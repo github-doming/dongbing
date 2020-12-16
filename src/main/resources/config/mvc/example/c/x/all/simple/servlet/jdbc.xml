@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<action name="TestAction" url="/list2.do">
+		example.c.x.all.simple.servlet.jdbc.HttpServlet_JdbcTransaction_listAction
+	</action>
+</root>

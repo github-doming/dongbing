@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="SysAccountUserAction"
+		url="/all/admin/sys/account_user/listJson.do">
+		all.sys_admin.sys.account_user.action.SysAccountUserListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="SysAccountUserAction"
+		url="/all/admin/sys/account_user/list.do">
+		all.sys_admin.sys.account_user.action.SysAccountUserListAction
+		<result name="Default" type="forward">
+			/pages/all/sys_admin/sys/account_user/SysAccountUserListBootstrap.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysAccountUserAction"
+		url="/all/admin/sys/account_user/form.do">
+		all.sys_admin.sys.account_user.action.SysAccountUserFormAction
+		<result name="Default" type="forward">
+			/pages/all/sys_admin/sys/account_user/SysAccountUserFormBootstrap.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysAccountUserAction"
+		url="/all/admin/sys/account_user/save.do">
+		all.sys_admin.sys.account_user.action.SysAccountUserSaveAction
+		<result name="Default" type="forward">
+			/all/admin/sys/account_user/list.do
+		</result>
+	</action>
+	<action name="SysAccountUserAction"
+		url="/all/admin/sys/account_user/saveJson.do">
+		all.sys_admin.sys.account_user.action.SysAccountUserSaveJsonAction
+	</action>
+	<!--删除del -->
+	<action name="SysAccountUserAction"
+		url="/all/admin/sys/account_user/del.do">
+		all.sys_admin.sys.account_user.action.SysAccountUserDelAction
+		<result name="Default" type="forward">
+			/all/admin/sys/account_user/list.do
+		</result>
+	</action>
+	<action name="SysAccountUserAction"
+		url="/all/admin/sys/account_user/delJson.do">
+		all.sys_admin.sys.account_user.action.SysAccountUserDelJsonAction
+	</action>
+	<!--删除所有del all -->
+	<action name="SysAccountUserAction"
+		url="/all/admin/sys/account_user/del_all.do">
+		all.sys_admin.sys.account_user.action.SysAccountUserDelAllAction
+		<result name="Default" type="forward">
+			/all/admin/sys/account_user/list.do
+		</result>
+	</action>
+	<action name="SysAccountUserAction"
+		url="/all/admin/sys/account_user/delAllJson.do">
+		all.sys_admin.sys.account_user.action.SysAccountUserDelAllJsonAction
+	</action>
+</root>

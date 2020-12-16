@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<action name="IndexAction" url="/example/all/sys/ay/sys_menu/list.do">
+		example.all.sys.ay.sys_menu.t.action.SysAySysMenuListAction
+	</action>
+
+
+</root>

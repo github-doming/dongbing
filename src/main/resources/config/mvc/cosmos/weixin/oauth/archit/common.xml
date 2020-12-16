@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--e1 -->
+	
+	<action name="WxPArticleTGenAction" url="/cosmos/weixin/oauth/archit/common/e1/index.do">
+		cosmos.weixin.oauth.archit.common.e1.WxPubIndexAction
+	</action>
+	
+	
+	<action name="WxPArticleTGenAction"
+		url="/cosmos/weixin/oauth/archit/common/e1/request_oauth.do">
+		cosmos.weixin.oauth.archit.common.e1.WxPubRequestOauthAction
+	</action>
+	<action name="WxPArticleTGenAction"
+		url="/cosmos/weixin/oauth/archit/common/e1/get_oauth.do">
+		cosmos.weixin.oauth.archit.common.e1.WxPubGetOauthAction
+	</action>
+	
+</root>

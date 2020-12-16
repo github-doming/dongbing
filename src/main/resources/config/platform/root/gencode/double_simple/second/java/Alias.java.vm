@@ -1,0 +1,16 @@
+package ${second_package_name_all}.alias;
+/**
+ * The vo class for the database table ${second_table_name} 
+ * 别名Alias类
+ */
+
+public class ${second_table_class}Alias  {
+
+
+	#foreach( $name in $second_list_column )
+	//${name.comment}
+	public static String  ${name.fieldName}="${name.comment}";
+#end
+
+
+}

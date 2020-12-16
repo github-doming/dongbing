@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!-- -->
+	<action name="App" url="/all/pc/api.do">
+		all.pc.api.action.PcApiAction
+		<result name="Default" type="forward">
+			/pages/all/pc/api/api.jsp
+		</result>
+	</action>
+</root>

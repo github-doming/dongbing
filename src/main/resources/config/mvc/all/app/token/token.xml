@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!-- 测试 -->
+	<action name="App" url="/all/app/token/test/save.do">
+		all.app.token.AppTokenTestSaveAction
+	</action>
+	<!-- session -->
+	<action name="App" url="/all/app/token/session.do">
+		all.app.token.AppTokenSessionAction
+	</action>
+	<!-- 账号验证码 -->
+	<action name="App" url="/all/app/token/verify.do">
+		all.app.token.AppTokenVerifyAction
+	</action>
+	<!-- 账号验证码,图片 -->
+	<action name="App" url="/all/app/token/verify/img.do">
+		all.app.token.AppTokenVerifyImgAction
+	</action>
+	<!-- 登录 -->
+	<action name="App" url="/all/app/token/login.do">
+		all.app.token.AppTokenLoginAction
+	</action>
+	<!-- 登录,不需要验证码 -->
+	<action name="App" url="/all/app/token/login2.do">
+		all.app.token.AppTokenLoginAction2
+	</action>
+	<!-- 游客登录 -->
+	<action name="App" url="/all/app/token/loginGuest.do">
+		all.app.token.AppTokenLoginGuestAction
+	</action>
+	<!-- 退出注销 -->
+	<action name="App" url="/all/app/token/logout.do">
+		all.app.token.AppTokenLogoutAction
+	</action>
+	<!-- 注册 -->
+	<!-- <action name="App" url="/all/app/token/register.do"> all.app.token.AppTokenRegisterAction 
+		</action> -->
+	<!-- 注册 ,不需要验证码 -->
+	<action name="App" url="/all/app/token/register2.do">
+		all.app.token.AppTokenRegisterAction2
+	</action>
+	<!--通过token查找个人信息 -->
+	<action name="App" url="/all/app/token/form.do">
+		all.app.token.AppTokenFormAction
+	</action>
+	<!--测试jsonp -->
+	<action name="App" url="/all/app/token/jsonp.do">
+		all.app.token.AppTokenJsonpAction
+	</action>
+</root>

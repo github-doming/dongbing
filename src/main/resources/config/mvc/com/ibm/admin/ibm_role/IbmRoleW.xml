@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!-- 查询所有角色 -->
+	<action name="IbmRoleWAction"
+		url="/com/ibm/admin/ibm_role/w/list.do">
+		com.ibm.old.v1.admin.ibm_role.w.action.IbmRoleListAction
+		<result name="Default" type="forward">
+			/pages/com/ibm/admin/ibm_role/IbmRoleWList.jsp
+		</result>
+	</action>
+	<!-- 跳转新增/编辑界面 -->
+	<action name="IbmRoleWAction"
+		url="/com/ibm/admin/ibm_role/w/form.do">
+		com.ibm.old.v1.admin.ibm_role.w.action.IbmRoleFormAction
+		<result name="Default" type="forward">
+			/pages/com/ibm/admin/ibm_role/IbmRoleWForm.jsp
+		</result>
+	</action>
+	<!-- 保存角色 -->
+	<action name="IbmRoleWAction"
+		url="/com/ibm/admin/ibm_role/w/save.do">
+		com.ibm.old.v1.admin.ibm_role.w.action.IbmRoleSaveAction
+		<result name="Default" type="forward">
+			/com/ibm/admin/ibm_role/w/list.do
+		</result>
+	</action>
+	<!-- 删除角色 -->
+	<action name="IbmRoleWAction"
+		url="/com/ibm/admin/ibm_role/w/del.do">
+		com.ibm.old.v1.admin.ibm_role.w.action.IbmRoleDelAction
+		<result name="Default" type="forward">
+			/com/ibm/admin/ibm_role/w/list.do
+		</result>
+	</action>
+	<!-- 删除选中角色 -->
+	<action name="IbmRoleWAction"
+		url="/com/ibm/admin/ibm_role/w/delAll.do">
+		com.ibm.old.v1.admin.ibm_role.w.action.IbmRoleDelAllAction
+		<result name="Default" type="forward">
+			/com/ibm/admin/ibm_role/w/list.do
+		</result>
+	</action>
+	<!-- 查询可修改的权限 -->
+	<action name="IbmRoleWAction"
+		url="/com/ibm/admin/ibm_role/w/listPower.do">
+		com.ibm.old.v1.admin.ibm_role.w.action.ModifyPowerAction
+	</action>
+</root>

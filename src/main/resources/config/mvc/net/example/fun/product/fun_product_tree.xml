@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表json-->
+	<action name="FunProductTreeProductAction" url="/net/example/fun/product/fun_product_tree/listJson.do">
+	net.example.fun.product.fun_product_tree.action.FunProductTreeProductListJsonAction
+	</action>
+	<!--列表list-->
+	<action name="FunProductTreeProductAction" url="/net/example/fun/product/fun_product_tree/list/bootstrap.do">
+		net.example.fun.product.fun_product_tree.action.FunProductTreeProductListAction
+		<result name="Default" type="forward">
+			/pages/net/example/fun/product/fun_product_tree/FunProductTreeProductListBootstrap.jsp
+		</result>
+		
+		
+	</action>
+	<!--表单form-->
+	<action name="FunProductTreeProductAction" url="/net/example/fun/product/fun_product_tree/form/bootstrap.do">
+		net.example.fun.product.fun_product_tree.action.FunProductTreeProductFormAction
+		<result name="Default" type="forward">
+/pages/net/example/fun/product/fun_product_tree/FunProductTreeProductFormBootstrap.jsp
+		</result>
+		
+		
+	</action>
+	<!--保存save-->
+	<action name="FunProductTreeProductAction" url="/net/example/fun/product/fun_product_tree/save/bootstrap.do">
+		net.example.fun.product.fun_product_tree.action.FunProductTreeProductSaveAction
+		<result name="Default" type="forward">
+		/com/example/fun/product/fun_product_tree/list/bootstrap.do
+		</result>
+		
+		
+	</action>
+	<!--删除del-->
+	<action name="FunProductTreeProductAction" url="/net/example/fun/product/fun_product_tree/del/bootstrap.do">
+		net.example.fun.product.fun_product_tree.action.FunProductTreeProductDelAction
+		<result name="Default" type="forward">
+		/com/example/fun/product/fun_product_tree/list/bootstrap.do
+		</result>
+		
+	</action>
+	<!--删除所有del all-->
+	<action name="FunProductTreeProductAction" url="/net/example/fun/product/fun_product_tree/del_all/bootstrap.do">
+		net.example.fun.product.fun_product_tree.action.FunProductTreeProductDelAllAction
+		<result name="Default" type="forward">
+		/com/example/fun/product/fun_product_tree/list/bootstrap.do
+		</result>
+		
+	</action>
+	<!--请求选择上一级parent-->
+	<action name="FunProductTreeProductAction" url="/net/example/fun/product/fun_product_tree/parent/bootstrap.do">
+		net.example.fun.product.fun_product_tree.action.FunProductTreeProductParentAction
+		<result name="Default" type="forward">
+			/pages/net/example/fun/product/fun_product_tree/FunProductTreeProductParentBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--选择上一级select-->
+	<action name="FunProductTreeProductAction" url="/net/example/fun/product/fun_product_tree/select.do">
+		net.example.fun.product.fun_product_tree.action.FunProductTreeProductSelectAction
+		<result name="Default" type="forward">
+			/pages/net/example/fun/product/fun_product_tree/FunProductTreeProductSelect.jsp
+		</result>
+		
+	</action>
+</root>

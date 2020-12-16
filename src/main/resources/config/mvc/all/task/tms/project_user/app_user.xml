@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+
+	<!--下拉框,项目人员 -->
+	<action name="AppUserProjectUserAction"
+		url="/all/task/tms/project_user/app_user/select/list.do">
+		all.task.tms.project_user.tms_project_user.action.ProjectUserSelectListAction
+	</action>
+
+	<!--列表Json -->
+	<action name="AppUserProjectUserAction" url="/all/task/tms/project_user/app_user/listJson.do">
+		all.task.tms.project_user.app_user.action.AppUserProjectUserListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="AppUserProjectUserAction"
+		url="/all/task/tms/project_user/app_user/list/bootstrap.do">
+		all.task.tms.project_user.app_user.action.AppUserProjectUserListAction
+		<result name="Default" type="forward">
+			/pages/all/task/tms/project_user/app_user/AppUserProjectUserListBootstrap.jsp
+		</result>
+
+	</action>
+	<!--表单form -->
+	<action name="AppUserProjectUserAction"
+		url="/all/task/tms/project_user/app_user/form/bootstrap.do">
+		all.task.tms.project_user.app_user.action.AppUserProjectUserFormAction
+		<result name="Default" type="forward">
+			/pages/all/task/tms/project_user/app_user/AppUserProjectUserFormBootstrap.jsp
+		</result>
+
+	</action>
+	<!--保存save -->
+	<action name="AppUserProjectUserAction"
+		url="/all/task/tms/project_user/app_user/save/bootstrap.do">
+		all.task.tms.project_user.app_user.action.AppUserProjectUserSaveAction
+		<result name="Default" type="forward">
+			/all/task/tms/project_user/app_user/list/bootstrap.do
+		</result>
+
+	</action>
+	<!--删除del -->
+	<action name="AppUserProjectUserAction"
+		url="/all/task/tms/project_user/app_user/del/bootstrap.do">
+		all.task.tms.project_user.app_user.action.AppUserProjectUserDelAction
+		<result name="Default" type="forward">
+			/all/task/tms/project_user/app_user/list/bootstrap.do
+		</result>
+
+	</action>
+	<!--删除所有del all -->
+	<action name="AppUserProjectUserAction"
+		url="/all/task/tms/project_user/app_user/del_all/bootstrap.do">
+		all.task.tms.project_user.app_user.action.AppUserProjectUserDelAllAction
+		<result name="Default" type="forward">
+			/all/task/tms/project_user/app_user/list/bootstrap.do
+		</result>
+
+	</action>
+</root>

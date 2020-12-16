@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--post -->
+	<action name="UserTAction" url="/all/cms/msg/admin/app_user/t/new/post.do">
+		all.cms.msg.admin.app_user.t.action.AppUserTNewPostAction
+		<result name="Default" type="forward">
+			/pages/all/cms/msg/admin/app_user/t/AppUserTNewPost.jsp
+		</result>
+	</action>
+
+	<!--群聊 -->
+	<action name="UserTAction" url="/all/cms/msg/admin/app_user/t/new/topic.do">
+		all.cms.msg.admin.app_user.t.action.AppUserTNewTopicAction
+		<result name="Default" type="forward">
+			/pages/all/cms/msg/admin/app_user/t/AppUserTNewTopic.jsp
+		</result>
+	</action>
+	<!--列表json -->
+	<action name="AppUserTAction" url="/all/cms/msg/admin/app_user/t/listJson.do">
+		all.cms.msg.admin.app_user.t.action.AppUserTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="AppUserTAction" url="/all/cms/msg/admin/app_user/t/list/easyui.do">
+		all.cms.msg.admin.app_user.t.action.AppUserTListAction
+		<result name="Default" type="forward">
+			/pages/all/cms/msg/admin/app_user/t/AppUserTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="AppUserTAction" url="/all/cms/msg/admin/app_user/t/list/bootstrap.do">
+		all.cms.msg.admin.app_user.t.action.AppUserTListAction
+		<result name="Default" type="forward">
+			/pages/all/cms/msg/admin/app_user/t/AppUserTListBootstrap.jsp
+		</result>
+
+	</action>
+	<!--表单form -->
+	<action name="AppUserTAction" url="/all/cms/msg/admin/app_user/t/form/bootstrap.do">
+		all.cms.msg.admin.app_user.t.action.AppUserTFormAction
+		<result name="Default" type="forward">
+			/pages/all/cms/msg/admin/app_user/t/AppUserTFormBootstrap.jsp
+		</result>
+
+	</action>
+	<!--保存save -->
+	<action name="AppUserTAction" url="/all/cms/msg/admin/app_user/t/save/bootstrap.do">
+		all.cms.msg.admin.app_user.t.action.AppUserTSaveAction
+		<result name="Default" type="send">
+			/all/cms/admin/app_user/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppUserTAction" url="/all/cms/msg/admin/app_user/t/saveJson.do">
+		all.cms.msg.admin.app_user.t.action.AppUserTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="AppUserTAction" url="/all/cms/msg/admin/app_user/t/del/bootstrap.do">
+		all.cms.msg.admin.app_user.t.action.AppUserTDelAction
+		<result name="Default" type="send">
+			/all/cms/admin/app_user/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppUserTAction" url="/all/cms/msg/admin/app_user/t/delJson.do">
+		all.cms.msg.admin.app_user.t.action.AppUserTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="AppUserTAction"
+		url="/all/cms/msg/admin/app_user/t/del_all/bootstrap.do">
+		all.cms.msg.admin.app_user.t.action.AppUserTDelAllAction
+		<result name="Default" type="send">
+			/all/cms/admin/app_user/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppUserTAction" url="/all/cms/msg/admin/app_user/t/delAllJson.do">
+		all.cms.msg.admin.app_user.t.action.AppUserTDelAllJsonAction
+
+	</action>
+</root>

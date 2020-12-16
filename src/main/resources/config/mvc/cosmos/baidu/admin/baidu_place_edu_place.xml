@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/list.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceListAction
+		<result name="index" type="forward">
+			/pages/cosmos/baidu/admin/baidu_place_edu_place/list.jsp
+		</result>
+	</action>
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/list.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceListAction
+		<result name="index" type="forward">
+			/pages/cosmos/baidu/admin/baidu_place_edu_place/list.jsp
+		</result>
+	</action>
+	
+	
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/list/bootstrap.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceListAction
+		<result name="index" type="forward">
+			/pages/cosmos/baidu/admin/baidu_place_edu_place/list_bootstrap.jsp
+		</result>
+	</action>
+	
+	
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/list/kaida.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceListAction
+		<result name="index" type="forward">
+			/pages/cosmos/baidu/admin/baidu_place_edu_place/list_kaida.jsp
+		</result>
+	</action>
+	
+	<!--列表list_object-->
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/list_object.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceListObjectAction
+		<result name="index" type="forward">
+			/pages/cosmos/baidu/admin/baidu_place_edu_place/list_object.jsp
+		</result>
+	</action>
+	
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/list_object/bootstrap.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceListObjectAction
+		<result name="index" type="forward">
+			/pages/cosmos/baidu/admin/baidu_place_edu_place/list_object_bootstrap.jsp
+		</result>
+	</action>
+	
+	
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/list_object/kaida.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceListObjectAction
+		<result name="index" type="forward">
+			/pages/cosmos/baidu/admin/baidu_place_edu_place/list_object_kaida.jsp
+		</result>
+	</action>
+	
+	<!--表单form-->
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/form.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceActionForm
+		<result name="index" type="forward">
+			/pages/cosmos/baidu/admin/baidu_place_edu_place/form.jsp
+		</result>
+	</action>
+	
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/form/bootstrap.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceActionForm
+		<result name="index" type="forward">
+			/pages/cosmos/baidu/admin/baidu_place_edu_place/form_bootstrap.jsp
+		</result>
+	</action>
+	
+	
+	
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/form/kaida.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceActionForm
+		<result name="index" type="forward">
+			/pages/cosmos/baidu/admin/baidu_place_edu_place/form_kaida.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/save.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceSaveAction
+		<result name="index" type="forward">
+		/pages/cosmos/baidu/admin/baidu_place_edu_place/list.xinyu
+		</result>
+			
+	</action>
+	
+	
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/save.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceSaveAction
+		<result name="index" type="forward">
+	/pages/cosmos/baidu/admin/baidu_place_edu_place/list.xinyu
+		</result>
+		
+		<result name="list_v1" type="forward">
+		/pages/cosmos/baidu/admin/baidu_place_edu_place/list.xinyu
+		</result>
+		
+		<result name="list_v2" type="forward">
+			/pages/cosmos/baidu/admin/baidu_place_edu_place/list.xinyu
+		</result>
+		
+	
+	</action>
+	
+		
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/save/bootstrap.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceSaveAction
+		<result name="index" type="forward">
+		/pages/cosmos/baidu/admin/baidu_place_edu_place/list/bootstrap.xinyu
+		</result>
+	
+	</action>
+	
+	
+		
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/save/kaida.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceSaveAction
+		<result name="index" type="forward">
+		/pages/cosmos/baidu/admin/baidu_place_edu_place/list/kaida.xinyu
+		</result>
+
+		
+	
+	</action>
+	
+	
+	<!--删除del-->
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/del.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceDelAction
+		
+		
+		<result name="index" type="forward">
+		/pages/cosmos/baidu/admin/baidu_place_edu_place/list.xinyu
+		
+		</result>
+		
+		
+		<result name="list_v3" type="forward">
+		/pages/cosmos/baidu/admin/baidu_place_edu_place/list.xinyu
+	
+		</result>
+		
+		<result name="list_v2" type="forward">
+			/pages/cosmos/baidu/admin/baidu_place_edu_place/list.xinyu
+		</result>
+		
+		<result name="list_v1" type="forward">
+			/pages/cosmos/baidu/admin/baidu_place_edu_place/list.xinyu
+		</result>
+	</action>
+	
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/del/bootstrap.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceDelAction
+		
+		
+		<result name="index" type="forward">
+		/pages/cosmos/baidu/admin/baidu_place_edu_place/list/bootstrap.xinyu
+		
+		</result>
+		
+	</action>
+	
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/del/kaida.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceDelAction
+		
+		
+		<result name="index" type="forward">
+		/pages/cosmos/baidu/admin/baidu_place_edu_place/list/kaida.xinyu
+		
+		</result>
+		
+	</action>
+	
+	
+	<!--删除所有del all-->
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/del_all.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceDelAllAction
+		<result name="index" type="forward">
+		/pages/cosmos/baidu/admin/baidu_place_edu_place/list.xinyu
+		</result>
+	</action>
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/del_all/bootstrap.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceDelAllAction
+		<result name="index" type="forward">
+		/pages/cosmos/baidu/admin/baidu_place_edu_place/list/bootstrap.xinyu
+		</result>
+	</action>
+	<action name="BaiduPlaceEduPlaceAction" url="/cosmos/baidu/admin/baidu_place_edu_place/del_all/kaida.xinyu">
+		cosmos.baidu.admin.baidu_place_edu_place.action.BaiduPlaceEduPlaceDelAllAction
+		<result name="index" type="forward">
+		/pages/cosmos/baidu/admin/baidu_place_edu_place/list/kaida.xinyu
+		</result>
+	</action>
+	
+</root>

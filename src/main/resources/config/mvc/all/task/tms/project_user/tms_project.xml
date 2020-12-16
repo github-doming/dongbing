@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表json-->
+	<action name="TmsProjectProjectUserAction" url="/all/task/tms/project_user/tms_project/listJson.do">
+	all.task.tms.project_user.tms_project.action.TmsProjectProjectUserListJsonAction
+	</action>
+	<!--列表list-->
+	<action name="TmsProjectProjectUserAction" url="/all/task/tms/project_user/tms_project/list/bootstrap.do">
+		all.task.tms.project_user.tms_project.action.TmsProjectProjectUserListAction
+		<result name="Default" type="forward">
+			/pages/all/task/tms/project_user/tms_project/TmsProjectProjectUserListBootstrap.jsp
+		</result>
+		
+		
+	</action>
+	<!--表单form-->
+	<action name="TmsProjectProjectUserAction" url="/all/task/tms/project_user/tms_project/form/bootstrap.do">
+		all.task.tms.project_user.tms_project.action.TmsProjectProjectUserFormAction
+		<result name="Default" type="forward">
+/pages/all/task/tms/project_user/tms_project/TmsProjectProjectUserFormBootstrap.jsp
+		</result>
+		
+		
+	</action>
+	<!--保存save-->
+	<action name="TmsProjectProjectUserAction" url="/all/task/tms/project_user/tms_project/save/bootstrap.do">
+		all.task.tms.project_user.tms_project.action.TmsProjectProjectUserSaveAction
+		<result name="Default" type="forward">
+		/all/task/tms/project_user/tms_project/list/bootstrap.do
+		</result>
+		
+		
+	</action>
+	<!--删除del-->
+	<action name="TmsProjectProjectUserAction" url="/all/task/tms/project_user/tms_project/del/bootstrap.do">
+		all.task.tms.project_user.tms_project.action.TmsProjectProjectUserDelAction
+		<result name="Default" type="forward">
+		/all/task/tms/project_user/tms_project/list/bootstrap.do
+		</result>
+		
+	</action>
+	<!--删除所有del all-->
+	<action name="TmsProjectProjectUserAction" url="/all/task/tms/project_user/tms_project/del_all/bootstrap.do">
+		all.task.tms.project_user.tms_project.action.TmsProjectProjectUserDelAllAction
+		<result name="Default" type="forward">
+		/all/task/tms/project_user/tms_project/list/bootstrap.do
+		</result>
+		
+	</action>
+	<!--请求选择上一级parent-->
+	<action name="TmsProjectProjectUserAction" url="/all/task/tms/project_user/tms_project/parent/bootstrap.do">
+		all.task.tms.project_user.tms_project.action.TmsProjectProjectUserParentAction
+		<result name="Default" type="forward">
+			/pages/all/task/tms/project_user/tms_project/TmsProjectProjectUserParentBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--选择上一级select-->
+	<action name="TmsProjectProjectUserAction" url="/all/task/tms/project_user/tms_project/select.do">
+		all.task.tms.project_user.tms_project.action.TmsProjectProjectUserSelectAction
+		<result name="Default" type="forward">
+			/pages/all/task/tms/project_user/tms_project/TmsProjectProjectUserSelect.jsp
+		</result>
+		
+	</action>
+</root>

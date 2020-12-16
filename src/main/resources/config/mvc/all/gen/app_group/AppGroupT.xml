@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="AppGroupTAction"
+		url="/all/gen/app_group/t/listJson.do">
+		all.gen.app_group.t.action.AppGroupTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="AppGroupTAction"
+		url="/all/gen/app_group/t/list/easyui.do">
+		all.gen.app_group.t.action.AppGroupTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_group/t/AppGroupTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="AppGroupTAction"
+		url="/all/gen/app_group/t/list/bootstrap.do">
+		all.gen.app_group.t.action.AppGroupTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_group/t/AppGroupTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="AppGroupTAction"
+		url="/all/gen/app_group/t/form/bootstrap.do">
+		all.gen.app_group.t.action.AppGroupTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_group/t/AppGroupTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="AppGroupTAction"
+		url="/all/gen/app_group/t/save/bootstrap.do">
+		all.gen.app_group.t.action.AppGroupTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/app_group/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppGroupTAction"
+		url="/all/gen/app_group/t/saveJson.do">
+		all.gen.app_group.t.action.AppGroupTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="AppGroupTAction"
+		url="/all/gen/app_group/t/del/bootstrap.do">
+		all.gen.app_group.t.action.AppGroupTDelAction
+		<result name="Default" type="forward">
+			/all/gen/app_group/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppGroupTAction"
+		url="/all/gen/app_group/t/delJson.do">
+		all.gen.app_group.t.action.AppGroupTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="AppGroupTAction"
+		url="/all/gen/app_group/t/del_all/bootstrap.do">
+		all.gen.app_group.t.action.AppGroupTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/app_group/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppGroupTAction"
+		url="/all/gen/app_group/t/delAllJson.do">
+		all.gen.app_group.t.action.AppGroupTDelAllJsonAction
+		
+	</action>
+</root>

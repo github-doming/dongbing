@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="FunTypeStrTAction"
+		url="/all/gen/fun_type_str/t/listJson.do">
+		all.gen.fun_type_str.t.action.FunTypeStrTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="FunTypeStrTAction"
+		url="/all/gen/fun_type_str/t/list/easyui.do">
+		all.gen.fun_type_str.t.action.FunTypeStrTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/fun_type_str/t/FunTypeStrTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="FunTypeStrTAction"
+		url="/all/gen/fun_type_str/t/list/bootstrap.do">
+		all.gen.fun_type_str.t.action.FunTypeStrTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/fun_type_str/t/FunTypeStrTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="FunTypeStrTAction"
+		url="/all/gen/fun_type_str/t/form/bootstrap.do">
+		all.gen.fun_type_str.t.action.FunTypeStrTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/fun_type_str/t/FunTypeStrTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="FunTypeStrTAction"
+		url="/all/gen/fun_type_str/t/save/bootstrap.do">
+		all.gen.fun_type_str.t.action.FunTypeStrTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/fun_type_str/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="FunTypeStrTAction"
+		url="/all/gen/fun_type_str/t/saveJson.do">
+		all.gen.fun_type_str.t.action.FunTypeStrTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="FunTypeStrTAction"
+		url="/all/gen/fun_type_str/t/del/bootstrap.do">
+		all.gen.fun_type_str.t.action.FunTypeStrTDelAction
+		<result name="Default" type="forward">
+			/all/gen/fun_type_str/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="FunTypeStrTAction"
+		url="/all/gen/fun_type_str/t/delJson.do">
+		all.gen.fun_type_str.t.action.FunTypeStrTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="FunTypeStrTAction"
+		url="/all/gen/fun_type_str/t/del_all/bootstrap.do">
+		all.gen.fun_type_str.t.action.FunTypeStrTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/fun_type_str/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="FunTypeStrTAction"
+		url="/all/gen/fun_type_str/t/delAllJson.do">
+		all.gen.fun_type_str.t.action.FunTypeStrTDelAllJsonAction
+		
+	</action>
+</root>

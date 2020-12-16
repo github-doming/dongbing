@@ -1,0 +1,8 @@
+.select { background-color:#fcfcfc; border:1px solid #ccc; margin:10px 1%; min-height:1px; width:98%; }
+.form_list { border-bottom:1px solid #e4e7ea; line-height:50px; min-height:50px; }
+.form_text_height { margin:7px 0; }
+.huise { background:#a0a0a0; color:#fff; }
+.huise:hover { background:#848484; color:#fff; }
+.form_button { background-color:#428BCA; border:0; }
+.btnanniu { border:0; border-radius:0; height:40px; width:70%; }
+.errors{color:red;}

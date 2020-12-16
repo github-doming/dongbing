@@ -1,0 +1,49 @@
+*{
+   margin: 0;
+   padding: 0;
+   font-family: "Microsoft Yahei";
+}
+input:focus, button:focus, textarea:focus{
+   outline: none;
+}
+ul,li{
+   list-style: none;
+}
+a, a:hover, a:link, a:visited, a:active{
+  text-decoration: none;
+}
+.layoutImg{
+	width:100%;
+}
+.layoutTitle{
+	text-align:center;
+	margin-top: 15px;
+}
+/* pingmu buju */
+.layoutImg>div{
+	width:100%;
+	height:100%;
+}
+.screen01{
+	border: 1px solid #304055;
+}
+.screen02 div{
+	width:50%;
+	height:50%;
+	border: 1px solid #304055;
+}
+.screen03Top{
+	width:100%;
+	height:50%;
+}
+.screen03Top div{
+	width:50%;
+	height:100%;
+	border: 1px solid #304055;
+	float:left;
+}
+.screen03Bottom{
+	width:100%;
+	height:50%;
+	border: 1px solid #304055;
+}

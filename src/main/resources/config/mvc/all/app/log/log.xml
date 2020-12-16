@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!-- save -->
+	<action name="App" url="/all/app/log/save.do">
+		all.app.log.AppLogSaveAction
+	</action>
+</root>

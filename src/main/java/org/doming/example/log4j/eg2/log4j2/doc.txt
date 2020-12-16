@@ -1,0 +1,23 @@
+https://www.jianshu.com/p/d13c2e50a89c
+
+
+各部分配置介绍
+-Appenders:包含以下标签
+
+FileAppender 　　 普通地输出到本地文件
+FlumeAppender　　 将几个不同源的日志汇集、集中到一处
+RewriteAppender 　　对日志事件进行掩码或注入信息
+RollingFileAppender　　对日志文件进行封存
+RoutingAppender　　在输出地之间进行筛选路由
+SMTPAppender　　将LogEvent发送到指定邮件列表
+SocketAppender　　将LogEvent以普通格式发送到远程主机
+SyslogAppender　　将LogEvent以RFC 5424格式发送到远程主机
+AsynchAppender 　　将一个LogEvent异步地写入多个不同输出地
+ConsoleAppender　　将LogEvent输出到控制台
+FailoverAppender　　维护一个队列，系统将尝试向队列中的Appender依次输出LogEvent，直到有一个成功为止
+
+
+
+
+
+

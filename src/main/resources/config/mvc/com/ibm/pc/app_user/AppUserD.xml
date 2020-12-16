@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+    <!-- session -->
+	<action name="Ibm" url="/ibm/pc/user/token/session.do">
+		com.ibm.old.v1.pc.app_user.t.action.AppTokenSessionAction
+	</action>
+
+	<!-- 账号验证码,图片 -->
+	<action name="Ibm" url="/ibm/pc/user/token/verify/img.do">
+		com.ibm.old.v1.pc.app_user.t.action.AppTokenVerifyImgAction
+	</action>
+
+	<!-- 注册 -->
+	<action name="Ibm" url="/ibm/pc/user/token/register.do">
+		com.ibm.old.v1.pc.app_user.t.action.AppTokenRegisterAction
+	</action>
+
+
+	<!-- 登录 -->
+	<action name="Ibm" url="/ibm/pc/user/token/login.do">
+		com.ibm.old.v1.pc.app_user.t.action.AppUserLoginAction
+	</action>
+
+	<!-- 修改密码 -->
+	<action name="Ibm" url="/ibm/pc/user/updatePassword.do">
+		com.ibm.old.v1.pc.app_user.t.action.AppUpdatePasswordAction
+	</action>
+
+	<!-- 删除选中用户 -->
+	<action name="AppTokenLogoutAction" url="/ibm/pc/user/logout.do">
+		com.ibm.old.v1.pc.app_user.t.action.AppTokenLogoutAction
+	</action>
+
+</root>

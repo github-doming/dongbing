@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表json-->
+	<action name="SysDictTreeTAction" url="/all/sys_admin/sys/dict/sys_dict_tree/listJson.do">
+	all.sys_admin.sys.dict.sys_dict_tree.action.SysDictTreeTListJsonAction
+	</action>
+	<!--列表list-->
+	<action name="SysDictTreeTAction" url="/all/sys_admin/sys/dict/sys_dict_tree/list/bootstrap.do">
+		all.sys_admin.sys.dict.sys_dict_tree.action.SysDictTreeTListAction
+		<result name="Default" type="forward">
+			/pages/all/sys_admin/sys/dict/sys_dict_tree/SysDictTreeTListBootstrap.jsp
+		</result>
+		
+		
+	</action>
+	<!--表单form-->
+	<action name="SysDictTreeTAction" url="/all/sys_admin/sys/dict/sys_dict_tree/form/bootstrap.do">
+		all.sys_admin.sys.dict.sys_dict_tree.action.SysDictTreeTFormAction
+		<result name="Default" type="forward">
+/pages/all/sys_admin/sys/dict/sys_dict_tree/SysDictTreeTFormBootstrap.jsp
+		</result>
+		
+		
+	</action>
+	<!--保存save-->
+	<action name="SysDictTreeTAction" url="/all/sys_admin/sys/dict/sys_dict_tree/save/bootstrap.do">
+		all.sys_admin.sys.dict.sys_dict_tree.action.SysDictTreeTSaveAction
+		<result name="Default" type="forward">
+		/all/sys_admin/sys/dict/sys_dict_tree/list/bootstrap.do
+		</result>
+		
+		
+	</action>
+	<!--删除del-->
+	<action name="SysDictTreeTAction" url="/all/sys_admin/sys/dict/sys_dict_tree/del/bootstrap.do">
+		all.sys_admin.sys.dict.sys_dict_tree.action.SysDictTreeTDelAction
+		<result name="Default" type="forward">
+		/all/sys_admin/sys/dict/sys_dict_tree/list/bootstrap.do
+		</result>
+		
+	</action>
+	<!--删除所有del all-->
+	<action name="SysDictTreeTAction" url="/all/sys_admin/sys/dict/sys_dict_tree/del_all/bootstrap.do">
+		all.sys_admin.sys.dict.sys_dict_tree.action.SysDictTreeTDelAllAction
+		<result name="Default" type="forward">
+		/all/sys_admin/sys/dict/sys_dict_tree/list/bootstrap.do
+		</result>
+		
+	</action>
+	<!--请求选择上一级parent-->
+	<action name="SysDictTreeTAction" url="/all/sys_admin/sys/dict/sys_dict_tree/parent/bootstrap.do">
+		all.sys_admin.sys.dict.sys_dict_tree.action.SysDictTreeTParentAction
+		<result name="Default" type="forward">
+			/pages/all/sys_admin/sys/dict/sys_dict_tree/SysDictTreeTParentBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--选择上一级select-->
+	<action name="SysDictTreeTAction" url="/all/sys_admin/sys/dict/sys_dict_tree/select.do">
+		all.sys_admin.sys.dict.sys_dict_tree.action.SysDictTreeTSelectAction
+		<result name="Default" type="forward">
+			/pages/all/sys_admin/sys/dict/sys_dict_tree/SysDictTreeTSelect.jsp
+		</result>
+		
+	</action>
+</root>

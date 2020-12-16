@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--jqgrid -->
+	<action name="IndexAction"
+		url="/all/sys_admin/sys/sys_account/sys_user_jqgrid/listJson.do">
+		all.sys_admin.sys.sys_account.t.action.SysUserJqgridListJsonAction
+	</action>
+	<!--json -->
+	<action name="SysAccountCxAction" url="/all/admin/sys/sys_account/t/listJson.do">
+		all.sys_admin.sys.sys_account.t.action.SysAccountCxListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="SysAccountCxAction" url="/all/admin/sys/sys_account/t/list.do">
+		all.sys_admin.sys.sys_account.t.action.SysAccountCxListAction
+		<result name="Default" type="forward">
+			/pages/all/sys_admin/sys/sys_account/t/SysAccountCxListBootstrap.jsp
+		</result>
+	</action>
+	<action name="SysAccountCxAction" url="/all/admin/sys/sys_account/t/list/miniui.do">
+		all.sys_admin.sys.sys_account.t.action.SysAccountCxListAction
+		<result name="Default" type="forward">
+			/pages/all/sys_admin/sys/sys_account/t/SysAccountCxListMiniui.jsp
+		</result>
+	</action>
+	<action name="SysAccountCxAction" url="/all/admin/sys/sys_account/t/list/bootstrap.do">
+		all.sys_admin.sys.sys_account.t.action.SysAccountCxListAction
+		<result name="Default" type="forward">
+			/pages/all/sys_admin/sys/sys_account/t/SysAccountCxListBootstrap.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/all/sys_admin/sys/sys_account/t/SysAccountCxListMiniui.jsp
+		</result>
+		<result name="DefaultObject" type="forward">
+			/pages/all/sys_admin/sys/sys_account/t/SysAccountCxListObject.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/all/sys_admin/sys/sys_account/t/SysAccountCxListBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/all/sys_admin/sys/sys_account/t/SysAccountCxListBootstrapObject.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/all/sys_admin/sys/sys_account/t/SysAccountCxListKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/all/sys_admin/sys/sys_account/t/SysAccountCxListKaidaObject.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysAccountCxAction" url="/all/admin/sys/sys_account/t/form.do">
+		all.sys_admin.sys.sys_account.t.action.SysAccountCxFormAction
+		<result name="Default" type="forward">
+			/pages/all/sys_admin/sys/sys_account/t/SysAccountCxFormBootstrap.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/all/sys_admin/sys/sys_account/t/SysAccountCxFormMiniui.jsp
+		</result>
+		<result name="DefaultObject" type="forward">
+			/pages/all/sys_admin/sys/sys_account/t/SysAccountCxForm.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/all/sys_admin/sys/sys_account/t/SysAccountCxFormBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/all/sys_admin/sys/sys_account/t/SysAccountCxFormBootstrap.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/all/sys_admin/sys/sys_account/t/SysAccountCxFormKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/all/sys_admin/sys/sys_account/t/SysAccountCxFormKaida.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysAccountCxAction" url="/all/admin/sys/sys_account/t/form/miniui.do">
+		all.sys_admin.sys.sys_account.t.action.SysAccountCxFormAction
+		<result name="Default" type="forward">
+			/pages/all/sys_admin/sys/sys_account/t/SysAccountCxFormMiniui.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysAccountCxAction" url="/all/admin/sys/sys_account/t/save.do">
+		all.sys_admin.sys.sys_account.t.action.SysAccountCxSaveAction
+		<result name="Default" type="forward">
+			/all/admin/sys/sys_account/t/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="SysAccountCxAction" url="/all/admin/sys/sys_account/t/del.do">
+		all.sys_admin.sys.sys_account.t.action.SysAccountCxDelAction
+		<result name="Default" type="forward">
+			/all/admin/sys/sys_account/t/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="SysAccountCxAction" url="/all/admin/sys/sys_account/t/del_all.do">
+		all.sys_admin.sys.sys_account.t.action.SysAccountCxDelAllAction
+		<result name="Default" type="forward">
+			/all/admin/sys/sys_account/t/list.do
+		</result>
+	</action>
+</root>

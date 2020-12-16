@@ -1,0 +1,111 @@
+*{
+	margin: 0;
+   	padding: 0;
+   	font-family: "Microsoft Yahei";
+}
+input:focus, button:focus, textarea:focus{
+   	outline: none;
+}
+ul,li{
+   	list-style: none;
+}
+a, a:hover, a:link, a:visited, a:active{
+  	text-decoration: none;
+}
+body{
+   	background-color: #1d2939;
+   	overflow:hidden;
+}
+/*头部样式*/
+.header{
+   	width: 100%;
+   	height: 80px;
+   	color: #fff;
+}
+.headerLeft{
+   	float: left;
+   	height:80px;
+   	padding: 5px 0;
+}
+.logoImg{
+	width: 90px;
+   	height: 70px;
+   	float: left;
+   	padding-left:20px;
+}
+.logoImg img{
+   	width:100%;
+   	height:100%;
+}
+.logoName{
+   	font-size: 24px;
+   	height: 70px;
+   	line-height: 70px;
+   	float: left;
+   	padding-left: 10px;
+   	padding-right:30px;
+}
+.headerMiddle{
+   	height: 80px;
+   	float: left;
+}
+.marquee{
+	width:100%;
+	height: 80px;
+    font-size: 24px;
+    line-height: 80px;
+    color:#f00;
+    display:inline-block;
+}
+.scrollInfo{ 
+   	width:100%;
+   	line-height: 80px;
+   	overflow:hidden; 
+   	white-space:nowrap; 
+}
+.scrollInfoStyle{ 
+	width:auto;
+   	display:inline-block;
+   	font-size:24px; 
+   	color:red;
+}
+.headerRight{
+   	width:260px;
+   	height:80px;
+   	padding: 10px 0;
+   	font-size: 20px;
+   	float: left;
+    text-align: center;
+}
+.headerRight div{
+   	height: 50%;
+}
+/* 显示布局的大div */
+.layoutDiv{
+	width:100%;
+}
+.layoutImg{
+	width:100%;
+	height:100%;
+	display:none;
+}
+.height100{
+	height:100%;
+	border:1px solid #304055;
+	padding:10px 0;
+}
+.height50{
+	height:50%;
+	border:1px solid #304055;
+	padding:10px 0;
+}
+.noBorder{
+	border:none;
+}
+.noPadding{
+	padding:0;
+}
+.displayIframe{
+	width:100%;
+	height:100%;
+}

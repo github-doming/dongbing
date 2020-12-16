@@ -1,0 +1,37 @@
+<beans
+  xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core.xsd">
+
+
+
+  <broker useJmx="false" brokerName="jdbcBroker" xmlns="http://activemq.apache.org/schema/core">
+
+    <!--
+        See more database locker options at http://activemq.apache.org/pluggable-storage-lockers.html
+    -->
+    <persistenceAdapter>
+       <jdbcPersistenceAdapter dataDirectory="${activemq.data}" dataSource="#mysql-ds"/>
+    </persistenceAdapter>
+
+    <transportConnectors>
+       <transportConnector name="openwire" uri="tcp://0.0.0.0:61616"/>
+    </transportConnectors>
+  </broker>
+
+
+  <!-- MySql DataSource Sample Setup -->
+
+  <bean id="mysql-ds" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+    <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+    <property name="url" value="jdbc:mysql://localhost:3306/c2?relaxAutoCommit=true"/>
+    <property name="username" value="root"/>
+    <property name="password" value="1"/>
+    <property name="maxTotal" value="200"/>
+    <property name="poolPreparedStatements" value="true"/>
+  </bean>
+
+
+
+</beans>

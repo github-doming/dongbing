@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	<action name="WfDefProcessTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_process_t/cx/list.do">
+		c.x.platform.admin.feng.wf.wf_def_process_t.cx.action.WfDefProcessTCxListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_def_process_t/cx/WfDefProcessTCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object-->
+	<action name="WfDefProcessTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_process_t/cx/list_object.do">
+		c.x.platform.admin.feng.wf.wf_def_process_t.cx.action.WfDefProcessTCxListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_def_process_t/cx/WfDefProcessTCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form-->
+	<action name="WfDefProcessTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_process_t/cx/form.do">
+		c.x.platform.admin.feng.wf.wf_def_process_t.cx.action.WfDefProcessTCxFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_def_process_t/cx/WfDefProcessTCxForm.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	<action name="WfDefProcessTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_process_t/cx/save.do">
+		c.x.platform.admin.feng.wf.wf_def_process_t.cx.action.WfDefProcessTCxSaveAction
+		<result name="index" type="forward">
+	/c/x/platform/admin/feng/wf/wf_def_process_t/cx/list.do
+		</result>
+	</action>
+	<!--删除del-->
+	<action name="WfDefProcessTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_process_t/cx/del.do">
+		c.x.platform.admin.feng.wf.wf_def_process_t.cx.action.WfDefProcessTCxDelAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/wf/wf_def_process_t/cx/list.do
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="WfDefProcessTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_process_t/cx/del_all.do">
+		c.x.platform.admin.feng.wf.wf_def_process_t.cx.action.WfDefProcessTCxDelAllAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/wf/wf_def_process_t/cx/list.do
+		</result>
+	</action>
+</root>

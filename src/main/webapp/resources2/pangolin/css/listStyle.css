@@ -1,0 +1,252 @@
+*{
+   margin: 0;
+   padding: 0;
+   font-family: "Microsoft Yahei";
+   list-style:none;
+}
+input:focus, button:focus, textarea:focus{
+   outline: none;
+}
+body{
+	padding:0;
+	margin:0;
+}
+.btn-group{
+    margin-bottom: 0;
+    margin-right:10px;
+}
+.panel{
+	margin-bottom:0;
+	background-color:#fff;
+	-moz-box-shadow: 0 3px 0 rgba(12,12,12,0);
+    -webkit-box-shadow: 0 3px 0 rgba(12,12,12,0);
+    box-shadow: 0 3px 0 rgba(12,12,12,0);
+}
+.panel-heading{
+	position: relative;
+	border-radius:0;
+	min-height:75px;
+}
+.menus {width:100%;}
+/*.menus li{float:left;width:33%;text-align:center;height:35px;line-height:30px;margin-bottom:10px;}
+.menus li label{float:left;width:25%;}
+.menus li span{float:left;width:75%;text-align:left;}
+.menus li input , .menus li select{width:90%;}*/
+
+.xiaju{margin-bottom:10px;}
+.menusbtn{width:140px;margin:0 auto;height:35px;}
+.menusbtn li{width:70px;float:left;text-align:center;}
+.toppadding{padding-left:15px;}
+.headPosition i{margin:0 10px;}
+.treetop{margin-top:40px;position:relative;}
+
+.caozuo{overflow:hidden;height:35px;right:20px;top:-25px;position:absolute;}
+.caozuo li{margin-left:5px;float:left;text-align:center;}
+#table2 th{vertical-align:middle;}
+.clear{clear:both;}
+.panel-heading-input{
+	height:75px;
+}
+.panel-heading .col-sm-1{
+	line-height:35px;
+	text-align:right;
+}
+.chosen-container{
+	height:35px;
+}
+.chosen-container-single .chosen-single{
+	margin-top:0;
+	height:35px;
+}
+.panel-heading .form-control{
+	height:35px;
+	padding:6px 12px;
+}
+.headerRight{
+	position: absolute;
+    top: 20px;
+    right: 20px;
+}
+/* 搜索框样式  */
+.select_search {
+	height:35px; 
+	background:#fff; 
+	border:1px solid #ff860e;
+	position:relative;
+	border-radius: 3px;
+	padding-left:5px;
+	float:left;
+}
+.select_search input { 
+	line-height:33px; 
+	height:33px; 
+	width:200px; 
+	border:0px;
+}
+.search_icon {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
+    background-color: #ff860e;
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+    color: #fff;
+}
+.advancedSearch{
+	float:left;
+	margin-left:10px;
+	display:none;
+}
+
+.panel-body{
+	padding:10px 20px 20px 20px;
+	border-radius:0;
+	position:relative;
+}
+.table{
+    width: 100% !important;
+}
+.table th{
+    font-family: "Microsoft Yahei";
+}
+.dataTable thead > tr > th{
+	background-color:#fff;
+} 
+td, th{
+	background-color:#fff;
+	line-height: 30px !important;
+}
+
+/* cao zuo an niu */
+.sansan{display:inline-block;}
+.shoushi{
+    cursor: pointer;
+    display: inline-block;
+    width: 4em;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+/* chakan */
+.seeBtn{
+	color:#428bca;
+}
+.seeBtn:hover{
+	background-color:#428bca;
+	color:#fff;
+	border-radius: 3px;
+}
+/* yanchi */
+.delayBtn{
+	color:#f0ad4e;
+}
+.delayBtn:hover{
+	background-color:#f0ad4e;
+	color:#fff;
+	border-radius: 3px;
+}
+/* wancheng */
+.completeBtn{
+	color:#4cd964;
+}
+.completeBtn:hover{
+	background-color:#4cd964;
+	color:#fff;
+	border-radius: 3px;
+}
+/* shengji */
+.upgradeBtn{
+	color:#8a6de9;
+}
+.upgradeBtn:hover{
+	background-color:#8a6de9;
+	color:#fff;
+	border-radius: 3px;
+}
+/* kaishi */
+.startBtn{
+	color:#dd524d;
+}
+.startBtn:hover{
+	background-color:#dd524d;
+	color:#fff;
+	border-radius: 3px;
+}
+/* pingjia */
+.appraiseBtn{
+	color:#1CAF9A;
+}
+.appraiseBtn:hover{
+	background-color:#1CAF9A;
+	color:#fff;
+	border-radius: 3px;
+}
+/* shenhe */
+.checkBtn{
+	color:#5bc0de;
+}
+.checkBtn:hover{
+	background-color:#5bc0de;
+	color:#fff;
+	border-radius: 3px;
+}
+/* xiugai */
+.modifyBtn{
+	color:#f38108;
+}
+.modifyBtn:hover{
+	background-color:#f38108;
+	color:#fff;
+	border-radius: 3px;
+}
+/* shanchu */
+.deleteBtn{
+	color:#d9534f;
+}
+.deleteBtn:hover{
+	background-color:#d9534f;
+	color:#fff;
+	border-radius: 3px;
+}
+/* quanxian */
+.jurisdictionBtn{
+	color:#e5da00;
+}
+.jurisdictionBtn:hover{
+	background-color:#e5da00;
+	color:#fff;
+	border-radius: 3px;
+}
+/* erweima */
+.QRCodeBtn{
+	color:#000;
+}
+.QRCodeBtn:hover{
+	background-color:#000;
+	color:#fff;
+	border-radius: 3px;
+}
+/* yulan */
+.previewBtn{
+	color:#ed9c28;
+}
+.previewBtn:hover{
+	background-color:#ed9c28;
+	color:#fff;
+	border-radius: 3px;
+}
+
+.paging_full_numbers a.paginate_active {
+    background-color: #1caf9a;
+    border-color: #1caf9a;
+}
+.modal-content{
+	-moz-box-shadow: 0px 0px 0 rgba(0,0,0,0);
+    -webkit-box-shadow: 0px 0px 0 rgba(0,0,0,0); 
+    box-shadow: 0px 0px 0 rgba(0,0,0,0); 
+}
+
+.help-block{color:red;}

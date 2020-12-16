@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--监控-->
+	<action name="IndexAction" url="/all/netty/index.do">
+		all.netty.action.TcpNettyAction
+	</action>
+	<action name="IndexAction" url="/all/netty/list.do">
+		all.netty.action.TcpNettyMonitorAction
+		<result name="Default" type="forward">
+			/pages/all/netty/netty.jsp
+		</result>
+	</action>
+	<!--测试-->
+		<action name="IndexAction" url="/all/netty/check/connect.do">
+		c.a.util.netty.action.CheckConnectAction 
+	</action>
+		<action name="IndexAction" url="/all/netty/open.do">
+		c.a.util.netty.action.TcpOpenAction
+	</action>
+	<action name="IndexAction" url="/all/netty/card.do">
+		c.a.util.netty.action.CardAction
+	</action>
+	<action name="IndexAction" url="/all/netty/card2.do">
+		c.a.util.netty.action.CardAction2
+	</action>
+	<action name="IndexAction" url="/all/netty/msg.do">
+		c.a.util.netty.action.MsgAction
+	</action>
+	<action name="IndexAction" url="/all/netty/example.do">
+		c.a.util.netty.action.ExampleAction
+	</action>
+	<action name="IndexAction" url="/all/netty/socket.do">
+		c.a.util.netty.action.SocketAction
+	</action>
+</root>

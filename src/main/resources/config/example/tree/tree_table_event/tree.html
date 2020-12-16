@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<script type="text/javascript"
+	src="jquery/jquery-1.9.1.js">
+        </script>
+        
+<title></title>
+</head>
+
+
+<script type="text/javascript">
+
+/**
+ * 展开所有的
+ */
+ var AyTreeChange= function(db_id,id) {
+
+	 alert('id='+id);
+	  alert('db_id='+db_id);
+	  var path_root=$("#"+id).attr("path");
+	  var state_root=$("#"+id).attr("state");
+
+//alert('path_root='+path_root);
+	  
+	  $("tr").each(function(){
+		var parent_id=  $(this).attr("parent_id");
+		//var state=  $(this).attr("state");
+		var path =$(this).attr("path");
+		//关闭时，所有孩子和孙子关闭
+		//打开时，只打开孩子
+		
+		
+		if(state_root=='open'){
+		//关闭时，所有孩子和孙子关闭
+		//{
+			//1_20可不是1_2的孩子啊
+			//path=1_2
+			//path=1_20
+			//path=1_2_5
+			//path=1_2_7
+			
+			
+			if (path.indexOf(path_root+"") == 0) {
+					//设置style
+					$(this).attr("style","display: none;");
+					//设置状态
+					$(this).attr("state","close");
+				
+			}
+		//}
+			
+		//关闭时，所有孩子和孙子关闭
+
+			
+		}else{
+
+			//打开时，只打开孩子
+			//{
+			if (parent_id == id) {
+				//设置style
+				var style=  $(this).attr("style");
+
+				$(this).attr("style","");
+			}
+
+			//}
+			//打开时，只打开孩子
+	}
+		
+  });
+
+		//设置本身状态
+		if(state_root=='open'){
+
+			$("#"+id).attr("state","close");
+			
+		}else{
+			$("#"+id).attr("state","open");
+
+		}
+		//本身不隐藏
+
+	 	 $("#"+id).attr("style","");
+}
+/**
+ * 展开所有的(编辑树时，可能用到)
+ */
+ var AyTreeChange_v1= function(id) {
+	  var p=$("#"+id).attr("path");
+
+	  
+	  $("tr").each(function(){
+		var path=  $(this).attr("path");
+
+		if (path.indexOf(p) == 0) {
+
+			var style=  $(this).attr("style");
+			if(style=='display: none;'){
+
+
+				$(this).attr("style","");
+			}else{
+				$(this).attr("style","display: none;");
+			}
+			
+		
+
+		}
+
+		
+		  });
+
+	  $("#"+id).attr("style","");
+}
+
+
+var hide= function(id) {
+
+	
+	var oj = document.getElementById(id);
+	  alert($("#"+id).attr("path"));
+		
+
+
+		if (oj.style.display == "none") {
+		$("#"+id).attr("style","");
+		
+
+		} else {
+			$("#"+id).attr("style","display: none;");
+
+		}
+			
+}
+
+
+
+	</script>
+
+
+
+
+
+<html>
+<body>
+<table border="1">

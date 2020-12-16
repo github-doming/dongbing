@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	<action name="EduSearchTCxAction" url="/c/x/platform/admin/feng/edu/edu_search_t/cx/list.do">
+		c.x.platform.admin.feng.edu.edu_search_t.cx.action.EduSearchTCxListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/edu/edu_search_t/cx/EduSearchTCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object-->
+	<action name="EduSearchTCxAction" url="/c/x/platform/admin/feng/edu/edu_search_t/cx/list_object.do">
+		c.x.platform.admin.feng.edu.edu_search_t.cx.action.EduSearchTCxListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/edu/edu_search_t/cx/EduSearchTCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form-->
+	<action name="EduSearchTCxAction" url="/c/x/platform/admin/feng/edu/edu_search_t/cx/form.do">
+		c.x.platform.admin.feng.edu.edu_search_t.cx.action.EduSearchTCxFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/edu/edu_search_t/cx/EduSearchTCxForm.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	<action name="EduSearchTCxAction" url="/c/x/platform/admin/feng/edu/edu_search_t/cx/save.do">
+		c.x.platform.admin.feng.edu.edu_search_t.cx.action.EduSearchTCxSaveAction
+		<result name="index" type="forward">
+	/c/x/platform/admin/feng/edu/edu_search_t/cx/list.do
+		</result>
+	</action>
+	<!--删除del-->
+	<action name="EduSearchTCxAction" url="/c/x/platform/admin/feng/edu/edu_search_t/cx/del.do">
+		c.x.platform.admin.feng.edu.edu_search_t.cx.action.EduSearchTCxDelAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/edu/edu_search_t/cx/list.do
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="EduSearchTCxAction" url="/c/x/platform/admin/feng/edu/edu_search_t/cx/del_all.do">
+		c.x.platform.admin.feng.edu.edu_search_t.cx.action.EduSearchTCxDelAllAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/edu/edu_search_t/cx/list.do
+		</result>
+	</action>
+</root>

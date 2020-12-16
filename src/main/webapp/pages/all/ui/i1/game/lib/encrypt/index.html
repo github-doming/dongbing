@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>使用jsencrypt执行OpenSSL的RSA加密，解密</title>
+    </head>
+    <!--引入jsencrypt.js-->
+    <script src="jsencrypt.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        //公钥
+        var PUBLIC_KEY = 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCesxTCipzD80vT5Coogy4YhFNKuEAkjdVRDKVw6b7Y5Au7sj2tAtb15uCjlU3egoN+74Mvvu5/ICPtNpP31Rq1h1LUhXBaA1m2czD+8coHcugrPY6R0h6MgKyPZJH1FzSQ4B6UnMFvYoI7t3Dsr4QmtcOqTUtx09LfM8cO1ZL7fwIDAQAB';
+        //私钥
+        var PRIVATE_KEY = 'MIICXQIBAAKBgQCesxTCipzD80vT5Coogy4YhFNKuEAkjdVRDKVw6b7Y5Au7sj2tAtb15uCjlU3egoN+74Mvvu5/ICPtNpP31Rq1h1LUhXBaA1m2czD+8coHcugrPY6R0h6MgKyPZJH1FzSQ4B6UnMFvYoI7t3Dsr4QmtcOqTUtx09LfM8cO1ZL7fwIDAQABAoGABzV5TvD++AO4QRLPO3HiCSkRo4ZFG6P5uanKZhuoGLAbPFZ3aMGFRDxNngCtPdtN39k/a07QBKRQHXlqNUrP4LbHJ6MIMqr5Qelgcp2VmhkC2WLyzMPHDrVQh4snPPum+gHziyov2x0IWe8tk/yxbuychnuGkIlwJx4vUXNYxUkCQQDQy4TKTUG0qaC6YpPNy4p21OzaMi+7dS8If5sz3wg3h/PzC9y2Hw4e8SfypcuNN12VsN2r7vTFkOBai4xZw4bzAkEAwpQst0gY+wYAV1iF97BvLFJT/VuMQuCH1PDxdztMP7tCz9/M/gXC9gwir5hhLNdEQ0qvu3+9dsP38KvC68D0RQJBAJ7XBTll1qObHBRPJAQ+YSMPzvQbk+Z3OoWrliW6+aRNQA/ZKVo/e92cNnjJGnZe9UoImErRadLW6WbYnLg5IHMCQGU/oT0F4SnN56OLxroqLs9LT7UITCYIm+WsMpmuW3DWSl/Mvuh3qwlJK0tf6UDiCv1RAbx5Led89algVx9B2lkCQQCO70D43I7KKeT5ONaAS3yFePfOLtiyjWpJ/uwwhLORlSiZd6LmmdkbCT8fugss9ubyz0hHdtIhwIvHtyh9CQev';
+        //使用公钥加密
+        var encrypt = new JSEncrypt();
+        encrypt.setPublicKey('-----BEGIN PUBLIC KEY-----' + PUBLIC_KEY + '-----END PUBLIC KEY-----');
+        var encrypted = encrypt.encrypt('你今天吃了鱼吗');
+        console.log('加密后数据:%o', encrypted);
+        //使用私钥解密
+        var decrypt = new JSEncrypt();
+        decrypt.setPrivateKey('-----BEGIN RSA PRIVATE KEY-----'+PRIVATE_KEY+'-----END RSA PRIVATE KEY-----');
+        var uncrypted = decrypt.decrypt(encrypted);
+        console.log('解密后数据:%o', uncrypted);
+    </script>
+
+</html>
+
+js加密与解密

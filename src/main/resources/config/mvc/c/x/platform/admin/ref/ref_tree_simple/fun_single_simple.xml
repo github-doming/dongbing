@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!---->
+	<action name="FunTreeSimpleAction" url="/c/x/platform/admin/ref/ref_tree_simple/fun_single_simple/list.do">
+		c.x.platform.admin.ref.ref_tree_simple.fun_single_simple.action.FunTreeSimpleListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/ref/ref_tree_simple/fun_single_simple/list.jsp
+		</result>
+	</action>
+	<action name="FunTreeSimpleAction" url="/c/x/platform/admin/ref/ref_tree_simple/fun_single_simple/form.do">
+		c.x.platform.admin.ref.ref_tree_simple.fun_single_simple.action.FunTreeSimpleActionForm
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/ref/ref_tree_simple/fun_single_simple/form.jsp
+		</result>
+	</action>
+	<action name="FunTreeSimpleAction" url="/c/x/platform/admin/ref/ref_tree_simple/fun_single_simple/save.do">
+		c.x.platform.admin.ref.ref_tree_simple.fun_single_simple.action.FunTreeSimpleSaveAction
+		<result name="index" type="forward">
+			/c/x/platform/admin/ref/ref_tree_simple/fun_single_simple/list.do
+		</result>
+	</action>
+	<action name="FunTreeSimpleAction" url="/c/x/platform/admin/ref/ref_tree_simple/fun_single_simple/del.do">
+		c.x.platform.admin.ref.ref_tree_simple.fun_single_simple.action.FunTreeSimpleDelAction
+		<result name="index" type="forward">
+			/c/x/platform/admin/ref/ref_tree_simple/fun_single_simple/list.do
+		</result>
+	</action>
+<action name="FunTreeSimpleAction" url="/c/x/platform/admin/ref/ref_tree_simple/fun_single_simple/del_all.do">
+		c.x.platform.admin.ref.ref_tree_simple.fun_single_simple.action.FunTreeSimpleDelAllAction
+		<result name="index" type="forward">
+			/c/x/platform/admin/ref/ref_tree_simple/fun_single_simple/list.do
+		</result>
+	</action>
+<action name="FunTreeSimpleAction" url="/c/x/platform/admin/ref/ref_tree_simple/fun_single_simple/parent.do">
+		c.x.platform.admin.ref.ref_tree_simple.fun_single_simple.action.FunTreeSimpleParentAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/ref/ref_tree_simple/fun_single_simple/parent.jsp
+		</result>
+	</action>
+<action name="FunTreeSimpleAction" url="/c/x/platform/admin/ref/ref_tree_simple/fun_single_simple/select.do">
+		c.x.platform.admin.ref.ref_tree_simple.fun_single_simple.action.FunTreeSimpleSelectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/ref/ref_tree_simple/fun_single_simple/select.jsp
+		</result>
+	</action>
+</root>

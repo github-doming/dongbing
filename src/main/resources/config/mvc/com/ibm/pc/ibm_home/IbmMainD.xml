@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+    <!-- 首页主体框架 -->
+	<action name="IbmMainD" url="/ibm/pc/home/main.do">
+        com.ibm.old.v1.pc.ibm_home.action.IbmHomeMainAction
+	</action>
+
+    <!-- 首页主体信息 -->
+    <action name="IbmMainD" url="/ibm/pc/home/page.do">
+        com.ibm.old.v1.pc.ibm_home.action.IbmHomePageAction
+    </action>
+
+</root>

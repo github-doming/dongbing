@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name>simple platform</display-name>
+
+	<context-param>
+		<param-name>brokerURI</param-name>
+		<param-value>/WEB-INF/activemq.xml</param-value>
+	</context-param>
+
+
+
+	<!-- 过滤器 -->
+	<!--{ -->
+	<filter>
+		<filter-name>FilterProxy</filter-name>
+		<filter-class>c.a.tools.filter.proxy.FilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>FilterProxy</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!--} -->
+	<!-- 过滤器 -->
+	<!-- MvcHttpServlet -->
+	<!--{ -->
+	<servlet>
+		<servlet-name>MvcHttpServlet</servlet-name>
+		<servlet-class>c.a.tools.mvc.nut.MvcHttpServlet</servlet-class>
+	</servlet>
+	<!--} -->
+	<!-- MvcHttpServlet -->
+	<!-- MvcHttpServlet -->
+	<!--{ -->
+	<servlet-mapping>
+		<servlet-name>MvcHttpServlet</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<!--} -->
+	<!-- MvcHttpServlet -->
+	<!--监听器 -->
+	<listener>
+		<listener-class>c.x.platform.root.listener.BootServletContextListener</listener-class>
+	</listener>
+
+
+	<listener>
+		<listener-class>org.apache.activemq.web.SpringBrokerContextListener</listener-class>
+	</listener>
+
+
+	<!--监听器 -->
+	<!-- 设置session失效时间，60分钟后失效 -->
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+	<!-- 开始页面 -->
+	<welcome-file-list>
+		<welcome-file>/pages/c/x/platform/root/login_not/request_login.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 异常页面 -->
+	<error-page>
+		<error-code>500</error-code>
+		<location>/pages/c/x/platform/root/common/error/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/pages/c/x/platform/root/common/error/pagenotfound.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/pages/c/x/platform/root/common/error/403.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>c.x.platform.root.compo.mvc.tools.exception.BizRuntimeException</exception-type>
+		<location>/pages/c/x/platform/root/common/error/bizruntimeexception.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.RuntimeException</exception-type>
+		<location>/pages/c/x/platform/root/common/error/runtimeexception.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/pages/c/x/platform/root/common/error/exception.jsp</location>
+	</error-page>
+	<!-- -->
+	<!-- 异常页面 -->
+</web-app>
+	

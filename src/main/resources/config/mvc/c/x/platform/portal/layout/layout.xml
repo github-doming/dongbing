@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!---->
+	<action name="IndexAction" url="/index.do">
+		c.x.platform.portal.layout.index.action.IndexAction
+		<result name="index" type="forward">
+		/pages/c/x/platform/portal/layout/index/index.jsp
+		</result>
+	</action>
+</root>

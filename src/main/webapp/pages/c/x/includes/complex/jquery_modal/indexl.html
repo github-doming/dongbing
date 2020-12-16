@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+
+<meta http-equiv="Content-Language" content="zh-cn"></meta>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+  <meta charset="utf-8">
+  <title>jQuery UI Dialog - Modal form</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+  <script src="jquery.modal.js"></script>
+  <script>
+  //随时随处的登录弹窗
+	$.fn.extend({ leanModal: function (options) { 
+			var defaults = { top: 100, overlay: 0.5, closeButton: null }; 
+			var overlay = $("<div id='login_overlay'></div>"); 
+			
+			$("body").append(overlay); 
+			options = $.extend(defaults, options); 
+			var o = options;
+			return this.each(function () { 
+			   
+				var modal_id = $(this).attr("title"); 
+				 
+					$("#login_overlay").click(function () { close_modal(modal_id) }); 
+					$(o.closeButton).click(function () { close_modal(modal_id) });
+					var modal_height = $(modal_id).outerHeight();
+					var modal_width = $(modal_id).outerWidth();
+					$("#login_overlay").css({ "display": "block", opacity: 0 }); 
+					$("#login_overlay").fadeTo(200, o.overlay); 
+					$(modal_id).css({ "display": "block", "position": "fixed", "opacity": 0, "z-index": 11000, "left": 50 + "%", "margin-left": -(modal_width / 2) + "px", "top": o.top + "px" }); 
+					$(modal_id).fadeTo(200, 1); 
+					//e.preventDefault()
+				
+			});
+			function close_modal(modal_id) { $("#login_overlay").fadeOut(200); $(modal_id).css({ "display": "none" }) }
+		}
+    });
+
+function toLogin(othis){
+	$(othis).leanModal({ top: 100,  closeButton: ".login_modal_close" });
+}
+
+		
+
+
+  </script>
+</head>
+<body>
+
+
+<div class="headInvestButton">
+	<span> <a href="javascript:void(0);" onclick='toLogin(this)'
+		title='#login_modal'>aaaaaaaaaaaaaaaa</a>
+	</span> <span> <a href="javascript:void(0);" onclick='toLogin(this)'
+		title='#login_modal'>bbbbbbbbbbbbbbbbbbbbbbbbb</a>
+	</span>
+</div>
+
+<div id='login_modal'>	 
+aaaaaaaaaaaaaaaa
+
+</div>
+ 
+
+
+ <input type="button" onclick="p();" value="点我"></input>
+</body>
+</html>  
+
+
+<script>
+
+function p(){
+
+alert("p");
+
+}
+
+</script>

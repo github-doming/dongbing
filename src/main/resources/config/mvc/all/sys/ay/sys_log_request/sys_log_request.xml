@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--保存save -->
+	<action name="SysRequestTAction" url="/all/sys/sys_request/save.do">
+		all.sys.ay.sys_log_request.action.SysLogRequestTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/sys_log_request/t/list/bootstrap.do
+		</result>
+	</action>
+</root>

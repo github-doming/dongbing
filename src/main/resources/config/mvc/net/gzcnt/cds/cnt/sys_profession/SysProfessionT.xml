@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--Json -->
+	<action name="SysProfessionTAction"
+		url="/cnt/sys_profession/t/listJson.do">
+		net.gzcnt.cds.cnt.sys_profession.t.action.SysProfessionTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="SysProfessionTAction"
+		url="/cnt/sys_profession/t/list.do">
+		net.gzcnt.cds.cnt.sys_profession.t.action.SysProfessionTListAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_profession/t/SysProfessionTListBootstrap.jsp
+		</result>
+		
+		<result name="Miniui" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_profession/t/SysProfessionTListMiniui.jsp
+		</result>
+		
+		<result name="DefaultObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_profession/t/SysProfessionTList.jsp
+		</result>
+		
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_profession/t/SysProfessionTListBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_profession/t/SysProfessionTListBootstrap.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_profession/t/SysProfessionTListKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_profession/t/SysProfessionTListKaida.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysProfessionTAction"
+		url="/cnt/sys_profession/t/form.do">
+		net.gzcnt.cds.cnt.sys_profession.t.action.SysProfessionTFormAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_profession/t/SysProfessionTFormBootstrap.jsp
+		</result>
+		<result name="DefaultObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_profession/t/SysProfessionTForm.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_profession/t/SysProfessionTFormMiniui.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_profession/t/SysProfessionTFormBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_profession/t/SysProfessionTFormBootstrap.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_profession/t/SysProfessionTFormKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_profession/t/SysProfessionTFormKaida.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysProfessionTAction"
+		url="/cnt/sys_profession/t/save.do">
+		net.gzcnt.cds.cnt.sys_profession.t.action.SysProfessionTSaveAction
+		<result name="Default" type="forward">
+			/cnt/sys_profession/t/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="SysProfessionTAction"
+		url="/cnt/sys_profession/t/del.do">
+		net.gzcnt.cds.cnt.sys_profession.t.action.SysProfessionTDelAction
+		<result name="Default" type="forward">
+			/cnt/sys_profession/t/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="SysProfessionTAction"
+		url="/cnt/sys_profession/t/del_all.do">
+		net.gzcnt.cds.cnt.sys_profession.t.action.SysProfessionTDelAllAction
+		<result name="Default" type="forward">
+			/cnt/sys_profession/t/list.do
+		</result>
+	</action>
+	<!--请求选择上一级parent -->
+	<action name="SysProfessionTAction"
+		url="/cnt/sys_profession/t/parent.do">
+		net.gzcnt.cds.cnt.sys_profession.t.action.SysProfessionTParentAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_profession/t/SysProfessionTParentBootstrap.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_profession/t/SysProfessionTParentBootstrap.jsp
+		</result>
+	</action>
+	<!--选择上一级select -->
+	<action name="SysProfessionTAction"
+		url="/cnt/sys_profession/t/select.do">
+		net.gzcnt.cds.cnt.sys_profession.t.action.SysProfessionTSelectAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_profession/t/SysProfessionTSelect.jsp
+		</result>
+	</action>
+</root>

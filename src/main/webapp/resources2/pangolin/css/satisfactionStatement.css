@@ -1,0 +1,40 @@
+*{margin: 0;padding: 0;font-family: "Microsoft Yahei";}
+.time-selection{
+	width: 100%;
+	height: 60px;
+	padding: 10px 0;
+	font-size: 16px;
+}
+.time-selection span{
+	float: left;
+	padding: 0 10px 0 20px;
+	line-height: 34px;
+}
+.time-selection select{
+	float: left;
+	width: 150px;
+	margin-right: 20px;
+}
+.row{
+	margin: 0;
+	overflow: hidden;
+}
+.col-sm-4{
+	margin-bottom: 10px;
+}
+.col-sm-4 p{
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	color: #fff;
+	background-color: #428bca;
+	font-size: 16px;
+	padding-left: 15px;
+	margin-bottom: 0;
+	border-radius: 4px 4px 0 0;
+}
+.main{
+	width: 100%;
+	border: 1px solid #428bca;
+	border-radius: 0 0 4px 4px;
+}

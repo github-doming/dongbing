@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="SysTempFieldAction"
+		url="/cnt/sys_temp_field/listJson.do">
+		net.gzcnt.cds.cnt.cnt_report.sys_temp_field.action.SysTempFieldListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="SysTempFieldAction"
+		url="/cnt/sys_temp_field/list/easyui.do">
+		net.gzcnt.cds.cnt.cnt_report.sys_temp_field.action.SysTempFieldListAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_temp_field/SysTempFieldListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="SysTempFieldAction"
+		url="/cnt/sys_temp_field/list/bootstrap.do">
+		net.gzcnt.cds.cnt.cnt_report.sys_temp_field.action.SysTempFieldListAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_temp_field/SysTempFieldListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="SysTempFieldAction"
+		url="/cnt/sys_temp_field/form/bootstrap.do">
+		net.gzcnt.cds.cnt.cnt_report.sys_temp_field.action.SysTempFieldFormAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_temp_field/SysTempFieldFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="SysTempFieldAction"
+		url="/cnt/sys_temp_field/save/bootstrap.do">
+		net.gzcnt.cds.cnt.cnt_report.sys_temp_field.action.SysTempFieldSaveAction
+		<result name="Default" type="forward">
+			/cnt/sys_temp_field/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysTempFieldAction"
+		url="/cnt/sys_temp_field/saveJson.do">
+		net.gzcnt.cds.cnt.cnt_report.sys_temp_field.action.SysTempFieldSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="SysTempFieldAction"
+		url="/cnt/sys_temp_field/del/bootstrap.do">
+		net.gzcnt.cds.cnt.cnt_report.sys_temp_field.action.SysTempFieldDelAction
+		<result name="Default" type="forward">
+			/cnt/sys_temp_field/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysTempFieldAction"
+		url="/cnt/sys_temp_field/delJson.do">
+		net.gzcnt.cds.cnt.cnt_report.sys_temp_field.action.SysTempFieldDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="SysTempFieldAction"
+		url="/cnt/sys_temp_field/del_all/bootstrap.do">
+		net.gzcnt.cds.cnt.cnt_report.sys_temp_field.action.SysTempFieldDelAllAction
+		<result name="Default" type="forward">
+			/cnt/sys_temp_field/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysTempFieldAction"
+		url="/cnt/sys_temp_field/delAllJson.do">
+		net.gzcnt.cds.cnt.cnt_report.sys_temp_field.action.SysTempFieldDelAllJsonAction
+		
+	</action>
+</root>

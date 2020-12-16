@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="WxPMtArticleTAction"
+		url="/all/gen/wx_p_mt_article/t/listJson.do">
+		all.gen.wx_p_mt_article.t.action.WxPMtArticleTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="WxPMtArticleTAction"
+		url="/all/gen/wx_p_mt_article/t/list/easyui.do">
+		all.gen.wx_p_mt_article.t.action.WxPMtArticleTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_mt_article/t/WxPMtArticleTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="WxPMtArticleTAction"
+		url="/all/gen/wx_p_mt_article/t/list/bootstrap.do">
+		all.gen.wx_p_mt_article.t.action.WxPMtArticleTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_mt_article/t/WxPMtArticleTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="WxPMtArticleTAction"
+		url="/all/gen/wx_p_mt_article/t/form/bootstrap.do">
+		all.gen.wx_p_mt_article.t.action.WxPMtArticleTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_mt_article/t/WxPMtArticleTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="WxPMtArticleTAction"
+		url="/all/gen/wx_p_mt_article/t/save/bootstrap.do">
+		all.gen.wx_p_mt_article.t.action.WxPMtArticleTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_mt_article/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPMtArticleTAction"
+		url="/all/gen/wx_p_mt_article/t/saveJson.do">
+		all.gen.wx_p_mt_article.t.action.WxPMtArticleTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="WxPMtArticleTAction"
+		url="/all/gen/wx_p_mt_article/t/del/bootstrap.do">
+		all.gen.wx_p_mt_article.t.action.WxPMtArticleTDelAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_mt_article/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPMtArticleTAction"
+		url="/all/gen/wx_p_mt_article/t/delJson.do">
+		all.gen.wx_p_mt_article.t.action.WxPMtArticleTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="WxPMtArticleTAction"
+		url="/all/gen/wx_p_mt_article/t/del_all/bootstrap.do">
+		all.gen.wx_p_mt_article.t.action.WxPMtArticleTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_mt_article/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPMtArticleTAction"
+		url="/all/gen/wx_p_mt_article/t/delAllJson.do">
+		all.gen.wx_p_mt_article.t.action.WxPMtArticleTDelAllJsonAction
+		
+	</action>
+</root>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+   <!-- 后台查看盘口 -->
+	<action name="IbmHandicapWAction" url="/ibm/admin/ibm_handicap/w/list.do">
+		com.ibm.old.v1.admin.ibm_handicap.w.action.IbmHandicapListAction
+		<result name="Default" type="forward">
+			/pages/com/ibm/admin/ibm_handicap/IbmHandicapWList.jsp
+		</result>
+	</action>
+
+   <!-- 跳转新增/编辑 -->
+	<action name="IbmHandicapWAction" url="/ibm/admin/ibm_handicap/w/form.do">
+		com.ibm.old.v1.admin.ibm_handicap.w.action.IbmHandicapFormAction
+		<result name="Default" type="forward">
+			/pages/com/ibm/admin/ibm_handicap/IbmHandicapWForm.jsp
+		</result>
+	</action>
+
+   <!-- 删除盘口 -->
+	<action name="IbmHandicapWAction" url="/ibm/admin/ibm_handicap/w/del.do">
+		com.ibm.old.v1.admin.ibm_handicap.w.action.IbmHandicapDelAction
+		<result name="Default" type="forward">
+			/ibm/admin/ibm_handicap/w/list.do
+		</result>
+	</action>
+
+   <!-- 删除选中盘口 -->
+	<action name="IbmHandicapWAction" url="/ibm/admin/ibm_handicap/w/delAll.do">
+		com.ibm.old.v1.admin.ibm_handicap.w.action.IbmHandicapDelAllAction
+		<result name="Default" type="forward">
+			/ibm/admin/ibm_handicap/w/list.do
+		</result>
+	</action>
+	
+	
+   <!-- 保存盘口 -->
+	<action name="IbmHandicapWAction" url="/ibm/admin/ibm_handicap/w/save.do">
+		com.ibm.old.v1.admin.ibm_handicap.w.action.IbmHandicapSaveAction
+		<result name="Default" type="forward">
+			/ibm/admin/ibm_handicap/w/list.do
+		</result>
+	</action>
+	
+	<!-- 查看所有盘口 -->
+	<action name="IbmHandicapWListJsonAction" url="/ibm/admin/ibm_handicap/w/listJson.do">
+		com.ibm.old.v1.admin.ibm_handicap.w.action.IbmHandicapListJsonAction
+	</action>
+	
+</root>

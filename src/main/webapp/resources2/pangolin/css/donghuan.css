@@ -1,0 +1,169 @@
+body{
+	background-color:#fff;
+}
+.panel{
+	margin-bottom:0;
+}
+.panel-heading{
+	overflow:hidden;
+}
+.panel-heading .col-sm-1{
+    line-height: 35px;
+}
+.form-control{
+	height:35px;
+	padding:6px;
+}
+.panel-body{
+	background-color:#fff;
+}
+.panel-body-row{
+	width:100%;
+	overflow:hidden;
+}
+.panel-body-left{
+	width:25%;
+	float:left;
+	min-height:1px;
+}
+.panel-body-right{
+	width:75%;
+	float:left;
+	padding-left: 20px;
+	border-left:1px solid #e5e5e5;
+}
+.content1{
+	margin-bottom:20px;
+}
+.chartContent{
+	overflow:hidden;
+}
+.content2{
+	width:25%;
+	float:left;
+	height:200px;
+}
+#tu1,#tu2,#tu3,#tu4{
+	width:100%;
+  	height:100%;
+}
+.chartText{
+	padding-left:10%;
+}
+/* shebeishiyong */
+.history{
+	margin-right:20px;
+}
+.leftText li{
+	margin-bottom:10px;
+}
+.leftChart{
+	margin-top:20px;
+	text-align: center;
+}
+.rate{
+	width:100%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.rightPadding{
+	padding-top:40px;
+	padding-bottom:20px;
+}
+.progress{
+	height: 30px;
+	margin-bottom:10px;
+}
+.textDescription{
+	margin-bottom:40px;
+}
+.textDescription span{
+	margin-right:100px;
+}
+.minHeight{
+	min-height:260px;
+}
+.cpName, .cp, .surplus{
+	width: 200px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.progress .progress-bar{
+	line-height:30px;
+	border-radius: 4px;
+}
+.xline{
+	width:100%;
+	height:1px;
+	background-color:#e5e5e5;
+}
+.giveAnAlarm{
+    position: fixed;
+    top: 15%;
+    left: 35%;
+    background-color:#333;
+    width:30%;
+    height:auto;
+    display:none;
+    color:#fff;
+    z-index:99;
+    font-size:16px;
+    padding:20px;
+    }
+.giveAnAlarm ul{
+  list-style:none;
+  width:100%;
+}
+.giveAnAlarm ul li{
+	margin-bottom:10px;
+}
+#img{
+  height:auto;
+  padding-left:40%;
+} 
+/* lishishuju */
+.time{
+	width:100px;
+	cursor: pointer;
+	float:left;
+	margin:0 10px;
+}
+.text{
+	float:left;
+	line-height:35px;
+}
+.panel-body-top{
+	width:100%;
+	height:220px;
+	border-bottom:1px solid #e5e5e5;
+	padding-bottom:20px;
+}
+.content3{
+	width:100%;
+	height:100%;
+}
+#tuone,#tutwo,#tuthree,#tufour{height:100%;}
+.panel-body-bottom{
+	width:100%;
+	height:220px;
+	padding-top:20px;
+}
+.content4{
+	width:50%;
+	height:100%;
+	float:left;
+	padding-top:20px;
+}
+.leftBorder{
+	border-left:1px solid #e5e5e5;
+	padding-left:20px;
+}
+
+.panel{
+    -moz-box-shadow: 0 3px 0 rgba(12,12,12,0);
+    -webkit-box-shadow: 0 3px 0 rgba(12,12,12,0);
+    box-shadow: 0 3px 0 rgba(12,12,12,0);
+}

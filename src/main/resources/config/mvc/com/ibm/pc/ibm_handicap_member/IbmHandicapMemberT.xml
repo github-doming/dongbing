@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+
+    <!-- 盘口会员登录 -->
+	<action name="IbmHandicapMemberLogin" url="/ibm/pc/ibm_handicap_member/ibmHandicapMemberLogin.do">
+		com.ibm.old.v1.pc.ibm_handicap_member.t.action.IbmHandicapMemberLoginAction
+	</action>
+	
+	 <!-- 盘口会员退出登录 -->
+	<action name="IbmHandicapMemberLogoutAction" url="/ibm/pc/ibm_handicap_member/ibmHandicapMemberLogout.do">
+		com.ibm.old.v1.pc.ibm_handicap_member.t.action.IbmHandicapMemberLogoutAction
+	</action>
+	
+	 <!-- 盘口会员获取所有账号 -->
+	<action name="IbmHmAllAccountAction" url="/ibm/pc/ibm_handicap_member/allAccount.do">
+		com.ibm.old.v1.pc.ibm_handicap_member.t.action.IbmHmAllAccountAction
+	</action>
+
+	 <!-- 刷新盘口会员获取所有账号 -->
+	<!--<action name="RefreshMemberInfoAction" url="/ibm/pc/ibm_handicap_member/refreshMemberInfo.do">-->
+		<!--com.ibm.old.v1.pc.ibm_handicap_member.t.action.RefreshMemberInfoAction-->
+	<!--</action>-->
+
+</root>

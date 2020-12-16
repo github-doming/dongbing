@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<action name="SysDictTAction" url="/all/sys_admin/sys/dict/sys_dict/list_by_code.do">
+		all.sys_admin.sys.dict.sys_dict.common.action.SysDictTListByCodeAction
+	</action>
+	<!--列表Json -->
+	<action name="SysDictTAction" url="/all/sys_admin/sys/dict/sys_dict/listJson.do">
+		all.sys_admin.sys.dict.sys_dict.action.SysDictTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="SysDictTAction"
+		url="/all/sys_admin/sys/dict/sys_dict/list/bootstrap.do">
+		all.sys_admin.sys.dict.sys_dict.action.SysDictTListAction
+		<result name="Default" type="forward">
+			/pages/all/sys_admin/sys/dict/sys_dict/SysDictTListBootstrap.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysDictTAction"
+		url="/all/sys_admin/sys/dict/sys_dict/form/bootstrap.do">
+		all.sys_admin.sys.dict.sys_dict.action.SysDictTFormAction
+		<result name="Default" type="forward">
+			/pages/all/sys_admin/sys/dict/sys_dict/SysDictTFormBootstrap.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysDictTAction"
+		url="/all/sys_admin/sys/dict/sys_dict/save/bootstrap.do">
+		all.sys_admin.sys.dict.sys_dict.action.SysDictTSaveAction
+		<result name="Default" type="forward">
+			/all/sys_admin/sys/dict/sys_dict/list/bootstrap.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="SysDictTAction" url="/all/sys_admin/sys/dict/sys_dict/del/bootstrap.do">
+		all.sys_admin.sys.dict.sys_dict.action.SysDictTDelAction
+		<result name="Default" type="forward">
+			/all/sys_admin/sys/dict/sys_dict/list/bootstrap.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="SysDictTAction"
+		url="/all/sys_admin/sys/dict/sys_dict/del_all/bootstrap.do">
+		all.sys_admin.sys.dict.sys_dict.action.SysDictTDelAllAction
+		<result name="Default" type="forward">
+			/all/sys_admin/sys/dict/sys_dict/list/bootstrap.do
+		</result>
+	</action>
+</root>

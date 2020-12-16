@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--monitor -->
+	<action name="SysMonitorTAction" url="/c/a/monitor/gc.do">
+		c.a.monitor.MonitorGcAction
+		<result name="Default" type="forward">
+			/c/a/monitor/index.do
+		</result>
+	</action>
+	<action name="SysMonitorTAction" url="/c/a/monitor/index.do">
+		c.a.monitor.MonitorIndexAction
+		<result name="Default" type="forward">
+			/pages/c/a/monitor/monitor.jsp
+		</result>
+	</action>
+	<action name="SysMonitorTAction" url="/c/a/monitor/thread.do">
+		c.a.monitor.thread.MonitorThreadAction
+		<result name="Default" type="forward">
+			/pages/c/a/monitor/thread.jsp
+		</result>
+	</action>
+	<action name="SysMonitorTAction" url="/c/a/monitor/thread/save.do">
+		c.a.monitor.thread.MonitorThreadSaveAction
+		<result name="Default" type="forward">
+			/pages/c/a/monitor/thread.jsp
+		</result>
+	</action>
+	<action name="SysMonitorTAction" url="/c/a/monitor/thread/stop.do">
+		c.a.monitor.thread.MonitorThreadStopAction
+		<result name="Default" type="forward">
+			/pages/c/a/monitor/thread.jsp
+		</result>
+	</action>
+</root>

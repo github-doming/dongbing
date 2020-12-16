@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="CntDimensionVerTAction"
+		url="/cnt/cnt_dimension_ver/t/listJson.do">
+		net.gzcnt.cds.cnt.cnt_dimension_ver.t.action.CntDimensionVerTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="CntDimensionVerTAction"
+		url="/cnt/cnt_dimension_ver/t/list/easyui.do">
+		net.gzcnt.cds.cnt.cnt_dimension_ver.t.action.CntDimensionVerTListAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension_ver/t/CntDimensionVerTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="CntDimensionVerTAction"
+		url="/cnt/cnt_dimension_ver/t/list.do">
+		net.gzcnt.cds.cnt.cnt_dimension_ver.t.action.CntDimensionVerTListAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension_ver/t/CntDimensionVerTListBootstrap.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension_ver/t/CntDimensionVerTListMiniui.jsp
+		</result>
+
+		<result name="DefaultObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension_ver/t/CntDimensionVerTListObject.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension_ver/t/CntDimensionVerTListBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension_ver/t/CntDimensionVerTListBootstrapObject.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension_ver/t/CntDimensionVerTListKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension_ver/t/CntDimensionVerTListKaidaObject.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="CntDimensionVerTAction"
+		url="/cnt/cnt_dimension_ver/t/form.do">
+		net.gzcnt.cds.cnt.cnt_dimension_ver.t.action.CntDimensionVerTFormAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension_ver/t/CntDimensionVerTFormBootstrap.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension_ver/t/CntDimensionVerTFormMiniui.jsp
+		</result>
+
+		<result name="DefaultObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension_ver/t/CntDimensionVerTForm.jsp
+		</result>
+
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension_ver/t/CntDimensionVerTFormBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension_ver/t/CntDimensionVerTFormBootstrap.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension_ver/t/CntDimensionVerTFormKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension_ver/t/CntDimensionVerTFormKaida.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="CntDimensionVerTAction"
+		url="/cnt/cnt_dimension_ver/t/save.do">
+		net.gzcnt.cds.cnt.cnt_dimension_ver.t.action.CntDimensionVerTSaveAction
+		<result name="Default" type="forward">
+			/cnt/cnt_dimension_ver/t/list.do
+		</result>
+	</action>
+	<action name="CntDimensionVerTAction"
+		url="/cnt/cnt_dimension_ver/t/saveJson.do">
+		net.gzcnt.cds.cnt.cnt_dimension_ver.t.action.CntDimensionVerTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="CntDimensionVerTAction"
+		url="/cnt/cnt_dimension_ver/t/del.do">
+		net.gzcnt.cds.cnt.cnt_dimension_ver.t.action.CntDimensionVerTDelAction
+		<result name="Default" type="forward">
+			/cnt/cnt_dimension_ver/t/list.do
+		</result>
+	</action>
+	<action name="CntDimensionVerTAction"
+		url="/cnt/cnt_dimension_ver/t/delJson.do">
+		net.gzcnt.cds.cnt.cnt_dimension_ver.t.action.CntDimensionVerTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="CntDimensionVerTAction"
+		url="/cnt/cnt_dimension_ver/t/del_all.do">
+		net.gzcnt.cds.cnt.cnt_dimension_ver.t.action.CntDimensionVerTDelAllAction
+		<result name="Default" type="forward">
+			/cnt/cnt_dimension_ver/t/list.do
+		</result>
+	</action>
+	<action name="CntDimensionVerTAction"
+		url="/cnt/cnt_dimension_ver/t/delAllJson.do">
+		net.gzcnt.cds.cnt.cnt_dimension_ver.t.action.CntDimensionVerTDelAllJsonAction
+		<result name="Default" type="forward">
+			/cnt/cnt_dimension_ver/t/list.do
+		</result>
+	</action>
+</root>

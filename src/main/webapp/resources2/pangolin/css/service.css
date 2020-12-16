@@ -1,0 +1,106 @@
+.btn-list{
+	margin: 5px 10px;
+	padding: 0;
+	overflow: hidden;
+}
+.btn-list li{
+	width: 25%;
+	height: 80px;
+	float: left;
+	padding: 0 10px;
+}
+.btn-list li a{
+	width: 100%;
+	min-width: 225px;
+	height: 100%;
+	display: block;
+	background-color: #8191a1;
+	overflow: hidden;
+}
+.btn-list li .btn-bg03{
+	background-color: #42ae56;
+}
+.btn-list li .btn-bg04{
+	background-color: #e94c4c;
+}
+.btn-list li .btn-bg05{
+	background-color: #9797d7;
+}
+.icons{
+	width: 60px;
+	height: 80px;
+	display: block;
+	float: left;
+	margin: 0 10px;
+}
+.icons-01{
+	background: url(../images/icons.png) no-repeat left 10px;
+}
+.icons-02{
+	background: url(../images/icons.png) no-repeat left 10px;
+}
+.icons-03{
+	background: url(../images/icons.png) no-repeat -65px 10px;
+}
+.icons-04{
+	background: url(../images/icons.png) no-repeat -130px 10px;
+}
+.icons-05{
+	background: url(../images/icons.png) no-repeat -195px 10px;
+}
+.icons-06{
+	background: url(../images/icons.png) no-repeat -260px 10px;
+}
+.text{
+	float: left;
+	color: #fff;
+	font-size: 18px;
+	height: 80px;
+	padding: 20px 0;
+}
+.text p{
+	margin-bottom: 0;
+}
+.text p:last-child{
+	font-size: 16px;
+}
+.num{
+	height: 80px;
+	line-height: 80px;
+	font-size: 36px;
+	color: #fff;
+	padding-right: 10px;
+	float: right;
+}
+/*-----下面内容区样式-----*/
+.bottom-content{
+	position:relative;
+	width: 100%;
+	overflow: hidden;
+	padding: 0 20px;
+}
+.chart{
+	width: 75%;
+	float: left;
+	margin-right:10px;
+}
+.chart-top{
+	width: 100%;
+	min-height: 200px;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+}
+.chart-bottom{
+	width: 100%;
+	min-height: 300px;
+	border: 1px solid #ccc;
+}
+.message-bar{
+	position:absolute;
+	right:20px;
+	bottom:0px;
+	width: 25%;
+	float: left;
+	border: 1px solid #ccc;
+	height: 100%;
+}

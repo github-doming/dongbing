@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <config>
+        <virtualHost>cloud</virtualHost>
+        <ip>mq.tzxyz.xyz</ip>
+        <port>5672</port>
+        <userName>cloud</userName>
+        <password>cloud!</password>
+        <exchangeFormat>topic_cloud_%s</exchangeFormat>
+        <clientFormat>client.%s_%s</clientFormat>
+    </config>
+
+
+    <exchange id="lottery" type="TOPIC">
+        <client class="com.ibm.follow.servlet.server.core.mq.LotteryPk10Listener">
+            <routing key="cloud.lottery.pk10"/>
+        </client>
+        <client class="com.ibm.follow.servlet.server.core.mq.LotteryXyftListener">
+            <routing key="cloud.lottery.xyft"/>
+        </client>
+        <client class="com.ibm.follow.servlet.server.core.mq.LotteryCqsscListener">
+            <routing key="cloud.lottery.cqssc"/>
+        </client>
+        <client class="com.ibm.follow.servlet.server.core.mq.LotteryJs10Listener">
+            <routing key="cloud.lottery.js10"/>
+        </client>
+        <client class="com.ibm.follow.servlet.server.core.mq.LotteryJssscListener">
+            <routing key="cloud.lottery.jsssc"/>
+        </client>
+        <client class="com.ibm.follow.servlet.server.core.mq.LotteryXyncListener">
+            <routing key="cloud.lottery.xync"/>
+        </client>
+        <client class="com.ibm.follow.servlet.server.core.mq.LotteryGdklcListener">
+            <routing key="cloud.lottery.gdklc"/>
+        </client>
+        <client class="com.ibm.follow.servlet.server.core.mq.LotterySelf102Listener">
+            <routing key="cloud.lottery.self102"/>
+        </client>
+        <client class="com.ibm.follow.servlet.server.core.mq.LotterySelf105Listener">
+            <routing key="cloud.lottery.self105"/>
+        </client>
+        <client class="com.ibm.follow.servlet.server.core.mq.LotterySelfSsc5Listener">
+            <routing key="cloud.lottery.selfSsc5"/>
+        </client>
+        <client class="com.ibm.follow.servlet.server.core.mq.LotteryCountry10Listener">
+            <routing key="cloud.lottery.country10"/>
+        </client>
+        <client class="com.ibm.follow.servlet.server.core.mq.LotteryCountrySscListener">
+            <routing key="cloud.lottery.countrySsc"/>
+        </client>
+
+    </exchange>
+
+
+    <!--测试-->
+    <exchange id="test" type="TOPIC">
+        <client class="com.ibm.old.v1.common.doming.test.MqTestListener">
+            <routing desc="test.%s"/>
+        </client>
+    </exchange>
+
+</root>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--index -->
+	<action name="TmsTaskTAction"
+		url="/all/gen/tms_task/t/index/easyui.do">
+		all.gen.tms_task.t.action.TmsTaskTIndexAction
+		
+		<result name="Default" type="forward">
+			/pages/all/gen/tms_task/t/TmsTaskTListEasyui.jsp
+		</result>
+		
+	</action>
+	<!--列表Json -->
+	<action name="TmsTaskTAction"
+		url="/all/gen/tms_task/t/listJson.do">
+		all.gen.tms_task.t.action.TmsTaskTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="TmsTaskTAction"
+		url="/all/gen/tms_task/t/list/bootstrap.do">
+		all.gen.tms_task.t.action.TmsTaskTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/tms_task/t/TmsTaskTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="TmsTaskTAction"
+		url="/all/gen/tms_task/t/form/bootstrap.do">
+		all.gen.tms_task.t.action.TmsTaskTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/tms_task/t/TmsTaskTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="TmsTaskTAction"
+		url="/all/gen/tms_task/t/save/bootstrap.do">
+		all.gen.tms_task.t.action.TmsTaskTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/tms_task/t/list/bootstrap.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="TmsTaskTAction"
+		url="/all/gen/tms_task/t/del/bootstrap.do">
+		all.gen.tms_task.t.action.TmsTaskTDelAction
+		<result name="Default" type="forward">
+			/all/gen/tms_task/t/list/bootstrap.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="TmsTaskTAction"
+		url="/all/gen/tms_task/t/del_all/bootstrap.do">
+		all.gen.tms_task.t.action.TmsTaskTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/tms_task/t/list/bootstrap.do
+		</result>
+	</action>
+	<!--请求选择上一级parent -->
+	<action name="TmsTaskTAction"
+		url="/all/gen/tms_task/t/parent/bootstrap.do">
+		all.gen.tms_task.t.action.TmsTaskTParentAction
+		<result name="Default" type="forward">
+			/pages/all/gen/tms_task/t/TmsTaskTParentBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--选择上一级select -->
+	<action name="TmsTaskTAction"
+		url="/all/gen/tms_task/t/select.do">
+		all.gen.tms_task.t.action.TmsTaskTSelectAction
+		<result name="Default" type="forward">
+			/pages/all/gen/tms_task/t/TmsTaskTSelect.jsp
+		</result>
+	</action>
+</root>

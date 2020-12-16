@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--index -->
+	<action name="TmsFunctionTAction"
+		url="/all/task/tms/tms_function/t/index/easyui.do">
+		all.task.tms.tms_function.t.action.TmsFunctionTIndexAction
+		
+		<result name="Default" type="forward">
+			/pages/all/task/tms/tms_function/t/TmsFunctionTListEasyui.jsp
+		</result>
+		
+	</action>
+	<!--列表Json -->
+	<action name="TmsFunctionTAction"
+		url="/all/task/tms/tms_function/t/listJson.do">
+		all.task.tms.tms_function.t.action.TmsFunctionTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="TmsFunctionTAction"
+		url="/all/task/tms/tms_function/t/list/bootstrap.do">
+		all.task.tms.tms_function.t.action.TmsFunctionTListAction
+		<result name="Default" type="forward">
+			/pages/all/task/tms/tms_function/t/TmsFunctionTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="TmsFunctionTAction"
+		url="/all/task/tms/tms_function/t/form/bootstrap.do">
+		all.task.tms.tms_function.t.action.TmsFunctionTFormAction
+		<result name="Default" type="forward">
+			/pages/all/task/tms/tms_function/t/TmsFunctionTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="TmsFunctionTAction"
+		url="/all/task/tms/tms_function/t/save/bootstrap.do">
+		all.task.tms.tms_function.t.action.TmsFunctionTSaveAction
+		<result name="Default" type="forward">
+			/all/task/tms/tms_function/t/list/bootstrap.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="TmsFunctionTAction"
+		url="/all/task/tms/tms_function/t/del/bootstrap.do">
+		all.task.tms.tms_function.t.action.TmsFunctionTDelAction
+		<result name="Default" type="forward">
+			/all/task/tms/tms_function/t/list/bootstrap.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="TmsFunctionTAction"
+		url="/all/task/tms/tms_function/t/del_all/bootstrap.do">
+		all.task.tms.tms_function.t.action.TmsFunctionTDelAllAction
+		<result name="Default" type="forward">
+			/all/task/tms/tms_function/t/list/bootstrap.do
+		</result>
+	</action>
+	<!--请求选择上一级parent -->
+	<action name="TmsFunctionTAction"
+		url="/all/task/tms/tms_function/t/parent/bootstrap.do">
+		all.task.tms.tms_function.t.action.TmsFunctionTParentAction
+		<result name="Default" type="forward">
+			/pages/all/task/tms/tms_function/t/TmsFunctionTParentBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--选择上一级select -->
+	<action name="TmsFunctionTAction"
+		url="/all/task/tms/tms_function/t/select.do">
+		all.task.tms.tms_function.t.action.TmsFunctionTSelectAction
+		<result name="Default" type="forward">
+			/pages/all/task/tms/tms_function/t/TmsFunctionTSelect.jsp
+		</result>
+	</action>
+</root>

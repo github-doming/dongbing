@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--e2 -->
+	<action name="WxPArticleTGenAction"
+		url="/cosmos/weixin/pub/archit/common/e2/request_oauth.do">
+		cosmos.weixin.pub.archit.common.e2.WxPubRequestOauthAction
+	</action>
+	<action name="WxPArticleTGenAction"
+		url="/cosmos/weixin/pub/archit/common/e2/get_oauth.do">
+		cosmos.weixin.pub.archit.common.e2.WxPubGetOauthAction
+	</action>
+	<!--e1 -->
+	<action name="WxPArticleTGenAction" url="/cosmos/weixin/pub/archit/common/e1/index.do">
+		cosmos.weixin.pub.archit.common.e1.WxPubIndexAction
+	</action>
+	<action name="WxPArticleTGenAction" url="/cosmos/weixin/pub/archit/common/accept.do">
+		cosmos.weixin.pub.archit.common.callback.WxPubAcceptAction
+	</action>
+	<action name="WxPArticleTGenAction"
+		url="/cosmos/weixin/pub/archit/common/e1/request_oauth.do">
+		cosmos.weixin.pub.archit.common.e1.WxPubRequestOauthAction
+	</action>
+	<action name="WxPArticleTGenAction"
+		url="/cosmos/weixin/pub/archit/common/e1/get_oauth.do">
+		cosmos.weixin.pub.archit.common.e1.WxPubGetOauthAction
+	</action>
+	<action name="WxPArticleTGenAction"
+		url="/cosmos/weixin/pub/archit/common/e1/loginNot.do">
+		cosmos.weixin.pub.archit.common.e1.WxPubLoginNotAction
+	</action>
+	<action name="weixinAction" url="/cosmos/weixin/pub/archit/mo/query.do">
+		cosmos.weixin.pub.archit.action.mo.WxPublicAction_query_bussiness
+		<result name="Default" type="forward">
+			/pages/example/cosmos/weixin/pub/e1/index.jsp
+		</result>
+	</action>
+</root>

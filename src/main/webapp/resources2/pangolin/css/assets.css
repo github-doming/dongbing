@@ -1,0 +1,39 @@
+.select {  min-height:1px; margin:10px 1%; width:98%; }
+.select_top {  height:40px; width:100%; border-bottom:2px solid #e4e7ea; }
+.select_bottom { background:#d7e5f2; height:35px; width:100%; line-height:35px;}
+.select_bottom a {background:#93c3f4 left 0;height:25px;line-height:25px;margin-right:10px;padding:3px 10px;}
+.select_bottom a:hover{text-decoration:none;color:#fff;}
+.select_bottom a span{background:#93c3f4 right 0; }
+.noradius{border-radius:0px;}
+.rel { position:relative; }
+.abs { position:absolute; right:0; top:0; }
+.sansan{width:33%;float:left;}
+.two{width:50%;float:left;}
+.table1 ,.table2{width:100%;}
+.table1 {height:35px;line-height:35px;}
+.table1 thead{border-bottom:2px solid #e4e7ea;}
+.table1 tbody{background-color:#fcfcfc;}
+.table th{font-family: "Microsoft YaHei";}
+.table2 tr{height:30px;line-height:30px;background-color:#fcfcfc;border-bottom:1px solid #e4e7ea;}
+.table2 td{font-size:14px;text-align:center;}
+.table2 td img{vertical-align:middle;cursor:pointer;}
+.select_table{width:100%;height:310px;}
+.message{float:right;}
+.message ul{float:left;height:100%;}
+.message ul li{float:left;margin-right:15px;}
+.select_top { position:relative; }
+.select_add{background-color:#428bca;border-radius:0px;border:0px;}
+.select_add:hover{background-color:#3c82be;}
+.shoushi{cursor:pointer;}
+.select_search { width:180px; height:30px; background:#fff; float:right; border:1px solid #4b98dc;position:relative;margin-right:30px;}
+.select_search input { line-height:30px; height:28px; width:150px; border:0px; padding-left:3px;}
+.operation_search{display:none;}
+.search_icon { position:absolute; right:7px; top:7px; cursor:pointer; }
+.lock3{display:none;position:fixed;top:0;left:0;background:rgba(80,81,82,.9);z-index:1;}
+.scc{width:300px;height:174px;position:fixed;top:50%;left:50%;margin-top:-87px;margin-left:-150px;z-index:2;box-shadow:0 5px 15px rgba(0,0,0,.5);}
+.stars{background-image:url(../images/stars.png)}
+.moon{background-image:url(../images/moon.png)}
+.sunlight{background-image:url(../images/sunlight.png)}
+.stars , .moon ,.sunlight{height:18px;width:18px;float:left;}
+.yincang{display:none;}
+span.fa.fa-angle-double-down.shoushi{display:none;}

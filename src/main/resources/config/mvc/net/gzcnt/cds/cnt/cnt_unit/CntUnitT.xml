@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--json -->
+	<action name="CntUnitTAction"
+		url="/cnt/cnt_unit/t/listJson.do">
+		net.gzcnt.cds.cnt.cnt_unit.t.action.CntUnitTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="CntUnitTAction"
+		url="/cnt/cnt_unit/t/list.do">
+		net.gzcnt.cds.cnt.cnt_unit.t.action.CntUnitTListAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_unit/t/CntUnitTListBootstrap.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_unit/t/CntUnitTListMiniui.jsp
+		</result>
+
+		<result name="DefaultObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_unit/t/CntUnitTListObject.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_unit/t/CntUnitTListBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_unit/t/CntUnitTListBootstrapObject.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_unit/t/CntUnitTListKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_unit/t/CntUnitTListKaidaObject.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="CntUnitTAction"
+		url="/cnt/cnt_unit/t/form.do">
+		net.gzcnt.cds.cnt.cnt_unit.t.action.CntUnitTFormAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_unit/t/CntUnitTFormBootstrap.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_unit/t/CntUnitTFormMiniui.jsp
+		</result>
+		
+		<result name="DefaultObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_unit/t/CntUnitTForm.jsp
+		</result>
+		
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_unit/t/CntUnitTFormBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_unit/t/CntUnitTFormBootstrap.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_unit/t/CntUnitTFormKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_unit/t/CntUnitTFormKaida.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="CntUnitTAction"
+		url="/cnt/cnt_unit/t/save.do">
+		net.gzcnt.cds.cnt.cnt_unit.t.action.CntUnitTSaveAction
+		<result name="Default" type="forward">
+			/cnt/cnt_unit/t/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="CntUnitTAction"
+		url="/cnt/cnt_unit/t/del.do">
+		net.gzcnt.cds.cnt.cnt_unit.t.action.CntUnitTDelAction
+		<result name="Default" type="forward">
+			/cnt/cnt_unit/t/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="CntUnitTAction"
+		url="/cnt/cnt_unit/t/del_all.do">
+		net.gzcnt.cds.cnt.cnt_unit.t.action.CntUnitTDelAllAction
+		<result name="Default" type="forward">
+			/cnt/cnt_unit/t/list.do
+		</result>
+	</action>
+</root>

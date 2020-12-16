@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<action name="IndexAction" url="/example/c/x/platform/root/compo/tab/a.do">
+		example.c.x.platform.root.compo.tab.TabAction_a
+		<result name="Default" type="forward">
+			/pages/example/c/x/platform/root/compo/tab/tools/tab/a.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/example/c/x/platform/root/compo/tab/b.do">
+		example.c.x.platform.root.compo.tab.TabAction_b
+		<result name="Default" type="forward">
+			/pages/example/c/x/platform/root/compo/tab/tools/tab/b.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/example/c/x/platform/root/compo/tab/c.do">
+		example.c.x.platform.root.compo.tab.TabAction_c
+		<result name="Default" type="forward">
+			/pages/example/c/x/platform/root/compo/tab/tools/tab/c.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/example/c/x/platform/root/compo/tab/d.do">
+		example.c.x.platform.root.compo.tab.TabAction_d
+		<result name="Default" type="forward">
+			/pages/example/c/x/platform/root/compo/tab/tools/tab/d.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/example/c/x/platform/root/compo/tab/e.do">
+		example.c.x.platform.root.compo.tab.TabAction_e
+		<result name="Default" type="forward">
+			/pages/example/c/x/platform/root/compo/tab/tools/tab/e.jsp
+		</result>
+	</action>
+
+
+
+
+</root>

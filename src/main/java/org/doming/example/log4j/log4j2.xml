@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--日志级别以及优先级排序: OFF > FATAL > ERROR > WARN > INFO > DEBUG > TRACE > ALL -->
+<!--status="WARN" :用于设置log4j2自身内部日志的信息输出级别，默认是OFF-->
+<!--monitorInterval="30"  :间隔秒数,自动检测配置文件的变更和重新配置本身-->
+<Configuration status="WARN" monitorInterval="30">
+    <Properties>
+        <!--自定义一些常量，之后使用${变量名}引用-->
+        <Property name="logFilePath">log</Property>
+        <Property name="logFileName">test.log</Property>
+    </Properties>
+    <!--appenders:定义输出内容,输出格式,输出方式,日志保存策略等,常用其下三种标签[console,File,RollingFile]-->
+    <Appenders>
+        <!--console :输出到控制台的Appender.-->
+        <!--name:指定Appender的名字-->
+        <!--target:SYSTEM_OUT 或 SYSTEM_ERR,一般只设置默认:SYSTEM_OUT.-->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!--PatternLayout:输出格式，不设置默认为:%m%n.-->
+            <PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n"/>
+        </Console>
+        <!--File :输出到指定位置的文件的Appender-->
+        <!--fileName :指定输出日志的目的文件带全路径的文件名.-->
+        <!--append="false" :根据其下日志策略,每次清空文件重新输入日志,可用于测试-->
+        <File name="log" fileName="${logFilePath}/${logFileName}" append="false">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
+        </File>
+        <!--RollingFile :超过指定大小自动删除旧的创建新的的Appender.-->
+        <!--filePattern :指定新建日志文件的名称格式.-->
+        <!-- ${sys:user.home} :项目路径 -->
+        <RollingFile name="RollingFileInfo" fileName="${sys:user.home}/logs/info.log"
+                     filePattern="${sys:user.home}/logs/$${date:yyyy-MM}/info-%d{yyyy-MM-dd}-%i.log">
+            <!--ThresholdFilter :指定日志输出过滤，-->
+            <!--level :日志级别,level="info" onMatch="ACCEPT" onMismatch="DENY" 级别在info之上则接受,级别在info之下则拒绝-->
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n"/>
+            <!--Policies :指定滚动日志的策略，就是什么时候进行新建日志文件输出日志.-->
+            <Policies>
+                <!--TimeBasedTriggeringPolicy:Policies子节点，基于时间的滚动策略，-->
+                <!--interval :属性用来指定多久滚动一次，默认是1 hour.-->
+                <!--modulate :用来调整时间. modulate="true",比如现在是早上3am，interval是4，那么第一次滚动是在4am，接着是8am，12am...而不是7am-->
+                <TimeBasedTriggeringPolicy interval="4" modulate="true"/>
+                <!--SizeBasedTriggeringPolicy:Policies子节点，基于指定文件大小的滚动策略，size属性用来定义每个日志文件的大小.-->
+                <SizeBasedTriggeringPolicy size="100 MB"/>
+            </Policies>
+            <!-- DefaultRolloverStrategy :用来指定同一个文件夹下最多有几个日志文件时开始删除最旧的，创建新的(通过max属性)属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了20 -->
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+
+        <!--SMTP :邮件发送日志-->
+        <SMTP name="Mail" subject="****SaaS系统正式版异常信息" to="message@message.info" from="message@lengjing.info" smtpUsername="message@message.info" smtpPassword="LENG****1234" smtpHost="mail.lengjing.info" smtpDebug="false" smtpPort="25" bufferSize="10">
+            <PatternLayout pattern="[%-5p]:%d{YYYY-MM-dd HH:mm:ss} [%t] %c{1}:%L - %msg%n" />
+        </SMTP>
+
+    </Appenders>
+    <!--然后定义logger，只有定义了logger并引入的appender，appender才会生效-->
+    <Logger>
+        <!-- Root：用来指定项目的根日志，如果没有单独指定Logger，那么就会默认使用该Root日志输出 -->
+        <Root level="all">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="RollingFileInfo"/>
+            <appender-ref ref="RollingFileWarn"/>
+            <appender-ref ref="RollingFileError"/>
+        </Root>
+        <!--过滤掉spring和mybatis的一些无用的DEBUG信息-->
+        <!-- Logger：用来单独指定日志的形式，name为包路径,比如要为org.springframework包下所有日志指定为INFO级别等。 -->
+        <!-- level:日志输出级别，共有8个级别 -->
+        <!-- name:用来指定该Logger所适用的类或者类所在的包全路径,继承自Root节点. -->
+        <Logger name="org.springframework" level="INFO"/>
+
+        <!--AsyncLogger :异步日志,LOG4J有三种日志模式,全异步日志,混合模式,同步日志,性能从高到底,线程越多效率越高,也可以避免日志卡死线程情况发生-->
+        <!--additivity="false" : additivity设置事件是否在root logger输出，为了避免重复输出，可以在Logger 标签下设置additivity为”false”-->
+        <AsyncLogger name="AsyncLogger" level="trace" includeLocation="true" additivity="false">
+            <appender-ref ref="RollingFileError"/>
+        </AsyncLogger>
+    </Logger>
+</Configuration>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="TmsProjectTAction"
+		url="/all/gen/tms_project/t/listJson.do">
+		all.gen.tms_project.t.action.TmsProjectTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="TmsProjectTAction"
+		url="/all/gen/tms_project/t/list/easyui.do">
+		all.gen.tms_project.t.action.TmsProjectTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/tms_project/t/TmsProjectTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="TmsProjectTAction"
+		url="/all/gen/tms_project/t/list/bootstrap.do">
+		all.gen.tms_project.t.action.TmsProjectTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/tms_project/t/TmsProjectTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="TmsProjectTAction"
+		url="/all/gen/tms_project/t/form/bootstrap.do">
+		all.gen.tms_project.t.action.TmsProjectTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/tms_project/t/TmsProjectTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="TmsProjectTAction"
+		url="/all/gen/tms_project/t/save/bootstrap.do">
+		all.gen.tms_project.t.action.TmsProjectTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/tms_project/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="TmsProjectTAction"
+		url="/all/gen/tms_project/t/saveJson.do">
+		all.gen.tms_project.t.action.TmsProjectTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="TmsProjectTAction"
+		url="/all/gen/tms_project/t/del/bootstrap.do">
+		all.gen.tms_project.t.action.TmsProjectTDelAction
+		<result name="Default" type="forward">
+			/all/gen/tms_project/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="TmsProjectTAction"
+		url="/all/gen/tms_project/t/delJson.do">
+		all.gen.tms_project.t.action.TmsProjectTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="TmsProjectTAction"
+		url="/all/gen/tms_project/t/del_all/bootstrap.do">
+		all.gen.tms_project.t.action.TmsProjectTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/tms_project/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="TmsProjectTAction"
+		url="/all/gen/tms_project/t/delAllJson.do">
+		all.gen.tms_project.t.action.TmsProjectTDelAllJsonAction
+		
+	</action>
+</root>

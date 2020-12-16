@@ -1,0 +1,6 @@
+CountDownLatch是一种简单的同步模式，
+它让一个线程可以等待一个或多个线程完成它们的工作从而避免对临界资源并发访问所引发的各种问题。
+
+
+
+原文：https://blog.csdn.net/jackfrued/article/details/44499227

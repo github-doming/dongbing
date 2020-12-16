@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表Json-->
+	<action name="FunProductProductAction" url="/net/example/fun/product/fun_product/listJson.do">
+		net.example.fun.product.fun_product.action.FunProductProductListJsonAction
+	</action>
+	<!--列表list-->
+	<action name="FunProductProductAction" url="/net/example/fun/product/fun_product/list/bootstrap.do">
+		net.example.fun.product.fun_product.action.FunProductProductListAction
+		<result name="Default" type="forward">
+			/pages/net/example/fun/product/fun_product/FunProductProductListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form-->
+	<action name="FunProductProductAction" url="/net/example/fun/product/fun_product/form/bootstrap.do">
+		net.example.fun.product.fun_product.action.FunProductProductFormAction
+		<result name="Default" type="forward">
+			/pages/net/example/fun/product/fun_product/FunProductProductFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save-->
+	<action name="FunProductProductAction" url="/net/example/fun/product/fun_product/save/bootstrap.do">
+		net.example.fun.product.fun_product.action.FunProductProductSaveAction
+		<result name="Default" type="forward">
+		/com/example/fun/product/fun_product/list/bootstrap.do
+		</result>
+		
+	</action>
+	<!--删除del-->
+	<action name="FunProductProductAction" url="/net/example/fun/product/fun_product/del/bootstrap.do">
+		net.example.fun.product.fun_product.action.FunProductProductDelAction
+		<result name="Default" type="forward">
+		/com/example/fun/product/fun_product/list/bootstrap.do
+		</result>
+		
+	</action>
+	<!--删除所有del all-->
+	<action name="FunProductProductAction" url="/net/example/fun/product/fun_product/del_all/bootstrap.do">
+		net.example.fun.product.fun_product.action.FunProductProductDelAllAction
+		<result name="Default" type="forward">
+		/com/example/fun/product/fun_product/list/bootstrap.do
+		</result>
+		
+	</action>
+</root>

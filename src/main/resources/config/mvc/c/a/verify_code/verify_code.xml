@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--verify_code -->
+	<action name="IndexAction" url="/c/a/verify_code.do">
+		c.a.util.core.verify_code.VerifyCodeAction
+	</action>
+
+</root>

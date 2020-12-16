@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="${ay_table_class}Action"
+		url="/${resources_name_all}/${ay_table_name_child}/${ay_table_name_module}/listJson.do">
+		${ay_package_name}.action.${ay_table_class}ListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="${ay_table_class}Action"
+		url="/${resources_name_all}/${ay_table_name_child}/${ay_table_name_module}/list/easyui.do">
+		${ay_package_name}.action.${ay_table_class}ListAction
+		<result name="Default" type="forward">
+			/pages/${pages_name_all}/${ay_table_name_child}/${ay_table_name_module}/${ay_table_class}ListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="${ay_table_class}Action"
+		url="/${resources_name_all}/${ay_table_name_child}/${ay_table_name_module}/list/bootstrap.do">
+		${ay_package_name}.action.${ay_table_class}ListAction
+		<result name="Default" type="forward">
+			/pages/${pages_name_all}/${ay_table_name_child}/${ay_table_name_module}/${ay_table_class}ListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="${ay_table_class}Action"
+		url="/${resources_name_all}/${ay_table_name_child}/${ay_table_name_module}/form/bootstrap.do">
+		${ay_package_name}.action.${ay_table_class}FormAction
+		<result name="Default" type="forward">
+			/pages/${pages_name_all}/${ay_table_name_child}/${ay_table_name_module}/${ay_table_class}FormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="${ay_table_class}Action"
+		url="/${resources_name_all}/${ay_table_name_child}/${ay_table_name_module}/save/bootstrap.do">
+		${ay_package_name}.action.${ay_table_class}SaveAction
+		<result name="Default" type="send">
+			/${resources_name_all}/${ay_table_name_child}/${ay_table_name_module}/list/bootstrap.do
+		</result>
+	</action>
+	<action name="${ay_table_class}Action"
+		url="/${resources_name_all}/${ay_table_name_child}/${ay_table_name_module}/saveJson.do">
+		${ay_package_name}.action.${ay_table_class}SaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="${ay_table_class}Action"
+		url="/${resources_name_all}/${ay_table_name_child}/${ay_table_name_module}/del/bootstrap.do">
+		${ay_package_name}.action.${ay_table_class}DelAction
+		<result name="Default" type="send">
+			/${resources_name_all}/${ay_table_name_child}/${ay_table_name_module}/list/bootstrap.do
+		</result>
+	</action>
+	<action name="${ay_table_class}Action"
+		url="/${resources_name_all}/${ay_table_name_child}/${ay_table_name_module}/delJson.do">
+		${ay_package_name}.action.${ay_table_class}DelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="${ay_table_class}Action"
+		url="/${resources_name_all}/${ay_table_name_child}/${ay_table_name_module}/del_all/bootstrap.do">
+		${ay_package_name}.action.${ay_table_class}DelAllAction
+		<result name="Default" type="send">
+			/${resources_name_all}/${ay_table_name_child}/${ay_table_name_module}/list/bootstrap.do
+		</result>
+	</action>
+	<action name="${ay_table_class}Action"
+		url="/${resources_name_all}/${ay_table_name_child}/${ay_table_name_module}/delAllJson.do">
+		${ay_package_name}.action.${ay_table_class}DelAllJsonAction
+		
+	</action>
+</root>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+
+    <!-- 盘口用户后台获取所有数据 -->
+    <action name="IbmHandicapUserWListAction" url="/ibm/admin/ibm_handicap_user/t/list.do">
+        com.ibm.old.v1.admin.ibm_handicap_user.w.action.IbmHandicapUserWListAction
+        <result name="Default" type="forward">
+            /pages/com/ibm/admin/ibm_handicap_user/IbmHandicapUserWList.jsp
+        </result>
+    </action>
+
+    <!-- 盘口用户后台删除单条数据 -->
+    <action name="IbmHandicapUserWDelAction" url="/ibm/admin/ibm_handicap_user/t/del.do">
+        com.ibm.old.v1.admin.ibm_handicap_user.w.action.IbmHandicapUserWDelAction
+        <result name="Default" type="forward">
+            /ibm/admin/ibm_handicap_user/t/list.do
+        </result>
+    </action>
+
+    <!-- 盘口用户后台删除选择数据 -->
+    <action name="IbmHandicapUserWDelAllAction" url="/ibm/admin/ibm_handicap_user/t/delAll.do">
+        com.ibm.old.v1.admin.ibm_handicap_user.w.action.IbmHandicapUserWDelAllAction
+        <result name="Default" type="forward">
+            /ibm/admin/ibm_handicap_user/t/list.do
+        </result>
+    </action>
+
+    <!-- 盘口用户后台form -->
+    <action name="IbmHandicapUserWFormAction" url="/ibm/admin/ibm_handicap_user/t/form.do">
+        com.ibm.old.v1.admin.ibm_handicap_user.w.action.IbmHandicapUserWFormAction
+        <result name="Default" type="forward">
+            /pages/com/ibm/admin/ibm_handicap_user/IbmHandicapUserWForm.jsp
+        </result>
+    </action>
+
+    <!-- 盘口用户后台修改数据 -->
+    <action name="IbmHandicapUserWSaveAction" url="/ibm/admin/ibm_handicap_user/t/save.do">
+        com.ibm.old.v1.admin.ibm_handicap_user.w.action.IbmHandicapUserWSaveAction
+        <result name="Default" type="forward">
+            /ibm/admin/ibm_handicap_user/t/list.do
+        </result>
+    </action>
+
+</root>

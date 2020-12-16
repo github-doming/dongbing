@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	<action name="${ay_table_class}Action" url="/platform/admin/${ay_table_name_module}/${ay_table_name_child}/list.do">
+		${ay_package_name}.action.${ay_table_class}ListAction
+		<result name="Default" type="forward">
+			/servlet/admin/${ay_table_name_module}/${ay_table_name_child}/list.jsp
+		</result>
+	</action>
+	<!--表单form-->
+	<action name="${ay_table_class}Action" url="/platform/admin/${ay_table_name_module}/${ay_table_name_child}/form.do">
+		${ay_package_name}.action.${ay_table_class}FormAction
+		<result name="Default" type="forward">
+			/servlet/admin/${ay_table_name_module}/${ay_table_name_child}/${ay_table_class}Form.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	<action name="${ay_table_class}Action" url="/platform/admin/${ay_table_name_module}/${ay_table_name_child}/save.do">
+		${ay_package_name}.action.${ay_table_class}SaveAction
+		<result name="Default" type="forward">
+			/admin/${ay_table_name_module}/${ay_table_name_child}/list.do
+		</result>
+	</action>
+	<!--删除del-->
+	<action name="${ay_table_class}Action" url="/platform/admin/${ay_table_name_module}/${ay_table_name_child}/del.do">
+		${ay_package_name}.action.${ay_table_class}DelAction
+		<result name="Default" type="forward">
+			/admin/${ay_table_name_module}/${ay_table_name_child}/list.do
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="${ay_table_class}Action" url="/platform/admin/${ay_table_name_module}/${ay_table_name_child}/del_all.do">
+		${ay_package_name}.action.${ay_table_class}DelAllAction
+		<result name="Default" type="forward">
+			/admin/${ay_table_name_module}/${ay_table_name_child}/list.do
+		</result>
+	</action>
+	<!--请求选择上一级parent-->
+	<action name="${ay_table_class}Action" url="/platform/admin/${ay_table_name_module}/${ay_table_name_child}/parent.do">
+		${ay_package_name}.action.${ay_table_class}ParentAction
+		<result name="Default" type="forward">
+			/servlet/admin/${ay_table_name_module}/${ay_table_name_child}/parent.jsp
+		</result>
+	</action>
+	<!--选择上一级select-->
+	<action name="${ay_table_class}Action" url="/platform/admin/${ay_table_name_module}/${ay_table_name_child}/select.do">
+		${ay_package_name}.action.${ay_table_class}SelectAction
+		<result name="Default" type="forward">
+			/servlet/admin/${ay_table_name_module}/${ay_table_name_child}/select.jsp
+		</result>
+	</action>
+</root>

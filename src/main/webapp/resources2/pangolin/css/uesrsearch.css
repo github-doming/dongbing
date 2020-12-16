@@ -1,0 +1,34 @@
+.select_top span{color:#fff;}
+.select_button{width:125px;height:50px;background:#4b98dc;color:#fff;font-size:18px;text-align:center;line-height:50px;border-radius:5px;float:left;margin-left:50px;cursor:pointer;margin-top:30px;position:relative;}
+.select_circle{border-radius:50%;width:30px;height:30px;background:#bb3a24;position:absolute;color:#fff;text-align:center;line-height:30px;top:-10px;right:-15px;}
+.sansan{float:left;width:33%;}
+.lock{display:none;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(87,88,92,0.8);z-index:1001;}
+.xj{width:600px;height:330px;position:absolute;margin-top:-165px;margin-left:-300px;top:50%;left:50%;}
+.two{width:100%;height:140px;background:#fff;}
+.two li{width:50%;float:left;height:60px;line-height:60px;}
+.two li label{width:40%;text-align:center;float:left;}
+.two_bottom{height:120px;width:100%;background:#fff;}
+.two_bottom label{width:20%;float:left;height:60px;text-align:center;}
+.two_bottom textarea{border:1px solid #ccc; resize:none;height:100px;width:75%;}
+.itext2{width:60%;}
+.fright{float:right;}
+.faketext{margin:0px;}
+.bottom-triangle{height:0; width:0; overflow: hidden; font-size: 0; line-height: 0; border-color:#000 transparent transparent transparent; border-style:solid dashed dashed dashed; border-width:6px;}
+.abs { position:absolute; right:4px; top:8px; }
+.dw{margin-top:17px;}
+.faketext2 ul li{text-align:center;}
+.sbutton{float:left;border-left:1px solid #ccc;text-align:center;width:99px;height:100%;cursor:pointer;color:#666;}
+.xuanxiang{text-align:center;}
+.select_r{float:right;width:240px;height:35px;}
+.select_r li{width:78px;border-left:1px #ccc solid;text-align:center;float:left;color:#333;cursor:pointer;}
+.uesrlist{width:100%;}
+.userleft{float:left;}
+.userdiv{width:310px;height:215px;margin:20px;float:left;background-color:#e1e1e7;}
+.userdivleft{width:110px;float:left;padding:15px 5px 5px 5px;position:relative;}
+.userimg{border:1px solid #bfbfc1;background-image:url(../images/man.png);width:115px;height:115px}
+.userwoman{border:1px solid #bfbfc1;background-image:url(../images/woman.png);width:115px;height:115px}
+.userdivleft p{text-align:center;color:#337ab7;margin-top:8px;}
+.userdivright{float:right;width:180px;height:215px;}
+.userp{width:50%;float:left;}
+.usertop{margin-top:15px;height:15px;}
+.dianji{cursor:pointer;}

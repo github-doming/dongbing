@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<action name="weixinAction" url="/weixin_qy_third/test.do">
+example.cosmos.weixin.ent_third.archit.action.mo.WxQyThirdAction_query_bussiness
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<!-- 第三方应用,系统事件接收URL,沟通记录 -->
+	<action name="weixinAction" url="/WeChatQiYe/thirdPartyAppEntrance.jhtml">
+example.cosmos.weixin.ent_third.archit.common.action.callback.app.WxQyThirdCbEventAction_app_querychat
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<!-- 第三方套件会话,系统事件接收URL -->
+	<action name="weixinAction" url="/WeChatQiYe/conversationEntrance.jhtml">
+example.cosmos.weixin.ent_third.archit.common.action.callback.suite.chat.WxQyThirdCbEventAction_suiteChat
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<!-- 第三方套件会话,用户信息接收URL -->
+	<action name="weixinAction" url="/WeChatQiYe/userMsgReceive.jhtml">
+example.cosmos.weixin.ent_third.archit.common.action.callback.suite.chat.WxQyThirdCbMsgAction_suiteChat
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<!-- 第三方套件应用,系统事件接收URL -->
+	<!-- 微信服务器会向应用提供商申请时填写的套件事件接收 URL定时（每十分钟）推送ticket： -->
+	<action name="weixinAction" url="/WeChatQiYe/thirdPartyCallBackControl.jhtml">
+example.cosmos.weixin.ent_third.archit.common.action.callback.suite.app.WxQyThirdCbEventAction_suiteApp
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<!-- -->
+	<!-- 第三方应用,登录授权接口开发登录 -->
+	<!-- 请根据企业号登录授权接口开发登录功能，让企业号管理员微信扫码登录你的网站 -->
+	<!--授权完成回调URL -->
+	<action name="weixinAction" url="/OAuth/getAuthCodeAndProcess.jhtml">
+example.cosmos.weixin.ent_third.archit.common.action.callback.login.WxQyThirdCbEventAction_login
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<!--html5 -->
+	<action name="weixinAction" url="/weixin_qy_third/get_oauth.do">
+example.cosmos.weixin.ent_third.archit.common.action.html5.WxQyThirdHtmlAction_getOauth
+		<result name="index" type="forward">
+		</result>
+	</action>
+		<!--html5 -->
+	<action name="weixinAction" url="/weixin_qy_third/request_oauth.do">
+example.cosmos.weixin.ent_third.archit.common.action.html5.WxQyThirdHtmlAction_requestOauth
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<action name="weixinAction" url="/weixin_qy_third/request_app.do">
+	example.cosmos.weixin.ent_third.archit.common.action.oauth.app.WxQyThirdOauthAction_requestApp
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<!-- getAuthCodeAndProcess -->
+	<action name="weixinAction" url="/weixin_qy_third/app.do">
+example.cosmos.weixin.ent_third.archit.common.action.oauth.app.WxQyThirdOauthAction_app
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<action name="weixinAction" url="/weixin_qy_third/request_chat.do">
+example.cosmos.weixin.ent_third.archit.common.action.oauth.chat.WxQyThirdOauthAction_requestChat
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<action name="weixinAction" url="/weixin_qy_third/chat.do">
+example.cosmos.weixin.ent_third.archit.common.action.oauth.chat.WxQyThirdOauthAction_chat
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<action name="weixinAction" url="/weixin_qy_third/request_login.do">
+example.cosmos.weixin.ent_third.archit.common.action.oauth.login.WxQyThirdOauthAction_requestLogin
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<action name="weixinAction" url="/weixin_qy_third/login.do">
+example.cosmos.weixin.ent_third.archit.common.action.oauth.login.WxQyThirdOauthAction_login
+		<result name="index" type="forward">
+		</result>
+	</action>
+</root>

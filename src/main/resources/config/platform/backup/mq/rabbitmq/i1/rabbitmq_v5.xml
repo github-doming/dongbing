@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<config>
+		<virtualHost>MqVirtualHost</virtualHost>
+		<ip>134.175.152.61</ip>
+		<port>5672</port>
+		<userName>guest</userName>
+		<password>guest</password>
+		
+		<exchangeFormat>MqExchange[%s]</exchangeFormat>
+		<topicFormat>MqTopic[%s]</topicFormat>
+		<queueFormat>MqQueue[%s]</queueFormat>
+		<clientIdFormat>MqClientId[%s]</clientIdFormat>
+		<machineList>machine01,machine02,machine03</machineList>
+	</config>
+	<exchange name="exchange_a">
+		<queue name="smart.queue.a1">
+			<client
+				class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e1"></client>
+		</queue>
+		<queue name="smart.queue.a2">
+			<client
+				class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e2"></client>
+		</queue>
+	</exchange>
+	
+	<exchange name="exchange_b">
+		<queue name="smart.queue.b1">
+			<client
+				class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e5"></client>
+		</queue>
+		<queue name="smart.queue.b2">
+			<client
+				class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e6"></client>
+		</queue>
+	</exchange>
+</root>

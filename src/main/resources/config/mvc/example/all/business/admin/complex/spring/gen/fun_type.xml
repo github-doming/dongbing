@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	<action name="GenTypeAction" url="/example/all/business/admin/complex/spring/gen/fun_type/list.xinyu">
+		example.all.business.admin.complex.spring.gen.fun_type.action.GenTypeListAction
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/spring/gen/fun_type/list.jsp
+		</result>
+	</action>
+	
+	<!--列表list_object-->
+	<action name="GenTypeAction" url="/example/all/business/admin/complex/spring/gen/fun_type/list_object.xinyu">example.all.business.admin.complex.spring.gen.fun_type.action.GenTypeListObjectAction<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/spring/gen/fun_type/list_object.jsp
+		</result>
+	</action>
+	
+	<!--表单form-->
+	<action name="GenTypeAction" url="/example/all/business/admin/complex/spring/gen/fun_type/form.xinyu">
+		example.all.business.admin.complex.spring.gen.fun_type.action.GenTypeFormAction
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/spring/gen/fun_type/form.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	<action name="GenTypeAction" url="/example/all/business/admin/complex/spring/gen/fun_type/save.xinyu">
+		example.all.business.admin.complex.spring.gen.fun_type.action.GenTypeSaveAction
+		<result name="index" type="forward">
+		/pages/example/all/business/admin/complex/spring/gen/fun_type/list.xinyu
+		</result>
+		<result name="list_v1" type="forward">
+			/admin/gen/type/list.xinyu
+		</result>
+	</action>
+	<!--删除del-->
+	<action name="GenTypeAction" url="/example/all/business/admin/complex/spring/gen/fun_type/del.xinyu">
+		example.all.business.admin.complex.spring.gen.fun_type.action.GenTypeDelAction
+		<result name="index" type="forward">
+		/pages/example/all/business/admin/complex/spring/gen/fun_type/list.xinyu
+	
+		</result>
+		<result name="list_v1" type="forward">
+			/admin/gen/type/list.xinyu
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="GenTypeAction" url="/example/all/business/admin/complex/spring/gen/fun_type/del_all.xinyu">
+		example.all.business.admin.complex.spring.gen.fun_type.action.GenTypeDelAllAction
+		<result name="index" type="forward">
+			/admin/gen/type/list.xinyu
+		</result>
+	</action>
+	<!--请求选择上一级parent-->
+	<action name="GenTypeAction" url="/example/all/business/admin/complex/spring/gen/fun_type/parent.xinyu">
+		example.all.business.admin.complex.spring.gen.fun_type.action.GenTypeParentAction
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/spring/gen/fun_type/parent.jsp
+		</result>
+	</action>
+	<!--选择上一级select-->
+	<action name="GenTypeAction" url="/example/all/business/admin/complex/spring/gen/fun_type/select.xinyu">
+		example.all.business.admin.complex.spring.gen.fun_type.action.GenTypeSelectAction
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/spring/gen/fun_type/select.jsp
+		</result>
+	</action>
+</root>

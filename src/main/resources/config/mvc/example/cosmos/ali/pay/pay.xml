@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--alipay -->
+	<action name="IndexAction" url="/example/cosmos/ali/pay/e1/aliPay.do">
+		example.cosmos.ali.pay.e1_AliPayAction
+	</action>
+	<action name="IndexAction" url="/example/cosmos/ali/pay/e3/refundquery.do">
+		example.cosmos.ali.pay.e3_AliPayAction_refundquery
+	</action>
+
+
+	<action name="IndexAction" url="/example/cosmos/ali/pay/e5/auth/return.do">
+		example.cosmos.ali.pay.e5_AliPayAction_authReturnAction
+	</action>
+	<action name="IndexAction" url="/example/cosmos/ali/pay/e5/return.do">
+		example.cosmos.ali.pay.e5_AliPayAction_returnAction
+	</action>
+	<action name="IndexAction" url="/example/cosmos/ali/pay/e5/notify.do">
+		example.cosmos.ali.pay.e5_AliPayAction_notifyAction
+	</action>
+</root>

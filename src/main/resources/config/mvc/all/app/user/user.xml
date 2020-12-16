@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!-- user -->
+	<action name="App" url="/all/app/user/save.do">
+		all.app.user.action.AppUserSaveAction
+	</action>
+	
+	<!--通过appUserId查找个人信息 -->
+	<action name="App" url="/all/app/user/form.do">
+		all.app.user.action.AppUserFormAction 
+	</action>
+	
+	<!--通过appUserId查找个人信息 -->
+	<action name="App" url="/all/app/account/password/verify.do">
+		all.app.user.action.AppAccountPasswordVerifyAction
+	</action>
+	
+	
+</root>

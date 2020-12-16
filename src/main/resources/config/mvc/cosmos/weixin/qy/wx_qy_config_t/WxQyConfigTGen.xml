@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--json -->
+	<action name="WxQyConfigTGenAction"
+		url="/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/listJson.do">
+		all.business.pc.third.weixin.qy.wx_qy_config_t.gen.action.WxQyConfigTGenListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="WxQyConfigTGenAction"
+		url="/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/list.do">
+		all.business.pc.third.weixin.qy.wx_qy_config_t.gen.action.WxQyConfigTGenListAction
+		<result name="Default" type="forward">
+			/pages/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/WxQyConfigTGenList.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/WxQyConfigTGenListMiniui.jsp
+		</result>
+
+		<result name="DefaultObject" type="forward">
+			/pages/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/WxQyConfigTGenListObject.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/WxQyConfigTGenListBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/WxQyConfigTGenListBootstrapObject.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/WxQyConfigTGenListKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/WxQyConfigTGenListKaidaObject.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="WxQyConfigTGenAction"
+		url="/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/form.do">
+		all.business.pc.third.weixin.qy.wx_qy_config_t.gen.action.WxQyConfigTGenFormAction
+		<result name="Default" type="forward">
+			/pages/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/WxQyConfigTGenForm.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/WxQyConfigTGenFormMiniui.jsp
+		</result>
+		
+		<result name="DefaultObject" type="forward">
+			/pages/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/WxQyConfigTGenForm.jsp
+		</result>
+		
+		<result name="Bootstrap" type="forward">
+			/pages/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/WxQyConfigTGenFormBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/WxQyConfigTGenFormBootstrap.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/WxQyConfigTGenFormKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/WxQyConfigTGenFormKaida.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="WxQyConfigTGenAction"
+		url="/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/save.do">
+		all.business.pc.third.weixin.qy.wx_qy_config_t.gen.action.WxQyConfigTGenSaveAction
+		<result name="Default" type="forward">
+			/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="WxQyConfigTGenAction"
+		url="/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/del.do">
+		all.business.pc.third.weixin.qy.wx_qy_config_t.gen.action.WxQyConfigTGenDelAction
+		<result name="Default" type="forward">
+			/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="WxQyConfigTGenAction"
+		url="/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/del_all.do">
+		all.business.pc.third.weixin.qy.wx_qy_config_t.gen.action.WxQyConfigTGenDelAllAction
+		<result name="Default" type="forward">
+			/c/x/business/admin/third/weixin/qy/wx_qy_config_t/gen/list.do
+		</result>
+	</action>
+</root>

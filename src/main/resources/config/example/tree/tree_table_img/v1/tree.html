@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title></title>
+</head>
+<script type="text/javascript"
+	src="../pages/c/x/includes/simple/jquery/jquery-1.9.1.js">
+</script>
+<script type="text/javascript">
+	/**
+	 * 展开所有的
+	 */
+	var AyTree_change = function(cp, cp, id_root) {
+		var leaf_root = $("#" + id_root).attr("leaf");
+		var path_root = $("#" + id_root).attr("path");
+		var state_root = $("#" + id_root).attr("state");
+		//循环
+		$("tr").each(function() {
+			//获得id
+			var id = $(this).attr("id");
+			//alert(id);
+			var parent_id = $(this).attr("parent_id");
+			//var state=  $(this).attr("state");
+			var path = $(this).attr("path");
+			//关闭时，所有孩子和孙子关闭
+			//打开时，只打开孩子
+			if (state_root == 'open') {
+				//关闭时，所有孩子和孙子关闭
+				//{
+				//1_20可不是1_2的孩子啊
+				//path=1_2
+				//path=1_20
+				//path=1_2_5
+				//path=1_2_7
+				//查找所有孩子和孙子
+				if (path.indexOf(path_root + "") == 0) {
+					//设置图片
+					var leaf = $(this).attr("leaf");
+					if (leaf == 'false') {
+						$("#img_" + id).attr("src", cp + "/pages/c/x/imports/compo/tree_table/images/v1/folder-closed.gif");
+					}
+					//设置style
+					$(this).attr("style", "display: none;");
+					//设置状态
+					$(this).attr("state", "close");
+				}
+				//}
+				//关闭时，所有孩子和孙子关闭
+			} else {
+				//打开时，只打开孩子
+				//{
+				//只查找所有孩子，不查找孙子
+				if (parent_id == id_root) {
+					//设置style
+					var style = $(this).attr("style");
+					$(this).attr("style", "");
+				}
+				//}
+				//打开时，只打开孩子
+			}
+		});
+		//循环
+		//设置本身状态
+		if (state_root == 'open') {
+			//设置本身图片
+			if (leaf_root = 'false') {
+				$("#img_" + id_root).attr("src", cp + "/pages/c/x/imports/compo/tree_table/images/v1/folder-closed.gif");
+			}
+			//设置状态
+			$("#" + id_root).attr("state", "close");
+		} else {
+			//设置本身图片
+			if (leaf_root == 'false') {
+				$("#img_" + id_root).attr("src", cp + "/pages/c/x/imports/compo/tree_table/images/v1/folder.gif");
+			}
+			//设置状态
+			$("#" + id_root).attr("state", "open");
+		}
+		//本身不隐藏
+		//$("#"+id_root).attr("style","");
+		//alert('end');
+	}
+</script>
+<style>
+table {
+	FONT-SIZE: 12px;
+	WHITE-SPACE: nowrap;
+	border-collapse: collapse; /*细线表格;firefox不支持;*/
+}
+img {
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	VERTICAL-ALIGN: middle;
+	BORDER-LEFT: 0px;
+	BORDER-BOTTOM: 0px
+}
+td {
+	margin: 0px;
+	padding: 0px;
+}
+</style>
+<html>
+<body>
+	<table border="0">

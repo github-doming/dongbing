@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="CmsSendBoxDraftTAction"
+		url="/all/cms/msg/admin/cms_send_box_draft/t/listJson.do">
+		all.cms.msg.admin.cms_send_box_draft.t.action.CmsSendBoxDraftTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="CmsSendBoxDraftTAction"
+		url="/all/cms/msg/admin/cms_send_box_draft/t/list/easyui.do">
+		all.cms.msg.admin.cms_send_box_draft.t.action.CmsSendBoxDraftTListAction
+		<result name="Default" type="forward">
+			/pages/all/cms/msg/admin/cms_send_box_draft/t/CmsSendBoxDraftTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="CmsSendBoxDraftTAction"
+		url="/all/cms/msg/admin/cms_send_box_draft/t/list/bootstrap.do">
+		all.cms.msg.admin.cms_send_box_draft.t.action.CmsSendBoxDraftTListAction
+		<result name="Default" type="forward">
+			/pages/all/cms/msg/admin/cms_send_box_draft/t/CmsSendBoxDraftTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="CmsSendBoxDraftTAction"
+		url="/all/cms/msg/admin/cms_send_box_draft/t/form/bootstrap.do">
+		all.cms.msg.admin.cms_send_box_draft.t.action.CmsSendBoxDraftTFormAction
+		<result name="Default" type="forward">
+			/pages/all/cms/msg/admin/cms_send_box_draft/t/CmsSendBoxDraftTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="CmsSendBoxDraftTAction"
+		url="/all/cms/msg/admin/cms_send_box_draft/t/save/bootstrap.do">
+		all.cms.msg.admin.cms_send_box_draft.t.action.CmsSendBoxDraftTSaveAction
+		<result name="Default" type="send">
+			/all/cms/admin/cms_send_box_draft/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsSendBoxDraftTAction"
+		url="/all/cms/msg/admin/cms_send_box_draft/t/saveJson.do">
+		all.cms.msg.admin.cms_send_box_draft.t.action.CmsSendBoxDraftTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="CmsSendBoxDraftTAction"
+		url="/all/cms/msg/admin/cms_send_box_draft/t/del/bootstrap.do">
+		all.cms.msg.admin.cms_send_box_draft.t.action.CmsSendBoxDraftTDelAction
+		<result name="Default" type="send">
+			/all/cms/admin/cms_send_box_draft/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsSendBoxDraftTAction"
+		url="/all/cms/msg/admin/cms_send_box_draft/t/delJson.do">
+		all.cms.msg.admin.cms_send_box_draft.t.action.CmsSendBoxDraftTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="CmsSendBoxDraftTAction"
+		url="/all/cms/msg/admin/cms_send_box_draft/t/del_all/bootstrap.do">
+		all.cms.msg.admin.cms_send_box_draft.t.action.CmsSendBoxDraftTDelAllAction
+		<result name="Default" type="send">
+			/all/cms/admin/cms_send_box_draft/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsSendBoxDraftTAction"
+		url="/all/cms/msg/admin/cms_send_box_draft/t/delAllJson.do">
+		all.cms.msg.admin.cms_send_box_draft.t.action.CmsSendBoxDraftTDelAllJsonAction
+		
+	</action>
+</root>

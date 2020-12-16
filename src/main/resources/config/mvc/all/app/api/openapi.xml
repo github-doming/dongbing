@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!-- -->
+	<action name="App" url="/all/app/openapi.do">
+		all.app.api.action.OpenapiAction
+
+	</action>
+</root>

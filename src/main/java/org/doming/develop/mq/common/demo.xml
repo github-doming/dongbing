@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <config>
+        <ip>${ip}</ip>
+        <port>${port}</port>
+        <virtualHost>${virtualHost}</virtualHost>
+        <userName>${userName}</userName>
+        <password>${password}</password>
+        <poolSize>${poolSize}</poolSize>
+        <exchangeFormat>${exchangeFormat}</exchangeFormat>
+        <queueFormat>${queueFormat}</queueFormat>
+        <clientFormat>${clientFormat}</clientFormat>
+        <desc>${desc}</desc>
+    </config>
+
+
+    <queue id="${id}" name="${name}" desc="${desc}">
+        <client id="${id}" name="${name}" class="${class}"/>
+    </queue>
+
+    <exchange id="${id}" name="${name}" type="${type}" desc="${desc}">
+        <client id="${id}" name="${name}" class="${class}"/>
+        <client name="${name}" class="${class}">
+            <routing id="${id}" key="${key}" desc="${desc}"/>
+        </client>
+        <queue id="${id}" name="${name}" desc="${desc}">
+            <client id="${id}" name="${name}" class="${class}"/>
+            <client name="${name}" class="${class}">
+                <routing id="${id}" key="${key}" desc="${desc}"/>
+            </client>
+        </queue>
+
+    </exchange>
+
+</root>

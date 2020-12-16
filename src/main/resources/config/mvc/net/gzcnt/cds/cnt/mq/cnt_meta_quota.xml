@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表list -->
+	<action name="CntMetaQuotaMqAction" url="/cds/cnt/mq/cnt_meta_quota/list.do">
+		net.gzcnt.cds.cnt.mq.cnt_meta_quota.action.CntMetaQuotaMqListAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/mq/cnt_meta_quota/CntMetaQuotaMqListBootstrap.jsp
+		</result>
+		<result name="quato" type="forward">
+			/pages/net/gzcnt/cds/cnt/mq/cnt_meta_quota/CntMetaQuotaMqViewBootstrap.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/mq/cnt_meta_quota/CntMetaQuotaMqListBootstrap.jsp
+		</result>
+	</action>
+	
+	<!--表单form -->
+	<action name="CntMetaQuotaMqAction" url="/cds/cnt/mq/cnt_meta_quota/form.do">
+		net.gzcnt.cds.cnt.mq.cnt_meta_quota.action.CntMetaQuotaMqFormAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/mq/cnt_meta_quota/CntMetaQuotaMqFormBootstrap.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/mq/cnt_meta_quota/CntMetaQuotaMqFormBootstrap.jsp
+		</result>
+	</action>
+	
+	<!--保存save -->
+	<action name="CntMetaQuotaMqAction" url="/cds/cnt/mq/cnt_meta_quota/save.do">
+		net.gzcnt.cds.cnt.mq.cnt_meta_quota.action.CntMetaQuotaMqSaveAction
+	</action>
+	
+	<!--删除del -->
+	<action name="CntMetaQuotaMqAction" url="/cds/cnt/mq/cnt_meta_quota/del.do">
+		net.gzcnt.cds.cnt.mq.cnt_meta_quota.action.CntMetaQuotaMqDelAction
+	</action>
+	
+	<!--删除所有del all -->
+	<action name="CntMetaQuotaMqAction" url="/cds/cnt/mq/cnt_meta_quota/del_all.do">
+		net.gzcnt.cds.cnt.mq.cnt_meta_quota.action.CntMetaQuotaMqDelAllAction
+		<result name="Default" type="forward">
+			/cds/cnt/mq/cnt_meta_quota/list.do
+		</result>
+		<result name="Bootstrap" type="forward">
+			/cds/cnt/mq/cnt_meta_quota/list.do
+		</result>
+	</action>
+
+	<!--导入Excel -->
+	<action name="CntMetaQuotaMqAction" url="/cds/cnt/mq/cnt_meta_quota/import.do">
+		net.gzcnt.cds.cnt.mq.cnt_meta_quota.action.CntMetaQuotaMqImportExcelAction
+	</action>
+
+	<!--导出Excel -->
+	<action name="CntMetaQuotaMqAction" url="/cds/cnt/mq/cnt_meta_quota/export.do">
+		net.gzcnt.cds.cnt.mq.cnt_meta_quota.action.CntMetaQuotaMqExportExcelAction
+	</action>
+
+
+	<!--绑定维度 -->
+	<action name="CntDimensionTAction" url="/cds/cnt/mq/cnt_meta_quota/t/parent.do">
+		net.gzcnt.cds.cnt.mq.cnt_meta_quota.action.CntDimensionTParentAction
+	</action>
+
+	<!--选择维度 -->
+	<action name="CntDimensionTAction" url="/cds/cnt/mq/cnt_meta_quota/t/select.do">
+		net.gzcnt.cds.cnt.mq.cnt_meta_quota.action.CntDimensionTSelectAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/mq/cnt_meta_quota/CntDimensionTSelect.jsp
+		</result>
+	</action>
+
+
+	<!-- 验证名称的唯一性 -->
+	<action name="CntTreeMetaQuotaMqExistsNameAction" url="/cds/cnt/mq/cnt_meta_quota/existsName.do">
+		net.gzcnt.cds.cnt.mq.cnt_meta_quota.action.CntMetaQuotaMqExistNameAction
+	</action>
+
+	<!-- 验证编码的唯一性 -->
+	<action name="CntTreeMetaQuotaMqExistsNameAction" url="/cds/cnt/mq/cnt_meta_quota/existsCode.do">
+		net.gzcnt.cds.cnt.mq.cnt_meta_quota.action.CntMetaQuotaMqExistCodeAction
+	</action>
+	
+	<!-- 验证别名的唯一性 -->
+	<action name="CntTreeMetaQuotaMqExistsNameAction" url="/cds/cnt/mq/cnt_meta_quota/existsAlias.do">
+		net.gzcnt.cds.cnt.mq.cnt_meta_quota.action.CntMetaQuotaMqExistAliasAction
+	</action>
+	
+	<!-- 解析execl的数据 -->
+	<action name="CntMetaQuotaMqAnalysisAtion" url="/cds/cnt/mq/cnt_meta_quota/analysis.do">
+		net.gzcnt.cds.cnt.mq.cnt_meta_quota.action.CntMetaQuotaMqAnalysisAtion
+	</action>
+
+	<!-- 展示excel的内容 -->
+	<action name="CntMetaQuotaMqAction" url="/cds/cnt/mq/cnt_meta_quota/showExcel.do">
+		net.gzcnt.cds.cnt.mq.cnt_meta_quota.action.CntMetaQuotaMqShowExcelAtion
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/mq/cnt_meta_quota/CntMetaQuotaMqShowExcelBootstrap.jsp
+		</result>
+	</action>
+</root>

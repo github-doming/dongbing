@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	<action name="WfDefNodeTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_node_t/cx/list.do">
+		c.x.platform.admin.feng.wf.wf_def_node_t.cx.action.WfDefNodeTCxListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_def_node_t/cx/WfDefNodeTCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object-->
+	<action name="WfDefNodeTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_node_t/cx/list_object.do">
+		c.x.platform.admin.feng.wf.wf_def_node_t.cx.action.WfDefNodeTCxListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_def_node_t/cx/WfDefNodeTCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form-->
+	<action name="WfDefNodeTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_node_t/cx/form.do">
+		c.x.platform.admin.feng.wf.wf_def_node_t.cx.action.WfDefNodeTCxFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_def_node_t/cx/WfDefNodeTCxForm.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	<action name="WfDefNodeTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_node_t/cx/save.do">
+		c.x.platform.admin.feng.wf.wf_def_node_t.cx.action.WfDefNodeTCxSaveAction
+		<result name="index" type="forward">
+	/c/x/platform/admin/feng/wf/wf_def_node_t/cx/list.do
+		</result>
+	</action>
+	<!--删除del-->
+	<action name="WfDefNodeTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_node_t/cx/del.do">
+		c.x.platform.admin.feng.wf.wf_def_node_t.cx.action.WfDefNodeTCxDelAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/wf/wf_def_node_t/cx/list.do
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="WfDefNodeTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_node_t/cx/del_all.do">
+		c.x.platform.admin.feng.wf.wf_def_node_t.cx.action.WfDefNodeTCxDelAllAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/wf/wf_def_node_t/cx/list.do
+		</result>
+	</action>
+</root>

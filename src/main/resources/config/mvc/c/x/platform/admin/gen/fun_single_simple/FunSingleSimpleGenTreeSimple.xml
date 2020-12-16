@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--Json -->
+	<action name="FunSingleSimpleGenTreeSimpleAction"
+		url="/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/listJson.do">
+		c.x.platform.admin.gen.fun_single_simple.gen_tree_simple.action.FunSingleSimpleGenTreeSimpleListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="FunSingleSimpleGenTreeSimpleAction"
+		url="/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/list.do">
+		c.x.platform.admin.gen.fun_single_simple.gen_tree_simple.action.FunSingleSimpleGenTreeSimpleListAction
+		<result name="Default" type="forward">
+			/pages/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/FunSingleSimpleGenTreeSimpleList.jsp
+		</result>
+		
+		<result name="Miniui" type="forward">
+			/pages/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/FunSingleSimpleGenTreeSimpleListMiniui.jsp
+		</result>
+		
+		<result name="DefaultObject" type="forward">
+			/pages/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/FunSingleSimpleGenTreeSimpleList.jsp
+		</result>
+		
+		<result name="Bootstrap" type="forward">
+			/pages/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/FunSingleSimpleGenTreeSimpleListBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/FunSingleSimpleGenTreeSimpleListBootstrap.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/FunSingleSimpleGenTreeSimpleListKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/FunSingleSimpleGenTreeSimpleListKaida.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="FunSingleSimpleGenTreeSimpleAction"
+		url="/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/form.do">
+		c.x.platform.admin.gen.fun_single_simple.gen_tree_simple.action.FunSingleSimpleGenTreeSimpleFormAction
+		<result name="Default" type="forward">
+			/pages/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/FunSingleSimpleGenTreeSimpleForm.jsp
+		</result>
+		<result name="DefaultObject" type="forward">
+			/pages/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/FunSingleSimpleGenTreeSimpleForm.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/FunSingleSimpleGenTreeSimpleFormMiniui.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/FunSingleSimpleGenTreeSimpleFormBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/FunSingleSimpleGenTreeSimpleFormBootstrap.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/FunSingleSimpleGenTreeSimpleFormKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/FunSingleSimpleGenTreeSimpleFormKaida.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="FunSingleSimpleGenTreeSimpleAction"
+		url="/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/save.do">
+		c.x.platform.admin.gen.fun_single_simple.gen_tree_simple.action.FunSingleSimpleGenTreeSimpleSaveAction
+		<result name="Default" type="forward">
+			/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="FunSingleSimpleGenTreeSimpleAction"
+		url="/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/del.do">
+		c.x.platform.admin.gen.fun_single_simple.gen_tree_simple.action.FunSingleSimpleGenTreeSimpleDelAction
+		<result name="Default" type="forward">
+			/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="FunSingleSimpleGenTreeSimpleAction"
+		url="/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/del_all.do">
+		c.x.platform.admin.gen.fun_single_simple.gen_tree_simple.action.FunSingleSimpleGenTreeSimpleDelAllAction
+		<result name="Default" type="forward">
+			/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/list.do
+		</result>
+	</action>
+	<!--请求选择上一级parent -->
+	<action name="FunSingleSimpleGenTreeSimpleAction"
+		url="/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/parent.do">
+		c.x.platform.admin.gen.fun_single_simple.gen_tree_simple.action.FunSingleSimpleGenTreeSimpleParentAction
+		<result name="Default" type="forward">
+			/pages/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/FunSingleSimpleGenTreeSimpleParent.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/FunSingleSimpleGenTreeSimpleParentBootstrap.jsp
+		</result>
+	</action>
+	<!--选择上一级select -->
+	<action name="FunSingleSimpleGenTreeSimpleAction"
+		url="/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/select.do">
+		c.x.platform.admin.gen.fun_single_simple.gen_tree_simple.action.FunSingleSimpleGenTreeSimpleSelectAction
+		<result name="Default" type="forward">
+			/pages/c/x/platform/admin/gen/fun_single_simple/gen_tree_simple/FunSingleSimpleGenTreeSimpleSelect.jsp
+		</result>
+	</action>
+</root>

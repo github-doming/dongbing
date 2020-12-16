@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--netty群发消息 -->
+	<action name="CmsMsgTopicTAction" url="/all/cms/msg/netty/cms_msg_post/saveBatch.do">
+		all.cms.msg.netty.action.CmsMsgPostSaveBatchAction
+	</action>
+	<action name="CmsMsgTopicTAction" url="/all/cms/msg/netty/cms_msg_topic/saveBatch.do">
+		all.cms.msg.netty.action.CmsMsgTopicSaveBatchAction
+	</action>
+	<!--websocket群发消息 -->
+	<action name="CmsMsgTopicTAction" url="/all/cms/msg/websocket/cms_msg_post/saveBatch.do">
+		all.cms.msg.websocket.action.CmsMsgPostSaveBatchAction
+	</action>
+	<action name="CmsMsgTopicTAction" url="/all/cms/msg/websocket/cms_msg_topic/saveBatch.do">
+		all.cms.msg.websocket.action.CmsMsgTopicSaveBatchAction
+	</action>
+
+	<!--消息总条数 -->
+	<action name="CmsMsgTopicTAction" url="/all/cms/msg/cms_msg/state_new/cnt_total.do">
+		all.cms.msg.action.CmsMsgStateNewCntTotalAction
+	</action>
+	<!--消息主题删除 -->
+	<action name="CmsMsgTopicTAction" url="/all/cms/msg/cms_msg_topic/del.do">
+		all.cms.msg.action.CmsMsgTopicDelAction
+	</action>
+	<!--消息删除 -->
+	<action name="CmsMsgTopicTAction" url="/all/cms/msg/cms_msg/del.do">
+		all.cms.msg.action.CmsMsgDelAction
+	</action>
+	<!--消息主题 -->
+	<action name="CmsMsgTopicTAction" url="/all/cms/msg/cms_msg_topic/form.do">
+		all.cms.msg.action.CmsMsgTopicAction
+	</action>
+	<!--保存消息 -->
+	<action name="CmsMsgTopicTAction" url="/all/cms/msg/cms_msg/save.do">
+		all.cms.msg.action.CmsMsgSaveAction
+	</action>
+
+	<!--消息主题列表 -->
+	<action name="CmsMsgTopicTAction" url="/all/cms/msg/cms_msg_topic/list.do">
+		all.cms.msg.action.CmsMsgTopicListAction
+	</action>
+	<action name="CmsMsgTopicTAction" url="/all/cms/msg/cms_msg_topic/list2.do">
+		all.cms.msg.action.CmsMsgTopicListAction2
+	</action>
+	<!--消息列表 -->
+	<action name="CmsTopicTAction" url="/all/cms/msg/cms_msg/list.do">
+		all.cms.msg.action.CmsMsgListAction
+	</action>
+	<action name="CmsTopicTAction" url="/all/cms/msg/cms_msg/list2.do">
+		all.cms.msg.action.CmsMsgListAction2
+	</action>
+	<!--保存反馈 -->
+	<action name="CmsTopicTAction" url="/all/cms/msg/cms_topic_feeback/save.do">
+		all.cms.msg.action.CmsTopicFeedbackSaveAction
+	</action>
+</root>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+
+	<!--Dongming-->
+	<!-- 方案列表 -->
+	<action name="IbmPlanUserTAction" url="/ibm/pc/ibm_plan_user/list.do">
+        com.ibm.old.v1.pc.ibm_plan_user.t.action.IbmPlanUserListAction
+	</action>
+	<!-- 方案详情列表 -->
+	<action name="IbmPlanUserTAction" url="/ibm/pc/ibm_plan_user/show.do">
+        com.ibm.old.v1.pc.ibm_plan_user.t.action.IbmPlanUserShowAction
+	</action>
+    <!-- 方案详情修改 -->
+    <action name="IbmPlanUserTAction" url="/ibm/pc/ibm_plan_user/edit.do">
+        com.ibm.old.v1.pc.ibm_plan_user.t.action.IbmPlanUserEditAction
+    </action>
+    <!-- 方案详情状态修改 -->
+    <action name="IbmPlanUserTAction" url="/ibm/pc/ibm_plan_user/editState.do">
+        com.ibm.old.v1.pc.ibm_plan_user.t.action.IbmPlanUserEditStateAction
+    </action>
+    <!-- 选中方案详情状态修改 -->
+    <action name="IbmPlanUserTAction" url="/ibm/pc/ibm_plan_user/editAllState.do">
+        com.ibm.old.v1.pc.ibm_plan_user.t.action.IbmPlanUserEditAllStateAction
+    </action>
+    <!-- 获取盘口所有方案 -->
+    <action name="IbmPlanListByHandicapAction" url="/ibm/pc/ibm_plan_user/listByHandicap.do">
+        com.ibm.old.v1.pc.ibm_plan_user.t.action.IbmPlanListByHandicapAction
+    </action>
+
+</root>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!-- sys -->
+	<action name="IndexAction" url="/platform/admin/sys/tree_table.do">
+		c.x.platform.root.layout.menu.action.SysMenuAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/root/layout/menu/index.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/platform/admin/sys/menuListJson.do">
+		c.x.platform.root.layout.menu.action.SysMenuListJsonAction
+	</action>
+	<!-- app -->
+	<action name="IndexAction" url="/platform/admin/app/tree_table.do">
+		all.app_admin.root.layout.menu.action.AppMenuAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/root/layout/menu/index.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/platform/admin/app/menuListJson.do">
+		all.app_admin.root.layout.menu.action.AppMenuListJsonAction
+	</action>
+	<!--模块,布局 -->
+	<!--注册 -->
+	<action name="IndexAction" url="/platform/admin/register_check.do">
+		all.app_admin.root.layout.register.action.RegisterActionCheck
+		<result name="index" type="forward">
+			/pages/c/x/platform/root/register/index.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/platform/admin/register.do">
+		all.app_admin.root.layout.register.action.RegisterAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/root/register/index.jsp
+		</result>
+	</action>
+	<!--登录 -->
+	<action name="IndexAction" url="/platform/admin/login.do">
+		all.app_admin.root.layout.login.action.AdminLoginAction
+		<result name="Default" type="forward">
+		   /pages/all/ui/i1/game/pages/login/login.jsp
+		</result>
+		<result name="Default1" type="forward">
+			/pages/all/cds/layout/login_not/login.jsp
+		</result>
+	</action>
+	<!--登录 -->
+	<action name="IndexAction" url="/platform/admin/login2.do">
+		all.app_admin.root.layout.login.action.AdminLoginAction
+		<result name="Default" type="forward">
+			/pages/all/cds/layout/login_not/login_2.jsp
+		</result>
+	</action>
+	<!--check -->
+	<action name="IndexAction" url="/platform/admin/check.do">
+		all.app_admin.root.layout.check.action.CheckAction
+		<result name="Default" type="forward">
+			/pages/c/x/platform/root/layout/main/request_main.jsp
+		</result>
+	</action>
+	<!--check -->
+	<action name="IndexAction" url="/platform/admin/checkJson.do">
+		all.app_admin.root.layout.check.action.CheckJsonAction
+	</action>
+	<!-- index页 -->
+	<action name="IndexAction" url="/platform/admin/index.do">
+		all.cds.AppMainAction
+		<result name="Default" type="forward">
+			/pages/all/cds/layout/index.jsp
+		</result>
+	</action>
+	<!--退出 -->
+	<action name="IndexAction" url="/platform/admin/logout.do">
+		all.app_admin.root.layout.logout.action.AdminLogoutAction
+		<result name="loginNot" type="forward">
+			/platform/admin/login.do
+		</result>
+		<result name="loginNotDevelop" type="forward">
+			/platform/admin/login2.do
+		</result>
+	</action>
+	<!--退出 -->
+	<action name="IndexAction" url="/platform/admin/logout/bootstrap.do">
+		all.app_admin.root.layout.logout.action.AdminLogoutAction
+		<result name="login" type="forward">
+			/admin/login.do
+		</result>
+		<result name="loginNot" type="forward">
+			/pages/c/x/platform/root/login_not/login_not.jsp
+		</result>
+		<result name="loginNotDevelop" type="forward">
+			/pages/c/x/platform/root/login_not/develop/index.jsp
+		</result>
+	</action>
+	<!--模块,布局 -->
+</root>

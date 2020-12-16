@@ -1,0 +1,87 @@
+/**
+		
+		crud list 
+*/
+
+
+/**
+		
+		为了td边界线的蓝色线
+*/
+.class_crud_table{
+		width: 100%;
+		table-layout: fixed;
+		/**
+		
+		为了td边界线的蓝色线
+		*/
+background-color:#7A9DB8;
+}
+
+
+/**
+		
+		白色
+*/
+.class_crud_td_white{
+	/**
+		
+		白色
+		*/
+		background-color:#FFFFFF;
+		word-wrap : break-word; 
+}
+/**
+		
+		字体
+		crud page
+		crud form
+*/
+.class_font_size_12px{
+	color: #000000;
+	font-size: 12px;
+}
+
+
+/**
+		
+		链接
+		crud page
+		crud list
+*/
+
+
+
+A:link.class_a{
+	TEXT-DECORATION: none;
+	TEXT-DECORATION: none;
+	color: #000000;
+	cursor: hand;
+	font-size: 12px
+}
+
+A:visited.class_a{
+	TEXT-DECORATION: none;
+	TEXT-DECORATION: none;
+	color: #000000;
+	cursor: hand;
+	font-size: 12px
+}
+
+A:active.class_a{
+	TEXT-DECORATION: none;
+	TEXT-DECORATION: none;
+	color: #000000;
+	cursor: hand;
+	font-size: 12px
+}
+
+A:hover.class_a{
+	LEFT: 1px;
+	POSITION: relative;
+	TOP: 1px;
+	TEXT-DECORATION: none;
+	color: #3366CC;
+	cursor: hand;
+	font-size: 12px
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="WxPMenuTAction"
+		url="/all/gen/wx_p_menu/t/listJson.do">
+		all.gen.wx_p_menu.t.action.WxPMenuTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="WxPMenuTAction"
+		url="/all/gen/wx_p_menu/t/list/easyui.do">
+		all.gen.wx_p_menu.t.action.WxPMenuTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_menu/t/WxPMenuTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="WxPMenuTAction"
+		url="/all/gen/wx_p_menu/t/list/bootstrap.do">
+		all.gen.wx_p_menu.t.action.WxPMenuTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_menu/t/WxPMenuTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="WxPMenuTAction"
+		url="/all/gen/wx_p_menu/t/form/bootstrap.do">
+		all.gen.wx_p_menu.t.action.WxPMenuTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_menu/t/WxPMenuTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="WxPMenuTAction"
+		url="/all/gen/wx_p_menu/t/save/bootstrap.do">
+		all.gen.wx_p_menu.t.action.WxPMenuTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_menu/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPMenuTAction"
+		url="/all/gen/wx_p_menu/t/saveJson.do">
+		all.gen.wx_p_menu.t.action.WxPMenuTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="WxPMenuTAction"
+		url="/all/gen/wx_p_menu/t/del/bootstrap.do">
+		all.gen.wx_p_menu.t.action.WxPMenuTDelAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_menu/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPMenuTAction"
+		url="/all/gen/wx_p_menu/t/delJson.do">
+		all.gen.wx_p_menu.t.action.WxPMenuTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="WxPMenuTAction"
+		url="/all/gen/wx_p_menu/t/del_all/bootstrap.do">
+		all.gen.wx_p_menu.t.action.WxPMenuTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_menu/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPMenuTAction"
+		url="/all/gen/wx_p_menu/t/delAllJson.do">
+		all.gen.wx_p_menu.t.action.WxPMenuTDelAllJsonAction
+		
+	</action>
+</root>

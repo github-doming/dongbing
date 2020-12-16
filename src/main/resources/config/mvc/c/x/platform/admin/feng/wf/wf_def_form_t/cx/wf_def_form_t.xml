@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	<action name="WfDefFormTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_form_t/cx/list.do">
+		c.x.platform.admin.feng.wf.wf_def_form_t.cx.action.WfDefFormTCxListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_def_form_t/cx/WfDefFormTCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object-->
+	<action name="WfDefFormTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_form_t/cx/list_object.do">
+		c.x.platform.admin.feng.wf.wf_def_form_t.cx.action.WfDefFormTCxListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_def_form_t/cx/WfDefFormTCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form-->
+	<action name="WfDefFormTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_form_t/cx/form.do">
+		c.x.platform.admin.feng.wf.wf_def_form_t.cx.action.WfDefFormTCxFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_def_form_t/cx/WfDefFormTCxForm.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	<action name="WfDefFormTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_form_t/cx/save.do">
+		c.x.platform.admin.feng.wf.wf_def_form_t.cx.action.WfDefFormTCxSaveAction
+		<result name="index" type="forward">
+	/c/x/platform/admin/feng/wf/wf_def_form_t/cx/list.do
+		</result>
+	</action>
+	<!--删除del-->
+	<action name="WfDefFormTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_form_t/cx/del.do">
+		c.x.platform.admin.feng.wf.wf_def_form_t.cx.action.WfDefFormTCxDelAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/wf/wf_def_form_t/cx/list.do
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="WfDefFormTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_form_t/cx/del_all.do">
+		c.x.platform.admin.feng.wf.wf_def_form_t.cx.action.WfDefFormTCxDelAllAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/wf/wf_def_form_t/cx/list.do
+		</result>
+	</action>
+</root>

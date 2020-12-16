@@ -1,0 +1,66 @@
+删除 c3p0-0.9.5.2.jar
+
+c3p0初始化错误
+
+
+com.mchange.v2.cfg.BasicMultiPropertiesConfig.<init>([Ljava/lang/String;Ljav
+
+
+c3p0 jar包冲突
+
+启动tomcat报以下异常
+
+used by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [spring-mybatis.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.mchange.v2.c3p0.ComboPooledDataSource]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError
+    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1116)
+    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1060)
+    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+    at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+    at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+    at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+    at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+    at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+    ... 116 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.mchange.v2.c3p0.ComboPooledDataSource]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError
+    at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:154)
+    at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:89)
+    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1108)
+    ... 124 more
+Caused by: java.lang.ExceptionInInitializerError
+    at com.mchange.v2.c3p0.impl.PoolBackedDataSourceBase.<init>(PoolBackedDataSourceBase.java:54)
+    at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.<init>(AbstractPoolBackedDataSource.java:74)
+    at com.mchange.v2.c3p0.AbstractComboPooledDataSource.<init>(AbstractComboPooledDataSource.java:142)
+    at com.mchange.v2.c3p0.AbstractComboPooledDataSource.<init>(AbstractComboPooledDataSource.java:138)
+    at com.mchange.v2.c3p0.ComboPooledDataSource.<init>(ComboPooledDataSource.java:47)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+    at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+    at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:142)
+    ... 126 more
+Caused by: java.lang.reflect.UndeclaredThrowableException
+    at com.sun.proxy.$Proxy24.find(Unknown Source)
+    at com.mchange.v2.cfg.MConfig.readVmConfig(MConfig.java:75)
+    at com.mchange.v2.c3p0.cfg.C3P0Config.findLibraryMultiPropertiesConfig(C3P0Config.java:157)
+    at com.mchange.v2.c3p0.cfg.C3P0Config.<clinit>(C3P0Config.java:143)
+    ... 136 more
+Caused by: java.lang.reflect.InvocationTargetException
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:497)
+    at com.mchange.v1.lang.Synchronizer$1.invoke(Synchronizer.java:58)
+    ... 140 more
+Caused by: java.lang.NoSuchMethodError: com.mchange.v2.cfg.BasicMultiPropertiesConfig.<init>([Ljava/lang/String;Ljava/util/List;)V
+    at com.mchange.v2.cfg.ConfigUtils.read(ConfigUtils.java:63)
+    at com.mchange.v2.cfg.MConfig$CSManager.recreateFromKey(MConfig.java:153)
+    at com.mchange.v1.cachedstore.NoCleanupCachedStore.find(NoCleanupCachedStore.java:63)
+    ... 145 more
+
+经过艰难的排查，原来是新加的定时任务的依赖包quartz引起的。
+
+程序原来引用的c3p0包的版本是0.9.5.2，而新加的quartz的版本是2.2.1，这个版本依赖的c3p0版本是0.9.1.1
+
+导致启动失败。
+
+解决方法：直接将pom中的0.9.5.2版本去掉即可

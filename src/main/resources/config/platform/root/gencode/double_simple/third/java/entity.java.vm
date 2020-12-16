@@ -1,0 +1,69 @@
+package ${third_package_name_all}.entity;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Date;
+
+import javax.persistence.Column;
+import c.a.util.core.annotation.AnnotationEntity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import c.a.util.core.annotation.AnnotationTable;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+
+/**
+ * The persistent class for the database table ${third_table_name} 
+ * 实体类
+ */
+@AnnotationEntity
+@AnnotationTable(name = "${third_table_name}")
+public class ${third_table_class} implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	#foreach( $name in $third_list_column )
+	#if ($name.isPk)
+	//自己制定ID
+	// @Id
+	// 根据底层数据库
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	#else
+	#end
+	
+	#if ($name.dataType=='Date')
+	@Temporal( TemporalType.TIMESTAMP)
+	#else
+	#end
+	
+//${name.comment}
+@Column(name="${name.columnName}")
+	private ${name.dataType} ${name.fieldName};
+	
+	public void set${name.methodName}(${name.dataType} ${name.fieldName}) {
+		this.${name.fieldName}=${name.fieldName};
+	}
+	public ${name.dataType} get${name.methodName}() {
+		return this.${name.fieldName} ;
+	}
+#end
+
+	private String tableNameMy;
+	/*
+	 * 不映射
+	 * 
+	 * @return
+	 */
+	@Transient
+	public String getTableNameMy() {
+		return tableNameMy;
+	}
+
+	public void setTableNameMy(String tableNameMy) {
+		this.tableNameMy = tableNameMy;
+	}
+
+
+}

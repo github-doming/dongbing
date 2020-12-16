@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="AppUserGroupTAction"
+		url="/all/gen/app_user_group/t/listJson.do">
+		all.gen.app_user_group.t.action.AppUserGroupTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="AppUserGroupTAction"
+		url="/all/gen/app_user_group/t/list/easyui.do">
+		all.gen.app_user_group.t.action.AppUserGroupTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_user_group/t/AppUserGroupTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="AppUserGroupTAction"
+		url="/all/gen/app_user_group/t/list/bootstrap.do">
+		all.gen.app_user_group.t.action.AppUserGroupTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_user_group/t/AppUserGroupTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="AppUserGroupTAction"
+		url="/all/gen/app_user_group/t/form/bootstrap.do">
+		all.gen.app_user_group.t.action.AppUserGroupTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_user_group/t/AppUserGroupTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="AppUserGroupTAction"
+		url="/all/gen/app_user_group/t/save/bootstrap.do">
+		all.gen.app_user_group.t.action.AppUserGroupTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/app_user_group/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppUserGroupTAction"
+		url="/all/gen/app_user_group/t/saveJson.do">
+		all.gen.app_user_group.t.action.AppUserGroupTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="AppUserGroupTAction"
+		url="/all/gen/app_user_group/t/del/bootstrap.do">
+		all.gen.app_user_group.t.action.AppUserGroupTDelAction
+		<result name="Default" type="forward">
+			/all/gen/app_user_group/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppUserGroupTAction"
+		url="/all/gen/app_user_group/t/delJson.do">
+		all.gen.app_user_group.t.action.AppUserGroupTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="AppUserGroupTAction"
+		url="/all/gen/app_user_group/t/del_all/bootstrap.do">
+		all.gen.app_user_group.t.action.AppUserGroupTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/app_user_group/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppUserGroupTAction"
+		url="/all/gen/app_user_group/t/delAllJson.do">
+		all.gen.app_user_group.t.action.AppUserGroupTDelAllJsonAction
+		
+	</action>
+</root>

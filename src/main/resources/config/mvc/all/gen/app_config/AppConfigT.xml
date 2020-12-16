@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="AppConfigTAction"
+		url="/all/gen/app_config/t/listJson.do">
+		all.gen.app_config.t.action.AppConfigTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="AppConfigTAction"
+		url="/all/gen/app_config/t/list/easyui.do">
+		all.gen.app_config.t.action.AppConfigTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_config/t/AppConfigTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="AppConfigTAction"
+		url="/all/gen/app_config/t/list/bootstrap.do">
+		all.gen.app_config.t.action.AppConfigTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_config/t/AppConfigTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="AppConfigTAction"
+		url="/all/gen/app_config/t/form/bootstrap.do">
+		all.gen.app_config.t.action.AppConfigTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_config/t/AppConfigTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="AppConfigTAction"
+		url="/all/gen/app_config/t/save/bootstrap.do">
+		all.gen.app_config.t.action.AppConfigTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/app_config/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppConfigTAction"
+		url="/all/gen/app_config/t/saveJson.do">
+		all.gen.app_config.t.action.AppConfigTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="AppConfigTAction"
+		url="/all/gen/app_config/t/del/bootstrap.do">
+		all.gen.app_config.t.action.AppConfigTDelAction
+		<result name="Default" type="forward">
+			/all/gen/app_config/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppConfigTAction"
+		url="/all/gen/app_config/t/delJson.do">
+		all.gen.app_config.t.action.AppConfigTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="AppConfigTAction"
+		url="/all/gen/app_config/t/del_all/bootstrap.do">
+		all.gen.app_config.t.action.AppConfigTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/app_config/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppConfigTAction"
+		url="/all/gen/app_config/t/delAllJson.do">
+		all.gen.app_config.t.action.AppConfigTDelAllJsonAction
+		
+	</action>
+</root>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="test" xmlns="http://jbpm.org/4.4/jpdl">
+
+	<!-- 流程实例的启动事件 -->
+	<on event="start">
+		<event-listener class="cn.grace.EventListenerImpl"></event-listener>
+	</on>
+	<!-- 流程实例的结束事件 -->
+	<on event="end">
+		<event-listener class="cn.grace.EventListenerImpl"></event-listener>
+	</on>
+
+	<start name="start1" g="86,69,7,1">
+		<!-- 开始活动中只有离开活动的事件 -->
+		<on event="end">
+			<event-listener class="cn.grace.EventListenerImpl"></event-listener>
+		</on>
+		<transition name="to task1" to="task1" g="-53,-17" />
+	</start>
+
+	<task name="task1" g="61,171,92,52" assignee="张三">
+		<!-- 进入活动的事件 -->
+		<on event="start">
+			<event-listener class="cn.grace.EventListenerImpl"></event-listener>
+		</on>
+		<!--离开活动的事件 -->
+		<on event="end">
+			<event-listener class="cn.grace.EventListenerImpl"></event-listener>
+		</on>
+		<transition name="to end1" to="end1" g="-47,-17" />
+	</task>
+
+	<end name="end1" g="86,272,48,48">
+		<!-- 结束活动中只有进入活动的事件 -->
+		<on event="start">
+			<event-listener class="cn.grace.EventListenerImpl"></event-listener>
+		</on>
+	</end>
+</process>

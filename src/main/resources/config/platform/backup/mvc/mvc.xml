@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--模块,布局 -->
+	<!--注册 -->
+	<action name="IndexAction" url="/c/x/platform/admin/register_check.do">
+		c.x.platform.root.layout.register.action.RegisterActionCheck
+		<result name="index" type="forward">
+			/pages/c/x/platform/root/register/index.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/c/x/platform/admin/register.do">
+		c.x.platform.root.layout.register.action.RegisterAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/root/register/index.jsp
+		</result>
+	</action>
+	<!--注册 -->
+	<!---->
+	<action name="IndexAction" url="/c/x/platform/admin/login.do">
+		c.x.platform.root.layout.login.action.AdminLoginAction
+		<result name="login" type="forward">
+			/pages/c/x/platform/root/login_not/login_not.jsp
+		</result>
+		<result name="login_miniui" type="forward">
+			/pages/all/ui/miniui/layout/login_not/login_not.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/c/x/platform/admin/check.do">
+		c.x.platform.root.layout.check.action.CheckAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/root/layout/main/request_main.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/c/x/platform/admin/checkJson.do">
+		c.x.platform.root.layout.check.action.CheckJsonAction
+	</action>
+	<action name="IndexAction" url="/c/x/platform/admin/index.do">
+		c.x.platform.root.layout.main.action.SysMainAction
+		<result name="index" type="forward">/pages/c/x/platform/root/layout/main/index.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/c/x/platform/admin/tree_table.do">
+		c.x.platform.root.layout.menu.action.SysMenuAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/root/layout/menu/index.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/c/x/platform/admin/menuListJson.do">
+		c.x.platform.root.layout.menu.action.SysMenuListJsonAction
+	</action>
+	<action name="IndexAction" url="/c/x/platform/admin/menuSaveJson.do">
+		c.x.platform.root.layout.menu.action.MenuSaveJsonAction
+	</action>
+	<action name="IndexAction" url="/c/x/platform/admin/logout.do">
+		c.x.platform.root.layout.logout.action.AdminLogoutAction
+		<result name="login" type="forward">
+			/admin/login.do
+		</result>
+		<result name="loginNot" type="forward">/pages/c/x/platform/root/login_not/login_not.jsp
+		</result>
+		<result name="loginNotDevelop" type="forward">/pages/c/x/platform/root/login_not/develop/index.jsp
+		</result>
+	</action>
+	<!-- -->
+	<!--模块,布局 -->
+	<!--模块,菜单 -->
+	<!--列表list -->
+	<action name="SysMenuCxAction" url="/c/x/platform/sys/sys_menu/cx/list.do">
+		c.x.platform.sys.sys_menu.cx.action.SysMenuCxListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_menu/cx/SysMenuCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object -->
+	<action name="SysMenuCxAction" url="/c/x/platform/sys/sys_menu/cx/list_object.do">
+		c.x.platform.sys.sys_menu.cx.action.SysMenuCxListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_menu/cx/SysMenuCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysMenuCxAction" url="/c/x/platform/sys/sys_menu/cx/form.do">
+		c.x.platform.sys.sys_menu.cx.action.SysMenuCxFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_menu/cx/SysMenuCxForm.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysMenuCxAction" url="/c/x/platform/sys/sys_menu/cx/save.do">
+		c.x.platform.sys.sys_menu.cx.action.SysMenuCxSaveAction
+		<result name="index" type="forward">
+			/platform/sys/sys_menu/cx/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="SysMenuCxAction" url="/c/x/platform/sys/sys_menu/cx/del.do">
+		c.x.platform.sys.sys_menu.cx.action.SysMenuCxDelAction
+		<result name="index" type="forward">
+			/platform/sys/sys_menu/cx/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="SysMenuCxAction" url="/c/x/platform/sys/sys_menu/cx/del_all.do">
+		c.x.platform.sys.sys_menu.cx.action.SysMenuCxDelAllAction
+		<result name="index" type="forward">
+			/platform/sys/sys_menu/cx/list.do
+		</result>
+	</action>
+	<!--请求选择上一级parent -->
+	<action name="SysMenuCxAction" url="/c/x/platform/sys/sys_menu/cx/parent.do">
+		c.x.platform.sys.sys_menu.cx.action.SysMenuCxParentAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_menu/cx/SysMenuCxParent.jsp
+		</result>
+	</action>
+	<!--选择上一级select -->
+	<action name="SysMenuCxAction" url="/c/x/platform/sys/sys_menu/cx/select.do">
+		c.x.platform.sys.sys_menu.cx.action.SysMenuCxSelectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_menu/cx/SysMenuCxSelect.jsp
+		</result>
+	</action>
+	<!--模块,菜单 -->
+	<!--模块,角色 -->
+	<!--模块,角色,授权authorize -->
+	<!--授权保存 -->
+	<action name="SysGroupInfoAction"
+		url="/platform/sys/sys_group/cx_role/authorize_save.do">
+		c.x.platform.sys.sys_group.cx_role.action.menu.SysGroupMenuCxRoleSaveAction
+		<result name="index" type="forward">
+			/platform/sys/sys_group/cx_role/list.do
+		</result>
+	</action>
+	<!--授权请求 -->
+	<action name="SysGroupInfoAction" url="/c/x/platform/sys/sys_group/cx_role/authorize.do">
+		c.x.platform.sys.sys_group.cx_role.action.menu.SysGroupMenuCxRoleListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group/cx_role/menu/SysGroupMenuCxRoleList.jsp
+		</result>
+	</action>
+	<!--模块,角色,授权authorize -->
+	<!--列表list -->
+	<action name="SysGroupCxRoleAction" url="/c/x/platform/sys/sys_group/cx_role/list.do">
+		c.x.platform.sys.sys_group.cx_role.action.SysGroupCxRoleListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group/cx_role/SysGroupCxRoleList.jsp
+		</result>
+	</action>
+	<!--列表list_object -->
+	<action name="SysGroupCxRoleAction" url="/c/x/platform/sys/sys_group/cx_role/list_object.do">
+		c.x.platform.sys.sys_group.cx_role.action.SysGroupCxRoleListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group/cx_role/SysGroupCxRoleListObject.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysGroupCxRoleAction" url="/c/x/platform/sys/sys_group/cx_role/form.do">
+		c.x.platform.sys.sys_group.cx_role.action.SysGroupCxRoleFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group/cx_role/SysGroupCxRoleForm.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysGroupCxRoleAction" url="/c/x/platform/sys/sys_group/cx_role/save.do">
+		c.x.platform.sys.sys_group.cx_role.action.SysGroupCxRoleSaveAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group/cx_role/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="SysGroupCxRoleAction" url="/c/x/platform/sys/sys_group/cx_role/del.do">
+		c.x.platform.sys.sys_group.cx_role.action.SysGroupCxRoleDelAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group/cx_role/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="SysGroupCxRoleAction" url="/c/x/platform/sys/sys_group/cx_role/del_all.do">
+		c.x.platform.sys.sys_group.cx_role.action.SysGroupCxRoleDelAllAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group/cx_role/list.do
+		</result>
+	</action>
+	<!--模块,角色 -->
+	<!--模块,用户组与用户,sys_group_user -->
+	<!--列表list -->
+	<action name="SysGroupUserCxAction" url="/c/x/platform/sys/sys_group_user/cx/list.do">
+		c.x.platform.sys.sys_group_user.cx.action.SysGroupUserCxListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group_user/cx/SysGroupUserCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object -->
+	<action name="SysGroupUserCxAction" url="/c/x/platform/sys/sys_group_user/cx/list_object.do">
+		c.x.platform.sys.sys_group_user.cx.action.SysGroupUserCxListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group_user/cx/SysGroupUserCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysGroupUserCxAction" url="/c/x/platform/sys/sys_group_user/cx/form.do">
+		c.x.platform.sys.sys_group_user.cx.action.SysGroupUserCxFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group_user/cx/SysGroupUserCxForm.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysGroupUserCxAction" url="/c/x/platform/sys/sys_group_user/cx/save.do">
+		c.x.platform.sys.sys_group_user.cx.action.SysGroupUserCxSaveAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group_user/cx/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="SysGroupUserCxAction" url="/c/x/platform/sys/sys_group_user/cx/del.do">
+		c.x.platform.sys.sys_group_user.cx.action.SysGroupUserCxDelAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group_user/cx/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="SysGroupUserCxAction" url="/c/x/platform/sys/sys_group_user/cx/del_all.do">
+		c.x.platform.sys.sys_group_user.cx.action.SysGroupUserCxDelAllAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group_user/cx/list.do
+		</result>
+	</action>
+	<!--模块,用户组与用户,sys_group_user -->
+	<!--模块,用户 -->
+	<!--列表list -->
+	<action name="SysUserCxAction" url="/c/x/platform/sys/sys_user/cx/list.do">
+		c.x.platform.sys.sys_user.cx.action.SysUserCxListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_user/cx/SysUserCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object -->
+	<action name="SysUserCxAction" url="/c/x/platform/sys/sys_user/cx/list_object.do">
+		c.x.platform.sys.sys_user.cx.action.SysUserCxListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_user/cx/SysUserCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysUserCxAction" url="/c/x/platform/sys/sys_user/cx/form.do">
+		c.x.platform.sys.sys_user.cx.action.SysUserCxFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_user/cx/SysUserCxForm.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysUserCxAction" url="/c/x/platform/sys/sys_user/cx/save.do">
+		c.x.platform.sys.sys_user.cx.action.SysUserCxSaveAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_user/cx/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="SysUserCxAction" url="/c/x/platform/sys/sys_user/cx/del.do">
+		c.x.platform.sys.sys_user.cx.action.SysUserCxDelAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_user/cx/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="SysUserCxAction" url="/c/x/platform/sys/sys_user/cx/del_all.do">
+		c.x.platform.sys.sys_user.cx.action.SysUserCxDelAllAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_user/cx/list.do
+		</result>
+	</action>
+	<!--模块,用户 -->
+	<!--模块,令牌 -->
+	<!--列表list -->
+	<action name="SysRequestTokenTCxAction" url="/c/x/platform/sys/sys_request_token/cx/list.do">
+		c.x.platform.sys.sys_request_token.cx.action.SysRequestTokenTCxListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_request_token/cx/SysRequestTokenTCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object -->
+	<action name="SysRequestTokenTCxAction"
+		url="/platform/sys/sys_request_token/cx/list_object.do">
+		c.x.platform.sys.sys_request_token.cx.action.SysRequestTokenTCxListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_request_token/cx/SysRequestTokenTCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysRequestTokenTCxAction" url="/c/x/platform/sys/sys_request_token/cx/form.do">
+		c.x.platform.sys.sys_request_token.cx.action.SysRequestTokenTCxFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_request_token/cx/SysRequestTokenTCxForm.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysRequestTokenTCxAction" url="/c/x/platform/sys/sys_request_token/cx/save.do">
+		c.x.platform.sys.sys_request_token.cx.action.SysRequestTokenTCxSaveAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_request_token/cx/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="SysRequestTokenTCxAction" url="/c/x/platform/sys/sys_request_token/cx/del.do">
+		c.x.platform.sys.sys_request_token.cx.action.SysRequestTokenTCxDelAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_request_token/cx/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="SysRequestTokenTCxAction" url="/c/x/platform/sys/sys_request_token/cx/del_all.do">
+		c.x.platform.sys.sys_request_token.cx.action.SysRequestTokenTCxDelAllAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_request_token/cx/list.do
+		</result>
+	</action>
+	<!--模块,令牌 -->
+	<!--模块,异常 -->
+	<!--列表list -->
+	<action name="SysExceptionTCxAction" url="/c/x/platform/sys/sys_exception/cx/list.do">
+		c.x.platform.sys.sys_exception.cx.action.SysExceptionTCxListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_exception/cx/SysExceptionTCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object -->
+	<action name="SysExceptionTCxAction" url="/c/x/platform/sys/sys_exception/cx/list_object.do">
+		c.x.platform.sys.sys_exception.cx.action.SysExceptionTCxListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_exception/cx/SysExceptionTCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysExceptionTCxAction" url="/c/x/platform/sys/sys_exception/cx/form.do">
+		c.x.platform.sys.sys_exception.cx.action.SysExceptionTCxFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_exception/cx/SysExceptionTCxForm.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysExceptionTCxAction" url="/c/x/platform/sys/sys_exception/cx/save.do">
+		c.x.platform.sys.sys_exception.cx.action.SysExceptionTCxSaveAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_exception/cx/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="SysExceptionTCxAction" url="/c/x/platform/sys/sys_exception/cx/del.do">
+		c.x.platform.sys.sys_exception.cx.action.SysExceptionTCxDelAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_exception/cx/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="SysExceptionTCxAction" url="/c/x/platform/sys/sys_exception/cx/del_all.do">
+		c.x.platform.sys.sys_exception.cx.action.SysExceptionTCxDelAllAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_exception/cx/list.do
+		</result>
+	</action>
+	<!--模块,异常 -->
+	<!--模块,sys_list_t -->
+	<!--列表list -->
+	<action name="SysListTGenAction" url="/c/x/platform/sys/sys_list_t/gen/list.do">
+		c.x.platform.sys.sys_list_t.gen.action.SysListTGenListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_list_t/gen/SysListTGenList.jsp
+		</result>
+	</action>
+	<!--列表list_object -->
+	<action name="SysListTGenAction" url="/c/x/platform/sys/sys_list_t/gen/list_object.do">
+		c.x.platform.sys.sys_list_t.gen.action.SysListTGenListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_list_t/gen/SysListTGenListObject.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysListTGenAction" url="/c/x/platform/sys/sys_list_t/gen/form.do">
+		c.x.platform.sys.sys_list_t.gen.action.SysListTGenFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_list_t/gen/SysListTGenForm.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysListTGenAction" url="/c/x/platform/sys/sys_list_t/gen/save.do">
+		c.x.platform.sys.sys_list_t.gen.action.SysListTGenSaveAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_list_t/gen/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="SysListTGenAction" url="/c/x/platform/sys/sys_list_t/gen/del.do">
+		c.x.platform.sys.sys_list_t.gen.action.SysListTGenDelAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_list_t/gen/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="SysListTGenAction" url="/c/x/platform/sys/sys_list_t/gen/del_all.do">
+		c.x.platform.sys.sys_list_t.gen.action.SysListTGenDelAllAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_list_t/gen/list.do
+		</result>
+	</action>
+	<!--模块,sys_list_t -->
+	<!--模块,sys_map_t -->
+	<!--列表list -->
+	<action name="SysMapTGenAction" url="/c/x/platform/sys/sys_map_t/gen/list.do">
+		c.x.platform.sys.sys_map_t.gen.action.SysMapTGenListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_map_t/gen/SysMapTGenList.jsp
+		</result>
+	</action>
+	<!--列表list_object -->
+	<action name="SysMapTGenAction" url="/c/x/platform/sys/sys_map_t/gen/list_object.do">
+		c.x.platform.sys.sys_map_t.gen.action.SysMapTGenListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_map_t/gen/SysMapTGenListObject.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysMapTGenAction" url="/c/x/platform/sys/sys_map_t/gen/form.do">
+		c.x.platform.sys.sys_map_t.gen.action.SysMapTGenFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_map_t/gen/SysMapTGenForm.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysMapTGenAction" url="/c/x/platform/sys/sys_map_t/gen/save.do">
+		c.x.platform.sys.sys_map_t.gen.action.SysMapTGenSaveAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_map_t/gen/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="SysMapTGenAction" url="/c/x/platform/sys/sys_map_t/gen/del.do">
+		c.x.platform.sys.sys_map_t.gen.action.SysMapTGenDelAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_map_t/gen/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="SysMapTGenAction" url="/c/x/platform/sys/sys_map_t/gen/del_all.do">
+		c.x.platform.sys.sys_map_t.gen.action.SysMapTGenDelAllAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_map_t/gen/list.do
+		</result>
+	</action>
+	<!--模块,sys_map_t -->
+	<!-- 例子1 -->
+	<action name="FunTypeAction"
+		url="/example/c/x/all/feng/crud/fun_type_str_t/queryfield.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeQueryFileldAction
+	</action>
+	<action name="FunTypeAction"
+		url="/example/c/x/all/feng/crud/fun_type_str_t/miniui/form.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeListAction
+		<result name="index" type="forward">/pages/all/ui/miniui/crud/FunTypeSave.jsp
+		</result>
+	</action>
+	<action name="FunTypeAction"
+		url="/example/c/x/all/feng/crud/fun_type_str_t/miniui/list.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeListAction
+		<result name="index" type="forward">/pages/all/ui/miniui/crud/FunTypeList.jsp
+		</result>
+	</action>
+	<action name="FunTypeAction" url="/example/c/x/all/feng/crud/fun_type_str_t/listjson.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeListJsonAction
+	</action>
+	<action name="FunTypeAction"
+		url="/example/c/x/all/feng/crud/fun_type_str_t/savetable.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeSaveTableAction
+		<result name="index" type="forward">
+			/example/c/x/all/feng/crud/fun_type_str_t/list.do
+		</result>
+	</action>
+	<action name="FunTypeAction" url="/example/c/x/all/feng/crud/fun_type_str_t/saveform.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeSaveFormAction
+		<result name="index" type="forward">
+			/example/c/x/all/feng/crud/fun_type_str_t/list.do
+		</result>
+	</action>
+	<action name="FunTypeAction" url="/example/c/x/all/feng/crud/fun_type_str_t/savejson.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeSaveActionJson
+	</action>
+	<action name="FunTypeAction" url="/example/c/x/all/feng/crud/fun_type_str_t/savedata.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeSaveDataAction
+	</action>
+	<action name="FunTypeAction" url="/example/c/x/all/feng/crud/fun_type_str_t/form.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeFormAction
+		<result name="index" type="forward">
+			/pages/example/c/x/all/feng/crud/fun_type_str_t/FunTypeForm.jsp
+		</result>
+	</action>
+	<action name="FunTypeAction" url="/example/c/x/all/feng/crud/fun_type_str_t/list.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeListAction
+		<result name="index" type="forward">/pages/example/c/x/all/feng/crud/fun_type_str_t/FunTypeList.jsp
+		</result>
+	</action>
+	<!-- 例子1 -->
+	<!-- 例子2 -->
+	<action name="FunTypeAction" url="/pages/all/ui/miniui/crud/FunTypeForm.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeFormAction
+		<result name="index" type="forward">
+			/pages/all/ui/miniui/crud/FunTypeForm.jsp
+		</result>
+	</action>
+	<action name="FunTypeAction" url="/pages/all/ui/miniui/crud/FunTypeList.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeListAction
+		<result name="index" type="forward">/pages/all/ui/miniui/crud/FunTypeList.jsp
+		</result>
+	</action>
+	<action name="FunTypeAction" url="/pages/all/ui/miniui/crud/CrudTestForm.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeFormAction
+		<result name="index" type="forward">
+			/pages/all/ui/miniui/crud/CrudTestForm.jsp
+		</result>
+	</action>
+	<action name="FunTypeAction" url="/pages/all/ui/miniui/crud/CrudTestList.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeListAction
+		<result name="index" type="forward">/pages/all/ui/miniui/crud/CrudTestList.jsp
+		</result>
+	</action>
+	<!-- 例子2 -->
+</root>

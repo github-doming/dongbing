@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<config>
+		<virtualHost>MqVirtualHost</virtualHost>
+		<ip>localhost</ip>
+		<port>5672</port>
+		<userName>admin</userName>
+		<password>admin#</password>
+		<clientIdFormat>MqClientId[%s]</clientIdFormat>
+		<exchangeFormat>MqExchange[%s]</exchangeFormat>
+		<topicFormat>MqTopic[%s]</topicFormat>
+		<queueFormat>MqQueue[%s]</queueFormat>
+	</config>
+	<queue name="smart.queue.1">
+		<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e1"></client>
+		<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e2"></client>
+	</queue>
+	<queue name="smart.queue.5">
+		<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e5"></client>
+		<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e6"></client>
+	</queue>
+	<queue name="smart.queue.7">
+		<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e7"></client>
+		<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e8"></client>
+	</queue>
+	<exchange name="exchange_1">
+		<queue name="smart.queue.1">
+			<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e1"></client>
+			<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e2"></client>
+			<routing key="info"></routing>
+			<routing key="debug"></routing>
+		</queue>
+		<queue name="smart.queue.5">
+			<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e5"></client>
+			<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e6"></client>
+			<routing key="error.*"></routing>
+			<routing key="#.warning"></routing>
+		</queue>
+	</exchange>
+	
+	<exchange name="exchange_2">
+		<queue name="smart.queue.1">
+			<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e1"></client>
+			<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e2"></client>
+			<routing key="info"></routing>
+			<routing key="debug"></routing>
+		</queue>
+		<queue name="smart.queue.5">
+			<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e5"></client>
+			<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e6"></client>
+			<routing key="error.*"></routing>
+			<routing key="#.warning"></routing>
+		</queue>
+	</exchange>
+	
+	
+	
+	<exchange name="exchange_3">
+		<queue name="smart.queue.1">
+			<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e1"></client>
+			<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e2"></client>
+			<routing key="info"></routing>
+			<routing key="debug"></routing>
+		</queue>
+		<queue name="smart.queue.5">
+			<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e5"></client>
+			<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e6"></client>
+			<routing key="error.*"></routing>
+			<routing key="#.warning"></routing>
+		</queue>
+	</exchange>
+	
+	
+	<!-- 
+	<topic name="smart.topic.1">
+		<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e1"></client>
+		<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e2"></client>
+	</topic>
+	<topic name="smart.topic.5">
+		<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e5"></client>
+		<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e6"></client>
+	</topic>
+	<topic name="smart.topic.7">
+		<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e7"></client>
+		<client class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e8"></client>
+	</topic>
+	 -->
+</root>

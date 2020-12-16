@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+
+    <!-- 选择盘口用户账号 -->
+    <action name="SelectHandicapAccountAction" url="/ibm/pc/handicap_user/selectHandicapAccount.do">
+        com.ibm.old.v1.pc.ibm_handicap_user.t.action.SelectHandicapAccountAction
+    </action>
+
+    <!-- 识别盘口 -->
+    <action name="DiscernHandicapAction" url="/ibm/pc/handicap_user/discernHandicap.do">
+        com.ibm.old.v1.pc.ibm_handicap_user.t.action.DiscernHandicapAction
+    </action>
+
+    <!-- 盘口会员登录识别盘口 -->
+    <action name="CheckHandicapAction" url="/ibm/pc/handicap_user/checkHandicap.do">
+        com.ibm.old.v1.pc.ibm_handicap_user.t.action.CheckHandicapAction
+    </action>
+
+    <!-- 打开盘口 -->
+    <action name="OpenHandicapAction" url="/ibm/pc/handicap_user/openHandicap.do">
+        com.ibm.old.v1.pc.ibm_handicap_user.t.action.OpenHandicapAction
+    </action>
+
+</root>

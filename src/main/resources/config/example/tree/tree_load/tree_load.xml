@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--测试tree_load -->
+	<action name="TestAction" url="/example/tree_load/e1.do">
+		example.c.x.platform.root.compo.tree_load.e1.SysAreaInfoActionJson
+	</action>
+	<action name="TestAction" url="/example/tree_load/e2.do">
+		example.c.x.platform.root.compo.tree_load.e2.SysAreaInfoActionJson
+	</action>
+	<!--测试tree_load -->
+</root>

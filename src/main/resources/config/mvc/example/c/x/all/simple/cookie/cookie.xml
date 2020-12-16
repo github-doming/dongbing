@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!-- -->
+	<action name="cookie" url="/cookie/list.do">
+		example.c.x.all.simple.cookie.CookieListAction
+		<result name="index" type="forward">
+			/pages/example/c/x/all/simple/cookie/cookie.jsp
+		</result>
+	</action>
+	<action name="cookie" url="/cookie/save.do">
+		example.c.x.all.simple.cookie.CookieSaveAction
+		<result name="index" type="forward">
+			/pages/example/c/x/all/simple/cookie/cookie.jsp
+		</result>
+	</action>
+
+	<action name="cookie" url="/cookie/del.do">
+		example.c.x.all.simple.cookie.CookieDelAction
+		<result name="index" type="forward">
+			/pages/example/c/x/all/simple/cookie/cookie.jsp
+		</result>
+	</action>
+
+</root>

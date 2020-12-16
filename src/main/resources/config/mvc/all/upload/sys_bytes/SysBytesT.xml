@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="SysBytesTAction"
+		url="/all/upload/sys_bytes/t/listJson.do">
+		all.upload.sys_bytes.t.action.SysBytesTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="SysBytesTAction"
+		url="/all/upload/sys_bytes/t/list/easyui.do">
+		all.upload.sys_bytes.t.action.SysBytesTListAction
+		<result name="Default" type="forward">
+			/pages/all/upload/sys_bytes/t/SysBytesTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="SysBytesTAction"
+		url="/all/upload/sys_bytes/t/list/bootstrap.do">
+		all.upload.sys_bytes.t.action.SysBytesTListAction
+		<result name="Default" type="forward">
+			/pages/all/upload/sys_bytes/t/SysBytesTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="SysBytesTAction"
+		url="/all/upload/sys_bytes/t/form/bootstrap.do">
+		all.upload.sys_bytes.t.action.SysBytesTFormAction
+		<result name="Default" type="forward">
+			/pages/all/upload/sys_bytes/t/SysBytesTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="SysBytesTAction"
+		url="/all/upload/sys_bytes/t/save/bootstrap.do">
+		all.upload.sys_bytes.t.action.SysBytesTSaveAction
+		<result name="Default" type="forward">
+			/all/upload/sys_bytes/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysBytesTAction"
+		url="/all/upload/sys_bytes/t/saveJson.do">
+		all.upload.sys_bytes.t.action.SysBytesTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="SysBytesTAction"
+		url="/all/upload/sys_bytes/t/del/bootstrap.do">
+		all.upload.sys_bytes.t.action.SysBytesTDelAction
+		<result name="Default" type="forward">
+			/all/upload/sys_bytes/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysBytesTAction"
+		url="/all/upload/sys_bytes/t/delJson.do">
+		all.upload.sys_bytes.t.action.SysBytesTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="SysBytesTAction"
+		url="/all/upload/sys_bytes/t/del_all/bootstrap.do">
+		all.upload.sys_bytes.t.action.SysBytesTDelAllAction
+		<result name="Default" type="forward">
+			/all/upload/sys_bytes/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysBytesTAction"
+		url="/all/upload/sys_bytes/t/delAllJson.do">
+		all.upload.sys_bytes.t.action.SysBytesTDelAllJsonAction
+		
+	</action>
+</root>

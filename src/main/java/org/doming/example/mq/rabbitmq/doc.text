@@ -1,0 +1,85 @@
+1.建立连接和通道
+ConnectionFactory factory = new ConnectionFactory();
+factory.setHost(RabbitMQConfiguration.HOST_NAME);
+factory.setUsername(RabbitMQConfiguration.USER_NAME);
+factory.setPassword(RabbitMQConfiguration.PASS_WORD);
+connection = factory.newConnection();
+channel = connection.createChannel();
+
+2a.声明队列（创建队列）：可以生产者和消费者都声明，也可以消费者声明生产者不声明，也可以生产者声明而消费者不声明。最好是都声明。
+（生产者未声明，消费者声明这种情况如果生产者先启动，会出现消息丢失的情况，因为队列未创建）
+channel.queueDeclare(String queue, - 队列的名称
+                     boolean durable, - 该队列是否持久化,即是否保存到磁盘中.（队列将在服务器重启后仍然存在-则为true）
+                     boolean exclusive, - 该队列是否为该通道独占的，即其他通道是否可以消费该队列
+                     boolean autoDelete, - 该队列不再使用的时候，是否让RabbitMQ服务器自动删除掉.（服务器将在不再使用时将其删除-则为true）
+                     Map<String, Object> arguments); - 队列的其他属性（构造参数）
+
+2b.声明路由器（创建路由器）：生产者、消费者都要声明路由器---如果声明了队列，可以不声明路由器。
+channel.exchangeDeclare(String exchange, – 路由名称
+                        String type, – 路由类型 topic、direct、fanout、header
+                               BuiltinExchangeType.DIRECT 会忽视绑定键，每个消费者都可以接受到所有的消息（前提是每个消费者都要有各自单独的队列，而不是共有同一队列）.
+                                    @see org.doming.example.mq.rabbitmq.eg3.exchanges.direct
+                               BuiltinExchangeType.FANOUT 只有绑定键和路由键完全匹配时，才可以接受到消息。
+                                    @see org.doming.example.mq.rabbitmq.eg3.exchanges.fanout
+                               BuiltinExchangeType.TOPIC 可以设置多个关键词作为路由键，在绑定键中可以使用*和#来匹配
+                                    @see org.doming.example.mq.rabbitmq.eg3.exchanges.topic
+                        boolean durable, - 该队列是否持久化,即是否保存到磁盘中.（队列将在服务器重启后仍然存在-则为true）
+                        boolean exclusive, - 该队列是否为该通道独占的，即其他通道是否可以消费该队列
+                        boolean autoDelete, - 该队列不再使用的时候，是否让RabbitMQ服务器自动删除掉.（服务器将在不再使用时将其删除-则为true）
+                        Map<String, Object> arguments); - 队列的其他属性（构造参数）
+
+A3.绑定队列和路由器：只用在消费者 @see org.doming.example.mq.rabbitmq.eg3.exchanges.fanout.ReceiveLogs
+channel.queueBind(String queue, - 队列的名称
+                  String exchange  - 路由器的名称
+                  String routingKey, - 用于绑定的路由密钥(生效与否与路由类型有关)
+                  Map<String, Object> arguments) - 其他绑定参数
+
+A4.设置确认接收：只用在消费者 @see org.doming.example.mq.rabbitmq.eg2.workqueues.WorkerTest#task02()
+channel.basicQos(6);一次只接受一条未包含的消息（一次性接受N条记录）0表示公平分配
+
+消费者确认收到一条或多条收到的消息
+void basicAck(long deliveryTag,  - 用来标识信道中投递的消息。RabbitMQ 推送消息给 Consumer 时，会附带一个 Delivery Tag，以便 Consumer 可以在消息确认时告诉 RabbitMQ 到底是哪条消息被确认了。RabbitMQ 保证在每个信道中，每条消息的 Delivery Tag 从 1 开始递增。
+              boolean multiple) - false：表示通知 RabbitMQ 当前消息被确认；
+                                  true ：则额外将比第一个参数指定的 deliveryTag 小的消息一并确认。
+                                  （批量确认针对的是整个信道，参考gordon.study.rabbitmq.ack.TestBatchAckInOneChannel.java。）
+
+A5.接收消息：只用在消费者
+channel.basicConsume(String queue, - 队列的名称
+                     boolean autoAck, - 是否自动确认，默认true
+                            true - 如果你杀死一个消费者，我们将会失去它正在处理的消息，同时也会丢失所有发给这个工作者但这个工作者还未处理的消息
+                                @see org.doming.example.mq.rabbitmq.eg2.workqueues.WorkerTest#test01()
+                            false - 我们不想丢掉任务，如果一个工作者死掉，我们想将这个任务发给其他的工作者
+                                @see org.doming.example.mq.rabbitmq.eg2.workqueues.WorkerTest#test02()/#test03()
+                     Consumer callback) - 消费者对象的接口，即谁接收消息
+A6.消费者中一般会有回调方法来消费消息<Consumer callback>
+Consumer consumer = new DefaultConsumer(channel) {
+    @Override
+    public void handleDelivery(String consumerTag, - 与消费者关联的消费者标签
+                               Envelope envelope, - 为所述消息包装数据
+                               AMQP.BasicProperties properties, - 消息内容的标头数据
+                               byte[] body) - 消息体（不透明，特定于客户端的字节数组）
+                               throws IOException {
+        //获取消息示例
+        String message = new String(body, "UTF-8");
+        //接下来就可以根据消息处理一些事情
+    }
+};
+
+B3.发布消息：只用在生产者
+channel.basicPublish(String exchange, – 路由器的名字，即将消息发到哪个路由器
+                       String routingKey, – 路由键，即发布消息时，该消息的路由键是什么
+                       BasicProperties props, – 指定消息的基本属性,路由标题等
+                            MessageProperties.PERSISTENT_TEXT_PLAIN - 持久化消息 @see org.doming.example.mq.rabbitmq.eg2.workqueues.NewTask#task2()
+                       byte[] body) – 消息体，也就是消息的内容，是字节数组
+
+B4.BasicProperties props：指定消息的基本属性，如deliveryMode为2时表示消息持久，2以外的值表示不持久化消息
+AMQP.BasicProperties props = new AMQP.BasicProperties
+            .Builder()
+            .correlationId(corrId) - 用来关联RPC的响应和请求。
+            .replyTo(replyQueueName) - 通常用来命名一个回调队列。
+            .deliveryMode(deliveryMode) - 标记一个消息是持久的（值为2）还是短暂的（2以外的任何值）
+            .contentType(contentType) - 描述编码的mime-type（mime-type of the encoding）。比如最常使用JSON格式，就可以将该属性设置为application/json。
+            .build();
+
+
+https://www.jianshu.com/p/a6460b4b155f

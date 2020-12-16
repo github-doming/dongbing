@@ -1,0 +1,108 @@
+package ${ay_package_name}entity;
+
+import c.a.util.core.annotation.AnnotationEntity;
+import c.a.util.core.annotation.AnnotationTable;
+import org.doming.core.tools.DateTool;
+import org.doming.core.tools.StringTool;
+
+import javax.persistence.*;
+import java.io.Serializable;
+import java.text.ParseException;
+import java.util.Date;
+
+/**
+ * The persistent class for the database table ${ay_table_name} 
+ * ${ay_table_comment} 实体类
+ * @author Robot
+ */
+@AnnotationEntity
+@AnnotationTable(name = "${ay_table_name}")
+public class ${ay_table_class} implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+#foreach( $name in $ay_list_column )
+#if ($name.isPk)
+
+	/**
+	 * ${name.comment}
+	 * 根据底层数据库
+	 */
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+#else
+
+	/**
+	 * ${name.comment}
+	 */
+#end
+#if ($name.dataType=='Date')
+	@Temporal( TemporalType.TIMESTAMP)
+#else
+#end
+	@Column(name="${name.columnName}")
+	private ${name.dataType} ${name.fieldName};
+	public void set${name.methodName}(${name.dataType} ${name.fieldName}) {
+		this.${name.fieldName}=${name.fieldName};
+	}
+#if ($name.dataType=='Date')
+	public void set${name.methodName}(Object ${name.fieldName}) throws ParseException {
+		if (${name.fieldName} != null) {
+			if (${name.fieldName} instanceof Date) {
+				this.${name.fieldName}= (Date) ${name.fieldName};
+			}else if (StringTool.isInteger(${name.fieldName}.toString())) {
+				this.${name.fieldName} = new Date(Long.parseLong(${name.fieldName}.toString()));
+			}else {
+				this.${name.fieldName} = DateTool.getTime(${name.fieldName}.toString());
+			}
+		}
+	}
+#end
+#if ($name.dataType=='Long')
+	public void set${name.methodName}(Object ${name.fieldName}) {
+		if (${name.fieldName} != null) {
+			if (${name.fieldName} instanceof Long) {
+				this.${name.fieldName}= (Long) ${name.fieldName};
+			}else if (StringTool.isInteger(${name.fieldName}.toString())) {
+				this.${name.fieldName} = Long.parseLong(${name.fieldName}.toString());
+			}
+		}
+	}
+#end
+#if ($name.dataType=='Integer')
+	public void set${name.methodName}(Object ${name.fieldName}) {
+		if (${name.fieldName} != null) {
+			if (${name.fieldName} instanceof Integer) {
+				this.${name.fieldName}= (Integer) ${name.fieldName};
+			}else if (StringTool.isInteger(${name.fieldName}.toString())) {
+				this.${name.fieldName} = Integer.parseInt(${name.fieldName}.toString());
+			}
+		}
+	}
+#end
+#if ($name.dataType =='String')
+	public void set${name.methodName}(Object ${name.fieldName}) {
+		if (${name.fieldName} != null) {
+			this.${name.fieldName} = ${name.fieldName}.toString();
+		}
+	}
+#end
+	public ${name.dataType} get${name.methodName}() {
+		return this.${name.fieldName} ;
+	}
+#end
+
+	private String tableNameMy;
+	/**
+	 * 不映射
+	 * @return 表名
+	 */
+	@Transient
+	public String getTableNameMy() {
+		return tableNameMy;
+	}
+
+	public void setTableNameMy(String tableNameMy) {
+		this.tableNameMy = tableNameMy;
+	}
+
+}

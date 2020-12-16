@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<action name="IndexAction"
+		url="/example/c/x/all/complex/table/jq_grid/sys_menu/list/tree.do">
+		example.c.x.all.complex.table.jq_grid.sys_menu.action.SysMenuListTreeAction
+	</action>
+	<action name="IndexAction"
+		url="/example/c/x/all/complex/table/jq_grid/sys_menu/list/jsonp.do">
+		example.c.x.all.complex.table.jq_grid.sys_menu.action.SysMenuListJsonpAction
+	</action>
+</root>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--Json -->
+	<action name="CntTreeMetaQuotaTAction"
+		url="/cnt/cnt_tree_meta_quota/t/listJson.do">
+		net.gzcnt.cds.cnt.cnt_tree_meta_quota.t.action.CntTreeMetaQuotaTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="CntTreeMetaQuotaTAction"
+		url="/cnt/cnt_tree_meta_quota/t/list.do">
+		net.gzcnt.cds.cnt.cnt_tree_meta_quota.t.action.CntTreeMetaQuotaTListAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_tree_meta_quota/t/CntTreeMetaQuotaTListBootstrap.jsp
+		</result>
+		
+		<result name="Miniui" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_tree_meta_quota/t/CntTreeMetaQuotaTListMiniui.jsp
+		</result>
+		
+		<result name="DefaultObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_tree_meta_quota/t/CntTreeMetaQuotaTList.jsp
+		</result>
+		
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_tree_meta_quota/t/CntTreeMetaQuotaTListBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_tree_meta_quota/t/CntTreeMetaQuotaTListBootstrap.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_tree_meta_quota/t/CntTreeMetaQuotaTListKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_tree_meta_quota/t/CntTreeMetaQuotaTListKaida.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="CntTreeMetaQuotaTAction"
+		url="/cnt/cnt_tree_meta_quota/t/form.do">
+		net.gzcnt.cds.cnt.cnt_tree_meta_quota.t.action.CntTreeMetaQuotaTFormAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_tree_meta_quota/t/CntTreeMetaQuotaTFormBootstrap.jsp
+		</result>
+		<result name="DefaultObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_tree_meta_quota/t/CntTreeMetaQuotaTForm.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_tree_meta_quota/t/CntTreeMetaQuotaTFormMiniui.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_tree_meta_quota/t/CntTreeMetaQuotaTFormBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_tree_meta_quota/t/CntTreeMetaQuotaTFormBootstrap.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_tree_meta_quota/t/CntTreeMetaQuotaTFormKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_tree_meta_quota/t/CntTreeMetaQuotaTFormKaida.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="CntTreeMetaQuotaTAction"
+		url="/cnt/cnt_tree_meta_quota/t/save.do">
+		net.gzcnt.cds.cnt.cnt_tree_meta_quota.t.action.CntTreeMetaQuotaTSaveAction
+		<result name="Default" type="forward">
+			/cnt/cnt_tree_meta_quota/t/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="CntTreeMetaQuotaTAction"
+		url="/cnt/cnt_tree_meta_quota/t/del.do">
+		net.gzcnt.cds.cnt.cnt_tree_meta_quota.t.action.CntTreeMetaQuotaTDelAction
+		<result name="Default" type="forward">
+			/cnt/cnt_tree_meta_quota/t/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="CntTreeMetaQuotaTAction"
+		url="/cnt/cnt_tree_meta_quota/t/del_all.do">
+		net.gzcnt.cds.cnt.cnt_tree_meta_quota.t.action.CntTreeMetaQuotaTDelAllAction
+		<result name="Default" type="forward">
+			/cnt/cnt_tree_meta_quota/t/list.do
+		</result>
+	</action>
+	<!--请求选择上一级parent -->
+	<action name="CntTreeMetaQuotaTAction"
+		url="/cnt/cnt_tree_meta_quota/t/parent.do">
+		net.gzcnt.cds.cnt.cnt_tree_meta_quota.t.action.CntTreeMetaQuotaTParentAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_tree_meta_quota/t/CntTreeMetaQuotaTParentBootstrap.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_tree_meta_quota/t/CntTreeMetaQuotaTParentBootstrap.jsp
+		</result>
+	</action>
+	<!--选择上一级select -->
+	<action name="CntTreeMetaQuotaTAction"
+		url="/cnt/cnt_tree_meta_quota/t/select.do">
+		net.gzcnt.cds.cnt.cnt_tree_meta_quota.t.action.CntTreeMetaQuotaTSelectAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_tree_meta_quota/t/CntTreeMetaQuotaTSelect.jsp
+		</result>
+	</action>
+	<!-- 验证名称的唯一性 -->
+	<action name="CntTreeMetaQuotaMqExistsNameAction"
+		url="/cnt/cnt_tree_meta_quota/t/existsName.do">
+		net.gzcnt.cds.cnt.cnt_tree_meta_quota.t.action.CntTreeMetaQuotaMqExistsNameAction
+	</action>
+</root>

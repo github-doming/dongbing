@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!-- app -->
+	<action name="FunTypeAction"
+		url="/example/c/x/all/feng/crud/fun_type_str_t/app/list.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.app.FunTypeStrAppListAction
+	</action>
+	<!-- crud -->
+	<action name="FunTypeAction" url="/example/c/x/all/feng/crud/fun_type_str_t/save.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeSaveAction
+	</action>
+	<action name="FunTypeAction"
+		url="/example/c/x/all/feng/crud/fun_type_str_t/queryField.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeQueryFileldAction
+	</action>
+	<action name="FunTypeAction"
+		url="/example/c/x/all/feng/crud/fun_type_str_t/saveTable.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeSaveTableAction
+		<result name="index" type="forward">
+			/example/c/x/all/feng/crud/fun_type_str_t/list.do
+		</result>
+	</action>
+	<action name="FunTypeAction"
+		url="/example/c/x/all/feng/crud/fun_type_str_t/saveForm.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeSaveFormAction
+		<result name="index" type="forward">
+			/example/c/x/all/feng/crud/fun_type_str_t/list.do
+		</result>
+	</action>
+	<action name="FunTypeAction"
+		url="/example/c/x/all/feng/crud/fun_type_str_t/saveJson.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeSaveJsonAction
+	</action>
+	<action name="FunTypeAction"
+		url="/example/c/x/all/feng/crud/fun_type_str_t/saveData.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeSaveDataAction
+	</action>
+	<action name="FunTypeAction"
+		url="/example/c/x/all/feng/crud/fun_type_str_t/listJson.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeListJsonAction
+	</action>
+	<action name="FunTypeAction" url="/example/c/x/all/feng/crud/fun_type_str_t/form.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeFormAction
+		<result name="index" type="forward">
+			/pages/example/c/x/all/feng/crud/fun_type_str_t/FunTypeForm.jsp
+		</result>
+	</action>
+	<action name="FunTypeAction"
+		url="/example/c/x/all/feng/crud/fun_type_str_t/redxun/form.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeFormAction
+		<result name="index" type="forward">
+			/pages/example/c/x/all/feng/crud/fun_type_str_t/redxun/FunTypeForm.jsp
+		</result>
+	</action>
+	<action name="FunTypeAction" url="/example/c/x/all/feng/crud/fun_type_str_t/list.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeListAction
+		<result name="index" type="forward">
+			/pages/example/c/x/all/feng/crud/fun_type_str_t/FunTypeList.jsp
+		</result>
+	</action>
+	<!-- crud -->
+	<!--miniui -->
+	<action name="FunTypeAction"
+		url="/example/c/x/all/feng/crud/fun_type_str_t/miniui/form.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeListAction
+		<result name="index" type="forward">
+			/pages/example/c/x/all/feng/crud/fun_type_str_t/miniui/FunTypeForm.jsp
+		</result>
+	</action>
+	<action name="FunTypeAction"
+		url="/example/c/x/all/feng/crud/fun_type_str_t/miniui/list.do">
+		example.c.x.all.feng.crud.fun_type_str_t.action.FunTypeListAction
+		<result name="index" type="forward">
+			/pages/example/c/x/all/feng/crud/fun_type_str_t/miniui/FunTypeList.jsp
+		</result>
+	</action>
+	<!--miniui -->
+</root>

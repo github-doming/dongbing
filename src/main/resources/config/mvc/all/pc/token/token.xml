@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!-- 登录 -->
+	<action name="App" url="/all/pc/token/login.do">
+		all.pc.token.AppTokenLoginAction
+	</action>
+	<!-- 注册 -->
+	<action name="App" url="/all/pc/token/register.do">
+		all.pc.token.AppTokenRegisterAction
+	</action>
+</root>

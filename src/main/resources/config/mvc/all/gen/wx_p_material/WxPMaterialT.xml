@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="WxPMaterialTAction"
+		url="/all/gen/wx_p_material/t/listJson.do">
+		all.gen.wx_p_material.t.action.WxPMaterialTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="WxPMaterialTAction"
+		url="/all/gen/wx_p_material/t/list/easyui.do">
+		all.gen.wx_p_material.t.action.WxPMaterialTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_material/t/WxPMaterialTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="WxPMaterialTAction"
+		url="/all/gen/wx_p_material/t/list/bootstrap.do">
+		all.gen.wx_p_material.t.action.WxPMaterialTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_material/t/WxPMaterialTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="WxPMaterialTAction"
+		url="/all/gen/wx_p_material/t/form/bootstrap.do">
+		all.gen.wx_p_material.t.action.WxPMaterialTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_material/t/WxPMaterialTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="WxPMaterialTAction"
+		url="/all/gen/wx_p_material/t/save/bootstrap.do">
+		all.gen.wx_p_material.t.action.WxPMaterialTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_material/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPMaterialTAction"
+		url="/all/gen/wx_p_material/t/saveJson.do">
+		all.gen.wx_p_material.t.action.WxPMaterialTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="WxPMaterialTAction"
+		url="/all/gen/wx_p_material/t/del/bootstrap.do">
+		all.gen.wx_p_material.t.action.WxPMaterialTDelAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_material/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPMaterialTAction"
+		url="/all/gen/wx_p_material/t/delJson.do">
+		all.gen.wx_p_material.t.action.WxPMaterialTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="WxPMaterialTAction"
+		url="/all/gen/wx_p_material/t/del_all/bootstrap.do">
+		all.gen.wx_p_material.t.action.WxPMaterialTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_material/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPMaterialTAction"
+		url="/all/gen/wx_p_material/t/delAllJson.do">
+		all.gen.wx_p_material.t.action.WxPMaterialTDelAllJsonAction
+		
+	</action>
+</root>

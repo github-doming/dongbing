@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	<action name="WfInsNodeTCxAction" url="/c/x/platform/admin/feng/wf/wf_ins_node_t/cx/list.do">
+		c.x.platform.admin.feng.wf.wf_ins_node_t.cx.action.WfInsNodeTCxListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_ins_node_t/cx/WfInsNodeTCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object-->
+	<action name="WfInsNodeTCxAction" url="/c/x/platform/admin/feng/wf/wf_ins_node_t/cx/list_object.do">
+		c.x.platform.admin.feng.wf.wf_ins_node_t.cx.action.WfInsNodeTCxListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_ins_node_t/cx/WfInsNodeTCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form-->
+	<action name="WfInsNodeTCxAction" url="/c/x/platform/admin/feng/wf/wf_ins_node_t/cx/form.do">
+		c.x.platform.admin.feng.wf.wf_ins_node_t.cx.action.WfInsNodeTCxFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_ins_node_t/cx/WfInsNodeTCxForm.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	<action name="WfInsNodeTCxAction" url="/c/x/platform/admin/feng/wf/wf_ins_node_t/cx/save.do">
+		c.x.platform.admin.feng.wf.wf_ins_node_t.cx.action.WfInsNodeTCxSaveAction
+		<result name="index" type="forward">
+	/c/x/platform/admin/feng/wf/wf_ins_node_t/cx/list.do
+		</result>
+	</action>
+	<!--删除del-->
+	<action name="WfInsNodeTCxAction" url="/c/x/platform/admin/feng/wf/wf_ins_node_t/cx/del.do">
+		c.x.platform.admin.feng.wf.wf_ins_node_t.cx.action.WfInsNodeTCxDelAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/wf/wf_ins_node_t/cx/list.do
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="WfInsNodeTCxAction" url="/c/x/platform/admin/feng/wf/wf_ins_node_t/cx/del_all.do">
+		c.x.platform.admin.feng.wf.wf_ins_node_t.cx.action.WfInsNodeTCxDelAllAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/wf/wf_ins_node_t/cx/list.do
+		</result>
+	</action>
+</root>

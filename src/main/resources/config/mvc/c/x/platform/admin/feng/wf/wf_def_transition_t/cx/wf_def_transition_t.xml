@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	<action name="WfDefTransitionTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_transition_t/cx/list.do">
+		c.x.platform.admin.feng.wf.wf_def_transition_t.cx.action.WfDefTransitionTCxListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_def_transition_t/cx/WfDefTransitionTCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object-->
+	<action name="WfDefTransitionTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_transition_t/cx/list_object.do">
+		c.x.platform.admin.feng.wf.wf_def_transition_t.cx.action.WfDefTransitionTCxListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_def_transition_t/cx/WfDefTransitionTCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form-->
+	<action name="WfDefTransitionTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_transition_t/cx/form.do">
+		c.x.platform.admin.feng.wf.wf_def_transition_t.cx.action.WfDefTransitionTCxFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_def_transition_t/cx/WfDefTransitionTCxForm.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	<action name="WfDefTransitionTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_transition_t/cx/save.do">
+		c.x.platform.admin.feng.wf.wf_def_transition_t.cx.action.WfDefTransitionTCxSaveAction
+		<result name="index" type="forward">
+	/c/x/platform/admin/feng/wf/wf_def_transition_t/cx/list.do
+		</result>
+	</action>
+	<!--删除del-->
+	<action name="WfDefTransitionTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_transition_t/cx/del.do">
+		c.x.platform.admin.feng.wf.wf_def_transition_t.cx.action.WfDefTransitionTCxDelAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/wf/wf_def_transition_t/cx/list.do
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="WfDefTransitionTCxAction" url="/c/x/platform/admin/feng/wf/wf_def_transition_t/cx/del_all.do">
+		c.x.platform.admin.feng.wf.wf_def_transition_t.cx.action.WfDefTransitionTCxDelAllAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/wf/wf_def_transition_t/cx/list.do
+		</result>
+	</action>
+</root>

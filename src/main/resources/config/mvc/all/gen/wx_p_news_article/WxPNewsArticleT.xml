@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="WxPNewsArticleTAction"
+		url="/all/gen/wx_p_news_article/t/listJson.do">
+		all.gen.wx_p_news_article.t.action.WxPNewsArticleTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="WxPNewsArticleTAction"
+		url="/all/gen/wx_p_news_article/t/list/easyui.do">
+		all.gen.wx_p_news_article.t.action.WxPNewsArticleTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_news_article/t/WxPNewsArticleTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="WxPNewsArticleTAction"
+		url="/all/gen/wx_p_news_article/t/list/bootstrap.do">
+		all.gen.wx_p_news_article.t.action.WxPNewsArticleTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_news_article/t/WxPNewsArticleTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="WxPNewsArticleTAction"
+		url="/all/gen/wx_p_news_article/t/form/bootstrap.do">
+		all.gen.wx_p_news_article.t.action.WxPNewsArticleTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_news_article/t/WxPNewsArticleTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="WxPNewsArticleTAction"
+		url="/all/gen/wx_p_news_article/t/save/bootstrap.do">
+		all.gen.wx_p_news_article.t.action.WxPNewsArticleTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_news_article/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPNewsArticleTAction"
+		url="/all/gen/wx_p_news_article/t/saveJson.do">
+		all.gen.wx_p_news_article.t.action.WxPNewsArticleTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="WxPNewsArticleTAction"
+		url="/all/gen/wx_p_news_article/t/del/bootstrap.do">
+		all.gen.wx_p_news_article.t.action.WxPNewsArticleTDelAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_news_article/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPNewsArticleTAction"
+		url="/all/gen/wx_p_news_article/t/delJson.do">
+		all.gen.wx_p_news_article.t.action.WxPNewsArticleTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="WxPNewsArticleTAction"
+		url="/all/gen/wx_p_news_article/t/del_all/bootstrap.do">
+		all.gen.wx_p_news_article.t.action.WxPNewsArticleTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_news_article/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPNewsArticleTAction"
+		url="/all/gen/wx_p_news_article/t/delAllJson.do">
+		all.gen.wx_p_news_article.t.action.WxPNewsArticleTDelAllJsonAction
+		
+	</action>
+</root>

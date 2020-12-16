@@ -1,0 +1,10 @@
+.bv-form .help-block {
+    /* margin-bottom: 0; */
+    position: absolute;
+    left: 100%;
+    min-width: 200px;
+    top: 50%;
+    margin: 0px;
+    padding: 0;
+    transform: translateY(-50%);
+}

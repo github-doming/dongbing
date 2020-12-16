@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+    <!-- manage -->
+    <action name="CloudManageTAction" url="/ibm/cloud/t/manage/registerClient.do">
+        com.ibm.old.v1.cloud.core.action.RegisterClientAction
+    </action>
+    <action name="CloudManageTAction" url="/ibm/cloud/t/manage/closeClient.do">
+        com.ibm.old.v1.cloud.core.action.CloseClientAction
+    </action>
+
+
+
+</root>

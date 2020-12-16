@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	
+	<!-- 接收消息 -->
+	<action name="IbmMessageListAction" url="/ibm/pc/cms_message/list.do">
+		com.ibm.old.v1.pc.ibm_cms_message_content.t.action.IbmMessageListAction
+	</action>
+	
+	<!-- 查看消息内容 -->
+	<action name="IbmMessageContentAction" url="/ibm/pc/cms_message/getContent.do">
+		com.ibm.old.v1.pc.ibm_cms_message_content.t.action.IbmMessageContentAction
+	</action>
+	
+	<!-- 删除消息内容 -->
+	<action name="IbmMessageDelAction" url="/ibm/pc/cms_message/del.do">
+		com.ibm.old.v1.pc.ibm_cms_message_content.t.action.IbmMessageDelAction
+	</action>
+	
+	<!-- 一键清空消息内容 -->
+	<action name="IbmMessageDelAllAction" url="/ibm/pc/cms_message/delAll.do">
+		com.ibm.old.v1.pc.ibm_cms_message_content.t.action.IbmMessageDelAllAction
+	</action>
+	
+	<!-- 一键已阅 -->
+	<action name="IbmMessageReadAllAction" url="/ibm/pc/cms_message/readAll.do">
+		com.ibm.old.v1.pc.ibm_cms_message_content.t.action.IbmMessageReadAllAction
+	</action>
+
+	
+</root>

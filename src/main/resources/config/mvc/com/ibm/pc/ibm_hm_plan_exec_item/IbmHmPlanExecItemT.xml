@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!-- 方案重置 -->
+	<action name="IbmPlanReplayAction" url="/ibm/pc/ibm_hm_plan_exec_item/replay.do">
+		com.ibm.old.v1.pc.ibm_plan_user.t.action.IbmPlanReplayAction
+	</action>
+	<!-- 所有方案重置 -->
+	<action name="IbmPlanReplayAllAction" url="/ibm/pc/ibm_hm_plan_exec_item/replayAll.do">
+		com.ibm.old.v1.pc.ibm_plan_user.t.action.IbmPlanReplayAllAction
+	</action>
+</root>

@@ -1,0 +1,19 @@
+package ${ay_package_name}.action;
+
+import ${ay_package_name}.entity.${ay_table_class};
+import ${ay_package_name}.service.${ay_table_class}Service;
+import c.a.util.core.enums.bean.CommViewEnum;
+import c.x.platform.root.common.action.BaseAction;
+public class ${ay_table_class}FormAction extends BaseAction {
+	@Override
+	public String execute() throws Exception {
+		String id = (String) request.getParameter("id");
+		if (id != null) {
+			${ay_table_class}Service service = new ${ay_table_class}Service();
+			${ay_table_class} entity = service.find(id);
+			request.setAttribute("id", id);
+			request.setAttribute("s", entity);
+		}
+		return CommViewEnum.Default.toString();
+	}
+}

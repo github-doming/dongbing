@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="WxPConfigTAction"
+		url="/all/gen/wx_p_config/t/listJson.do">
+		all.gen.wx_p_config.t.action.WxPConfigTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="WxPConfigTAction"
+		url="/all/gen/wx_p_config/t/list/easyui.do">
+		all.gen.wx_p_config.t.action.WxPConfigTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_config/t/WxPConfigTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="WxPConfigTAction"
+		url="/all/gen/wx_p_config/t/list/bootstrap.do">
+		all.gen.wx_p_config.t.action.WxPConfigTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_config/t/WxPConfigTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="WxPConfigTAction"
+		url="/all/gen/wx_p_config/t/form/bootstrap.do">
+		all.gen.wx_p_config.t.action.WxPConfigTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_config/t/WxPConfigTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="WxPConfigTAction"
+		url="/all/gen/wx_p_config/t/save/bootstrap.do">
+		all.gen.wx_p_config.t.action.WxPConfigTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_config/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPConfigTAction"
+		url="/all/gen/wx_p_config/t/saveJson.do">
+		all.gen.wx_p_config.t.action.WxPConfigTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="WxPConfigTAction"
+		url="/all/gen/wx_p_config/t/del/bootstrap.do">
+		all.gen.wx_p_config.t.action.WxPConfigTDelAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_config/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPConfigTAction"
+		url="/all/gen/wx_p_config/t/delJson.do">
+		all.gen.wx_p_config.t.action.WxPConfigTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="WxPConfigTAction"
+		url="/all/gen/wx_p_config/t/del_all/bootstrap.do">
+		all.gen.wx_p_config.t.action.WxPConfigTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_config/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPConfigTAction"
+		url="/all/gen/wx_p_config/t/delAllJson.do">
+		all.gen.wx_p_config.t.action.WxPConfigTDelAllJsonAction
+		
+	</action>
+</root>

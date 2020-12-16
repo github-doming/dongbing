@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--保存save，对外开放 -->
+	<action name="SysLobInfoAction"
+		url="/c/x/platform/admin/feng/upload/sys_lob_t/save_json.do">
+		c.x.platform.admin.feng.upload.sys_lob_info.action.SysLobInfoSaveJsonAction
+	</action>
+	<action name="SysLobInfoAction"
+		url="/c/x/platform/admin/feng/upload/sys_lob_t/save_URLDecoder_comm.do">
+		c.x.platform.admin.feng.upload.sys_lob_info.action.SysLobInfoSaveAction_URLDecoder_comm
+		<result name="index" type="forward">
+/pages/example/c/x/all/simple/jquery/ajax_upload/e1.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="SysLobInfoAction"
+		url="/c/x/platform/admin/feng/upload/sys_lob_t/list.do">
+		c.x.platform.admin.feng.upload.sys_lob_info.action.SysLobInfoListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/upload/sys_lob_t/list.jsp
+		</result>
+	</action>
+	<action name="SysLobInfoAction"
+		url="/c/x/platform/admin/feng/upload/sys_lob_t/list/bootstrap.do">
+		c.x.platform.admin.feng.upload.sys_lob_info.action.SysLobInfoListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/upload/sys_lob_t/list_bootstrap.jsp
+		</result>
+	</action>
+	<action name="SysLobInfoAction"
+		url="/c/x/platform/admin/feng/upload/sys_lob_t/list/kaida.do">
+		c.x.platform.admin.feng.upload.sys_lob_info.action.SysLobInfoListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/upload/sys_lob_t/list_kaida.jsp
+		</result>
+	</action>
+	<!--列表list_object -->
+	<action name="SysLobInfoAction"
+		url="/c/x/platform/admin/feng/upload/sys_lob_t/list_object.do">
+		c.x.platform.admin.feng.upload.sys_lob_info.action.SysLobInfoListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/upload/sys_lob_t/list_object.jsp
+		</result>
+	</action>
+	<action name="SysLobInfoAction"
+		url="/c/x/platform/admin/feng/upload/sys_lob_t/list_object/bootstrap.do">
+		c.x.platform.admin.feng.upload.sys_lob_info.action.SysLobInfoListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/upload/sys_lob_t/list_object_bootstrap.jsp
+		</result>
+	</action>
+	<action name="SysLobInfoAction"
+		url="/c/x/platform/admin/feng/upload/sys_lob_t/list_object/kaida.do">
+		c.x.platform.admin.feng.upload.sys_lob_info.action.SysLobInfoListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/upload/sys_lob_t/list_object_kaida.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysLobInfoAction" url="/admin/upload/sys_lob_info/form.do">
+		c.x.platform.admin.feng.upload.sys_lob_info.action.SysLobInfoFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/upload/sys_lob_t/form.jsp
+		</result>
+	</action>
+	<action name="SysLobInfoAction"
+		url="/c/x/platform/admin/feng/upload/sys_lob_t/form/bootstrap.do">
+		c.x.platform.admin.feng.upload.sys_lob_info.action.SysLobInfoFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/upload/sys_lob_t/form_bootstrap.jsp
+		</result>
+	</action>
+	<action name="SysLobInfoAction"
+		url="/c/x/platform/admin/feng/upload/sys_lob_t/form/kaida.do">
+		c.x.platform.admin.feng.upload.sys_lob_info.action.SysLobInfoFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/upload/sys_lob_t/form_kaida.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysLobInfoAction" url="/admin/upload/sys_lob_info/save.do">
+		c.x.platform.admin.feng.upload.sys_lob_info.action.SysLobInfoSaveAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/upload/sys_lob_t/list.do
+		</result>
+	</action>
+	<action name="SysLobInfoAction"
+		url="/c/x/platform/admin/feng/upload/sys_lob_t/save.do">
+		c.x.platform.admin.feng.upload.sys_lob_info.action.SysLobInfoSaveAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/upload/sys_lob_t/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="SysLobInfoAction"
+		url="/c/x/platform/admin/feng/upload/sys_lob_t/del.do">
+		c.x.platform.admin.feng.upload.sys_lob_info.action.SysLobInfoDelAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/upload/sys_lob_t/list/kaida.do
+		</result>
+		<result name="list_v3" type="forward">
+			/pages/c/x/platform/admin/feng/upload/pages/c/x/platform/admin/feng/upload/sys_lob_t/list.do
+		</result>
+		<result name="list_v2" type="forward">
+			/pages/c/x/platform/admin/feng/upload/sys_lob_t/list.do
+		</result>
+		<result name="list_v1" type="forward">
+			/pages/c/x/platform/admin/feng/upload/sys_lob_t/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="SysLobInfoAction"
+		url="/c/x/platform/admin/feng/upload/sys_lob_t/del_all.do">
+		c.x.platform.admin.feng.upload.sys_lob_info.action.SysLobInfoDelAllAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/upload/sys_lob_t/list/bootstrap.do
+		</result>
+	</action>
+	<!--请求选择上一级parent -->
+	<action name="SysLobInfoAction"
+		url="/c/x/platform/admin/feng/upload/sys_lob_t/parent.do">
+		c.x.platform.admin.feng.upload.sys_lob_info.action.SysLobInfoParentAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/upload/sys_lob_t/parent.jsp
+		</result>
+	</action>
+	<!--选择上一级select -->
+	<action name="SysLobInfoAction"
+		url="/c/x/platform/admin/feng/upload/sys_lob_t/select.do">
+		c.x.platform.admin.feng.upload.sys_lob_info.action.SysLobInfoSelectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/upload/sys_lob_t/select.jsp
+		</result>
+	</action>
+</root>

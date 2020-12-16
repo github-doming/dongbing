@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	<action name="SysOrgGenDoubleSimpleAction" url="/c/x/platform/admin/gen/gen_double_simple/sys_org/list.do">
+		c.x.platform.admin.gen.gen_double_simple.sys_org.action.SysOrgGenDoubleSimpleListAction
+		<result name="Default" type="forward">
+			/pages/c/x/platform/admin/gen/gen_double_simple/sys_org/SysOrgGenDoubleSimpleList.jsp
+		</result>
+		
+		<result name="Bootstrap" type="forward">
+			/pages/c/x/platform/admin/gen/gen_double_simple/sys_org/SysOrgGenDoubleSimpleListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form-->
+	<action name="SysOrgGenDoubleSimpleAction" url="/c/x/platform/admin/gen/gen_double_simple/sys_org/form.do">
+		c.x.platform.admin.gen.gen_double_simple.sys_org.action.SysOrgGenDoubleSimpleFormAction
+		<result name="Default" type="forward">
+/pages/c/x/platform/admin/gen/gen_double_simple/sys_org/SysOrgGenDoubleSimpleForm.jsp
+		</result>
+		
+		<result name="Bootstrap" type="forward">
+	/pages/c/x/platform/admin/gen/gen_double_simple/sys_org/SysOrgGenDoubleSimpleFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save-->
+	<action name="SysOrgGenDoubleSimpleAction" url="/c/x/platform/admin/gen/gen_double_simple/sys_org/save.do">
+		c.x.platform.admin.gen.gen_double_simple.sys_org.action.SysOrgGenDoubleSimpleSaveAction
+		<result name="Default" type="forward">
+		/c/x/platform/admin/gen/gen_double_simple/sys_org/list.do
+		</result>
+		<result name="Bootstrap" type="forward">
+		/c/x/platform/admin/gen/gen_double_simple/sys_org/list.do
+		</result>
+		
+	</action>
+	<!--删除del-->
+	<action name="SysOrgGenDoubleSimpleAction" url="/c/x/platform/admin/gen/gen_double_simple/sys_org/del.do">
+		c.x.platform.admin.gen.gen_double_simple.sys_org.action.SysOrgGenDoubleSimpleDelAction
+		<result name="Default" type="forward">
+		/c/x/platform/admin/gen/gen_double_simple/sys_org/list.do
+		</result>
+		<result name="Bootstrap" type="forward">
+			/c/x/platform/admin/gen/gen_double_simple/sys_org/list.do
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="SysOrgGenDoubleSimpleAction" url="/c/x/platform/admin/gen/gen_double_simple/sys_org/del_all.do">
+		c.x.platform.admin.gen.gen_double_simple.sys_org.action.SysOrgGenDoubleSimpleDelAllAction
+		<result name="Default" type="forward">
+		/c/x/platform/admin/gen/gen_double_simple/sys_org/list.do
+		</result>
+		<result name="Bootstrap" type="forward">
+		/c/x/platform/admin/gen/gen_double_simple/sys_org/list.do
+		</result>
+	</action>
+	<!--请求选择上一级parent-->
+	<action name="SysOrgGenDoubleSimpleAction" url="/c/x/platform/admin/gen/gen_double_simple/sys_org/parent.do">
+		c.x.platform.admin.gen.gen_double_simple.sys_org.action.SysOrgGenDoubleSimpleParentAction
+		<result name="Default" type="forward">
+			/pages/c/x/platform/admin/gen/gen_double_simple/sys_org/SysOrgGenDoubleSimpleParent.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/c/x/platform/admin/gen/gen_double_simple/sys_org/SysOrgGenDoubleSimpleParent.jsp
+		</result>
+	</action>
+	<!--选择上一级select-->
+	<action name="SysOrgGenDoubleSimpleAction" url="/c/x/platform/admin/gen/gen_double_simple/sys_org/select.do">
+		c.x.platform.admin.gen.gen_double_simple.sys_org.action.SysOrgGenDoubleSimpleSelectAction
+		<result name="Default" type="forward">
+			/pages/c/x/platform/admin/gen/gen_double_simple/sys_org/SysOrgGenDoubleSimpleSelect.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/c/x/platform/admin/gen/gen_double_simple/sys_org/SysOrgGenDoubleSimpleSelect.jsp
+		</result>
+	</action>
+</root>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	<action name="FunUserInfoAction" url="/example/all/business/admin/complex/spring/fun/sys_user_info/list.xinyu">
+		example.all.business.admin.complex.spring.fun.sys_user.action.SysUserTListSpringAction
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/spring/fun/sys_user_info/list.jsp
+		</result>
+	</action>
+	<!--列表list_object-->
+	<action name="FunUserInfoAction" url="/example/all/business/admin/complex/spring/fun/sys_user_info/list_object.xinyu">
+		example.all.business.admin.complex.spring.fun.sys_user.action.FunUserInfoListObjectAction
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/spring/fun/sys_user_info/list_object.jsp
+		</result>
+	</action>
+	<!--表单form-->
+	<action name="FunUserInfoAction" url="/example/all/business/admin/complex/spring/fun/sys_user_info/form.xinyu">
+		example.all.business.admin.complex.spring.fun.sys_user.action.SysUserTFormAction
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/spring/fun/sys_user_info/form.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	<action name="FunUserInfoAction" url="/example/all/business/admin/complex/spring/fun/sys_user_info/save.xinyu">
+		example.all.business.admin.complex.spring.fun.sys_user.action.FunUserInfoSaveAction
+		<result name="index" type="forward">
+		/pages/example/all/business/admin/complex/spring/fun/sys_user_info/list.xinyu
+		</result>
+		<result name="list_v1" type="forward">
+			/admin/fun/user_info/list.xinyu
+		</result>
+	</action>
+	<!--删除del-->
+	<action name="FunUserInfoAction" url="/example/all/business/admin/complex/spring/fun/sys_user_info/del.xinyu">
+		example.all.business.admin.complex.spring.fun.sys_user.action.FunUserInfoDelAction
+		<result name="index" type="forward">
+		/pages/example/all/business/admin/complex/spring/fun/sys_user_info/list.xinyu
+		</result>
+		<result name="list_v1" type="forward">
+			/admin/fun/user_info/list.xinyu
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="FunUserInfoAction" url="/example/all/business/admin/complex/spring/fun/sys_user_info/del_all.xinyu">
+		example.all.business.admin.complex.spring.fun.sys_user.action.FunUserInfoDelAllAction
+		<result name="index" type="forward">
+			/admin/fun/user_info/list.xinyu
+		</result>
+	</action>
+	<!--请求选择上一级parent-->
+	<action name="FunUserInfoAction" url="/example/all/business/admin/complex/spring/fun/sys_user_info/parent.xinyu">
+		example.all.business.admin.complex.spring.fun.sys_user.action.FunUserInfoParentAction
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/spring/fun/sys_user_info/parent.jsp
+		</result>
+	</action>
+	<!--选择上一级select-->
+	<action name="FunUserInfoAction" url="/example/all/business/admin/complex/spring/fun/sys_user_info/select.xinyu">
+		example.all.business.admin.complex.spring.fun.sys_user.action.FunUserInfoSelectAction
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/spring/fun/sys_user_info/select.jsp
+		</result>
+	</action>
+</root>

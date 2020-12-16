@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表json-->
+	<action name="${first_table_class}Action" url="/${first_resources_name_all}/${first_table_name_module}/${first_table_name_child}/listJson.do">
+	${first_package_name_all}.action.${first_table_class}ListJsonAction
+	</action>
+	<!--列表list-->
+	<action name="${first_table_class}Action" url="/${first_resources_name_all}/${first_table_name_module}/${first_table_name_child}/list/bootstrap.do">
+		${first_package_name_all}.action.${first_table_class}ListAction
+		<result name="Default" type="forward">
+			/pages/${first_pages_name_all}/${first_table_name_module}/${first_table_name_child}/${first_table_class}ListBootstrap.jsp
+		</result>
+		
+		
+	</action>
+	<!--表单form-->
+	<action name="${first_table_class}Action" url="/${first_resources_name_all}/${first_table_name_module}/${first_table_name_child}/form/bootstrap.do">
+		${first_package_name_all}.action.${first_table_class}FormAction
+		<result name="Default" type="forward">
+/pages/${first_pages_name_all}/${first_table_name_module}/${first_table_name_child}/${first_table_class}FormBootstrap.jsp
+		</result>
+		
+		
+	</action>
+	<!--保存save-->
+	<action name="${first_table_class}Action" url="/${first_resources_name_all}/${first_table_name_module}/${first_table_name_child}/save/bootstrap.do">
+		${first_package_name_all}.action.${first_table_class}SaveAction
+		<result name="Default" type="send">
+		/${first_pages_name_all}/${first_table_name_module}/${first_table_name_child}/list/bootstrap.do
+		</result>
+		
+		
+	</action>
+	<!--删除del-->
+	<action name="${first_table_class}Action" url="/${first_resources_name_all}/${first_table_name_module}/${first_table_name_child}/del/bootstrap.do">
+		${first_package_name_all}.action.${first_table_class}DelAction
+		<result name="Default" type="send">
+		/${first_pages_name_all}/${first_table_name_module}/${first_table_name_child}/list/bootstrap.do
+		</result>
+		
+	</action>
+	<!--删除所有del all-->
+	<action name="${first_table_class}Action" url="/${first_resources_name_all}/${first_table_name_module}/${first_table_name_child}/del_all/bootstrap.do">
+		${first_package_name_all}.action.${first_table_class}DelAllAction
+		<result name="Default" type="send">
+		/${first_pages_name_all}/${first_table_name_module}/${first_table_name_child}/list/bootstrap.do
+		</result>
+		
+	</action>
+	<!--请求选择上一级parent-->
+	<action name="${first_table_class}Action" url="/${first_resources_name_all}/${first_table_name_module}/${first_table_name_child}/parent/bootstrap.do">
+		${first_package_name_all}.action.${first_table_class}ParentAction
+		<result name="Default" type="forward">
+			/pages/${first_pages_name_all}/${first_table_name_module}/${first_table_name_child}/${first_table_class}ParentBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--选择上一级select-->
+	<action name="${first_table_class}Action" url="/${first_resources_name_all}/${first_table_name_module}/${first_table_name_child}/select.do">
+		${first_package_name_all}.action.${first_table_class}SelectAction
+		<result name="Default" type="forward">
+			/pages/${first_pages_name_all}/${first_table_name_module}/${first_table_name_child}/${first_table_class}Select.jsp
+		</result>
+		
+	</action>
+</root>

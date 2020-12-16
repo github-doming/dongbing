@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="AppUserTAction"
+		url="/all/gen/app_user/t/listJson.do">
+		all.gen.app_user.t.action.AppUserTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="AppUserTAction"
+		url="/all/gen/app_user/t/list/easyui.do">
+		all.gen.app_user.t.action.AppUserTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_user/t/AppUserTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="AppUserTAction"
+		url="/all/gen/app_user/t/list/bootstrap.do">
+		all.gen.app_user.t.action.AppUserTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_user/t/AppUserTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="AppUserTAction"
+		url="/all/gen/app_user/t/form/bootstrap.do">
+		all.gen.app_user.t.action.AppUserTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_user/t/AppUserTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="AppUserTAction"
+		url="/all/gen/app_user/t/save/bootstrap.do">
+		all.gen.app_user.t.action.AppUserTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/app_user/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppUserTAction"
+		url="/all/gen/app_user/t/saveJson.do">
+		all.gen.app_user.t.action.AppUserTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="AppUserTAction"
+		url="/all/gen/app_user/t/del/bootstrap.do">
+		all.gen.app_user.t.action.AppUserTDelAction
+		<result name="Default" type="forward">
+			/all/gen/app_user/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppUserTAction"
+		url="/all/gen/app_user/t/delJson.do">
+		all.gen.app_user.t.action.AppUserTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="AppUserTAction"
+		url="/all/gen/app_user/t/del_all/bootstrap.do">
+		all.gen.app_user.t.action.AppUserTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/app_user/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppUserTAction"
+		url="/all/gen/app_user/t/delAllJson.do">
+		all.gen.app_user.t.action.AppUserTDelAllJsonAction
+		
+	</action>
+</root>

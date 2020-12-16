@@ -1,0 +1,236 @@
+*{
+   margin: 0;
+   padding: 0;
+   font-family: "Microsoft Yahei";
+}
+input:focus, button:focus, textarea:focus{
+   outline: none;
+}
+a{
+    cursor: pointer;
+}
+body{
+	padding:0;
+	margin:0;
+}
+.panel{
+	margin-bottom:0;
+	background-color:#fff;
+	-moz-box-shadow: 0 3px 0 rgba(12,12,12,0);
+    -webkit-box-shadow: 0 3px 0 rgba(12,12,12,0);
+    box-shadow: 0 3px 0 rgba(12,12,12,0);
+}
+.panel-heading{
+	position: relative;
+	background-color:#fff;
+	border-radius:0;
+}
+.panel-body{
+	border-radius:0;
+}
+.panel-heading-height{
+	height:75px;
+}
+.headPosition a{
+	color:#5bc0de;
+}
+.headPosition a:hover{
+	color:#333;
+	text-decoration: none;
+}
+.headPosition i{
+	margin:0 10px;
+}
+.form-control:focus {
+    border-color: #999;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.row{
+	margin:0;
+}
+.form-bordered .form-group:first-child {
+    border-top: 1px solid #d3d7db;
+}
+.form-bordered>.form-group:first-child {
+    border-top: 0;
+}
+.btnCenter{
+	text-align: center;
+}
+.btnWidth{
+	padding-left: 40px;
+	padding-right: 40px;
+	height:40px;
+}
+
+.notnull{
+	border:1px solid #a94442;
+}
+.errors{
+	color: #E07470;
+	font-weight: bolder;
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	margin-left: -15px;
+}
+.gdzhuangtai{
+	display:none;
+}
+.cuowu{
+	display:block; margin-top: 10px; color:red;
+}
+
+.wzp{padding-top:7px;}
+
+.chosen-container-single .chosen-single{
+	margin-top:0;
+	height:40px;
+	line-height:30px;
+	border-radius: 3px;
+}
+.chosen-container-single .chosen-single div{
+	width:30px;
+}
+.chosen-container-single .chosen-single div b {
+    background: url('../images/chosen-sprite.png') no-repeat 10px 8px;
+}
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+    background-position: -10px 13px;
+}
+
+/* 大屏展现样式  */
+.timeWidth80{
+	width:80%;
+	float:left;
+}
+.timeSpanWidth{
+	float:left;
+	padding-left:10px;
+	line-height:40px;
+}
+/* 设置屏数表单样式 */
+.operationBtn .glyphicon{
+	font-size: 20px;
+    line-height: 40px;
+    color: #ccc;
+    cursor: pointer;
+    padding:0 5px;
+}
+.operationBtn .glyphicon-remove-circle:hover{
+	color:#900;
+}
+.operationBtn .glyphicon-circle-arrow-down:hover{
+	color:#f0ad4e;
+}
+.addScreen{
+	height:40px;
+	padding:0 30px;
+}
+.screenLayout>div{
+	width:100%;
+	height:100%;
+	display:none;
+}
+.screenLayout>div:first-child{
+	display:block;
+}
+.height100{
+	height:100%;
+	border:1px solid #ccc;
+	padding:10px 0;
+}
+.height50{
+	height:50%;
+	border:1px solid #ccc;
+	padding:10px 0;
+}
+.noBorder{
+	border:none;
+}
+.noPadding{
+	padding:0;
+}
+.operationBtn, .displayTime{
+	display:none;
+}
+.square{
+	position: relative;
+}
+.square p{
+	padding-left:10px;
+	line-height:30px;
+}
+.square .setBtn{
+	font-size:20px;
+	position: absolute;
+	top:20px;
+	right:20px;
+	cursor: pointer;
+	color:#ccc;
+}
+.square .setBtn:hover{
+	color:#333;
+}
+.screenNums .screenLayoutDiv{
+	border-top:none;
+}
+
+
+/* logo设置样式  */
+.photo{
+	width:100%;
+	height:92px;
+	border:1px solid #ccc;
+	border-radius:3px;
+	text-align:center;
+	padding:10px;
+}
+.photo img{
+	width:auto;
+	height:100%;
+}
+.inputFileBtn{
+	width:92px;
+	height:92px;
+	border:1px solid #ccc;
+	border-radius:3px;
+	cursor:pointer;
+	text-align:center;
+}
+.inputFileBtn .glyphicon{
+	font-size:50px;
+	color:#fddc63;
+	line-height:90px;
+}
+.inputFile{
+	display:none !important;
+}
+/* 多选框样式  */
+.checkBox label{
+	width:30%;
+	display:inline-block;
+	padding-left:20px;
+	cursor: pointer;
+}
+/* 年月日时间选择样式  */
+.monthTime, .dayTime{
+	display:none;
+}
+.checkboxTIshi{
+	padding-top:7px;
+	color:#f00;
+}
+.shangc{float:left;width:100px;margin-right:10px;height:40px;cursor:pointer;line-height:40px;text-align:center;}
+.yuelan{width:150px;height:180px;float:left;position:relative;margin-right:15px;}
+.yuelanred{position:absolute;background:rgba(255,0,0,0.4);bottom:30px;height:20px;width:100%;color:#000;text-align:center;}
+.yuelangreen{background:rgba(0,255,0,0.4);}
+.yuelan img{width:150px;height:150px;margin-right:10px;}
+.lj{position:absolute;right:5px;top:5px;cursor:pointer;}
+.yuelan_main{margin-top:5px;color:red;text-align:center;font-size:12px;}
+#ctlBtn{height:40px;}
+.scsj{background-image:url('../../../../images/selectImg.png');background-repeat:no-repeat;background-position:right;}
+.erweima{width:80px;height:80px;}
+.xz{transform:rotate(180deg)}

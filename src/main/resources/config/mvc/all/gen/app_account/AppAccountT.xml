@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="AppAccountTAction"
+		url="/all/gen/app_account/t/listJson.do">
+		all.gen.app_account.t.action.AppAccountTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="AppAccountTAction"
+		url="/all/gen/app_account/t/list/easyui.do">
+		all.gen.app_account.t.action.AppAccountTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_account/t/AppAccountTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="AppAccountTAction"
+		url="/all/gen/app_account/t/list/bootstrap.do">
+		all.gen.app_account.t.action.AppAccountTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_account/t/AppAccountTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="AppAccountTAction"
+		url="/all/gen/app_account/t/form/bootstrap.do">
+		all.gen.app_account.t.action.AppAccountTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_account/t/AppAccountTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="AppAccountTAction"
+		url="/all/gen/app_account/t/save/bootstrap.do">
+		all.gen.app_account.t.action.AppAccountTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/app_account/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppAccountTAction"
+		url="/all/gen/app_account/t/saveJson.do">
+		all.gen.app_account.t.action.AppAccountTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="AppAccountTAction"
+		url="/all/gen/app_account/t/del/bootstrap.do">
+		all.gen.app_account.t.action.AppAccountTDelAction
+		<result name="Default" type="forward">
+			/all/gen/app_account/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppAccountTAction"
+		url="/all/gen/app_account/t/delJson.do">
+		all.gen.app_account.t.action.AppAccountTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="AppAccountTAction"
+		url="/all/gen/app_account/t/del_all/bootstrap.do">
+		all.gen.app_account.t.action.AppAccountTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/app_account/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppAccountTAction"
+		url="/all/gen/app_account/t/delAllJson.do">
+		all.gen.app_account.t.action.AppAccountTDelAllJsonAction
+		
+	</action>
+</root>

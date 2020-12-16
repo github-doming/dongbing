@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	
+	<action name="Jbpm4LobAction" url="/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/list.xinyu">
+		example.all.business.admin.complex.jbpm4_4.deploy.jbpm4_lob.action.Jbpm4LobListAction
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/list.jsp
+		</result>
+	</action>
+	
+	
+	<action name="Jbpm4LobAction" url="/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/list/bootstrap.xinyu">
+		example.all.business.admin.complex.jbpm4_4.deploy.jbpm4_lob.action.Jbpm4LobListAction
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/list_bootstrap.jsp
+		</result>
+	</action>
+	
+	
+	<action name="Jbpm4LobAction" url="/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/list/kaida.xinyu">
+		example.all.business.admin.complex.jbpm4_4.deploy.jbpm4_lob.action.Jbpm4LobListAction
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/list_kaida.jsp
+		</result>
+	</action>
+	
+	<!--列表list_object-->
+	<action name="Jbpm4LobAction" url="/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/list_object.xinyu">
+		example.all.business.admin.complex.jbpm4_4.deploy.jbpm4_lob.action.Jbpm4LobListObjectAction
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/list_object.jsp
+		</result>
+	</action>
+	
+	<action name="Jbpm4LobAction" url="/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/list_object/bootstrap.xinyu">
+		example.all.business.admin.complex.jbpm4_4.deploy.jbpm4_lob.action.Jbpm4LobListObjectAction
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/list_object_bootstrap.jsp
+		</result>
+	</action>
+	
+	
+		<action name="Jbpm4LobAction" url="/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/list_object/kaida.xinyu">
+		example.all.business.admin.complex.jbpm4_4.deploy.jbpm4_lob.action.Jbpm4LobListObjectAction
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/list_object_kaida.jsp
+		</result>
+	</action>
+	
+	<!--表单form-->
+	<action name="Jbpm4LobAction" url="/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/form.xinyu">
+		example.all.business.admin.complex.jbpm4_4.deploy.jbpm4_lob.action.Jbpm4LobActionForm
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/form.jsp
+		</result>
+	</action>
+	
+	<action name="Jbpm4LobAction" url="/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/form/bootstrap.xinyu">
+		example.all.business.admin.complex.jbpm4_4.deploy.jbpm4_lob.action.Jbpm4LobActionForm
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/form_bootstrap.jsp
+		</result>
+	</action>
+	
+	
+	
+	<action name="Jbpm4LobAction" url="/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/form/kaida.xinyu">
+		example.all.business.admin.complex.jbpm4_4.deploy.jbpm4_lob.action.Jbpm4LobActionForm
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/form_kaida.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	
+	<action name="Jbpm4LobAction" url="/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/save.xinyu">
+		example.all.business.admin.complex.jbpm4_4.deploy.jbpm4_lob.action.Jbpm4LobSaveAction
+		<result name="index" type="forward">
+		/admin/deploy/jbpm4_lob/list.xinyu
+		</result>
+			
+	</action>
+	
+	
+	<action name="Jbpm4LobAction" url="/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/save.xinyu">
+		example.all.business.admin.complex.jbpm4_4.deploy.jbpm4_lob.action.Jbpm4LobSaveAction
+		<result name="index" type="forward">
+		/pages/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/list.xinyu
+		</result>
+		
+		<result name="list_v1" type="forward">
+		/pages/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/list.xinyu
+		</result>
+		
+		<result name="list_v2" type="forward">
+			/admin/deploy/jbpm4_lob/list.xinyu
+		</result>
+		
+	
+	</action>
+	<!--删除del-->
+	<action name="Jbpm4LobAction" url="/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/del.xinyu">
+		example.all.business.admin.complex.jbpm4_4.deploy.jbpm4_lob.action.Jbpm4LobDelAction
+		
+		
+		<result name="index" type="forward">
+		/pages/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/list/kaida.xinyu
+		
+		</result>
+		
+		
+		<result name="list_v3" type="forward">
+		/pages/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/list.xinyu
+	
+		</result>
+		
+		<result name="list_v2" type="forward">
+			/admin/deploy/jbpm4_lob/list.xinyu
+		</result>
+		
+		<result name="list_v1" type="forward">
+			/admin/deploy/jbpm4_lob/list.xinyu
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="Jbpm4LobAction" url="/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/del_all.xinyu">
+		example.all.business.admin.complex.jbpm4_4.deploy.jbpm4_lob.action.Jbpm4LobDelAllAction
+		<result name="index" type="forward">
+		/pages/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/list/bootstrap.xinyu
+		</result>
+	</action>
+	<!--请求选择上一级parent-->
+	<action name="Jbpm4LobAction" url="/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/parent.xinyu">
+		example.all.business.admin.complex.jbpm4_4.deploy.jbpm4_lob.action.Jbpm4LobParentAction
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/parent.jsp
+		</result>
+	</action>
+	<!--选择上一级select-->
+	<action name="Jbpm4LobAction" url="/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/select.xinyu">
+		example.all.business.admin.complex.jbpm4_4.deploy.jbpm4_lob.action.Jbpm4LobSelectAction
+		<result name="index" type="forward">
+			/pages/example/all/business/admin/complex/jbpm4_4/deploy/jbpm4_lob/select.jsp
+		</result>
+	</action>
+</root>

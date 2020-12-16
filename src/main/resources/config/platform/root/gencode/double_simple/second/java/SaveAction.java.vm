@@ -1,0 +1,46 @@
+package ${second_package_name_all}.action;
+import c.a.util.core.request.RequestThreadLocal;
+import c.a.util.core.string.StringUtil;
+import  c.x.platform.root.common.action.BaseAction;
+import c.a.util.core.enums.bean.CommViewEnum;
+public class ${second_table_class}SaveAction extends BaseAction {
+	@Override
+	public String execute() throws Exception {
+		//String id = request.getParameter("${second_table_name}.id");
+		//String id = request.getParameter("${second_fieldNamePk}");
+		//String id = request.getParameter("id");
+		String id = request.getParameter("${second_table_name}.${second_fieldNamePk}");
+		${second_package_name_all}.entity.${second_table_class} entity = (${second_package_name_all}.entity.${second_table_class}) RequestThreadLocal.doRequest2Entity(
+				${second_package_name_all}.vo.${second_table_class}Vo.class, ${second_package_name_all}.entity.${second_table_class}.class, request);
+		${second_package_name_all}.service.${second_table_class}Service service = new ${second_package_name_all}.service.${second_table_class}Service();
+		// 第3表
+		//{
+		${third_package_name_all}.service.${third_table_class}Service t${third_table_class}Service = new ${third_package_name_all}.service.${third_table_class}Service();
+		${third_package_name_all}.entity.${third_table_class} t${third_table_class} = new ${third_package_name_all}.entity.${third_table_class}();
+		//树的老的ID
+		String name_first$tree$id = request
+				.getParameter("name_first$tree$id");
+		//树的新的ID
+		String ${first_table_name}$parent = request
+				.getParameter("${first_table_name}.parent");
+		request.setAttribute("first$tree$id", ${first_table_name}$parent  );
+		//}
+		// 第3表
+		if (StringUtil.isBlank(id)) {
+			id = service.save(entity);
+			// 第3表保存
+			t${third_table_class}.set${first_methodNamePk}(${first_table_name}$parent);
+			t${third_table_class}.set${second_methodNamePk}(id);
+			t${third_table_class}Service.save(t${third_table_class});
+		} else {
+			service.update(entity);
+			// 第3表删除
+			t${third_table_class}Service.del(name_first$tree$id, id);
+			// 第3表保存
+			t${third_table_class}.set${first_methodNamePk}( ${first_table_name}$parent);
+			t${third_table_class}.set${second_methodNamePk}(id);
+			t${third_table_class}Service.save(t${third_table_class});
+		}
+			return CommViewEnum.Default.toString();
+	}
+}

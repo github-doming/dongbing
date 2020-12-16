@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!-- task -->
+	<action name="IndexAction"
+		url="/all/workflow/activiti/task/run.do">
+		all.workflow.activiti.task.ActivitTaskRunAction
+		<result name="Default" type="forward">
+			/all/workflow/activiti/task/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/workflow/activiti/task/list.do">
+		all.workflow.activiti.task.ActivitTaskListAction
+		<result name="Default" type="forward">
+			/pages/all/workflow/activiti/task/ActivitTaskListBootstrap.jsp
+		</result>
+	</action>
+	<!-- process_instance -->
+	<action name="IndexAction" url="/all/workflow/activiti/process_instance/list.do">
+		all.workflow.activiti.process_instance.ActivitProcessInstanceListAction
+		<result name="Default" type="forward">
+			/pages/all/workflow/activiti/process_instance/ActivitProcessInstanceListBootstrap.jsp
+		</result>
+	</action>
+	<!-- process_definition -->
+	<action name="IndexAction"
+		url="/all/workflow/activiti/process_definition/start.do">
+		all.workflow.activiti.process_definition.ActivitProcessDefinitionStartAction
+		<result name="Default" type="forward">
+			/all/workflow/activiti/process_definition/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/workflow/activiti/process_definition/list.do">
+		all.workflow.activiti.process_definition.ActivitProcessDefinitionListAction
+		<result name="Default" type="forward">
+			/pages/all/workflow/activiti/process_definition/ActivitProcessDefinitionListBootstrap.jsp
+		</result>
+	</action>
+	<!-- model -->
+	<action name="IndexAction" url="/all/workflow/activiti/model/deploy.do">
+		all.workflow.activiti.model.ActivitModelDeployAction
+		<result name="Default" type="forward">
+			/all/workflow/activiti/model/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/workflow/activiti/model/del.do">
+		all.workflow.activiti.model.ActivitModelDelAction
+		<result name="Default" type="forward">
+			/all/workflow/activiti/model/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/workflow/activiti/model/delAll.do">
+		all.workflow.activiti.model.ActivitModelDelAllAction
+		<result name="Default" type="forward">
+			/all/workflow/activiti/model/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/workflow/activiti/model/list.do">
+		all.workflow.activiti.model.ActivitModelListAction
+		<result name="Default" type="forward">
+			/pages/all/workflow/activiti/model/ActivitModelListBootstrap.jsp
+		</result>
+	</action>
+	<!--deployment -->
+	<action name="IndexAction" url="/all/workflow/activiti/deployment/del.do">
+		all.workflow.activiti.deployment.ActivitDeploymentDelAction
+		<result name="Default" type="forward">
+			/all/workflow/activiti/deployment/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/workflow/activiti/deployment/delAll.do">
+		all.workflow.activiti.deployment.ActivitDeploymentDelAllAction
+		<result name="Default" type="forward">
+			/all/workflow/activiti/deployment/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/workflow/activiti/deployment/list.do">
+		all.workflow.activiti.deployment.ActivitDeploymentListAction
+		<result name="Default" type="forward">
+			/pages/all/workflow/activiti/deployment/ActivitDeploymentListBootstrap.jsp
+		</result>
+	</action>
+</root>

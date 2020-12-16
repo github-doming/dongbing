@@ -1,0 +1,73 @@
+
+<style type="text/css">
+.css_select {
+	width: 220px;
+	height: 20px;
+	border: 1px solid #36c;
+	position: relative;
+}
+
+.css_select select {
+	width: 220px;
+
+	border: 0;
+	font-size: 12px;
+	padding-left: 3px
+}
+
+.css_select .css_select_img {
+
+	width: 200px;
+
+	position: absolute;
+	left: 0;
+	top: -2
+}
+</style>
+<!-- html -->
+<!-- {-->
+<div class="css_select"><select id='id_select' name='name_select'
+	onchange="CfSelect.onchange_${key}(this);">
+	
+	<!-- 不能删除下面的代码,切记,不然选择不了第一行 -->
+  <option value =""></option>
+
+	${option}
+</select> <input id="${id}" name="${name}" value="${selected}" type="text" class="css_select_img"></div>
+<!-- }-->
+<!-- html -->
+<script language="javascript">
+
+
+if ("undefined" == typeof (CfSelect) ||  !CfSelect ||CfSelect== null) {
+var CfSelect= {};
+}
+
+
+/**
+ * 
+ */
+ CfSelect.onchange_${key} = function(c_this){
+	
+	
+	 CfSelect.onchange_main_${key}(c_this);
+	/*自定义call函数*/
+	${onchange}
+}
+
+/**
+ * 
+ */
+ CfSelect.onchange_main_${key} = function(s){
+	
+	
+	var v=s.options[s.options.selectedIndex].value;
+	/*alert(v);*/
+
+	   document.getElementById('${id}').value=v;
+	
+	
+}
+
+
+</script>

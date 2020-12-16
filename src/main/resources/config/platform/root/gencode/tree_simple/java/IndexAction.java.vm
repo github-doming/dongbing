@@ -1,0 +1,9 @@
+package ${ay_package_name}.action;
+import c.x.platform.root.common.action.BaseAction;
+import c.a.util.core.enums.bean.CommViewEnum;
+public class ${ay_table_class}IndexAction extends BaseAction {
+	@Override
+	public String execute() throws Exception {
+			return CommViewEnum.Default.toString();
+	}
+}

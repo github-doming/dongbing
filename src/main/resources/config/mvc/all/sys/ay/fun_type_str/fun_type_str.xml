@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--json -->
+	<action name="FunTypeStrTAction"
+		url="/all/sys/fun_type_str/sys/listJson.do">
+	all.sys.ay.fun_type_str.action.FunTypeStrSysListJsonAction
+	</action>
+</root>

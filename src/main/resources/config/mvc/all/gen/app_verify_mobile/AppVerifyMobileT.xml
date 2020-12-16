@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="AppVerifyMobileTAction"
+		url="/all/gen/app_verify_mobile/t/listJson.do">
+		all.gen.app_verify_mobile.t.action.AppVerifyMobileTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="AppVerifyMobileTAction"
+		url="/all/gen/app_verify_mobile/t/list/easyui.do">
+		all.gen.app_verify_mobile.t.action.AppVerifyMobileTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_verify_mobile/t/AppVerifyMobileTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="AppVerifyMobileTAction"
+		url="/all/gen/app_verify_mobile/t/list/bootstrap.do">
+		all.gen.app_verify_mobile.t.action.AppVerifyMobileTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_verify_mobile/t/AppVerifyMobileTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="AppVerifyMobileTAction"
+		url="/all/gen/app_verify_mobile/t/form/bootstrap.do">
+		all.gen.app_verify_mobile.t.action.AppVerifyMobileTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_verify_mobile/t/AppVerifyMobileTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="AppVerifyMobileTAction"
+		url="/all/gen/app_verify_mobile/t/save/bootstrap.do">
+		all.gen.app_verify_mobile.t.action.AppVerifyMobileTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/app_verify_mobile/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppVerifyMobileTAction"
+		url="/all/gen/app_verify_mobile/t/saveJson.do">
+		all.gen.app_verify_mobile.t.action.AppVerifyMobileTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="AppVerifyMobileTAction"
+		url="/all/gen/app_verify_mobile/t/del/bootstrap.do">
+		all.gen.app_verify_mobile.t.action.AppVerifyMobileTDelAction
+		<result name="Default" type="forward">
+			/all/gen/app_verify_mobile/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppVerifyMobileTAction"
+		url="/all/gen/app_verify_mobile/t/delJson.do">
+		all.gen.app_verify_mobile.t.action.AppVerifyMobileTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="AppVerifyMobileTAction"
+		url="/all/gen/app_verify_mobile/t/del_all/bootstrap.do">
+		all.gen.app_verify_mobile.t.action.AppVerifyMobileTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/app_verify_mobile/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppVerifyMobileTAction"
+		url="/all/gen/app_verify_mobile/t/delAllJson.do">
+		all.gen.app_verify_mobile.t.action.AppVerifyMobileTDelAllJsonAction
+		
+	</action>
+</root>

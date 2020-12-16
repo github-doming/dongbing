@@ -1,0 +1,93 @@
+package ${ay_package_name}service;
+
+import ${ay_package_name}entity.${ay_table_class};
+import org.doming.core.common.jdbc.BaseServiceProxy;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+* ${ay_table_comment} 服务类
+ * @author Robot
+ */
+public class ${ay_table_class}Service extends BaseServiceProxy {
+
+	/**
+	 * 保存${ay_table_comment} 对象数据
+	 * @param entity ${ay_table_class}对象数据
+	 */
+	public String save(${ay_table_class} entity) throws Exception {
+		return dao.save(entity);
+	}
+
+	/**
+	 * 逻辑删除
+	 * @param id 要删除${ay_table_name} 的 ${columnNamePk}主键id
+	 */
+	public void del(String id) throws Exception {
+		String sql = "update ${ay_table_name} set state_='DEL' where ${columnNamePk}=?";
+		List<Object> parameterList = new ArrayList<>();
+		parameterList.add(id);
+		dao.execute(sql, parameterList);
+	}
+
+	/**
+	 * 逻辑删除${columnNamePk}主键id数组的数据
+	 * @param idArray 要删除 ${ay_table_name} 的 ${columnNamePk}数组
+	 */
+	public void delAll(String[] idArray) throws Exception {
+		if (idArray != null) {
+			StringBuilder stringBuilder = new StringBuilder();
+			for (String id : idArray) {
+				stringBuilder.append("'").append(id).append("'").append(",");
+			}
+			stringBuilder.deleteCharAt(stringBuilder.length() - 1);
+			String sql = "update ${ay_table_name} set state_='DEL' where ${columnNamePk} in(" + stringBuilder.toString() + ")";
+			dao.execute(sql, null);
+		}
+	}
+
+	/**
+	 * 物理删除
+	 * @param id 要删除 ${ay_table_name}  的 ${columnNamePk}
+	 */
+	public void delPhysical(String id) throws Exception {
+		String sql = "delete from ${ay_table_name} where ${columnNamePk}=?";
+		List<Object> parameterList = new ArrayList<>();
+		parameterList.add(id);
+		dao.execute(sql, parameterList);
+	}
+
+	/**
+	 * 物理删除${columnNamePk}主键id数组的数据
+	 * @param idArray 要删除${ay_table_name} 的 ${columnNamePk}数组
+	 */
+	public void delAllPhysical(String[] idArray) throws Exception {
+		if (idArray != null) {
+			StringBuilder stringBuilder = new StringBuilder();
+			for (String id : idArray) {
+				stringBuilder.append("'").append(id).append("'").append(",");
+			}
+			stringBuilder.deleteCharAt(stringBuilder.length() - 1);
+			String sql = "delete from ${ay_table_name} where ${columnNamePk} in(" + stringBuilder.toString() + ")";
+			dao.execute(sql, null);
+		}
+	}
+
+	/**
+	 * 更新${ay_table_class}实体信息
+	 * @param entity ${ay_table_comment} 实体
+	 */
+	public void update(${ay_table_class} entity) throws Exception {
+		dao.update(entity);
+	}
+
+	/**
+	 * 根据${ay_table_name}表主键查找 ${ay_table_comment} 实体
+	 * @param id ${ay_table_name} 主键
+	 * @return ${ay_table_comment} 实体
+	 */
+	public ${ay_table_class} find(String id) throws Exception {
+		return dao.find(${ay_table_class}.class,id);
+	}
+}

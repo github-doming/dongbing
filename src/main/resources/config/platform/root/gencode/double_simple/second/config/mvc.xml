@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表Json-->
+	<action name="${second_table_class}Action" url="/${second_resources_name_all}/${second_table_name_module}/${second_table_name_child}/listJson.do">
+		${second_package_name_all}.action.${second_table_class}ListJsonAction
+	</action>
+	<!--列表list-->
+	<action name="${second_table_class}Action" url="/${second_resources_name_all}/${second_table_name_module}/${second_table_name_child}/list/bootstrap.do">
+		${second_package_name_all}.action.${second_table_class}ListAction
+		<result name="Default" type="forward">
+			/pages/${second_pages_name_all}/${second_table_name_module}/${second_table_name_child}/${second_table_class}ListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form-->
+	<action name="${second_table_class}Action" url="/${second_resources_name_all}/${second_table_name_module}/${second_table_name_child}/form/bootstrap.do">
+		${second_package_name_all}.action.${second_table_class}FormAction
+		<result name="Default" type="forward">
+			/pages/${second_pages_name_all}/${second_table_name_module}/${second_table_name_child}/${second_table_class}FormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save-->
+	<action name="${second_table_class}Action" url="/${second_resources_name_all}/${second_table_name_module}/${second_table_name_child}/save/bootstrap.do">
+		${second_package_name_all}.action.${second_table_class}SaveAction
+		<result name="Default" type="send">
+		/${second_pages_name_all}/${second_table_name_module}/${second_table_name_child}/list/bootstrap.do
+		</result>
+		
+	</action>
+	<!--删除del-->
+	<action name="${second_table_class}Action" url="/${second_resources_name_all}/${second_table_name_module}/${second_table_name_child}/del/bootstrap.do">
+		${second_package_name_all}.action.${second_table_class}DelAction
+		<result name="Default" type="send">
+		/${second_pages_name_all}/${second_table_name_module}/${second_table_name_child}/list/bootstrap.do
+		</result>
+		
+	</action>
+	<!--删除所有del all-->
+	<action name="${second_table_class}Action" url="/${second_resources_name_all}/${second_table_name_module}/${second_table_name_child}/del_all/bootstrap.do">
+		${second_package_name_all}.action.${second_table_class}DelAllAction
+		<result name="Default" type="send">
+		/${second_pages_name_all}/${second_table_name_module}/${second_table_name_child}/list/bootstrap.do
+		</result>
+		
+	</action>
+</root>

@@ -1,0 +1,53 @@
+.modal{
+   overflow-y: auto;
+}
+.modal-content{
+   -moz-box-shadow: 0px 0px 0 rgba(0,0,0,0);
+   -webkit-box-shadow: 0px 0px 0 rgba(0,0,0,0);
+   box-shadow: 0px 0px 0 rgba(0,0,0,0);  
+}
+.modal-title{
+   font-family: "Microsoft Yahei";
+}
+.markedWords{
+   margin-bottom: 0;
+   font-size: 16px;
+   padding-left: 2em;
+}
+.modal-footer{
+   margin-top: 0;
+}
+.modal-header{
+	width:100%;
+}
+.modal-body{
+	width:100%;
+}
+.modal-body-height{
+	height:350px;
+	background-color: #1d2939;
+	border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.modalIframes{
+	width:570px;
+	height:320px;
+}
+.modal-body-height2{
+	width:100%;
+	padding:0;
+	background-color: #1d2939;
+	border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.modal-body-height2 .modalIframes{
+	padding:10px;
+}
+.selectedTishi{
+	padding-top:7px;
+	color:#f00;
+}
+.logoSetText{
+	font-size: 16px;
+    padding-left: 2em;
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <config>
+        <virtualHost>cloud</virtualHost>
+        <ip>mq.tzxyz.xyz</ip>
+        <port>5672</port>
+        <userName>cloud</userName>
+        <password>cloud!</password>
+        <exchangeFormat>topic_cloud_%s</exchangeFormat>
+        <clientFormat>client.%s_%s</clientFormat>
+    </config>
+
+    <exchange id="lottery" type="TOPIC">
+        <client class="com.ibm.follow.servlet.server.core.mq.LotteryDrawListener">
+            <routing key="cloud.lottery.*"/>
+        </client>
+    </exchange>
+
+</root>

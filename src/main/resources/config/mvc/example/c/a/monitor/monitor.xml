@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--monitor -->
+	<action name="SysMonitorTAction" url="/example/c/a/monitor/ay.do">
+		example.c.a.monitor.MonitorAyAction
+	</action>
+	<action name="SysMonitorTAction" url="/example/c/a/monitor/by.do">
+		example.c.a.monitor.MonitorByAction
+	</action>
+	<action name="SysMonitorTAction" url="/example/c/a/monitor/cy.do">
+		example.c.a.monitor.MonitorCyAction
+	</action>
+</root>

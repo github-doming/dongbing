@@ -1,0 +1,25 @@
+package ${third_package_name_all}.vo;
+
+import java.io.Serializable;
+/**
+ * The vo class for the database table ${third_table_name} 
+ * vo类
+ */
+
+public class ${third_table_class}Vo implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	#foreach( $name in $third_list_column )
+	
+//${name.comment}
+	private String ${name.fieldName};
+	public void set${name.methodName}(String ${name.fieldName}) {
+		this.${name.fieldName}=${name.fieldName};
+	}
+	public String get${name.methodName}() {
+		return this.${name.fieldName} ;
+	}
+#end
+
+
+}

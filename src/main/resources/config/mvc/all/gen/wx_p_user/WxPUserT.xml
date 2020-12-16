@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="WxPUserTAction"
+		url="/all/gen/wx_p_user/t/listJson.do">
+		all.gen.wx_p_user.t.action.WxPUserTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="WxPUserTAction"
+		url="/all/gen/wx_p_user/t/list/easyui.do">
+		all.gen.wx_p_user.t.action.WxPUserTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_user/t/WxPUserTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="WxPUserTAction"
+		url="/all/gen/wx_p_user/t/list/bootstrap.do">
+		all.gen.wx_p_user.t.action.WxPUserTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_user/t/WxPUserTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="WxPUserTAction"
+		url="/all/gen/wx_p_user/t/form/bootstrap.do">
+		all.gen.wx_p_user.t.action.WxPUserTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_user/t/WxPUserTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="WxPUserTAction"
+		url="/all/gen/wx_p_user/t/save/bootstrap.do">
+		all.gen.wx_p_user.t.action.WxPUserTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_user/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPUserTAction"
+		url="/all/gen/wx_p_user/t/saveJson.do">
+		all.gen.wx_p_user.t.action.WxPUserTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="WxPUserTAction"
+		url="/all/gen/wx_p_user/t/del/bootstrap.do">
+		all.gen.wx_p_user.t.action.WxPUserTDelAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_user/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPUserTAction"
+		url="/all/gen/wx_p_user/t/delJson.do">
+		all.gen.wx_p_user.t.action.WxPUserTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="WxPUserTAction"
+		url="/all/gen/wx_p_user/t/del_all/bootstrap.do">
+		all.gen.wx_p_user.t.action.WxPUserTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_user/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPUserTAction"
+		url="/all/gen/wx_p_user/t/delAllJson.do">
+		all.gen.wx_p_user.t.action.WxPUserTDelAllJsonAction
+		
+	</action>
+</root>

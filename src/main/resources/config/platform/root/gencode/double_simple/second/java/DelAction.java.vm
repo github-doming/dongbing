@@ -1,0 +1,23 @@
+package ${second_package_name_all}.action;
+import java.util.ArrayList;
+import java.util.List;
+import  c.x.platform.root.common.action.BaseAction;
+import c.a.util.core.enums.bean.CommViewEnum;
+public class ${second_table_class}DelAction extends BaseAction {
+	@Override
+	public String execute() throws Exception {
+		String id = request.getParameter("id");
+		${second_package_name_all}.service.${second_table_class}Service service = new ${second_package_name_all}.service.${second_table_class}Service();
+		service.del(id);
+		List<String> list_msg = new ArrayList<String>();
+		list_msg.add("信息");
+		list_msg.add("删除成功");
+		request.setAttribute("msg", list_msg);
+		//删除第3表
+		// 第3表
+		${third_package_name_all}.service.${third_table_class}Service t${third_table_class}Service = new ${third_package_name_all}.service.${third_table_class}Service();
+		// 第3表删除
+		t${third_table_class}Service .del_by_userId(id);
+			return CommViewEnum.Default.toString();
+	}
+}

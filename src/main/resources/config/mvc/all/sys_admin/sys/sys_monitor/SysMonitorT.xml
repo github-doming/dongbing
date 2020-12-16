@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="SysMonitorTAction" url="/all/sys_admin/sys/sys_monitor/t/listJson.do">
+		all.sys_admin.sys.sys_monitor.t.action.SysMonitorTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="SysMonitorTAction" url="/all/sys_admin/sys/sys_monitor/t/list/easyui.do">
+		all.sys_admin.sys.sys_monitor.t.action.SysMonitorTListAction
+		<result name="Default" type="forward">
+			/pages/all/sys_admin/sys/sys_monitor/t/SysMonitorTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="SysMonitorTAction"
+		url="/all/sys_admin/sys/sys_monitor/t/list/bootstrap.do">
+		all.sys_admin.sys.sys_monitor.t.action.SysMonitorTListAction
+		<result name="Default" type="forward">
+			/pages/all/sys_admin/sys/sys_monitor/t/SysMonitorTListBootstrap.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysMonitorTAction"
+		url="/all/sys_admin/sys/sys_monitor/t/form/bootstrap.do">
+		all.sys_admin.sys.sys_monitor.t.action.SysMonitorTFormAction
+		<result name="Default" type="forward">
+			/pages/all/sys_admin/sys/sys_monitor/t/SysMonitorTFormBootstrap.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysMonitorTAction"
+		url="/all/sys_admin/sys/sys_monitor/t/save/bootstrap.do">
+		all.sys_admin.sys.sys_monitor.t.action.SysMonitorTSaveAction
+		<result name="Default" type="forward">
+			/all/sys_admin/sys/sys_monitor/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysMonitorTAction" url="/all/sys_admin/sys/sys_monitor/t/saveJson.do">
+		all.sys_admin.sys.sys_monitor.t.action.SysMonitorTSaveJsonAction
+	</action>
+	<!--删除del -->
+	<action name="SysMonitorTAction" url="/all/sys_admin/sys/sys_monitor/t/del/bootstrap.do">
+		all.sys_admin.sys.sys_monitor.t.action.SysMonitorTDelAction
+		<result name="Default" type="forward">
+			/all/sys_admin/sys/sys_monitor/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysMonitorTAction" url="/all/sys_admin/sys/sys_monitor/t/delJson.do">
+		all.sys_admin.sys.sys_monitor.t.action.SysMonitorTDelJsonAction
+	</action>
+	<!--删除所有del all -->
+	<action name="SysMonitorTAction"
+		url="/all/sys_admin/sys/sys_monitor/t/del_all/bootstrap.do">
+		all.sys_admin.sys.sys_monitor.t.action.SysMonitorTDelAllAction
+		<result name="Default" type="forward">
+			/all/sys_admin/sys/sys_monitor/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysMonitorTAction" url="/all/sys_admin/sys/sys_monitor/t/delAllJson.do">
+		all.sys_admin.sys.sys_monitor.t.action.SysMonitorTDelAllJsonAction
+	</action>
+</root>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	<action name="SysGroupUserCxAction" url="/platform/sys/sys_group_user/cx/list.do">
+		c.x.platform.sys.sys_group_user.cx.action.SysGroupUserCxListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group_user/cx/SysGroupUserCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object-->
+	<action name="SysGroupUserCxAction" url="/platform/sys/sys_group_user/cx/list_object.do">
+		c.x.platform.sys.sys_group_user.cx.action.SysGroupUserCxListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group_user/cx/SysGroupUserCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form-->
+	<action name="SysGroupUserCxAction" url="/platform/sys/sys_group_user/cx/form.do">
+		c.x.platform.sys.sys_group_user.cx.action.SysGroupUserCxFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group_user/cx/SysGroupUserCxForm.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	<action name="SysGroupUserCxAction" url="/platform/sys/sys_group_user/cx/save.do">
+		c.x.platform.sys.sys_group_user.cx.action.SysGroupUserCxSaveAction
+		<result name="index" type="send">
+	/platform/sys/sys_group_user/cx/list.do
+		</result>
+	</action>
+	<!--删除del-->
+	<action name="SysGroupUserCxAction" url="/platform/sys/sys_group_user/cx/del.do">
+		c.x.platform.sys.sys_group_user.cx.action.SysGroupUserCxDelAction
+		<result name="index" type="send">
+		/platform/sys/sys_group_user/cx/list.do
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="SysGroupUserCxAction" url="/platform/sys/sys_group_user/cx/del_all.do">
+		c.x.platform.sys.sys_group_user.cx.action.SysGroupUserCxDelAllAction
+		<result name="index" type="send">
+		/platform/sys/sys_group_user/cx/list.do
+		</result>
+	</action>
+</root>

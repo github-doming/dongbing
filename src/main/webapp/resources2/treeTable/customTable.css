@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+*{margin:0px;padding:0px;font-family:"Microsoft Yahei";}
+ul,li{list-style:none;}
+body{background:#fff;}
+/* xiugai */
+.modifyBtn{
+	color:#f38108;
+}
+.modifyBtn:hover{
+	background-color:#f38108;
+	color:#fff;
+	border-radius: 3px;
+}
+.orderBtn{
+	color:#0080c0;
+}
+.orderBtn:hover{
+	background-color:#0080c0;
+	color:#fff;
+	border-radius: 3px;
+}
+.checkBtn{
+	color:#804040;
+}
+.checkBtn:hover{
+	background-color:#804040;
+	color:#fff;
+	border-radius: 3px;
+}
+/* shanchu */
+.deleteBtn{
+	color:#d9534f;
+}
+.deleteBtn:hover{
+	background-color:#d9534f;
+	color:#fff;
+	border-radius: 3px;
+}
+.shoushi{
+    cursor: pointer;
+    display: inline-block;
+    width: 4em;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.treetop{margin-top:40px;position:relative;}
+.xiaju{margin-bottom:10px;}
+.caozuo{width:180px;height:35px;right:20px;top:-20px;position:absolute;}
+.caozuo li{width:90px;float:left;text-align:center;}
+.toppadding{padding-left:15px;}
+.headPosition i{margin:0 10px;}
+.menus {width:100%;overflow:hidden;}
+.menus li{float:left;width:33%;text-align:center;height:35px;line-height:30px;}
+.menus li label{float:left;width:25%;}
+.menus li span{float:left;width:75%;text-align:center;}
+.menus li input{width:90%;}
+
+.menusbtn{width:140px;margin:0 auto;height:35px;}
+.menusbtn li{width:70px;float:left;text-align:center;}
+.clear{clear:both;}

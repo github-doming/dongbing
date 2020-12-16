@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="AppVerifyAccountTAction"
+		url="/all/gen/app_verify_account/t/listJson.do">
+		all.gen.app_verify_account.t.action.AppVerifyAccountTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="AppVerifyAccountTAction"
+		url="/all/gen/app_verify_account/t/list/easyui.do">
+		all.gen.app_verify_account.t.action.AppVerifyAccountTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_verify_account/t/AppVerifyAccountTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="AppVerifyAccountTAction"
+		url="/all/gen/app_verify_account/t/list/bootstrap.do">
+		all.gen.app_verify_account.t.action.AppVerifyAccountTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_verify_account/t/AppVerifyAccountTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="AppVerifyAccountTAction"
+		url="/all/gen/app_verify_account/t/form/bootstrap.do">
+		all.gen.app_verify_account.t.action.AppVerifyAccountTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_verify_account/t/AppVerifyAccountTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="AppVerifyAccountTAction"
+		url="/all/gen/app_verify_account/t/save/bootstrap.do">
+		all.gen.app_verify_account.t.action.AppVerifyAccountTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/app_verify_account/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppVerifyAccountTAction"
+		url="/all/gen/app_verify_account/t/saveJson.do">
+		all.gen.app_verify_account.t.action.AppVerifyAccountTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="AppVerifyAccountTAction"
+		url="/all/gen/app_verify_account/t/del/bootstrap.do">
+		all.gen.app_verify_account.t.action.AppVerifyAccountTDelAction
+		<result name="Default" type="forward">
+			/all/gen/app_verify_account/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppVerifyAccountTAction"
+		url="/all/gen/app_verify_account/t/delJson.do">
+		all.gen.app_verify_account.t.action.AppVerifyAccountTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="AppVerifyAccountTAction"
+		url="/all/gen/app_verify_account/t/del_all/bootstrap.do">
+		all.gen.app_verify_account.t.action.AppVerifyAccountTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/app_verify_account/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppVerifyAccountTAction"
+		url="/all/gen/app_verify_account/t/delAllJson.do">
+		all.gen.app_verify_account.t.action.AppVerifyAccountTDelAllJsonAction
+		
+	</action>
+</root>

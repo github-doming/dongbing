@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	<action name="EduStudentTCxAction" url="/c/x/platform/admin/feng/edu/edu_student_t/cx/list.do">
+		c.x.platform.admin.feng.edu.edu_student_t.cx.action.EduStudentTCxListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/edu/edu_student_t/cx/EduStudentTCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object-->
+	<action name="EduStudentTCxAction" url="/c/x/platform/admin/feng/edu/edu_student_t/cx/list_object.do">
+		c.x.platform.admin.feng.edu.edu_student_t.cx.action.EduStudentTCxListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/edu/edu_student_t/cx/EduStudentTCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form-->
+	<action name="EduStudentTCxAction" url="/c/x/platform/admin/feng/edu/edu_student_t/cx/form.do">
+		c.x.platform.admin.feng.edu.edu_student_t.cx.action.EduStudentTCxFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/edu/edu_student_t/cx/EduStudentTCxForm.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	<action name="EduStudentTCxAction" url="/c/x/platform/admin/feng/edu/edu_student_t/cx/save.do">
+		c.x.platform.admin.feng.edu.edu_student_t.cx.action.EduStudentTCxSaveAction
+		<result name="index" type="forward">
+	/c/x/platform/admin/feng/edu/edu_student_t/cx/list.do
+		</result>
+	</action>
+	<!--删除del-->
+	<action name="EduStudentTCxAction" url="/c/x/platform/admin/feng/edu/edu_student_t/cx/del.do">
+		c.x.platform.admin.feng.edu.edu_student_t.cx.action.EduStudentTCxDelAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/edu/edu_student_t/cx/list.do
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="EduStudentTCxAction" url="/c/x/platform/admin/feng/edu/edu_student_t/cx/del_all.do">
+		c.x.platform.admin.feng.edu.edu_student_t.cx.action.EduStudentTCxDelAllAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/edu/edu_student_t/cx/list.do
+		</result>
+	</action>
+</root>

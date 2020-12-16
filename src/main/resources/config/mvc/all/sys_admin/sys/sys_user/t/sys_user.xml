@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	<action name="SysUserCxAction" url="/all/admin/sys/sys_user/t/list.do">
+		all.sys_admin.sys.sys_user.t.action.SysUserCxListAction
+		<result name="index" type="forward">
+			/pages/all/sys_admin/sys/sys_user/t/SysUserCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object-->
+	<action name="SysUserCxAction" url="/all/admin/sys/sys_user/t/list_object.do">
+		all.sys_admin.sys.sys_user.t.action.SysUserCxListObjectAction
+		<result name="index" type="forward">
+			/pages/all/sys_admin/sys/sys_user/t/SysUserCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form-->
+	<action name="SysUserCxAction" url="/all/admin/sys/sys_user/t/form.do">
+		all.sys_admin.sys.sys_user.t.action.SysUserCxFormAction
+		<result name="index" type="forward">
+			/pages/all/sys_admin/sys/sys_user/t/SysUserCxForm.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	<action name="SysUserCxAction" url="/all/admin/sys/sys_user/t/save.do">
+		all.sys_admin.sys.sys_user.t.action.SysUserCxSaveAction
+		<result name="index" type="forward">
+	/all/admin/sys/sys_user/t/list.do
+		</result>
+	</action>
+	<!--删除del-->
+	<action name="SysUserCxAction" url="/all/admin/sys/sys_user/t/del.do">
+		all.sys_admin.sys.sys_user.t.action.SysUserCxDelAction
+		<result name="index" type="forward">
+		/all/admin/sys/sys_user/t/list.do
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="SysUserCxAction" url="/all/admin/sys/sys_user/t/del_all.do">
+		all.sys_admin.sys.sys_user.t.action.SysUserCxDelAllAction
+		<result name="index" type="forward">
+		/all/admin/sys/sys_user/t/list.do
+		</result>
+	</action>
+</root>

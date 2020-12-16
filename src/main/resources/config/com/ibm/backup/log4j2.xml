@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 其status属性为“WARN”说明： log4j2内部的日志会将日志级别大于WARN的日志打印到Console。 -->
+<!-- <Configuration status="WARN" packages="c.a.util.core.log"> -->
+<Configuration>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="file_root_fatal"/>
+            <AppenderRef ref="file_root_error"/>
+            <AppenderRef ref="file_root_warn"/>
+            <AppenderRef ref="file_root_info"/>
+            <AppenderRef ref="file_root_debug"/>
+            <AppenderRef ref="file_root_trace"/>
+            <AppenderRef ref="console_root_trace"/>
+        </Root>
+        <Logger name="com.ibm" additivity="false" level="trace">
+            <AppenderRef ref="file_com"/>
+            <AppenderRef ref="file_root_error"/>
+            <AppenderRef ref="file_root_info"/>
+            <AppenderRef ref="file_root_trace"/>
+            <AppenderRef ref="console_core_trace"/>
+        </Logger>
+		<Logger name="c.a" additivity="false" level="info">
+			<AppenderRef ref="file_root_trace"/>
+			<AppenderRef ref="file_core_fatal"/>
+			<AppenderRef ref="file_core_error"/>
+			<AppenderRef ref="file_core_warn"/>
+			<AppenderRef ref="file_core_info"/>
+			<AppenderRef ref="file_core_debug"/>
+			<AppenderRef ref="file_core_trace"/>
+			<AppenderRef ref="console_core_trace"/>
+		</Logger>
+        <Logger name="com.game" additivity="false" level="warn">
+            <AppenderRef ref="file_com"/>
+            <AppenderRef ref="console_custom"/>
+            <AppenderRef ref="file_root_error"/>
+            <AppenderRef ref="file_root_trace"/>
+        </Logger>
+        <Logger name="org.doming" additivity="false" level="info">
+            <AppenderRef ref="file_com"/>
+            <AppenderRef ref="file_root_error"/>
+            <AppenderRef ref="file_root_info"/>
+            <AppenderRef ref="file_root_trace"/>
+            <AppenderRef ref="console_core_trace"/>
+        </Logger>
+        <Logger name="netty" additivity="false" level="warn">
+            <AppenderRef ref="file_netty"/>
+            <AppenderRef ref="console_custom"/>
+            <AppenderRef ref="file_root_trace"/>
+        </Logger>
+        <Logger name="custom_error" additivity="false" level="warn">
+            <AppenderRef ref="file_custom_error"/>
+            <AppenderRef ref="console_custom"/>
+            <AppenderRef ref="file_root_trace"/>
+        </Logger>
+        <Logger name="custom" additivity="false" level="warn">
+            <AppenderRef ref="file_custom"/>
+            <AppenderRef ref="console_custom"/>
+            <AppenderRef ref="file_root_trace"/>
+        </Logger>
+        <Logger name="cosmos" additivity="false" level="warn">
+            <AppenderRef ref="file_root_trace"/>
+            <AppenderRef ref="file_core_fatal"/>
+            <AppenderRef ref="file_core_error"/>
+            <AppenderRef ref="file_core_warn"/>
+            <AppenderRef ref="file_core_info"/>
+            <AppenderRef ref="file_core_debug"/>
+            <AppenderRef ref="file_core_trace"/>
+            <AppenderRef ref="console_core_trace"/>
+        </Logger>
+        <Logger name="example" additivity="false" level="warn">
+            <AppenderRef ref="file_core_fatal"/>
+            <AppenderRef ref="file_core_error"/>
+            <AppenderRef ref="file_core_warn"/>
+            <AppenderRef ref="file_core_info"/>
+            <AppenderRef ref="file_core_debug"/>
+            <AppenderRef ref="file_core_trace"/>
+            <AppenderRef ref="console_core_trace"/>
+        </Logger>
+        <Logger name="all" additivity="false" level="warn">
+            <AppenderRef ref="file_root_trace"/>
+            <AppenderRef ref="file_core_fatal"/>
+            <AppenderRef ref="file_core_error"/>
+            <AppenderRef ref="file_core_warn"/>
+            <AppenderRef ref="file_core_info"/>
+            <AppenderRef ref="file_core_debug"/>
+            <AppenderRef ref="file_core_trace"/>
+            <AppenderRef ref="console_core_trace"/>
+        </Logger>
+        <Logger name="c.x" additivity="false" level="warn">
+            <AppenderRef ref="file_root_trace"/>
+            <AppenderRef ref="file_core_fatal"/>
+            <AppenderRef ref="file_core_error"/>
+            <AppenderRef ref="file_core_warn"/>
+            <AppenderRef ref="file_core_info"/>
+            <AppenderRef ref="file_core_debug"/>
+            <AppenderRef ref="file_core_trace"/>
+            <AppenderRef ref="console_core_trace"/>
+        </Logger>
+
+    </Loggers>
+    <Appenders>
+        <!-- com文件输出 -->
+        <RollingFile name="file_com" fileName="${sys:webapp.root}/log/com.log"
+                     filePattern="${sys:webapp.root}/log/com_%d{yyyy-MM-dd}.log">
+            <Filters>
+                <!-- 如果是trace级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="trace"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][file_com]%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true"
+                                           interval="1"/>
+            </Policies>
+        </RollingFile>
+        <!-- 自定义netty文件输出 -->
+        <RollingFile name="file_netty" fileName="${sys:webapp.root}/log/netty.log"
+                     filePattern="${sys:webapp.root}/log/netty_%d{yyyy-MM-dd}.log">
+            <Filters>
+                <!-- 如果是trace级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="trace"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][file_netty]%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true"
+                                           interval="1"/>
+            </Policies>
+        </RollingFile>
+        <!-- 自定义文件输出 -->
+        <RollingFile name="file_custom_error"
+                     fileName="${sys:webapp.root}/log/custom_error.log"
+                     filePattern="${sys:webapp.root}/log/custom_error_%d{yyyy-MM-dd}.log">
+            <Filters>
+                <!-- 如果是error级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="error"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][file_custom_error]%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true"
+                                           interval="1"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="file_custom" fileName="${sys:webapp.root}/log/custom.log"
+                     filePattern="${sys:webapp.root}/log/custom_%d{yyyy-MM-dd}.log">
+            <Filters>
+                <!-- 如果是trace级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="trace"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][file_custom]%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true"
+                                           interval="1"/>
+            </Policies>
+        </RollingFile>
+        <!-- 自定义控制台输出 -->
+        <Console name="console_custom" target="SYSTEM_OUT">
+            <Filters>
+                <!-- 如果是trace级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="trace"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][console_custom]%n"/>
+        </Console>
+        <!-- core文件输出 -->
+        <RollingFile name="file_core_fatal" fileName="${sys:webapp.root}/log/core_fatal.log"
+                     filePattern="${sys:webapp.root}/log/core_fatal_%d{yyyy-MM-dd}.log">
+            <Filters>
+                <!-- 如果是fatal级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="fatal"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][file_core_fatal]%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true"
+                                           interval="1"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="file_core_error" fileName="${sys:webapp.root}/log/core_error.log"
+                     filePattern="${sys:webapp.root}/log/core_error_%d{yyyy-MM-dd}.log">
+            <Filters>
+                <!-- 如果是error级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="error"/>
+                <!-- 如果是大于等于fatal，那么将返回onMatch，也就是拒绝， 如果是其他情况(也就是error)，将是中立情况，因为后面没有其他过滤器，则被接受。 -->
+                <!-- <ThresholdFilter level="fatal" onMatch="DENY" onMismatch="NEUTRAL"
+                    /> -->
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][file_core_error]%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true"
+                                           interval="1"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="file_core_warn" fileName="${sys:webapp.root}/log/core_warn.log"
+                     filePattern="${sys:webapp.root}/log/root_core_%d{yyyy-MM-dd}.log">
+            <Filters>
+                <!-- 如果是warn级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="warn"/>
+                <!-- 如果是大于等于error(ERROR/fatal)，那么将返回onMatch，也就是拒绝， 如果是其他情况(也就是warn)，
+                    将是中立情况，因为后面没有其他过滤器，则被接受。 -->
+                <!--<ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"
+                    /> -->
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][file_core_warn]%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true"
+                                           interval="1"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="file_core_info" fileName="${sys:webapp.root}/log/core_info.log"
+                     filePattern="${sys:webapp.root}/log/core_info_%d{yyyy-MM-dd}.log">
+            <Filters>
+                <!-- 如果是info级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="info"/>
+                <!-- 如果是大于等于warn(WARN/ERROR/fatal)，那么将返回onMatch，也就是拒绝， 如果是其他情况(也就是info)，将是中立情况，因为后面没有其他过滤器，则被接受。 -->
+                <!--<ThresholdFilter level="warn" onMatch="DENY" onMismatch="NEUTRAL"
+                    /> -->
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][file_core_info]%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true"
+                                           interval="1"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="file_core_debug" fileName="${sys:webapp.root}/log/core_debug.log"
+                     filePattern="${sys:webapp.root}/log/core_debug_%d{yyyy-MM-dd}.log">
+            <Filters>
+                <!-- 如果是debug级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="debug"/>
+                <!-- 如果是大于等于info(info/WARN/ERROR/fatal)，那么将返回onMatch，也就是拒绝， 如果是其他情况(也就是debug)，将是中立情况，因为后面没有其他过滤器，则被接受。 -->
+                <!--<ThresholdFilter level="info" onMatch="DENY" onMismatch="NEUTRAL"
+                    /> -->
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][file_core_debug]%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true"
+                                           interval="1"/>
+            </Policies>
+        </RollingFile>
+        <!-- filePattern="${sys:webapp.root}/log/core_trace_%d{yyyy-MM-dd}.log"
+            filePattern="${sys:webapp.root}/log/core_trace_%d{yyyy-MM-dd.HH}.log" -->
+        <RollingFile name="file_core_trace" fileName="${sys:webapp.root}/log/core_trace.log"
+                     filePattern="${sys:webapp.root}/log/core_trace_%d{yyyy-MM-dd}.log">
+            <Filters>
+                <!-- 如果是trace级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="trace"/>
+                <!-- 如果是大于等于debug，那么将返回onMatch，也就是拒绝， 如果是其他情况(也就是trace)，将是中立情况， 因为后面没有其他过滤器，则被接受。 -->
+                <!--<ThresholdFilter level="debug" onMatch="DENY" onMismatch="NEUTRAL"
+                    /> -->
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][file_core_trace]%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true"
+                                           interval="1"/>
+            </Policies>
+            <!-- 表示保留24小时数据 <IfLastModified age="1d"/> -->
+            <!-- 表示保留3天数据 <IfLastModified age="3d" /> -->
+            <!-- <DefaultRolloverStrategy max="99999"> <Delete basePath="log" maxDepth="1">
+                <IfFileName glob="*.log" /> <IfLastModified age="1d" /> </Delete> </DefaultRolloverStrategy> -->
+        </RollingFile>
+        <!-- root文件输出 -->
+        <RollingFile name="file_root_fatal" fileName="${sys:webapp.root}/log/root_fatal.log"
+                     filePattern="${sys:webapp.root}/log/root_fatal_%d{yyyy-MM-dd}.log">
+            <Filters>
+                <!-- 如果是fatal级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="fatal"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][file_root_fatal]%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true"
+                                           interval="1"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="file_root_error" fileName="${sys:webapp.root}/log/root_error.log"
+                     filePattern="${sys:webapp.root}/log/root_error_%d{yyyy-MM-dd}.log">
+            <Filters>
+                <!-- 如果是error级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="error"/>
+                <!-- 如果是大于等于fatal，那么将返回onMatch，也就是拒绝， 如果是其他情况(也就是error)，将是中立情况，因为后面没有其他过滤器，则被接受。 -->
+                <!-- <ThresholdFilter level="fatal" onMatch="DENY" onMismatch="NEUTRAL"
+                    /> -->
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][file_root_error]%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true"
+                                           interval="1"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="file_root_warn" fileName="${sys:webapp.root}/log/root_warn.log"
+                     filePattern="${sys:webapp.root}/log/root_warn_%d{yyyy-MM-dd}.log">
+            <Filters>
+                <!-- 如果是warn级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="warn"/>
+                <!-- 如果是大于等于error(ERROR/fatal)，那么将返回onMatch，也就是拒绝， 如果是其他情况(也就是warn)，
+                    将是中立情况，因为后面没有其他过滤器，则被接受。 -->
+                <!--<ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"
+                    /> -->
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][file_root_warn]%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true"
+                                           interval="1"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="file_root_info" fileName="${sys:webapp.root}/log/root_info.log"
+                     filePattern="${sys:webapp.root}/log/root_info_%d{yyyy-MM-dd}.log">
+            <Filters>
+                <!-- 如果是info级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="info"/>
+                <!-- 如果是大于等于warn(WARN/ERROR/fatal)，那么将返回onMatch，也就是拒绝， 如果是其他情况(也就是info)，将是中立情况，因为后面没有其他过滤器，则被接受。 -->
+                <!--<ThresholdFilter level="warn" onMatch="DENY" onMismatch="NEUTRAL"
+                    /> -->
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][file_root_info]%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true"
+                                           interval="1"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="file_root_debug" fileName="${sys:webapp.root}/log/root_debug.log"
+                     filePattern="${sys:webapp.root}/log/root_debug_%d{yyyy-MM-dd}.log">
+            <Filters>
+                <!-- 如果是debug级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="debug"/>
+                <!-- 如果是大于等于info(info/WARN/ERROR/fatal)，那么将返回onMatch，也就是拒绝， 如果是其他情况(也就是debug)，将是中立情况，因为后面没有其他过滤器，则被接受。 -->
+                <!--<ThresholdFilter level="info" onMatch="DENY" onMismatch="NEUTRAL"
+                    /> -->
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][file_root_debug]%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true"
+                                           interval="1"/>
+            </Policies>
+        </RollingFile>
+        <!-- filePattern="${sys:webapp.root}/log/root_trace_%d{yyyy-MM-dd}.log"
+            filePattern="${sys:webapp.root}/log/root_trace_%d{yyyy-MM-dd.HH}.log" -->
+        <RollingFile name="file_root_trace" fileName="${sys:webapp.root}/log/root_trace.log"
+                     filePattern="${sys:webapp.root}/log/root_trace_%d{yyyy-MM-dd}.log">
+            <Filters>
+                <!-- 如果是trace级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="trace"/>
+                <!-- 如果是大于等于debug，那么将返回onMatch，也就是拒绝， 如果是其他情况(也就是trace)，将是中立情况， 因为后面没有其他过滤器，则被接受。 -->
+                <!--<ThresholdFilter level="debug" onMatch="DENY" onMismatch="NEUTRAL"
+                    /> -->
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][file_root_trace]%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true"
+                                           interval="1"/>
+            </Policies>
+            <!-- 表示保留24小时数据 <IfLastModified age="1d"/> -->
+            <!-- 表示保留3天数据 <IfLastModified age="3d" /> -->
+            <!-- <DefaultRolloverStrategy max="99999"> <Delete basePath="log" maxDepth="1">
+                <IfFileName glob="*.log" /> <IfLastModified age="1d" /> </Delete> </DefaultRolloverStrategy> -->
+        </RollingFile>
+        <!-- 控制台输出 -->
+        <Console name="console_core_fatal" target="SYSTEM_OUT">
+            <Filters>
+                <!-- 如果是fatal级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="fatal"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][console_core_fatal]%n"/>
+        </Console>
+        <Console name="console_core_error" target="SYSTEM_OUT">
+            <Filters>
+                <!-- 如果是error级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="error"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][console_core_error]%n"/>
+        </Console>
+        <Console name="console_core_warn" target="SYSTEM_OUT">
+            <Filters>
+                <!-- 如果是warn级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="warn"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][console_core_warn]%n"/>
+        </Console>
+        <Console name="console_core_info" target="SYSTEM_OUT">
+            <Filters>
+                <!-- 如果是info级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="info"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][console_core_info]%n"/>
+        </Console>
+        <Console name="console_core_debug" target="SYSTEM_OUT">
+            <Filters>
+                <!-- 如果是debug级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="debug"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][console_core_debug]%n"/>
+        </Console>
+        <Console name="console_core_trace" target="SYSTEM_OUT">
+            <!-- 如果是trace级别及其以上，将经过通过第一个过滤 -->
+            <ThresholdFilter level="trace"/>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][console_core_trace]%n"/>
+        </Console>
+        <Console name="console_root_fatal" target="SYSTEM_OUT">
+            <Filters>
+                <!-- 如果是fatal级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="fatal"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][console_root_fatal]%n"/>
+        </Console>
+        <Console name="console_root_error" target="SYSTEM_OUT">
+            <Filters>
+                <!-- 如果是error级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="error"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][console_root_error]%n"/>
+        </Console>
+        <Console name="console_root_warn" target="SYSTEM_OUT">
+            <Filters>
+                <!-- 如果是warn级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="warn"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][console_root_warn]%n"/>
+        </Console>
+        <Console name="console_root_info" target="SYSTEM_OUT">
+            <Filters>
+                <!-- 如果是info级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="info"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][console_root_info]%n"/>
+        </Console>
+        <Console name="console_root_debug" target="SYSTEM_OUT">
+            <Filters>
+                <!-- 如果是debug级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="debug"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][console_root_debug]%n"/>
+        </Console>
+        <Console name="console_root_trace" target="SYSTEM_OUT">
+            <Filters>
+                <!-- 如果是trace级别及其以上，将经过通过第一个过滤 -->
+                <ThresholdFilter level="trace"/>
+            </Filters>
+            <PatternLayout
+                    pattern="[log4j2]%d{yyyy-MM-dd HH:mm:ss,SSS}[%p][%m][%t][%l][console_root_trace]%n"/>
+        </Console>
+    </Appenders>
+</Configuration>

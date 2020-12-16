@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+    <!-- 盘口游戏 -->
+    <action name="IbmHandicapGameZAction" url="/ibm/pc/ibm_handicap_game/handicapGame.do">
+        com.ibm.old.v1.pc.ibm_handicap_game.t.action.IbmHandicapGameAction
+    </action>
+
+    <!-- 刷新投注信息 -->
+    <!--<action name="IbmHandicapGameTAction" url="/ibm/pc/ibm_handicap_game/refreshBetInfo.do">-->
+        <!--com.ibm.old.v1.pc.ibm_handicap_game.t.action.RefreshBetInfoAction-->
+    <!--</action>-->
+
+
+</root>

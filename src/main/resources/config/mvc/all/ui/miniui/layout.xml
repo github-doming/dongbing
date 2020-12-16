@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<action name="IndexAction" url="/miniui/sys/menu/SysMenuTList.do">
+	all.ui.miniui.sys.menu.SysMenuListAction
+	<result name="index" type="forward">
+			/pages/c/x/miniui/sys/menu/SysMenuTList.jsp
+		</result>
+	</action>
+</root>

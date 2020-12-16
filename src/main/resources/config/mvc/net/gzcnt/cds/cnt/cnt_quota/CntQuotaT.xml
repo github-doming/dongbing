@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--json -->
+	<action name="CntQuotaTAction"
+		url="/cnt/cnt_quota/t/listJson.do">
+		net.gzcnt.cds.cnt.cnt_quota.t.action.CntQuotaTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="CntQuotaTAction"
+		url="/cnt/cnt_quota/t/list.do">
+		net.gzcnt.cds.cnt.cnt_quota.t.action.CntQuotaTListAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_quota/t/CntQuotaTListBootstrap.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_quota/t/CntQuotaTListMiniui.jsp
+		</result>
+
+		<result name="DefaultObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_quota/t/CntQuotaTListObject.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_quota/t/CntQuotaTListBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_quota/t/CntQuotaTListBootstrapObject.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_quota/t/CntQuotaTListKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_quota/t/CntQuotaTListKaidaObject.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="CntQuotaTAction"
+		url="/cnt/cnt_quota/t/form.do">
+		net.gzcnt.cds.cnt.cnt_quota.t.action.CntQuotaTFormAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_quota/t/CntQuotaTFormBootstrap.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_quota/t/CntQuotaTFormMiniui.jsp
+		</result>
+		
+		<result name="DefaultObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_quota/t/CntQuotaTForm.jsp
+		</result>
+		
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_quota/t/CntQuotaTFormBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_quota/t/CntQuotaTFormBootstrap.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_quota/t/CntQuotaTFormKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_quota/t/CntQuotaTFormKaida.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="CntQuotaTAction"
+		url="/cnt/cnt_quota/t/save.do">
+		net.gzcnt.cds.cnt.cnt_quota.t.action.CntQuotaTSaveAction
+		<result name="Default" type="forward">
+			/cnt/cnt_quota/t/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="CntQuotaTAction"
+		url="/cnt/cnt_quota/t/del.do">
+		net.gzcnt.cds.cnt.cnt_quota.t.action.CntQuotaTDelAction
+		<result name="Default" type="forward">
+			/cnt/cnt_quota/t/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="CntQuotaTAction"
+		url="/cnt/cnt_quota/t/del_all.do">
+		net.gzcnt.cds.cnt.cnt_quota.t.action.CntQuotaTDelAllAction
+		<result name="Default" type="forward">
+			/cnt/cnt_quota/t/list.do
+		</result>
+	</action>
+</root>

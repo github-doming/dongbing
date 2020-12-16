@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+
+	<!--alipay page -->
+	<action name="IndexAction" url="/cosmos/ali/pay/archit/page/trade_page_pay.do">
+		cosmos.ali.pay.archit.page.AlipayTradePagePayAction
+	</action>
+
+	<!--alipay auth -->
+	<action name="IndexAction" url="/cosmos/ali/pay/archit/oauth/request_oauth.do">
+		cosmos.ali.pay.archit.oauth.AlipayRequestOauthAction
+	</action>
+	<action name="IndexAction" url="/cosmos/ali/pay/archit/oauth/get_oauth.do">
+		cosmos.ali.pay.archit.oauth.AlipayGetOauthAction
+	</action>
+	<!--alipay common -->
+	<action name="IndexAction" url="/cosmos/ali/pay/archit/common/auth.do">
+		cosmos.ali.pay.archit.common.AlipayLogAuthAction
+	</action>
+	<action name="IndexAction" url="/cosmos/ali/pay/archit/common/event.do">
+		cosmos.ali.pay.archit.common.AlipayLogEventAction
+	</action>
+	<action name="IndexAction" url="/cosmos/ali/pay/archit/common/notify.do">
+		cosmos.ali.pay.archit.common.AlipayLogNotifyAction
+	</action>
+	<action name="IndexAction" url="/cosmos/ali/pay/archit/common/return.do">
+		cosmos.ali.pay.archit.common.AlipayLogReturnAction
+	</action>
+</root>

@@ -1,0 +1,51 @@
+body { background:#fff;overflow-y:hidden;}
+.menu{position:relative;width:100%;}
+.menul, .menur {  height:100%;}
+.menur { position:absolute;right:0px;bottom:0px;}
+.iframes { width:100%; margin:0; padding:0; background:#fff; height:100%;}
+.shoushi { cursor:pointer; color:#428bca; font-size:16px; }
+.linehight { background:#c6c9dc; }
+.data-top2 { height:35px; background-color:#3d464f; }
+.data-name2 { padding-left:35px; height:35px; line-height:35px; float:left; color:#b9bbbc; color:#f2f2f2; font-size:18px; position:relative; }
+.data-name2 .glyphicon-cloud { width:20px; height:20px; font-size:20px; display:block; position:absolute; top:9px; left:10px;  }
+.data-right { float:right; height:35px; position:relative}
+.data-right a { width:25px; height:35px; padding:5px 0; display:block; float:left; }
+.data-right .glyphicon-question-sign { color:#c9c9cb; font-size:20px; }
+.data-right a:hover .glyphicon-question-sign { color:#fff; }
+.input-search { width:250px; height:35px; padding:5px 0; float:left;  margin:0 10px; }
+.input-search input { width:100%; height:25px; border:none; background-color:#c9c9cb; padding:0 30px 0 5px; }
+.input-search .glyphicon-search { position:absolute; top:7px; right:5px; width:20px; height:20px; font-size:20px; color:#667686; display:block; }
+.user-img { width:35px; height:35px; float:left; border:1px solid #3d464f; background-color:#667686;  position:relative; }
+.user-img .glyphicon-user { color:#b3b8bc; font-size:20px; line-height:33px; width:20px; height:20px; margin-left:6px; display:block; }
+.user-img:hover .glyphicon-user { color:#fff; }
+.user-list { position:absolute; top:35px; left:0; z-index:999; width:150px; height:120px; background-color:#ccc; display:none; }
+.user-list li { width:100%; height:40px; }
+.user-list li a { width:100%; height:40px; line-height:40px; display:block; font-size:16px; padding:0 20px; color:#666; text-decoration:none; }
+.user-list li a:hover { background-color:#e7e8ed; }
+.user-list li a span { margin-right:5px; }
+.left-menu { width: 250px; background-color: #72b1d2; overflow: hidden; font-size: 18px; color: #fff; height:100%; position:absolute;left:0px;bottom:0px;}
+/*--------------一级菜单样式----------------*/
+.menu01 { width: 100%; float: left; overflow: auto;height:100%; }
+.menu01 li { width: 100%; height: 50px; line-height: 50px; cursor: pointer; overflow: hidden; }
+.menu01 .glyphicon:empty { width: 60px; height: 50px; float: left; display: inline-block; padding: 10px 15px; color: #fff; font-size: 30px; }
+.menu01 li:hover { background-color: #428bcb; }
+.selected-bg { background-color: #428bcb; }
+.icons { width: 30px; height: 30px; float: left; display: inline-block; margin: 10px 15px; overflow: hidden; }
+.icons-bg01 { background: url(../images/icon2.png) no-repeat left top; }
+.icons-bg02 { background: url(../images/icon2.png) no-repeat left -35px; }
+.icons-bg03 { background: url(../images/icon2.png) no-repeat left -70px; }
+.icons-bg04 { background: url(../images/icon2.png) no-repeat left -105px; }
+.icons-bg05 { background: url(../images/icon2.png) no-repeat left -140px; }
+.icons-bg06 { background: url(../images/icon2.png) no-repeat left -175px; }
+/*------------二级、三级、四级菜单样式-------------*/
+.menus { width: 190px; background-color: #72b1d2; float: left; display: none; overflow: auto; border-left: 1px solid #a0d2ed; }
+.menus ul { display: none; }
+.menus ul li { width: 100%; height: 40px; line-height: 40px; padding-left: 20px; cursor: pointer; }
+.menus ul li:hover { background-color: #428bcb; }
+.selected2-bg { background-color:#428bcb;  }
+/*------------修改密码样式-------------*/
+.lock , .lock2{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(80,81,82,.9);z-index:1;}
+.iframe2 ,.iframe3{width:100%; margin:0; padding:0; background:#fff; height:99%;  }
+.password_div{width:640px;height:276px;position:fixed;top:50%;left:50%;margin-top:-138px;margin-left:-320px;z-index:2;box-shadow:0 5px 15px rgba(0,0,0,.5);}
+.ziliao_div{width:640px;height:380px;position:fixed;top:50%;left:50%;margin-top:-190px;margin-left:-320px;z-index:2;box-shadow:0 5px 15px rgba(0,0,0,.5);}
+.yincang{display:none;}

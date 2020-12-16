@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!--
+-->
+<root>
+	<!---->
+	<action name="IndexAction" url="/c/x/platform/admin/ref/ref_single_simple/fun_single_simple/list.do">
+		c.x.platform.admin.ref.ref_single_simple.fun_single_simple.action.FunSingleSimpleListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/ref/ref_single_simple/fun_single_simple/list.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/c/x/platform/admin/ref/ref_single_simple/fun_single_simple/form.do">
+		c.x.platform.admin.ref.ref_single_simple.fun_single_simple.action.FunSingleSimpleActionForm
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/ref/ref_single_simple/fun_single_simple/form.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/c/x/platform/admin/ref/ref_single_simple/fun_single_simple/save.do">
+		c.x.platform.admin.ref.ref_single_simple.fun_single_simple.action.FunSingleSimpleSaveAction
+		<result name="index" type="forward">
+			/c/x/platform/admin/ref/ref_single_simple/fun_single_simple/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/c/x/platform/admin/ref/ref_single_simple/fun_single_simple/del.do">
+		c.x.platform.admin.ref.ref_single_simple.fun_single_simple.action.FunSingleSimpleDelAction
+		<result name="index" type="forward">
+			/c/x/platform/admin/ref/ref_single_simple/fun_single_simple/list.do
+		</result>
+	</action>
+		<action name="IndexAction" url="/c/x/platform/admin/ref/ref_single_simple/fun_single_simple/del_all.do">
+		c.x.platform.admin.ref.ref_single_simple.fun_single_simple.action.FunSingleSimpleDelAllAction
+		<result name="index" type="forward">
+			/c/x/platform/admin/ref/ref_single_simple/fun_single_simple/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/c/x/platform/admin/ref/ref_single_simple/fun_single_simple/parent.do">
+		c.x.platform.admin.ref.ref_single_simple.fun_single_simple.action.FunSingleSimpleParentAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/ref/ref_single_simple/fun_single_simple/parent.jsp
+		</result>
+	</action>
+		<action name="IndexAction" url="/c/x/platform/admin/ref/ref_single_simple/fun_single_simple/select.do">
+		c.x.platform.admin.ref.ref_single_simple.fun_single_simple.action.FunSingleSimpleSelectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/ref/ref_single_simple/fun_single_simple/select.jsp
+		</result>
+	</action>
+</root>

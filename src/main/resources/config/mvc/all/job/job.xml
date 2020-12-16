@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--定时器启动 -->
+	<action name="IndexAction" url="/all/job/config/shutdown.do">
+		all.job.action.SysQuartzConfigShutdownAction
+		<result name="Default" type="send">
+			/all/job/config/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/config/start.do">
+		all.job.action.SysQuartzConfigStartAction
+		<result name="Default" type="send">
+			/all/job/config/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/config/pause.do">
+		all.job.action.SysQuartzConfigPauseAction
+		<result name="Default" type="send">
+			/all/job/config/list.do
+		</result>
+	</action>
+	<!--定时器配置 -->
+	<action name="IndexAction" url="/all/job/config/list.do">
+		all.job.action.SysQuartzConfigListAction
+		<result name="Default" type="forward">
+			/pages/all/job/SysQuartzConfigListBootstrap.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/config/form.do">
+		all.job.action.SysQuartzConfigFormAction
+		<result name="Default" type="forward">
+			/pages/all/job/SysQuartzConfigFormBootstrap.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/config/save.do">
+		all.job.action.SysQuartzConfigSaveAction
+		<result name="Default" type="send">
+			/all/job/config/list.do
+		</result>
+	</action>
+	<!--定时器作业 -->
+	<action name="IndexAction" url="/all/job/job/list.do">
+		all.job.action.SysQuartzJobListAction
+		<result name="Default" type="forward">
+			/pages/all/job/SysQuartzJobListBootstrap.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/job/form.do">
+		all.job.action.SysQuartzJobFormAction
+		<result name="Default" type="forward">
+			/pages/all/job/SysQuartzJobFormBootstrap.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/job/save.do">
+		all.job.action.SysQuartzJobSaveAction
+		<result name="Default" type="send">
+			/all/job/job/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/job/del.do">
+		all.job.action.SysQuartzJobDelAction
+		<result name="Default" type="send">
+			/all/job/job/list.do
+		</result>
+	</action>
+	<!--定时器作业运行 -->
+	<action name="IndexAction" url="/all/job/job/run.do">
+		all.job.action.SysQuartzJobRunAction
+		<result name="Default" type="send">
+			/all/job/job/list.do
+		</result>
+	</action>
+	<!--定时器计划 -->
+	<action name="IndexAction" url="/all/job/trigger/list.do">
+		all.job.action.SysQuartzTriggerListAction
+		<result name="Default" type="forward">
+			/pages/all/job/SysQuartzTriggerListBootstrap.jsp
+		</result>
+	</action>
+    <!--定时器触发器信息 -->
+    <action name="IndexAction" url="/all/job/trigger/infos.do">
+        all.job.action.exp.SysQuartzTriggerInfosAction
+    </action>
+    <!--定时器触发器信息 -->
+    <action name="IndexAction" url="/all/job/trigger/pause.do">
+        all.job.action.exp.SysQuartzTriggerPauseAction
+    </action>
+    <!--定时器触发器信息 -->
+    <action name="IndexAction" url="/all/job/trigger/run.do">
+        all.job.action.exp.SysQuartzTriggerRunAction
+    </action>
+    <!--定时器触发器信息 -->
+    <action name="IndexAction" url="/all/job/trigger/state.do">
+        all.job.action.exp.SysQuartzTriggerStateAction
+    </action>
+	<action name="IndexAction" url="/all/job/trigger/form.do">
+		all.job.action.SysQuartzTriggerFormAction
+		<result name="Default" type="forward">
+			/pages/all/job/SysQuartzTriggerFormBootstrap.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/trigger/save.do">
+		all.job.action.SysQuartzTriggerSaveAction
+		<result name="Default" type="send">
+			/all/job/trigger/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/trigger/del.do">
+		all.job.action.SysQuartzTriggerDelAction
+		<result name="Default" type="send">
+			/all/job/trigger/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/trigger/delAll.do">
+		all.job.action.SysQuartzTriggerDelAllAction
+		<result name="Default" type="send">
+			/all/job/trigger/list.do
+		</result>
+	</action>
+	<!--定时器计划启动,暂停，运行 -->
+	<action name="IndexAction" url="/all/job/trigger/startAll.do">
+		all.job.action.SysQuartzTriggerStartAllAction
+		<result name="Default" type="send">
+			/all/job/trigger/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/trigger/start.do">
+		all.job.action.SysQuartzTriggerStartAction
+		<result name="Default" type="send">
+			/all/job/trigger/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/trigger/pauseAll.do">
+		all.job.action.SysQuartzTriggerPauseAllAction
+		<result name="Default" type="send">
+			/all/job/trigger/list.do
+		</result>
+	</action>
+
+	<action name="IndexAction" url="/all/job/trigger/runAll.do">
+		all.job.action.SysQuartzTriggerRunAllAction
+		<result name="Default" type="send">
+			/all/job/trigger/list.do
+		</result>
+	</action>
+	<!--quartz定时器job列表 -->
+	<action name="IndexAction" url="/all/job/quartz/job/list.do">
+		all.job.action.quartz.QuartzJobListAction
+		<result name="Default" type="forward">
+			/pages/all/job/quartz/QuartzJobListBootstrap.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/quartz/job/del.do">
+		all.job.action.quartz.QuartzJobDelAction
+		<result name="Default" type="send">
+			/all/job/quartz/job/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/quartz/job/pause.do">
+		all.job.action.quartz.QuartzJobPauseAction
+		<result name="Default" type="send">
+			/all/job/quartz/job/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/quartz/job/resume.do">
+		all.job.action.quartz.QuartzJobResumeAction
+		<result name="Default" type="send">
+			/all/job/quartz/job/list.do
+		</result>
+	</action>
+	<!--quartz定时器计划列表 -->
+	<action name="IndexAction" url="/all/job/quartz/trigger/list.do">
+		all.job.action.quartz.QuartzTriggerListAction
+		<result name="Default" type="forward">
+			/pages/all/job/quartz/QuartzTriggerListBootstrap.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/quartz/trigger/del.do">
+		all.job.action.quartz.QuartzTriggerDelAction
+		<result name="Default" type="send">
+			/all/job/quartz/trigger/list.do
+		</result>
+	</action>
+	<!--定时器 日志 -->
+	<action name="IndexAction" url="/all/job/log/list.do">
+		all.job.action.SysQuartzLogListAction
+		<result name="Default" type="forward">
+			/pages/all/job/SysQuartzLogListBootstrap.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/log/del.do">
+		all.job.action.SysQuartzLogDelAction
+		<result name="Default" type="send">
+			/all/job/log/list.do
+		</result>
+	</action>
+	<action name="IndexAction" url="/all/job/log/delAll.do">
+		all.job.action.SysQuartzLogDelAllAction
+		<result name="Default" type="send">
+			/all/job/log/list.do
+		</result>
+	</action>
+	<!--定时器 日志 清空 -->
+	<action name="IndexAction" url="/all/job/log/clear.do">
+		all.job.action.SysQuartzLogClearAction
+		<result name="Default" type="send">
+			/all/job/log/list.do
+		</result>
+	</action>
+</root>

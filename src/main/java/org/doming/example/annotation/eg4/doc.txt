@@ -1,0 +1,87 @@
+注解的属性
+
+注解的属性也叫做成员变量。注解只有成员变量，没有方法。注解的成员变量在注解的定义中以“无形参的方法”形式来声明，其方法名定义了该成员变量的名字，其返回值定义了该成员变量的类型。
+
+
+
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface TestAnnotation {
+
+    int id();
+
+    String msg();
+
+}
+
+上面代码定义了 TestAnnotation 这个注解中拥有 id 和 msg 两个属性。在使用的时候，我们应该给它们进行赋值。
+
+赋值的方式是在注解的括号内以 value=”” 形式，多个属性之前用 ，隔开。  
+
+
+
+@TestAnnotation(id=3,msg="hello annotation")
+public class Test {
+
+}
+
+需要注意的是，在注解中定义属性时它的类型必须是 8 种基本数据类型外加 类、接口、注解及它们的数组。  
+
+注解中属性可以有默认值，默认值需要用 default 关键值指定。比如：
+
+
+
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface TestAnnotation {
+
+    public int id() default -1;
+
+    public String msg() default "Hi";
+
+}
+
+TestAnnotation 中 id 属性默认值为 -1，msg 属性默认值为 Hi。 
+它可以这样应用。
+
+
+
+@TestAnnotation()
+public class Test {}
+
+因为有默认值，所以无需要再在  @TestAnnotation 后面的括号里面进行赋值了，这一步可以省略。  
+
+另外，还有一种情况。如果一个注解内仅仅只有一个名字为 value 的属性时，应用这个注解时可以直接接属性值填写到括号内。
+
+
+
+public @interface Check {
+    String value();
+}
+
+上面代码中，Check 这个注解只有 value 这个属性。所以可以这样应用。
+
+
+
+@Check("hi")
+int a;
+
+这和下面的效果是一样的
+
+
+
+@Check(value="hi")
+int a;
+
+最后，还需要注意的一种情况是一个注解没有任何属性。比如
+
+
+
+public @interface Perform {}
+
+那么在应用这个注解的时候，括号都可以省略。
+
+
+
+@Perform
+public void testMethod(){}

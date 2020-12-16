@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--mvc2 -->
+	<action name="IndexAction" url="/example/mvc/i1/list.do2">
+		example.c.a.tool.mvc.i1.ListAction
+		<result name="index" type="forward">
+			/pages/example/c/a/tool/mvc/list.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/example/mvc/i1/test.do2">
+	example.c.a.tool.mvc.i1.ListAction
+		<result name="index" type="forward">
+			/pages/example/c/a/tool/mvc/test.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/example/mvc/i1/demo.do2">
+	example.c.a.tool.mvc.i1.ListAction
+		<result name="index" type="forward">
+			/pages/example/c/a/tool/mvc/demo.jsp
+		</result>
+	</action>
+	<!--redis -->
+	<action name="IndexAction" url="/example/mvc/redis/test.do">
+		example.c.a.tool.mvc.redis.TestAction
+		<result name="Default" type="forward">
+			/pages/example/c/a/tool/mvc/test.jsp
+		</result>
+	</action>
+	<!--threadLocal -->
+	<action name="IndexAction" url="/example/mvc/threadlocal/test1.do">
+		example.c.a.tool.mvc.threadlocal.TestAction1
+		<result name="test" type="forward">
+			/pages/example/c/a/tool/mvc/test.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/example/mvc/threadlocal/test2.do">
+		example.c.a.tool.mvc.threadlocal.TestAction2
+		<result name="test" type="forward">
+			/pages/example/c/a/tool/mvc/test.jsp
+		</result>
+	</action>
+	<!--thread -->
+	<action name="IndexAction" url="/example/mvc/thread/test.do">
+		example.c.a.tool.mvc.thread.TestAction
+		<result name="test" type="forward">
+			/pages/example/c/a/tool/mvc/test.jsp
+		</result>
+	</action>
+	<!-- websocket -->
+	<action name="IndexAction" url="/example/mvc/websocket/demo.do">
+		example.c.a.tool.mvc.websocket.DemoAction
+		<result name="Default" type="forward">
+			/pages/example/c/a/tool/mvc/demo.jsp
+		</result>
+	</action>
+	<!--例子1 -->
+	<action name="IndexAction" url="/example/mvc/i1/error.do">
+		example.c.a.tool.mvc.i1.ErrorAction
+		<result name="Default" type="forward">
+			/pages/example/c/a/tool/mvc/test.jsp
+		</result>
+	</action>
+	<action name="/example/mvc.jh" url="/example/mvc/i1/test.do">
+		example.c.a.tool.mvc.i1.TestAction
+		<result name="test" type="forward">
+			/pages/example/c/a/tool/mvc/test.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/example/mvc/i1/demo.do">
+		example.c.a.tool.mvc.i1.DemoAction
+		<result name="Default" type="forward">
+			/pages/example/c/a/tool/mvc/demo.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/example/mvc/i1/demo1.do">
+		example.c.a.tool.mvc.i1.DemoAction
+		<result name="Default" type="forward">
+			/pages/example/c/a/tool/mvc/demo1.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/example/mvc/i1/list.do">
+		example.c.a.tool.mvc.i1.ListAction
+		<result name="index" type="forward">
+			/pages/example/c/a/tool/mvc/list.jsp
+		</result>
+	</action>
+</root>

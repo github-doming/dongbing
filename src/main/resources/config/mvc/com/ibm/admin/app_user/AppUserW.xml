@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+
+    <!-- 修改用户等级 -->
+	<action name="Ibm" url="/ibm/admin/app_user/modify_user_type.do">
+		com.ibm.old.v1.admin.app_user.w.action.ModifyUserTypeAction
+	</action>
+
+    <!-- 查询所有用户组 -->
+	<action name="Ibm" url="/ibm/admin/app_user/find_user_type.do">
+		com.ibm.old.v1.admin.app_user.w.action.AppUserFindTypeAction
+	</action>
+
+    <!-- 查询所有用户 -->
+	<action name="Ibm" url="/ibm/admin/app_user/list.do">
+		com.ibm.old.v1.admin.app_user.w.action.AppUserListAction
+		<result name="Default" type="forward">
+			/pages/com/ibm/admin/app_user/AppUserWList.jsp
+		</result>
+	</action>
+
+    <!-- 查询所有用户 -->
+	<action name="AppUserWListJsonAction" url="/ibm/admin/app_user/list_json.do">
+		com.ibm.old.v1.admin.app_user.w.action.AppUserWListJsonAction
+	</action>
+
+    <!-- 删除用户 -->
+	<action name="Ibm" url="/ibm/admin/app_user/del.do">
+		com.ibm.old.v1.admin.app_user.w.action.AppUserDelAction
+		<result name="Default" type="forward">
+			/ibm/admin/app_user/list.do
+		</result>
+	</action>
+
+    <!-- 删除选中用户 -->
+	<action name="Ibm" url="/ibm/admin/app_user/del_all.do">
+		com.ibm.old.v1.admin.app_user.w.action.AppUserWDelAllAction
+		<result name="Default" type="forward">
+			/ibm/admin/app_user/list.do
+		</result>
+	</action>
+
+</root>

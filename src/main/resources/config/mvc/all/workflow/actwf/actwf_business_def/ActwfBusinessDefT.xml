@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="ActwfBusinessDefTAction"
+		url="/all/workflow/actwf/actwf_business_def/t/listJson.do">
+		all.workflow.actwf.actwf_business_def.t.action.ActwfBusinessDefTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="ActwfBusinessDefTAction"
+		url="/all/workflow/actwf/actwf_business_def/t/list/easyui.do">
+		all.workflow.actwf.actwf_business_def.t.action.ActwfBusinessDefTListAction
+		<result name="Default" type="forward">
+			/pages/all/workflow/actwf/actwf_business_def/t/ActwfBusinessDefTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="ActwfBusinessDefTAction"
+		url="/all/workflow/actwf/actwf_business_def/t/list/bootstrap.do">
+		all.workflow.actwf.actwf_business_def.t.action.ActwfBusinessDefTListAction
+		<result name="Default" type="forward">
+			/pages/all/workflow/actwf/actwf_business_def/t/ActwfBusinessDefTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="ActwfBusinessDefTAction"
+		url="/all/workflow/actwf/actwf_business_def/t/form/bootstrap.do">
+		all.workflow.actwf.actwf_business_def.t.action.ActwfBusinessDefTFormAction
+		<result name="Default" type="forward">
+			/pages/all/workflow/actwf/actwf_business_def/t/ActwfBusinessDefTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="ActwfBusinessDefTAction"
+		url="/all/workflow/actwf/actwf_business_def/t/save/bootstrap.do">
+		all.workflow.actwf.actwf_business_def.t.action.ActwfBusinessDefTSaveAction
+		<result name="Default" type="forward">
+			/all/workflow/actwf/actwf_business_def/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="ActwfBusinessDefTAction"
+		url="/all/workflow/actwf/actwf_business_def/t/saveJson.do">
+		all.workflow.actwf.actwf_business_def.t.action.ActwfBusinessDefTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="ActwfBusinessDefTAction"
+		url="/all/workflow/actwf/actwf_business_def/t/del/bootstrap.do">
+		all.workflow.actwf.actwf_business_def.t.action.ActwfBusinessDefTDelAction
+		<result name="Default" type="forward">
+			/all/workflow/actwf/actwf_business_def/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="ActwfBusinessDefTAction"
+		url="/all/workflow/actwf/actwf_business_def/t/delJson.do">
+		all.workflow.actwf.actwf_business_def.t.action.ActwfBusinessDefTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="ActwfBusinessDefTAction"
+		url="/all/workflow/actwf/actwf_business_def/t/del_all/bootstrap.do">
+		all.workflow.actwf.actwf_business_def.t.action.ActwfBusinessDefTDelAllAction
+		<result name="Default" type="forward">
+			/all/workflow/actwf/actwf_business_def/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="ActwfBusinessDefTAction"
+		url="/all/workflow/actwf/actwf_business_def/t/delAllJson.do">
+		all.workflow.actwf.actwf_business_def.t.action.ActwfBusinessDefTDelAllJsonAction
+		
+	</action>
+</root>

@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+body{background:#f2f2f2;}
+.userbanner{background:#fff;height:60px;}
+.banner{height:40px;padding-top:10px;}
+.banner li{width:14%;float:left;text-align:center;}
+.btncolor{background:#3892d3;}
+.textwidth{width:90%;}
+.userlist{overflow:hidden;}
+.userlist li{float:left;width:33%;}
+.user_info{width:340px;height:125px;background:#fff;margin:0 auto;margin-top:10px;}
+.info_left{width:35%;float:left;}
+.info_left_c{width:90%;margin:0 auto;height:125px;}
+.info_left_k{border:1px solid #f2f2f2;height:85px;margin-top:5px;position:relative;}
+.info_left_k_t{position:absolute;width:50px;height:50px;top:5px;left:27px;}
+.info_left_k_bj{position:absolute;width:16px;height:16px;bottom:5px;left:30px;cursor:pointer;}
+.info_left_k_sc{position:absolute;width:13px;height:13px;bottom:7px;left:59px;cursor:pointer;}
+.info_left_k_name{height:20px;text-align:center;line-height:20px;color:#000fff;margin-top:2px;
+overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;}
+.info_right{width:65%;float:left;}
+.info_right_n{margin-top:5px;overflow:hidden;}
+.info_right_n li{float:left;height:20px;line-height:20px;margin-top:6px;width:50%;font-size:12px;overflow:hidden;}
+.info_right_n li:nth-child(5){width:100%;}
+.imgdx{width:14px;height:14px;}

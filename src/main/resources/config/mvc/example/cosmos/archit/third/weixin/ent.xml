@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+
+	<action name="weixinAction" url="/weixin_qy/accept_chat.do">
+cosmos.weixin.ent.archit.common.action.callback.WxQyAction_accept_chat
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<action name="weixinAction" url="/weixin_qy/accept_app.do">
+cosmos.weixin.ent.archit.common.action.callback.WxQyAction_accept_app
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<action name="weixinAction" url="/weixin_qy/get_oauth.do">
+		cosmos.weixin.ent.archit.common.action.WeinXinQiYe_getOauthAction
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<action name="weixinAction" url="/weixin_qy/request_oauth.do">
+		cosmos.weixin.ent.archit.common.action.WeinXinQiYe_requestOauthAction
+		<result name="index" type="forward">
+		</result>
+	</action>
+</root>

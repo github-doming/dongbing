@@ -1,0 +1,75 @@
+package ${first_package_name_all}.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+
+import ${first_package_name_all}.entity.${first_table_class};
+import  c.x.platform.root.common.service.BaseService;
+
+public class ${first_table_class}ServiceObject extends BaseService {
+	protected Logger log = LogManager.getLogger(this.getClass());
+	public ${first_table_class} find(String id) throws Exception {
+		return (${first_table_class}) this.dao.find(${first_table_class}.class, id);
+	}
+
+	public void update(${first_table_class} entity) throws Exception {
+		dao.update(entity);
+		// 更新所有节点的path
+		${first_table_class} parent = this.find(entity.getParent());
+		log.debug("父母id=" + parent.get${first_methodNamePk}());
+		this.updatePath(" ${first_table_name}", "${first_columnNamePk}",parent.get${first_methodNamePk}());
+	}
+
+	public void del(String id) throws Exception {
+		// 打出本身的path
+		StringBuilder sb = new StringBuilder();
+		sb.append("  select path FROM  ${first_table_name} where ${first_columnNamePk}= ");
+		sb.append(id);
+		String sql_query = sb.toString();
+		${first_table_class} parent = (${first_table_class}) dao.findObject(
+				${first_table_class}.class, sql_query, null);
+		String parent_path = parent.getPath();
+		// 清空 StringBuilder
+		sb.setLength(0);
+		// 删除所有孩子
+		sb.append(" delete  from ${first_table_name} where path like ?");
+		String sql_del = sb.toString();
+		List<Object> parameters = new ArrayList<Object>();
+		// delete from ${first_table_name} where PATH_ like '%1.'
+		parameters.add("" + parent_path + "%");
+		dao.execute(sql_del, parameters);
+	}
+
+	public void save(${first_table_class} entity) throws Exception {
+		${first_table_class} parent = this.find(entity.getParent().toString());
+		// 保存
+		String id = dao.save(entity);
+		// 设置主键
+		entity.set${first_methodNamePk}(id);
+		// Baselog.debug("id=" + id);
+		// 构造path
+		String path = parent.getPath() + id + ".";
+		entity.setPath(path);
+		// 更新
+		dao.update(entity);
+	}
+	
+	
+	/**
+	 * 
+	 * 查询所有
+	 * @return
+	 * @throws Exception
+	 */
+	public List<${first_table_class}> findAll() throws Exception {
+
+		String sql = "SELECT * FROM ${first_table_name} where state_!='DEL' order by UPDATE_TIME_ desc ";
+		List<${first_table_class}> list = this.dao.findObjectList(${first_table_class}.class, sql);
+
+		return list;
+	}
+}

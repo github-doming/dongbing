@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--所有登录 -->
+	<action name="IndexAction" url="/platform/admin/login3.do">
+		all.app_admin.root.layout.login.action.AdminLoginAction
+		<result name="Default" type="forward">
+			/pages/all/app_admin/root/layout/login3.jsp
+		</result>
+	</action>
+	<!--登录 -->
+	<action name="IndexAction" url="/platform/admin/login/cds.do">
+		all.app_admin.root.layout.login.action.AdminLoginAction
+		<result name="Default" type="forward">
+			/pages/all/cds/layout/login_not/login.jsp
+		</result>
+	</action>
+	<!-- index页 -->
+	<action name="IndexAction" url="/platform/admin/index/sys/cds.do">
+		all.cds.SysMainAction
+		<result name="Default" type="forward">
+			/pages/all/cds/layout/index.jsp
+		</result>
+	</action>
+	<!-- index页 -->
+		<action name="IndexAction" url="/platform/admin/index/app/cds.do">
+		all.cds.AppMainAction
+		<result name="Default" type="forward">
+			/pages/all/cds/layout/index.jsp
+		</result>
+	</action>
+	<!--登录 -->
+	<action name="IndexAction" url="/platform/admin/login/bootstrap.do">
+		all.app_admin.root.layout.login.action.AdminLoginDefaultAction
+		<result name="Default" type="forward">
+			/pages/c/x/platform/root/login_not/login_not.jsp
+		</result>
+	</action>
+		<!-- index页 -->
+	<action name="IndexAction" url="/platform/admin/index/sys/bootstrap.do">
+		c.x.platform.root.layout.main.action.SysMainAction
+		<result name="Default" type="forward">
+			/pages/c/x/platform/root/layout/main/index.jsp
+		</result>
+	</action>
+	<!-- index页 -->
+	<action name="IndexAction" url="/platform/admin/index/app/bootstrap.do">
+		all.app_admin.root.layout.main.action.AppMainAction
+		<result name="Default" type="forward">
+			/pages/c/x/platform/root/layout/main/indexByApp.jsp
+		</result>
+	</action>
+	<!--登录 -->
+	<action name="IndexAction" url="/platform/admin/login/easyui.do">
+		all.app_admin.root.layout.login.action.AdminLoginDefaultAction
+		<result name="Default" type="forward">
+			/pages/all/ui/easyui/layout/login_not/login_not.jsp
+		</result>
+	</action>
+		<!-- index页 -->
+	<action name="IndexAction" url="/platform/admin/index/sys/easyui.do">
+		c.x.platform.root.layout.main.action.SysMainDefaultAction
+		<result name="Default" type="forward">
+			/pages/all/ui/easyui/layout/index.jsp
+		</result>
+	</action>
+	<!-- index页 -->
+	<action name="IndexAction" url="/platform/admin/index/app/easyui.do">
+		all.app_admin.root.layout.main.action.AppMainDefaultAction
+		<result name="Default" type="forward">
+			/pages/all/ui/easyui/layout/index.jsp
+		</result>
+	</action>
+
+	<!--登录 -->
+	<action name="IndexAction" url="/platform/admin/login/miniui.do">
+		all.app_admin.root.layout.login.action.AdminLoginDefaultAction
+		<result name="Default" type="forward">
+			/pages/all/ui/miniui/layout/login_not/login_not.jsp
+		</result>
+	</action>
+	<!-- index页 -->
+	<action name="IndexAction" url="/platform/admin/index/sys/miniui.do">
+		c.x.platform.root.layout.main.action.SysMainDefaultAction
+		<result name="Default" type="forward">
+			/pages/all/ui/miniui/layout/sys/index.jsp
+		</result>
+	</action>
+	<!-- index页 -->
+	<action name="IndexAction" url="/platform/admin/index/app/miniui.do">
+		all.app_admin.root.layout.main.action.AppMainDefaultAction
+		<result name="Default" type="forward">
+			/pages/all/ui/miniui/layout/app/index.jsp
+		</result>
+	</action>
+	
+</root>

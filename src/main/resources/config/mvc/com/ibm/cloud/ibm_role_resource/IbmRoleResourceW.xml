@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="IbmRoleResourceWAction"
+		url="/com/ibm/cloud/ibm_role_resource/w/listJson.do">
+		com.ibm.old.v1.cloud.ibm_role_resource.w.action.IbmRoleResourceWListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="IbmRoleResourceWAction"
+		url="/com/ibm/cloud/ibm_role_resource/w/list/easyui.do">
+		com.ibm.old.v1.cloud.ibm_role_resource.w.action.IbmRoleResourceWListAction
+		<result name="Default" type="forward">
+			/pages/com/ibm/cloud/ibm_role_resource/w/IbmRoleResourceWListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="IbmRoleResourceWAction"
+		url="/com/ibm/cloud/ibm_role_resource/w/list/bootstrap.do">
+		com.ibm.old.v1.cloud.ibm_role_resource.w.action.IbmRoleResourceWListAction
+		<result name="Default" type="forward">
+			/pages/com/ibm/cloud/ibm_role_resource/w/IbmRoleResourceWListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="IbmRoleResourceWAction"
+		url="/com/ibm/cloud/ibm_role_resource/w/form/bootstrap.do">
+		com.ibm.old.v1.cloud.ibm_role_resource.w.action.IbmRoleResourceWFormAction
+		<result name="Default" type="forward">
+			/pages/com/ibm/cloud/ibm_role_resource/w/IbmRoleResourceWFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="IbmRoleResourceWAction"
+		url="/com/ibm/cloud/ibm_role_resource/w/save/bootstrap.do">
+		com.ibm.old.v1.cloud.ibm_role_resource.w.action.IbmRoleResourceWSaveAction
+		<result name="Default" type="forward">
+			/com/ibm/cloud/ibm_role_resource/w/list/bootstrap.do
+		</result>
+	</action>
+	<action name="IbmRoleResourceWAction"
+		url="/com/ibm/cloud/ibm_role_resource/w/saveJson.do">
+		com.ibm.old.v1.cloud.ibm_role_resource.w.action.IbmRoleResourceWSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="IbmRoleResourceWAction"
+		url="/com/ibm/cloud/ibm_role_resource/w/del/bootstrap.do">
+		com.ibm.old.v1.cloud.ibm_role_resource.w.action.IbmRoleResourceWDelAction
+		<result name="Default" type="forward">
+			/com/ibm/cloud/ibm_role_resource/w/list/bootstrap.do
+		</result>
+	</action>
+	<action name="IbmRoleResourceWAction"
+		url="/com/ibm/cloud/ibm_role_resource/w/delJson.do">
+		com.ibm.old.v1.cloud.ibm_role_resource.w.action.IbmRoleResourceWDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="IbmRoleResourceWAction"
+		url="/com/ibm/cloud/ibm_role_resource/w/del_all/bootstrap.do">
+		com.ibm.old.v1.cloud.ibm_role_resource.w.action.IbmRoleResourceWDelAllAction
+		<result name="Default" type="forward">
+			/com/ibm/cloud/ibm_role_resource/w/list/bootstrap.do
+		</result>
+	</action>
+	<action name="IbmRoleResourceWAction"
+		url="/com/ibm/cloud/ibm_role_resource/w/delAllJson.do">
+		com.ibm.old.v1.cloud.ibm_role_resource.w.action.IbmRoleResourceWDelAllJsonAction
+		
+	</action>
+</root>

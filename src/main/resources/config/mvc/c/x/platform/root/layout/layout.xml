@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!-- 其它 -->
+	<action name="IndexAction" url="/platform/admin/sys/tree_table.do">
+		c.x.platform.root.layout.menu.action.SysMenuAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/root/layout/menu/index.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/platform/admin/sys/menuListJson.do">
+		c.x.platform.root.layout.menu.action.SysMenuListJsonAction
+	</action>
+	<!--模块,布局 -->
+	<!--注册 -->
+	<action name="IndexAction" url="/platform/admin/register_check.do">
+		c.x.platform.root.layout.register.action.RegisterActionCheck
+		<result name="index" type="forward">
+			/pages/c/x/platform/root/register/index.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/platform/admin/register.do">
+		c.x.platform.root.layout.register.action.RegisterAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/root/register/index.jsp
+		</result>
+	</action>
+	<!--登录 -->
+	<action name="IndexAction" url="/platform/admin/login.do">
+		c.x.platform.root.layout.login.action.AdminLoginAction
+		<result name="Default" type="forward">
+			/pages/all/cds/layout/login_not/login.jsp
+		</result>
+	</action>
+	<!--check -->
+	<action name="IndexAction" url="/platform/admin/check.do">
+		c.x.platform.root.layout.check.action.CheckAction
+		<result name="Default" type="forward">
+			/pages/c/x/platform/root/layout/main/request_main.jsp
+		</result>
+	</action>
+	<!--check -->
+	<action name="IndexAction" url="/platform/admin/checkJson.do">
+		c.x.platform.root.layout.check.action.CheckJsonAction
+	</action>
+	<!-- index页 -->
+	<action name="IndexAction" url="/platform/admin/index.do">
+		all.cds.SysMainAction
+		<result name="Default" type="forward">
+			/pages/all/cds/layout/index.jsp
+		</result>
+	</action>
+	<!--退出 -->
+	<action name="IndexAction" url="/platform/admin/logout.do">
+		c.x.platform.root.layout.logout.action.AdminLogoutAction
+		<result name="loginNot" type="forward">
+			/platform/admin/login.do
+		</result>
+		<result name="loginNotDevelop" type="forward">
+			/platform/admin/login2.do
+		</result>
+	</action>
+	<!--退出 -->
+	<action name="IndexAction" url="/platform/admin/logout/bootstrap.do">
+		c.x.platform.root.layout.logout.action.AdminLogoutAction
+		<result name="login" type="forward">
+			/platform/admin/login.do
+		</result>
+		<result name="loginNot" type="forward">
+			/pages/c/x/platform/root/login_not/login_not.jsp
+		</result>
+		<result name="loginNotDevelop" type="forward">
+			/pages/c/x/platform/root/login_not/develop/index.jsp
+		</result>
+	</action>
+	<!--模块,布局 -->
+</root>

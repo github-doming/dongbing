@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+    <!-- 会员盘口设置 -->
+    <action name="handicapMemberSetAction" url="/ibm/pc/ibm_hm_set/handicapMemberSet.do">
+        com.ibm.old.v1.pc.ibm_hm_set.t.action.HandicapMemberSetAction
+    </action>
+
+</root>

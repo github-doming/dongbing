@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="CmsMsgTAction"
+		url="/all/cms/msg/admin/cms_msg/t/listJson.do">
+		all.cms.msg.admin.cms_msg.t.action.CmsMsgTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="CmsMsgTAction"
+		url="/all/cms/msg/admin/cms_msg/t/list/easyui.do">
+		all.cms.msg.admin.cms_msg.t.action.CmsMsgTListAction
+		<result name="Default" type="forward">
+			/pages/all/cms/msg/admin/cms_msg/t/CmsMsgTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="CmsMsgTAction"
+		url="/all/cms/msg/admin/cms_msg/t/list/bootstrap.do">
+		all.cms.msg.admin.cms_msg.t.action.CmsMsgTListAction
+		<result name="Default" type="forward">
+			/pages/all/cms/msg/admin/cms_msg/t/CmsMsgTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="CmsMsgTAction"
+		url="/all/cms/msg/admin/cms_msg/t/form/bootstrap.do">
+		all.cms.msg.admin.cms_msg.t.action.CmsMsgTFormAction
+		<result name="Default" type="forward">
+			/pages/all/cms/msg/admin/cms_msg/t/CmsMsgTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="CmsMsgTAction"
+		url="/all/cms/msg/admin/cms_msg/t/save/bootstrap.do">
+		all.cms.msg.admin.cms_msg.t.action.CmsMsgTSaveAction
+		<result name="Default" type="send">
+			/all/cms/admin/cms_msg/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsMsgTAction"
+		url="/all/cms/msg/admin/cms_msg/t/saveJson.do">
+		all.cms.msg.admin.cms_msg.t.action.CmsMsgTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="CmsMsgTAction"
+		url="/all/cms/msg/admin/cms_msg/t/del/bootstrap.do">
+		all.cms.msg.admin.cms_msg.t.action.CmsMsgTDelAction
+		<result name="Default" type="send">
+			/all/cms/admin/cms_msg/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsMsgTAction"
+		url="/all/cms/msg/admin/cms_msg/t/delJson.do">
+		all.cms.msg.admin.cms_msg.t.action.CmsMsgTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="CmsMsgTAction"
+		url="/all/cms/msg/admin/cms_msg/t/del_all/bootstrap.do">
+		all.cms.msg.admin.cms_msg.t.action.CmsMsgTDelAllAction
+		<result name="Default" type="send">
+			/all/cms/admin/cms_msg/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsMsgTAction"
+		url="/all/cms/msg/admin/cms_msg/t/delAllJson.do">
+		all.cms.msg.admin.cms_msg.t.action.CmsMsgTDelAllJsonAction
+		
+	</action>
+</root>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+
+    <action name="CloudManageTAction" url="/ibm/cloud/t/manage/messageReceipt.do">
+        com.ibm.old.v1.cloud.ibm_message.action.MessageReceiptAction
+    </action>
+
+    <action name="CloudManageTAction" url="/ibm/cloud/t/manage/messageReceiptBet.do">
+        com.ibm.old.v1.cloud.ibm_message.action.MessageReceiptBetAction
+    </action>
+    <action name="CloudManageTAction" url="/ibm/cloud/t/manage/messageReceiptBetData.do">
+        com.ibm.old.v1.cloud.ibm_message.action.MessageReceiptBetDataAction
+    </action>
+
+    <action name="CloudManageTAction" url="/ibm/cloud/t/manage/messageReceiptHm.do">
+        com.ibm.old.v1.cloud.ibm_message.action.MessageReceiptHmAction
+    </action>
+
+
+</root>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	<action name="EduSchoolPlaceCxAction" url="/c/x/platform/admin/feng/edu/edu_school_place/cx/list.do">
+		c.x.platform.admin.feng.edu.edu_school_place.cx.action.EduSchoolPlaceCxListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/edu/edu_school_place/cx/EduSchoolPlaceCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object-->
+	<action name="EduSchoolPlaceCxAction" url="/c/x/platform/admin/feng/edu/edu_school_place/cx/list_object.do">
+		c.x.platform.admin.feng.edu.edu_school_place.cx.action.EduSchoolPlaceCxListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/edu/edu_school_place/cx/EduSchoolPlaceCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form-->
+	<action name="EduSchoolPlaceCxAction" url="/c/x/platform/admin/feng/edu/edu_school_place/cx/form.do">
+		c.x.platform.admin.feng.edu.edu_school_place.cx.action.EduSchoolPlaceCxFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/edu/edu_school_place/cx/EduSchoolPlaceCxForm.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	<action name="EduSchoolPlaceCxAction" url="/c/x/platform/admin/feng/edu/edu_school_place/cx/save.do">
+		c.x.platform.admin.feng.edu.edu_school_place.cx.action.EduSchoolPlaceCxSaveAction
+		<result name="index" type="forward">
+	/c/x/platform/admin/feng/edu/edu_school_place/cx/list.do
+		</result>
+	</action>
+	<!--删除del-->
+	<action name="EduSchoolPlaceCxAction" url="/c/x/platform/admin/feng/edu/edu_school_place/cx/del.do">
+		c.x.platform.admin.feng.edu.edu_school_place.cx.action.EduSchoolPlaceCxDelAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/edu/edu_school_place/cx/list.do
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="EduSchoolPlaceCxAction" url="/c/x/platform/admin/feng/edu/edu_school_place/cx/del_all.do">
+		c.x.platform.admin.feng.edu.edu_school_place.cx.action.EduSchoolPlaceCxDelAllAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/edu/edu_school_place/cx/list.do
+		</result>
+	</action>
+</root>

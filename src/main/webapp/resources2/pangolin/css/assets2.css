@@ -1,0 +1,17 @@
+.rel { position:relative; }
+.abs { position:absolute; right:0; top:0; }
+
+.two{width:50%;float:left;}
+.liuliu{width:16%;float:left;}
+.two{text-align:center;width:50%;float:left;}
+
+.operation_search{display:none;}
+
+.lock3{display:none;position:fixed;top:0;left:0;background:rgba(80,81,82,.9);z-index:1;}
+.scc{width:300px;height:174px;position:fixed;top:50%;left:50%;margin-top:-87px;margin-left:-150px;z-index:2;box-shadow:0 5px 15px rgba(0,0,0,.5);}
+.stars{background-image:url(../images/stars.png)}
+.moon{background-image:url(../images/moon.png)}
+.sunlight{background-image:url(../images/sunlight.png)}
+.stars , .moon ,.sunlight{height:18px;width:18px;float:left;}
+.yincang{display:none;}
+span.fa.fa-angle-double-down.shoushi{display:none;}

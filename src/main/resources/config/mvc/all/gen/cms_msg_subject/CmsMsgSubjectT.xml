@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="CmsMsgSubjectTAction"
+		url="/all/gen/cms_msg_subject/t/listJson.do">
+		all.gen.cms_msg_subject.t.action.CmsMsgSubjectTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="CmsMsgSubjectTAction"
+		url="/all/gen/cms_msg_subject/t/list/easyui.do">
+		all.gen.cms_msg_subject.t.action.CmsMsgSubjectTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/cms_msg_subject/t/CmsMsgSubjectTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="CmsMsgSubjectTAction"
+		url="/all/gen/cms_msg_subject/t/list/bootstrap.do">
+		all.gen.cms_msg_subject.t.action.CmsMsgSubjectTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/cms_msg_subject/t/CmsMsgSubjectTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="CmsMsgSubjectTAction"
+		url="/all/gen/cms_msg_subject/t/form/bootstrap.do">
+		all.gen.cms_msg_subject.t.action.CmsMsgSubjectTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/cms_msg_subject/t/CmsMsgSubjectTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="CmsMsgSubjectTAction"
+		url="/all/gen/cms_msg_subject/t/save/bootstrap.do">
+		all.gen.cms_msg_subject.t.action.CmsMsgSubjectTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/cms_msg_subject/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsMsgSubjectTAction"
+		url="/all/gen/cms_msg_subject/t/saveJson.do">
+		all.gen.cms_msg_subject.t.action.CmsMsgSubjectTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="CmsMsgSubjectTAction"
+		url="/all/gen/cms_msg_subject/t/del/bootstrap.do">
+		all.gen.cms_msg_subject.t.action.CmsMsgSubjectTDelAction
+		<result name="Default" type="forward">
+			/all/gen/cms_msg_subject/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsMsgSubjectTAction"
+		url="/all/gen/cms_msg_subject/t/delJson.do">
+		all.gen.cms_msg_subject.t.action.CmsMsgSubjectTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="CmsMsgSubjectTAction"
+		url="/all/gen/cms_msg_subject/t/del_all/bootstrap.do">
+		all.gen.cms_msg_subject.t.action.CmsMsgSubjectTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/cms_msg_subject/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsMsgSubjectTAction"
+		url="/all/gen/cms_msg_subject/t/delAllJson.do">
+		all.gen.cms_msg_subject.t.action.CmsMsgSubjectTDelAllJsonAction
+		
+	</action>
+</root>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<config>
+		<virtualHost>MqVirtualHost</virtualHost>
+		<ip>134.175.152.61</ip>
+		<port>5672</port>
+		<userName>guest</userName>
+		<password>guest</password>
+		<exchangeFormat>MqExchange[%s]</exchangeFormat>
+		<topicFormat>MqTopic[%s]</topicFormat>
+		<queueFormat>MqQueue[%s]</queueFormat>
+		<clientIdFormat>MqClientId[%s]</clientIdFormat>
+	</config>
+	<exchange name="exchange_cms_topic">
+		<queue name="queue_cms_topic">
+			<client class="all.cms.mq.CmsTopicMessageListener"></client>
+		</queue>
+	</exchange>
+	<exchange name="exchange_cms_post">
+		<queue name="queue_cms_post">
+			<client class="all.cms.mq.CmsPostMessageListener"></client>
+		</queue>
+	</exchange>
+	<exchange name="exchange_save_php">
+		<queue name="queue_save_php">
+			<client
+				class="example.c.x.all.simple.servlet.jdbc.transaction.HttpServlet_JdbcTransaction_TaskMessageListener"></client>
+		</queue>
+	</exchange>
+	<exchange name="exchange_a">
+		<queue name="queue_a1">
+			<client
+				class="example.c.a.util.mq.rabbitmq.message_listener.TaskMessageListener_e1"></client>
+		</queue>
+	</exchange>
+</root>

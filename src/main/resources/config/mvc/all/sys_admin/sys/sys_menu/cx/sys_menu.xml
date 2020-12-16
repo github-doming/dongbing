@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<action name="IndexAction" url="/all/admin/sys/sys_menu/cx/listJson.do">
+		all.sys_admin.sys.sys_menu.cx.action.SysMenuListJsonAction
+	</action>
+	<action name="IndexAction" url="/all/admin/sys/sys_menu/cx/saveJson.do">
+		all.sys_admin.sys.sys_menu.cx.action.SysMenuSaveJsonAction
+	</action>
+	<action name="SysMenuCxAction" url="/all/admin/sys/sys_menu/cx/delJson.do">
+		all.sys_admin.sys.sys_menu.cx.action.SysMenuCxDelJsonAction
+	</action>
+	<!--列表list -->
+	<action name="SysMenuCxAction" url="/all/admin/sys/sys_menu/cx/list.do">
+		all.sys_admin.sys.sys_menu.cx.action.SysMenuCxListAction
+		<result name="index" type="forward">
+			/pages/all/sys_admin/sys/sys_menu/cx/SysMenuCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object -->
+	<action name="SysMenuCxAction" url="/all/admin/sys/sys_menu/cx/list_object.do">
+		all.sys_admin.sys.sys_menu.cx.action.SysMenuCxListObjectAction
+		<result name="index" type="forward">
+			/pages/all/sys_admin/sys/sys_menu/cx/SysMenuCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysMenuCxAction" url="/all/admin/sys/sys_menu/cx/form.do">
+		all.sys_admin.sys.sys_menu.cx.action.SysMenuCxFormAction
+		<result name="index" type="forward">
+			/pages/all/sys_admin/sys/sys_menu/cx/SysMenuCxForm.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysMenuCxAction" url="/all/admin/sys/sys_menu/cx/save.do">
+		all.sys_admin.sys.sys_menu.cx.action.SysMenuCxSaveAction
+		<result name="index" type="forward">
+			/all/admin/sys/sys_menu/cx/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="SysMenuCxAction" url="/all/admin/sys/sys_menu/cx/del.do">
+		all.sys_admin.sys.sys_menu.cx.action.SysMenuCxDelAction
+		<result name="index" type="forward">
+			/all/admin/sys/sys_menu/cx/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="SysMenuCxAction" url="/all/admin/sys/sys_menu/cx/del_all.do">
+		all.sys_admin.sys.sys_menu.cx.action.SysMenuCxDelAllAction
+		<result name="index" type="forward">
+			/all/admin/sys/sys_menu/cx/list.do
+		</result>
+	</action>
+	<!--请求选择上一级parent -->
+	<action name="SysMenuCxAction" url="/all/admin/sys/sys_menu/cx/parent.do">
+		all.sys_admin.sys.sys_menu.cx.action.SysMenuCxParentAction
+		<result name="index" type="forward">
+			/pages/all/sys_admin/sys/sys_menu/cx/SysMenuCxParent.jsp
+		</result>
+	</action>
+	<!--选择上一级select -->
+	<action name="SysMenuCxAction" url="/all/admin/sys/sys_menu/cx/select.do">
+		all.sys_admin.sys.sys_menu.cx.action.SysMenuCxSelectAction
+		<result name="index" type="forward">
+			/pages/all/sys_admin/sys/sys_menu/cx/SysMenuCxSelect.jsp
+		</result>
+	</action>
+</root>

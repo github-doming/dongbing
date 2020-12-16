@@ -1,0 +1,62 @@
+package ${first_package_name_all}.action;
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
+import c.a.util.core.bean.BeanThreadLocal;
+import c.a.util.core.jdbc.nut.IJdbcUtil;
+import c.a.util.core.json.JsonThreadLocal;
+import all.ui.easyui.bean.EasyuiMenuBean;
+import c.x.platform.root.common.action.CommAction;
+import c.a.tools.jdbc.IJdbcTool;
+import c.a.tools.jdbc.threadlocal.JdbcThreadLocal;
+import ${first_package_name_all}.entity.${first_table_class};
+public class ${first_table_class}ListJsonAction extends CommAction {
+	@Override
+	public String execute() throws Exception {
+		// 查找树
+		String sql = "select * from ${first_table_name} t1 where state_!='DEL'  order by t1.SN_ asc,t1.${first_columnNamePk} asc";
+		IJdbcTool jdbcTool = JdbcThreadLocal.findJdbcToolThreadLocal().get();
+		IJdbcUtil jdbcUtil = jdbcTool.getJdbcUtil();
+		Connection conn = jdbcUtil.getConnection();
+		List<${first_table_class}> fristList = jdbcTool.findObjectList(${first_table_class}.class, conn, sql, null);
+		List<EasyuiMenuBean> easyuiMenuBeanList = toListNode(fristList);
+		List<EasyuiMenuBean> treeEasyuiMenuBeanList = tree(easyuiMenuBeanList, "0");
+		String jsonStr = JsonThreadLocal.findThreadLocal().get().list2json(treeEasyuiMenuBeanList);
+		response.getWriter().print(jsonStr);
+		return null;
+	}
+	public List<EasyuiMenuBean> tree(List<EasyuiMenuBean> easyuiMenuBeanList, String id) {
+		// 递归转化为树形
+		List<EasyuiMenuBean> treeEasyuiMenuBeanList = new ArrayList<EasyuiMenuBean>();
+		for (EasyuiMenuBean easyuiMenuBean : easyuiMenuBeanList) {
+			EasyuiMenuBean treeEasyuiMenuBean = new EasyuiMenuBean();
+			treeEasyuiMenuBean.setId(easyuiMenuBean.getId());
+			treeEasyuiMenuBean.setPid(easyuiMenuBean.getPid());
+			treeEasyuiMenuBean.setText(easyuiMenuBean.getText());
+			treeEasyuiMenuBean.setUrl(easyuiMenuBean.getUrl());
+			treeEasyuiMenuBean.setAttributes(easyuiMenuBean.getAttributes());
+			treeEasyuiMenuBean.setState(easyuiMenuBean.getState());
+			if (id.equals(easyuiMenuBean.getPid())) {
+				treeEasyuiMenuBean.setChildren(tree(easyuiMenuBeanList, treeEasyuiMenuBean.getId()));
+				treeEasyuiMenuBeanList.add(treeEasyuiMenuBean);
+			}
+		}
+		return treeEasyuiMenuBeanList;
+	}
+	// 转化为TreeNode节点
+	public EasyuiMenuBean toNode(${first_table_class} menu) {
+		EasyuiMenuBean easyuiMenuBean = new EasyuiMenuBean();
+		easyuiMenuBean.setId(menu.get${first_methodNamePk}());
+		easyuiMenuBean.setPid(menu.getParent());
+		easyuiMenuBean.setText(menu.getName());
+		// easyuiMenuBean.setState(menu.getState());
+		return easyuiMenuBean;
+	}
+	public List<EasyuiMenuBean> toListNode(List<${first_table_class}> menuList) {
+		List<EasyuiMenuBean> easyuiMenuBeanList = new ArrayList<EasyuiMenuBean>();
+		for (${first_table_class} menu : menuList) {
+			easyuiMenuBeanList.add(toNode(menu));
+		}
+		return easyuiMenuBeanList;
+	}
+}

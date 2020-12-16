@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	<action name="SysUserGenDoubleSimpleAction" url="/c/x/platform/admin/gen/gen_double_simple/sys_user/list.do">
+		c.x.platform.admin.gen.gen_double_simple.sys_user.action.SysUserGenDoubleSimpleListAction
+		<result name="Default" type="forward">
+			/pages/c/x/platform/admin/gen/gen_double_simple/sys_user/SysUserGenDoubleSimpleList.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/c/x/platform/admin/gen/gen_double_simple/sys_user/SysUserGenDoubleSimpleListBootstrap.jsp
+		</result>
+	</action>
+	<!--表单form-->
+	<action name="SysUserGenDoubleSimpleAction" url="/c/x/platform/admin/gen/gen_double_simple/sys_user/form.do">
+		c.x.platform.admin.gen.gen_double_simple.sys_user.action.SysUserGenDoubleSimpleFormAction
+		<result name="Default" type="forward">
+			/pages/c/x/platform/admin/gen/gen_double_simple/sys_user/SysUserGenDoubleSimpleForm.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/c/x/platform/admin/gen/gen_double_simple/sys_user/SysUserGenDoubleSimpleFormBootstrap.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	<action name="SysUserGenDoubleSimpleAction" url="/c/x/platform/admin/gen/gen_double_simple/sys_user/save.do">
+		c.x.platform.admin.gen.gen_double_simple.sys_user.action.SysUserGenDoubleSimpleSaveAction
+		<result name="Default" type="forward">
+		/c/x/platform/admin/gen/gen_double_simple/sys_user/list.do
+		</result>
+		<result name="Bootstrap" type="forward">
+			/c/x/platform/admin/gen/gen_double_simple/sys_user/list.do
+		</result>
+	</action>
+	<!--删除del-->
+	<action name="SysUserGenDoubleSimpleAction" url="/c/x/platform/admin/gen/gen_double_simple/sys_user/del.do">
+		c.x.platform.admin.gen.gen_double_simple.sys_user.action.SysUserGenDoubleSimpleDelAction
+		<result name="Default" type="forward">
+		/c/x/platform/admin/gen/gen_double_simple/sys_user/list.do
+		</result>
+		<result name="Bootstrap" type="forward">
+			/c/x/platform/admin/gen/gen_double_simple/sys_user/list.do
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="SysUserGenDoubleSimpleAction" url="/c/x/platform/admin/gen/gen_double_simple/sys_user/del_all.do">
+		c.x.platform.admin.gen.gen_double_simple.sys_user.action.SysUserGenDoubleSimpleDelAllAction
+		<result name="Default" type="forward">
+		/c/x/platform/admin/gen/gen_double_simple/sys_user/list.do
+		</result>
+		<result name="Bootstrap" type="forward">
+			/c/x/platform/admin/gen/gen_double_simple/sys_user/list.do
+		</result>
+	</action>
+</root>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <config>
+        <virtualHost>ibm</virtualHost>
+        <ip>mq.tzxyz.xyz</ip>
+        <port>5672</port>
+        <userName>ibm</userName>
+        <password>ibm</password>
+        <exchangeFormat>ibm_exchange_%s</exchangeFormat>
+    </config>
+
+    <!-- 客户端-->
+    <!-- 会员-->
+    <exchange id="client_member" type="TOPIC">
+        <client class="com.ibm.follow.servlet.client.core.mq.member.ManageListener">
+            <routing desc="member.%s.manage"/>
+        </client>
+        <client class="com.ibm.follow.servlet.client.core.mq.member.LoginListener">
+            <routing desc="member.%s.login"/>
+        </client>
+        <client class="com.ibm.follow.servlet.client.core.mq.member.BetInfoListener" name="ibm_exchange_bet_info">
+            <routing desc="bet.info.%s"/>
+        </client>
+    </exchange>
+
+    <!-- 代理-->
+    <exchange id="client_agent" type="TOPIC">
+        <client class="com.ibm.follow.servlet.client.core.mq.agent.ManageListener">
+            <routing desc="agent.%s.manage"/>
+        </client>
+        <client class="com.ibm.follow.servlet.client.core.mq.agent.LoginListener">
+            <routing desc="agent.%s.login"/>
+        </client>
+    </exchange>
+
+    <!-- 配置-->
+    <exchange id="client_config" type="TOPIC">
+        <client class="com.ibm.follow.servlet.client.core.mq.config.SetListener">
+            <routing desc="config.%s.set"/>
+        </client>
+        <client class="com.ibm.follow.servlet.client.core.mq.config.InfoListener">
+            <routing desc="config.%s.info"/>
+        </client>
+    </exchange>
+
+
+    <!-- 中心端-->
+    <!-- 会员-->
+    <exchange id="cloud_member" type="TOPIC">
+        <client class="com.ibm.follow.servlet.cloud.core.mq.member.ManageListener">
+            <routing key="manage.member"/>
+        </client>
+        <client class="com.ibm.follow.servlet.cloud.core.mq.member.LoginListener">
+            <routing key="login.member"/>
+        </client>
+    </exchange>
+    <!-- 代理 -->
+    <exchange id="cloud_agent" type="TOPIC">
+        <client class="com.ibm.follow.servlet.cloud.core.mq.agent.ManageListener">
+            <routing key="manage.agent"/>
+        </client>
+        <client class="com.ibm.follow.servlet.cloud.core.mq.agent.LoginListener">
+            <routing key="login.agent"/>
+        </client>
+    </exchange>
+    <!-- 客户端信息 -->
+    <exchange id="cloud_info" type="TOPIC">
+        <client class="com.ibm.follow.servlet.cloud.core.mq.info.BetListener" name="ibm_exchange_bet_info">
+            <routing key="bet.info.*"/>
+        </client>
+        <client class="com.ibm.follow.servlet.cloud.core.mq.info.BetResultListener">
+            <routing key="bet.result.info"/>
+        </client>
+        <client class="com.ibm.follow.servlet.cloud.core.mq.info.AgentListener">
+            <routing key="agent.info"/>
+        </client>
+        <client class="com.ibm.follow.servlet.cloud.core.mq.info.MemberListener">
+            <routing key="member.info"/>
+        </client>
+        <client class="com.ibm.follow.servlet.cloud.core.mq.info.ClientListener">
+            <routing key="client.info"/>
+        </client>
+    </exchange>
+    <!-- 配置结果 -->
+    <exchange id="cloud_config" type="TOPIC">
+        <client class="com.ibm.follow.servlet.cloud.core.mq.config.SetListener">
+            <routing key="set.config"/>
+        </client>
+        <client class="com.ibm.follow.servlet.cloud.core.mq.config.ClientListener">
+            <routing key="client.config"/>
+        </client>
+    </exchange>
+</root>

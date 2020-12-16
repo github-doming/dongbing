@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="WxPMsgTAction"
+		url="/all/gen/wx_p_msg/t/listJson.do">
+		all.gen.wx_p_msg.t.action.WxPMsgTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="WxPMsgTAction"
+		url="/all/gen/wx_p_msg/t/list/easyui.do">
+		all.gen.wx_p_msg.t.action.WxPMsgTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_msg/t/WxPMsgTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="WxPMsgTAction"
+		url="/all/gen/wx_p_msg/t/list/bootstrap.do">
+		all.gen.wx_p_msg.t.action.WxPMsgTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_msg/t/WxPMsgTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="WxPMsgTAction"
+		url="/all/gen/wx_p_msg/t/form/bootstrap.do">
+		all.gen.wx_p_msg.t.action.WxPMsgTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_msg/t/WxPMsgTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="WxPMsgTAction"
+		url="/all/gen/wx_p_msg/t/save/bootstrap.do">
+		all.gen.wx_p_msg.t.action.WxPMsgTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_msg/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPMsgTAction"
+		url="/all/gen/wx_p_msg/t/saveJson.do">
+		all.gen.wx_p_msg.t.action.WxPMsgTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="WxPMsgTAction"
+		url="/all/gen/wx_p_msg/t/del/bootstrap.do">
+		all.gen.wx_p_msg.t.action.WxPMsgTDelAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_msg/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPMsgTAction"
+		url="/all/gen/wx_p_msg/t/delJson.do">
+		all.gen.wx_p_msg.t.action.WxPMsgTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="WxPMsgTAction"
+		url="/all/gen/wx_p_msg/t/del_all/bootstrap.do">
+		all.gen.wx_p_msg.t.action.WxPMsgTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_msg/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPMsgTAction"
+		url="/all/gen/wx_p_msg/t/delAllJson.do">
+		all.gen.wx_p_msg.t.action.WxPMsgTDelAllJsonAction
+		
+	</action>
+</root>

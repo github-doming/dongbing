@@ -1,0 +1,11 @@
+.searchselect2{width:100%;height:100px;position:relative;}
+.searchinput2{width:100%;height:100%;box-sizing:border-box;}
+.searchoption2{display:none;position:absolute;height:150px;width:100%;top:100px;background-color:#fff;z-index:2;border-left:1px solid #000;border-right:1px solid #000;border-bottom:1px solid #000;overflow-y:auto;}
+.searchoption2 li{height:25px;width:100%;text-align:center;line-height:20px;padding:5px 0px;}
+.kexuan2{cursor:pointer;}
+.kexuan2:hover{background:#eee;}
+.bukexuan2{color:#ccc;}
+.selectedop2{position:absolute;left:0px;top:0px;overflow-y:auto;height:100px;}
+.selectedop2 li{padding:0px 18px;background:#eee;float:left;position:relative;margin:5px;height:25px;line-height:25px;}
+.opclose2 {cursor:pointer; position: absolute; top: 7px; right: 3px; display: block; width: 12px; height: 12px; background: url('images/chosen-sprite.png') -42px 1px no-repeat; font-size: 1px; }
+.selectedop2 li ,.searchoption2 li{font-size:14px;}

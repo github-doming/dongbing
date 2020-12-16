@@ -1,0 +1,1 @@
+https://github.com/jdewit/bootstrap-timepicker/releases/tag/v0.5.2

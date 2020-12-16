@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!-- -->
+	<action name="App" url="/all/app/api.do">
+		all.app.api.action.AppApiAction
+		<result name="Default" type="forward">
+			/pages/all/app/api/api.jsp
+		</result>
+	</action>
+</root>

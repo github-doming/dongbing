@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--index -->
+	<action name="SysAreaTAction"
+		url="/all/gen/sys_area/t/index/easyui.do">
+		all.gen.sys_area.t.action.SysAreaTIndexAction
+		
+		<result name="Default" type="forward">
+			/pages/all/gen/sys_area/t/SysAreaTListEasyui.jsp
+		</result>
+		
+	</action>
+	<!--列表Json -->
+	<action name="SysAreaTAction"
+		url="/all/gen/sys_area/t/listJson.do">
+		all.gen.sys_area.t.action.SysAreaTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="SysAreaTAction"
+		url="/all/gen/sys_area/t/list/bootstrap.do">
+		all.gen.sys_area.t.action.SysAreaTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/sys_area/t/SysAreaTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="SysAreaTAction"
+		url="/all/gen/sys_area/t/form/bootstrap.do">
+		all.gen.sys_area.t.action.SysAreaTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/sys_area/t/SysAreaTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="SysAreaTAction"
+		url="/all/gen/sys_area/t/save/bootstrap.do">
+		all.gen.sys_area.t.action.SysAreaTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/sys_area/t/list/bootstrap.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="SysAreaTAction"
+		url="/all/gen/sys_area/t/del/bootstrap.do">
+		all.gen.sys_area.t.action.SysAreaTDelAction
+		<result name="Default" type="forward">
+			/all/gen/sys_area/t/list/bootstrap.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="SysAreaTAction"
+		url="/all/gen/sys_area/t/del_all/bootstrap.do">
+		all.gen.sys_area.t.action.SysAreaTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/sys_area/t/list/bootstrap.do
+		</result>
+	</action>
+	<!--请求选择上一级parent -->
+	<action name="SysAreaTAction"
+		url="/all/gen/sys_area/t/parent/bootstrap.do">
+		all.gen.sys_area.t.action.SysAreaTParentAction
+		<result name="Default" type="forward">
+			/pages/all/gen/sys_area/t/SysAreaTParentBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--选择上一级select -->
+	<action name="SysAreaTAction"
+		url="/all/gen/sys_area/t/select.do">
+		all.gen.sys_area.t.action.SysAreaTSelectAction
+		<result name="Default" type="forward">
+			/pages/all/gen/sys_area/t/SysAreaTSelect.jsp
+		</result>
+	</action>
+</root>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--index -->
+	<action name="AppMenuTAction"
+		url="/all/admin/app/app_menu/t/index/easyui.do">
+		all.app_admin.app.app_menu.t.action.AppMenuTIndexAction
+		
+		<result name="Default" type="forward">
+			/pages/all/app_admin/app/app_menu/t/AppMenuTListEasyui.jsp
+		</result>
+		
+	</action>
+	<!--列表Json -->
+	<action name="AppMenuTAction"
+		url="/all/admin/app/app_menu/t/listJson.do">
+		all.app_admin.app.app_menu.t.action.AppMenuTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="AppMenuTAction"
+		url="/all/admin/app/app_menu/t/list/bootstrap.do">
+		all.app_admin.app.app_menu.t.action.AppMenuTListAction
+		<result name="Default" type="forward">
+			/pages/all/app_admin/app/app_menu/t/AppMenuTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="AppMenuTAction"
+		url="/all/admin/app/app_menu/t/form/bootstrap.do">
+		all.app_admin.app.app_menu.t.action.AppMenuTFormAction
+		<result name="Default" type="forward">
+			/pages/all/app_admin/app/app_menu/t/AppMenuTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="AppMenuTAction"
+		url="/all/admin/app/app_menu/t/save/bootstrap.do">
+		all.app_admin.app.app_menu.t.action.AppMenuTSaveAction
+		<result name="Default" type="forward">
+			/all/admin/app/app_menu/t/list/bootstrap.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="AppMenuTAction"
+		url="/all/admin/app/app_menu/t/del/bootstrap.do">
+		all.app_admin.app.app_menu.t.action.AppMenuTDelAction
+		<result name="Default" type="forward">
+			/all/admin/app/app_menu/t/list/bootstrap.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="AppMenuTAction"
+		url="/all/admin/app/app_menu/t/del_all/bootstrap.do">
+		all.app_admin.app.app_menu.t.action.AppMenuTDelAllAction
+		<result name="Default" type="forward">
+			/all/admin/app/app_menu/t/list/bootstrap.do
+		</result>
+	</action>
+	<!--请求选择上一级parent -->
+	<action name="AppMenuTAction"
+		url="/all/admin/app/app_menu/t/parent/bootstrap.do">
+		all.app_admin.app.app_menu.t.action.AppMenuTParentAction
+		<result name="Default" type="forward">
+			/pages/all/app_admin/app/app_menu/t/AppMenuTParentBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--选择上一级select -->
+	<action name="AppMenuTAction"
+		url="/all/admin/app/app_menu/t/select.do">
+		all.app_admin.app.app_menu.t.action.AppMenuTSelectAction
+		<result name="Default" type="forward">
+			/pages/all/app_admin/app/app_menu/t/AppMenuTSelect.jsp
+		</result>
+	</action>
+</root>

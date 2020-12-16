@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title></title>
+</head>
+<script type="text/javascript"
+	src="../pages/c/x/includes/simple/jquery/jquery-1.9.1.js">
+</script>
+
+
+	<script type="text/javascript">
+	/**
+	 * 显示所有的孩子跟孙子
+	 */
+	var AyTree_show_all_childs = function(cp, id_root) {
+		var path_root = $("#" + id_root).attr("path");
+		$("tr").each(function() {
+			var path = $(this).attr("path");
+			//查找所有孩子和孙子
+			if (path.indexOf(path_root + "") == 0) {
+				//设置style
+				$(this).attr("style", "");
+			}
+		});
+	}
+	/**
+	 * 隐藏所有的孩子跟孙子
+	 */
+	var AyTree_hide_all_childs = function(cp, id_root) {
+		var path_root = $("#" + id_root).attr("path");
+		$("tr").each(function() {
+			var path = $(this).attr("path");
+			if (path == path_root) {
+			} else {
+				//查找所有孩子和孙子
+				if (path.indexOf(path_root + "") == 0) {
+					//设置style
+					$(this).attr("style", "display: none;");
+				}
+			}
+		});
+	}
+	/**
+	 * 设置本身状态
+	 */
+	var AyTree_set_state = function(cp, id_root, id_tr_img) {
+		//alert('id_root='+id_root);
+		var leaf_root = $("#" + id_root).attr("leaf");
+		var state_root = $("#" + id_root).attr("state");
+		//设置本身状态
+		if (true) {
+			if (state_root == 'open') {
+				//设置本身图片
+				if (leaf_root = 'false') {
+					$("#" + id_tr_img).attr("src", cp + "/pages/c/x/imports/compo/tree_table/images/v2/folder-closed.gif");
+				}
+				//设置状态
+				$("#" + id_root).attr("state", "close");
+			} else {
+				//设置本身图片
+				if (leaf_root == 'false') {
+					$("#" + id_tr_img).attr("src", cp + "/pages/c/x/imports/compo/tree_table/images/v2/folder.gif");
+				}
+				//设置状态
+				$("#" + id_root).attr("state", "open");
+			}
+		}
+		//设置本身状态
+	}
+	/**
+	 * 隐然与显示
+	 */
+	 var AyTree_change= function(cp, id_root, id_tr_img) {
+		var leaf_root = $("#" + id_root).attr("leaf");
+		var path_root = $("#" + id_root).attr("path");
+		var state_root = $("#" + id_root).attr("state");
+		//本身状态
+		if (state_root == 'open') {
+			//隐藏所有的孩子跟孙子
+			AyTree_hide_all_childs(cp, id_root);
+		}
+		if (state_root == 'close') {
+			//显示所有的孩子和孙子
+			AyTree_show_all_childs(cp, id_root);
+			//显示所有的孩子和孙子
+			//查找所有的孩子和孙子
+			$("tr").each(function() {
+				var path = $(this).attr("path");
+				//查找所有孩子和孙子
+				if (path == path_root) {
+				} else {
+					if (path.indexOf(path_root + "") == 0) {
+						var state = $(this).attr("state");
+						var id = $(this).attr("id");
+						if (state == 'close') {
+							//隐藏所有的孩子跟孙子
+							AyTree_hide_all_childs(cp, id);
+						}
+					}
+				}
+			});
+			//隐藏所有的孩子和孙子
+		}
+		//设置本身状态
+		AyTree_set_state(cp, id_root, id_tr_img);
+		//alert('end');
+	}
+	var AyTree_change_my = function(cp, id_root) {
+	//function AyTree_change_my(cp, id_root) {
+		//alert('1');
+		//AyTree_change(cp, id_root, id_tr_img);
+		AyTree_change(cp, id_root, null);
+	}
+	var AyTree_file_click_my = function(id, url) {
+		alert(id);
+		alert(url);
+	}
+	var AyTree_folder_click_my = function(id, url) {
+		alert('f');
+		alert(id);
+		alert(url);
+	}
+</script>
+<style>
+table {
+	FONT-SIZE: 12px;
+	WHITE-SPACE: nowrap;
+	border-collapse: collapse; /*细线表格;firefox不支持;*/
+}
+
+img {
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	VERTICAL-ALIGN: middle;
+	BORDER-LEFT: 0px;
+	BORDER-BOTTOM: 0px
+}	
+
+
+td {
+	margin: 0px;
+	padding: 0px;
+}
+</style>
+<html>
+<body>
+	<table border="0">

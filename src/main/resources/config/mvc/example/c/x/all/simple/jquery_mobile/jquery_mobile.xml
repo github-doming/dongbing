@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+<!-- 加载更多 -->
+<action name="TestAction" url="/jquery_mobile_listmore_form.do">
+c.x.all.simple.jquery_mobile.example.loadmore.news.FunTypeActionForm
+		<result name="index" type="forward">
+/pages/c/x/platform/all/simple/jquery_mobile/example/loadmore/news/talk.jsp
+		</result>
+	</action>
+<action name="TestAction" url="/jquery_mobile_listmore_list.do">
+c.x.all.simple.jquery_mobile.example.loadmore.news.FunTypeListAction
+		<result name="index" type="forward">
+/pages/c/x/platform/all/simple/jquery_mobile/example/loadmore/news/listtalk.jsp
+		</result>
+	</action>
+	<action name="TestAction" url="/jquery_mobile_listmore_more.do">
+c.x.all.simple.jquery_mobile.example.loadmore.news.FunTypeListMoreAction
+	</action>
+	<!-- 加载更多 -->
+	<!--测试jquery_mobile -->
+	<action name="TestAction" url="/jquery_mobile_collapsible_e2.do">
+	c.x.all.simple.jquery_mobile.example.collapsible.e2.JqueryMobileCollapsibleAction
+		<result name="index" type="forward">
+	/pages/c/x/platform/all/simple/jquery_mobile/example/collapsible/e2/e2.jsp
+		</result>
+	</action>
+	<action name="TestAction" url="/jquery_mobile_collapsible_e2_json.do">
+c.x.all.simple.jquery_mobile.example.collapsible.e2.JqueryMobileCollapsibleAction_json
+	</action>
+	<!--测试jquery_mobile -->
+</root>

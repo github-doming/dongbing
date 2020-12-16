@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+    <!-- 1.挡板项目WS2盘口获取赔率 -->
+    <action name="PlateTAction"
+            url="/ibm/ibm_plate/getWs2PlateOdds.do">
+        com.ibm.old.v1.servlet.ibm_plate.action.Ws2PlateOddAction
+    </action>
+
+    <!-- 2.挡板项目WS2盘口投注 -->
+    <action name="PlateTAction"
+            url="/ibm/ibm_plate/getWs2PlateBet.do">
+        com.ibm.old.v1.servlet.ibm_plate.action.Ws2PlateBetAction
+    </action>
+    
+    
+    <!-- 挡板项目获取赔率 -->
+    <action name="PlateTAction"
+            url="/ibm/ibm_plate/getPlateOdds.do">
+        com.ibm.old.v1.servlet.ibm_plate.action.PlateOddsAction
+    </action>
+
+    <!-- 挡板项目投注 -->
+    <action name="PlateTAction"
+            url="/ibm/ibm_plate/getPlateBet.do">
+        com.ibm.old.v1.servlet.ibm_plate.action.PlateBetAction
+    </action>
+</root>

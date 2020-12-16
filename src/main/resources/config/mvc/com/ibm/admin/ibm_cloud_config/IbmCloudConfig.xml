@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+
+    <!-- 修改会员最大在线数 -->
+	<action name="OnlineMemberCountAction" url="/ibm/admin/ibm_cloud_config/updateOnlineMemberCount.do">
+		com.ibm.old.v1.admin.ibm_cloud_config.w.action.OnlineMemberCountAction
+	</action>
+
+</root>

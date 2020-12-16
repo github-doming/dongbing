@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!-- /weixin/accept.do /pub/wxpub/accept.do -->
+	<action name="weixinAction" url="/pub/wxpub/accept.do">
+		cosmos.weixin.pub.archit.common.action.callback.WxPublicAction_accept
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<action name="weixinAction" url="/weixin/get_oauth.do">
+		cosmos.weixin.oauth.archit.common.e1.WxPubGetOauthAction
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<action name="weixinAction" url="/weixin/request_oauth.do">
+		cosmos.weixin.oauth.archit.common.e1.WxPubRequestOauthAction
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<action name="weixinAction" url="/weixin/query.do">
+		cosmos.weixin.pub.archit.action.mo.WxPublicAction_query_bussiness
+	</action>
+	<action name="weixinAction" url="/weixin/push.do">
+cosmos.weixin.pub.archit.action.mt.WxPublicAction_MessagePush
+		<result name="index" type="forward">
+		</result>
+	</action>
+	<action name="weixinAction" url="/weixin/menu_create.do">
+cosmos.weixin.pub.archit.action.mt.WxPublicAction_MenuCreate
+		<result name="index" type="forward">
+		</result>
+	</action>
+</root>

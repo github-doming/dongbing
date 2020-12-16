@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="SysExceptionTAction"
+		url="/all/gen/sys_exception/t/listJson.do">
+		all.gen.sys_exception.t.action.SysExceptionTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="SysExceptionTAction"
+		url="/all/gen/sys_exception/t/list/easyui.do">
+		all.gen.sys_exception.t.action.SysExceptionTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/sys_exception/t/SysExceptionTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="SysExceptionTAction"
+		url="/all/gen/sys_exception/t/list/bootstrap.do">
+		all.gen.sys_exception.t.action.SysExceptionTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/sys_exception/t/SysExceptionTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="SysExceptionTAction"
+		url="/all/gen/sys_exception/t/form/bootstrap.do">
+		all.gen.sys_exception.t.action.SysExceptionTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/sys_exception/t/SysExceptionTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="SysExceptionTAction"
+		url="/all/gen/sys_exception/t/save/bootstrap.do">
+		all.gen.sys_exception.t.action.SysExceptionTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/sys_exception/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysExceptionTAction"
+		url="/all/gen/sys_exception/t/saveJson.do">
+		all.gen.sys_exception.t.action.SysExceptionTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="SysExceptionTAction"
+		url="/all/gen/sys_exception/t/del/bootstrap.do">
+		all.gen.sys_exception.t.action.SysExceptionTDelAction
+		<result name="Default" type="forward">
+			/all/gen/sys_exception/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysExceptionTAction"
+		url="/all/gen/sys_exception/t/delJson.do">
+		all.gen.sys_exception.t.action.SysExceptionTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="SysExceptionTAction"
+		url="/all/gen/sys_exception/t/del_all/bootstrap.do">
+		all.gen.sys_exception.t.action.SysExceptionTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/sys_exception/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysExceptionTAction"
+		url="/all/gen/sys_exception/t/delAllJson.do">
+		all.gen.sys_exception.t.action.SysExceptionTDelAllJsonAction
+		
+	</action>
+</root>

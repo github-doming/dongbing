@@ -1,0 +1,8 @@
+.notice-modal-title {
+	font-size: 16px !important;
+}
+
+.notice-modal-close {
+	position: relative;
+	top: -5px;
+}

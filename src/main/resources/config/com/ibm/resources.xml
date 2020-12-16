@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources id="1" resourceName="所有菜单" resourceCode="ALL_RESOURCE" sn="0" parentId="0"
+           path="1." desc="MENU">
+    <subResources>
+        <resources>
+            <resourceName>权限管理</resourceName>
+            <resourceCode>AUTHORITY</resourceCode>
+            <sn>0</sn>
+            <grade>1</grade>
+            <desc>MENU</desc>
+            <subResources>
+                <resources resourceName="菜单列表" resourceCode="MENU_LIST" url="/ibm/admin/authority/menu/list" grade="11"
+                           sn="0"
+                           desc="MENU">
+                    <subResources>
+                        <resources resourceName="添加子菜单" resourceCode="ADD_MENU_SHOW" grade="110" sn="0" desc="BUTTON">
+                            <subResources>
+                                <resources resourceName="添加子菜单-保存" resourceCode="ADD_MENU_SAVE"
+                                           url="/ibm/admin/authority/menu/add" grade="1100" sn="0" desc="BUTTON"/>
+                            </subResources>
+                        </resources>
+                        <resources resourceName="修改上级菜单" resourceCode="EDIT_PARENT_MENU" grade="111" sn="1"
+                                   desc="BUTTON">
+                            <subResources>
+                                <resources resourceName="菜单上级信息" resourceCode="EDIT_PARENT_MENU_SHOW"
+                                           url="/ibm/admin/authority/menu/showParent" grade="1110" sn="0"
+                                           desc="BUTTON"/>
+                                <resources resourceName="修改上级菜单-保存" resourceCode="EDIT_PARENT_MENU_SAVE"
+                                           url="/ibm/admin/authority/menu/editParent" grade="1111" sn="1"
+                                           desc="BUTTON"/>
+                            </subResources>
+                        </resources>
+                        <resources resourceName="修改菜单" resourceCode="EDIT_MENU" grade="112" sn="2" desc="BUTTON">
+                            <subResources>
+                                <resources resourceName="菜单信息" resourceCode="EDIT_MENU_SHOW"
+                                           url="/ibm/admin/authority/menu/show" grade="1120" sn="0" desc="BUTTON"/>
+                                <resources resourceName="修改菜单-保存" resourceCode="EDIT_MENU_SAVE"
+                                           url="/ibm/admin/authority/menu/edit" grade="1121" sn="1" desc="BUTTON"/>
+                            </subResources>
+                        </resources>
+                        <resources resourceName="删除菜单" resourceCode="DEL_MENU" grade="113"
+                                   url="/ibm/admin/authority/menu/del"
+                                   sn="3" desc="BUTTON"/>
+                    </subResources>
+                </resources>
+                <resources resourceName="角色列表" resourceCode="ROLE_LIST" url="/ibm/admin/authority/role/list" grade="12"
+                           sn="1"
+                           desc="MENU">
+                    <subResources>
+
+                        <resources resourceName="新增角色" resourceCode="ADD_ROLE" grade="120" sn="0" desc="BUTTON">
+                            <subResources>
+                                <resources resourceName="新增角色-保存" resourceCode="ADD_ROLE_SAVE"
+                                           url="/ibm/admin/authority/role/add" grade="1200" sn="0" desc="BUTTON"/>
+                            </subResources>
+                        </resources>
+                        <resources resourceName="权限分配" resourceCode="ROLE_RESOURCES" grade="121" sn="1" desc="BUTTON">
+                            <subResources>
+                                <resources resourceName="角色资源" resourceCode="ROLE_RESOURCE_SHOW"
+                                           url="/ibm/admin/authority/role/resourcesShow" grade="1210" sn="0"
+                                           desc="BUTTON"/>
+                                <resources resourceName="权限分配-保存" resourceCode="ROLE_RESOURCE_SAVE"
+                                           url="/ibm/admin/authority/role/resourcesEdit" grade="1211" sn="1"
+                                           desc="BUTTON"/>
+                            </subResources>
+                        </resources>
+                        <resources resourceName="修改角色" resourceCode="EDIT_ROLE" grade="122" sn="2" desc="BUTTON">
+                            <subResources>
+                                <resources resourceName="角色信息" resourceCode="EDIT_ROLE_SHOW"
+                                           url="/ibm/admin/authority/role/show" grade="1220" sn="0" desc="BUTTON"/>
+                                <resources resourceName="修改角色-保存" resourceCode="EDIT_ROLE_SAVE"
+                                           url="/ibm/admin/authority/role/edit" grade="1221" sn="1" desc="BUTTON"/>
+                            </subResources>
+                        </resources>
+                        <resources resourceName="删除角色" resourceCode="DEL_ROLE" grade="123"
+                                   url="/ibm/admin/authority/role/del"
+                                   sn="3" desc="BUTTON"/>
+                    </subResources>
+                </resources>
+                <resources resourceName="操作员列表" resourceCode="USER_LIST" url="/ibm/admin/authority/user/list" grade="13"
+                           sn="2"
+                           desc="MENU">
+                    <subResources>
+                        <resources resourceName="新增操作员" resourceCode="ADD_USER" grade="130" sn="0" desc="BUTTON">
+                            <subResources>
+                                <resources resourceName="新增操作员-保存" resourceCode="ADD_USER_SAVE"
+                                           url="/ibm/admin/authority/user/add" grade="1301" sn="0" desc="BUTTON"/>
+                            </subResources>
+                        </resources>
+                        <resources resourceName="分配角色" resourceCode="USER_ROLE" grade="131" sn="1" desc="BUTTON">
+                            <subResources>
+                                <resources resourceName="分配角色-保存" resourceCode="USER_ROLE_EDIT"
+                                           url="/ibm/admin/authority/user/roleEdit" grade="1310" sn="0" desc="BUTTON"/>
+                            </subResources>
+                        </resources>
+                        <resources resourceName="修改操作员" resourceCode="EDIT_USER" grade="132" sn="2" desc="BUTTON">
+                            <subResources>
+                                <resources resourceName="操作员信息" resourceCode="EDIT_USER_SHOW"
+                                           url="/ibm/admin/authority/user/show" grade="1320" sn="0" desc="BUTTON"/>
+                                <resources resourceName="修改操作员-保存" resourceCode="EDIT_USER_SAVE"
+                                           url="/ibm/admin/authority/user/edit" grade="1321" sn="1" desc="BUTTON"/>
+                            </subResources>
+                        </resources>
+                        <resources resourceName="删除操作员" resourceCode="DEL_USER" grade="133"
+                                   url="/ibm/admin/authority/user/del"
+                                   sn="3" desc="BUTTON"/>
+                    </subResources>
+                </resources>
+            </subResources>
+
+        </resources>
+        <resources resourceName="充值管理" resourceCode="RECHARGE" grade="2" sn="4" desc="MENU">
+
+
+        </resources>
+        <resources resourceName="账户管理" resourceCode="ACCOUNT" grade="3" sn="8" desc="MENU">
+
+
+        </resources>
+
+    </subResources>
+
+</resources>

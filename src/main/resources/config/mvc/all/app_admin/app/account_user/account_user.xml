@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="AppAccountUserAction"
+		url="/all/admin/app/account_user/listJson.do">
+		all.app_admin.app.account_user.action.AppAccountUserListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="AppAccountUserAction"
+		url="/all/admin/app/account_user/list/bootstrap.do">
+		all.app_admin.app.account_user.action.AppAccountUserListAction
+		<result name="Default" type="forward">
+			/pages/all/app_admin/app/account_user/AppAccountUserListBootstrap.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="AppAccountUserAction"
+		url="/all/admin/app/account_user/form/bootstrap.do">
+		all.app_admin.app.account_user.action.AppAccountUserFormAction
+		<result name="Default" type="forward">
+			/pages/all/app_admin/app/account_user/AppAccountUserFormBootstrap2.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="AppAccountUserAction"
+		url="/all/admin/app/account_user/form/bootstrap.do">
+		all.app_admin.app.account_user.action.AppAccountUserFormAction
+		<result name="Default" type="forward">
+			/pages/all/app_admin/app/account_user/AppAccountUserFormBootstrap.jsp
+		</result>
+	</action>
+	<action name="AppAccountUserAction"
+		url="/all/admin/app/account_user/form/update/bootstrap.do">
+		all.app_admin.app.account_user.action.AppAccountUserFormUpdateAction
+		<result name="Default" type="forward">
+			/pages/all/app_admin/app/account_user/AppAccountUserFormUpdateBootstrap.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="AppAccountUserAction"
+		url="/all/admin/app/account_user/save/bootstrap.do">
+		all.app_admin.app.account_user.action.AppAccountUserSaveAction
+		<result name="Default" type="forward">
+			/all/admin/app/account_user/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppAccountUserAction"
+		url="/all/admin/app/account_user/save/bootstrap2.do">
+		all.app_admin.app.account_user.action.AppAccountUserSaveAction2
+		<result name="Default" type="forward">
+			/all/admin/app/account_user/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppAccountUserAction"
+		url="/all/admin/app/account_user/saveJson.do">
+		all.app_admin.app.account_user.action.AppAccountUserSaveJsonAction
+	</action>
+	
+	<!--删除del -->
+	<action name="AppAccountUserAction"
+		url="/all/admin/app/account_user/del/bootstrap.do">
+		all.app_admin.app.account_user.action.AppAccountUserDelAction
+		<result name="Default" type="forward">
+			/all/admin/app/account_user/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppAccountUserAction"
+		url="/all/admin/app/account_user/delJson.do">
+		all.app_admin.app.account_user.action.AppAccountUserDelJsonAction
+	</action>
+	<!--删除所有del all -->
+	<action name="AppAccountUserAction"
+		url="/all/admin/app/account_user/del_all/bootstrap.do">
+		all.app_admin.app.account_user.action.AppAccountUserDelAllAction
+		<result name="Default" type="forward">
+			/all/admin/app/account_user/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppAccountUserAction"
+		url="/all/admin/app/account_user/delAllJson.do">
+		all.app_admin.app.account_user.action.AppAccountUserDelAllJsonAction
+	</action>
+</root>

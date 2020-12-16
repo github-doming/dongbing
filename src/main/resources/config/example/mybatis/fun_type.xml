@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 包名 -->
+<mapper namespace="example.c.x.all.complex.mybatis">
+	<!-- 在select标签中编写查询的SQL语句， 设置select标签的id属性为getUser， id属性值必须是唯一的，不能够重复 ; 
+		使用parameterType属性指明查询时使用的参数类型， resultType属性指明查询返回的结果集类型 resultType=""就表示 
+		将查询结果封装成一个类的对象返回 ,类就是表所对应的实体类 -->
+	<!-- 根据id查询得到一个对象 -->
+	<select id="getUser" parameterType="int"
+		resultType="c.x.platform.admin.gen.fun_type_int_t.fun.entity.FunTypeIntTFun">
+		select * from fun_type_int_t where id=#{id}
+	</select>
+</mapper>

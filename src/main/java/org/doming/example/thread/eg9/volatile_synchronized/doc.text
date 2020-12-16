@@ -1,0 +1,2 @@
+结论：使用synchronized慢一些，但是安全些
+使用volatile慢一些，但是安全些

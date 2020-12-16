@@ -1,0 +1,22 @@
+table {
+	color: #333333;
+	FONT-SIZE: 12px;
+	WHITE-SPACE: nowrap;
+	border-collapse: collapse; /*细线表格;firefox不支持;*/
+}
+
+img {
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	VERTICAL-ALIGN: middle;
+	BORDER-LEFT: 0px;
+	BORDER-BOTTOM: 0px
+}
+
+td {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+

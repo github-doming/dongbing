@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--Json -->
+	<action name="CntDimensionTAction"
+		url="/cnt/cnt_dimension/t/listJson.do">
+		net.gzcnt.cds.cnt.cnt_dimension.t.action.CntDimensionTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="CntDimensionTAction"
+		url="/cnt/cnt_dimension/t/list.do">
+		net.gzcnt.cds.cnt.cnt_dimension.t.action.CntDimensionTListAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTListBootstrap.jsp
+		</result>
+		
+		<result name="Miniui" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTListMiniui.jsp
+		</result>
+		
+		<result name="DefaultObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTList.jsp
+		</result>
+		
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTListBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTListBootstrap.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTListKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTListKaida.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="CntDimensionTAction"
+		url="/cnt/cnt_dimension/t/form.do">
+		net.gzcnt.cds.cnt.cnt_dimension.t.action.CntDimensionTFormAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTFormBootstrap.jsp
+		</result>
+		<result name="DefaultObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTForm.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTFormMiniui.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTFormBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTFormBootstrap.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTFormKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTFormKaida.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="CntDimensionTAction"
+		url="/cnt/cnt_dimension/t/save.do">
+		net.gzcnt.cds.cnt.cnt_dimension.t.action.CntDimensionTSaveAction
+		<result name="Default" type="forward">
+			/cnt/cnt_dimension/t/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="CntDimensionTAction"
+		url="/cnt/cnt_dimension/t/del.do">
+		net.gzcnt.cds.cnt.cnt_dimension.t.action.CntDimensionTDelAction
+		<result name="Default" type="forward">
+			/cnt/cnt_dimension/t/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="CntDimensionTAction"
+		url="/cnt/cnt_dimension/t/del_all.do">
+		net.gzcnt.cds.cnt.cnt_dimension.t.action.CntDimensionTDelAllAction
+		<result name="Default" type="forward">
+			/cnt/cnt_dimension/t/list.do
+		</result>
+	</action>
+	<!--请求选择上一级parent -->
+	<action name="CntDimensionTAction"
+		url="/cnt/cnt_dimension/t/parent.do">
+		net.gzcnt.cds.cnt.cnt_dimension.t.action.CntDimensionTParentAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTParentBootstrap.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTParentBootstrap.jsp
+		</result>
+	</action>
+	<!--选择上一级select -->
+	<action name="CntDimensionTAction"
+		url="/cnt/cnt_dimension/t/select.do">
+		net.gzcnt.cds.cnt.cnt_dimension.t.action.CntDimensionTSelectAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTSelect.jsp
+		</result>
+	</action>
+	
+	<action name="CntDimensionTAction"
+		url="/cnt/cnt_dimension/t/checkName.do">
+		net.gzcnt.cds.cnt.cnt_dimension.t.action.CntDimensionTCheckNameAction
+	</action>
+	
+	<!--导入Excel-->
+	<action name="CntDimensionTAction" url="/cnt/cnt_dimension/t/import.do">
+		net.gzcnt.cds.cnt.cnt_dimension.t.action.CntDimensionImportExcelAction
+	</action>
+	
+	<!--导出Excel-->
+	<action name="CntDimensionTAction" url="/cnt/cnt_dimension/t/export.do">
+		net.gzcnt.cds.cnt.cnt_dimension.t.action.CntDimensionExportExcelAction
+	</action>
+	
+	<action name="CntDimensionTAction"
+		url="/cnt/cnt_dimension/t/checkCode.do">
+		net.gzcnt.cds.cnt.cnt_dimension.t.action.CntDimensionTCheckPathAction
+	</action>
+	
+	<action name="CntDimensionTAction"
+		url="/cnt/cnt_dimension/t/checkAlias.do">
+		net.gzcnt.cds.cnt.cnt_dimension.t.action.CntDimensionTCheckAliasAction
+	</action>
+	
+	<action name="CntDimensionTAction"
+		url="/cnt/cnt_dimension/t/view.do">
+		net.gzcnt.cds.cnt.cnt_dimension.t.action.CntDimensionTViewAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTViewBootstrap.jsp
+		</result>
+	</action>
+	
+	<action name="CntDimensionTAction"
+		url="/cnt/cnt_dimension/t/showExcel.do">
+		net.gzcnt.cds.cnt.cnt_dimension.t.action.CntDimensionTShowExcelAtion
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_dimension/t/CntDimensionTShowExcelBootstrap.jsp
+		</result>
+	</action>
+	
+	<action name="CntDimensionTAction"
+		url="/cnt/cnt_dimension/t/importSave.do">
+		net.gzcnt.cds.cnt.cnt_dimension.t.action.CntDimensionTImportSaveAction
+	</action>
+</root>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	version="2.0" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+	<description><![CDATA[""]]></description>
+	<display-name>"Tree Tags"</display-name>
+	<tlib-version>2.2.3</tlib-version>
+	<short-name>short_name_select</short-name>
+	<uri>/ay_select</uri>
+	
+	<tag>
+		<description><![CDATA[""]]></description>
+		<name>select</name>
+		<tag-class>c.x.platform.root.tag.select.TagSelect</tag-class>
+		<!-- 
+			自己处理
+			<body-content>tagdependent</body-content>
+			<body-content>JSP</body-content>
+			EL元素,JSP action元素 
+			<body-content>scriptless</body-content>
+			 -->
+		
+		
+		<body-content>scriptless</body-content>
+		<attribute>
+			<description><![CDATA[]]></description>
+			<name>id</name>
+			<required>false</required>
+		
+		</attribute>
+		<attribute>
+			<description><![CDATA[]]></description>
+			<name>name</name>
+			<required>false</required>
+		
+		</attribute>
+		<attribute>
+			<description><![CDATA[]]></description>
+			<name>selected</name>
+			<required>false</required>
+			<!--表示是否可以使用JSP表达式-->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description><![CDATA[]]></description>
+			<name>key</name>
+			<required>false</required>
+		
+		</attribute>
+		<attribute>
+			<description><![CDATA[]]></description>
+			<name>onchange</name>
+			<required>false</required>
+		
+		</attribute>
+	</tag>
+</taglib>

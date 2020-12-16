@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--设置log4j2自身内部日志的信息输出级别为WARN -->
+<Configuration status="WARN">
+    <Properties>
+        <!--自定义一个项目常量，之后使用${project}引用-->
+        <Property name="project">ibm</Property>
+        <Property name="pattern">[${project}]%d{MM-dd HH:mm:ss,SSS}[%5p][%t][%m][%l]</Property>
+        <Property name="log_file">${sys:webapp.root}/log</Property>
+        <Property name="archive_file">${sys:webapp.root}/log/$${date:yyyy-MM}</Property>
+    </Properties>
+    <Loggers>
+        <!-- root是默认的logger，也就是公共的logger，供记录一些不常打印的系统参数或者其他组件参数 -->
+        <Root level="warn">
+            <AppenderRef ref="file_trace"/>
+
+            <AppenderRef ref="gz_info"/>
+            <AppenderRef ref="gz_warn"/>
+        </Root>
+        <!-- 常打印的应用日志，建议独立配置，并采用异步模式。name根据实际的包名修改，生产环境中additivity建议设置为false以避免在root logger中重复打印 -->
+
+        <Logger name="com.ibm" additivity="false" level="trace">
+            <AppenderRef ref="file_trace"/>
+
+            <AppenderRef ref="gz_trace"/>
+            <AppenderRef ref="gz_info"/>
+            <AppenderRef ref="gz_warn"/>
+        </Logger>
+        <Logger name="com.ibm.common.core.servlet.boot" additivity="false" level="trace">
+            <AppenderRef ref="console_deploy"/>
+            <AppenderRef ref="file_trace"/>
+
+            <AppenderRef ref="gz_trace"/>
+            <AppenderRef ref="gz_info"/>
+            <AppenderRef ref="gz_warn"/>
+        </Logger>
+        <!-- 基本上为SQL语句 -->
+        <Logger name="c.a" additivity="false" level="info">
+            <AppenderRef ref="file_trace"/>
+
+            <AppenderRef ref="gz_warn"/>
+        </Logger>
+        <!-- 没什么重要的，其实也可以将此节点删掉 -->
+        <Logger name="org.doming" additivity="false" level="info">
+            <AppenderRef ref="file_trace"/>
+
+            <AppenderRef ref="gz_trace"/>
+            <AppenderRef ref="gz_info"/>
+            <AppenderRef ref="gz_warn"/>
+        </Logger>
+    </Loggers>
+    <Appenders>
+        <!-- 控制台输出 -->
+        <!-- WARN以上的等级 用SYSTEM_OUT输出，正常控制台颜色。WARN及以下等级用SYSTEM_ERR输出，控制台颜色警告-->
+        <Console name="console_out" target="SYSTEM_OUT">
+            <ThresholdFilter level="warn" onMatch="DENY" onMismatch="ACCEPT"/>
+            <PatternLayout pattern="${pattern}%n"/>
+        </Console>
+        <Console name="console_err" target="SYSTEM_ERR">
+            <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${pattern}%n"/>
+        </Console>
+        <Console name="console_deploy" target="SYSTEM_OUT">
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${pattern}%n"/>
+        </Console>
+        <!-- 控制台输出 -->
+
+        <!-- 文件日志输出 -->
+        <RollingFile name="file_trace" fileName="${log_file}/trace.log"
+                     filePattern="${log_file}/trace_%d{yyyy-MM-dd}.log.gz">
+            <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${pattern}[trace]%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+            </Policies>
+        </RollingFile>
+        <!-- 文件日志输出 -->
+
+        <!-- 压缩日志归档 -->
+        <RollingRandomAccessFile name="gz_trace" fileName="${archive_file}/trace_gz.log"
+                                 filePattern="${archive_file}/trace_%d{yyyy-MM-dd}.%i.log.gz">
+            <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${pattern}[trace]%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="400MB"/>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+            <DefaultRolloverStrategy max="1000">
+                <Delete basePath="${archive_file}" maxDepth="1">
+                    <IfFileName glob="trace*.gz"/>
+                    <IfLastModified age="45d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingRandomAccessFile>
+
+        <RollingRandomAccessFile name="gz_info" fileName="${archive_file}/info_gz.log"
+                                 filePattern="${archive_file}/info_%d{yyyy-MM-dd}.%i.log.gz">
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${pattern}[info]%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="400MB"/>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+            <DefaultRolloverStrategy max="1000">
+                <Delete basePath="${archive_file}" maxDepth="1">
+                    <IfFileName glob="info*.gz"/>
+                    <IfLastModified age="45d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingRandomAccessFile>
+
+        <RollingRandomAccessFile name="gz_warn" fileName="${archive_file}/warn_gz.log"
+                                 filePattern="${archive_file}/warn_%d{yyyy-MM-dd}.%i.log.gz">
+            <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${pattern}[warn]%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="400MB"/>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+            <DefaultRolloverStrategy max="1000">
+                <Delete basePath="${archive_file}" maxDepth="1">
+                    <IfFileName glob="warn*.gz"/>
+                    <IfLastModified age="45d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingRandomAccessFile>
+
+        <!-- 压缩日志归档 -->
+
+
+    </Appenders>
+</Configuration>

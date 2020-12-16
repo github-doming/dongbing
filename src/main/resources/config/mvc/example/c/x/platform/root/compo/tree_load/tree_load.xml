@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<action name="IndexAction" url="/example/tree_load/e1.do">
+		example.c.x.platform.root.compo.tree_load.e1.SysAreaInfoActionJson
+	</action>
+	<action name="IndexAction" url="/example/tree_load/e2.do">
+		example.c.x.platform.root.compo.tree_load.e2.SysAreaInfoActionJson
+	</action>
+</root>

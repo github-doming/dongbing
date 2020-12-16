@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="CmsTopicTAction"
+		url="/all/gen/cms_topic/t/listJson.do">
+		all.gen.cms_topic.t.action.CmsTopicTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="CmsTopicTAction"
+		url="/all/gen/cms_topic/t/list/easyui.do">
+		all.gen.cms_topic.t.action.CmsTopicTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/cms_topic/t/CmsTopicTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="CmsTopicTAction"
+		url="/all/gen/cms_topic/t/list/bootstrap.do">
+		all.gen.cms_topic.t.action.CmsTopicTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/cms_topic/t/CmsTopicTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="CmsTopicTAction"
+		url="/all/gen/cms_topic/t/form/bootstrap.do">
+		all.gen.cms_topic.t.action.CmsTopicTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/cms_topic/t/CmsTopicTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="CmsTopicTAction"
+		url="/all/gen/cms_topic/t/save/bootstrap.do">
+		all.gen.cms_topic.t.action.CmsTopicTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/cms_topic/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsTopicTAction"
+		url="/all/gen/cms_topic/t/saveJson.do">
+		all.gen.cms_topic.t.action.CmsTopicTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="CmsTopicTAction"
+		url="/all/gen/cms_topic/t/del/bootstrap.do">
+		all.gen.cms_topic.t.action.CmsTopicTDelAction
+		<result name="Default" type="forward">
+			/all/gen/cms_topic/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsTopicTAction"
+		url="/all/gen/cms_topic/t/delJson.do">
+		all.gen.cms_topic.t.action.CmsTopicTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="CmsTopicTAction"
+		url="/all/gen/cms_topic/t/del_all/bootstrap.do">
+		all.gen.cms_topic.t.action.CmsTopicTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/cms_topic/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsTopicTAction"
+		url="/all/gen/cms_topic/t/delAllJson.do">
+		all.gen.cms_topic.t.action.CmsTopicTDelAllJsonAction
+		
+	</action>
+</root>

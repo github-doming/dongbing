@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表excel-->
+	<action name="THassendLogAction" url="/send_log/excel.xinyu">
+		c.x.all.admin.complex.bs.excel_sqlserver_kaida.admin.T.hassend_Log.action.THassendLogAction_excel
+		<result name="index" type="forward">
+			/pages/c/x/business/admin/complex/excel_sqlserver_kaida/send_log/excel.jsp
+		</result>
+	</action>
+	<!--列表list_excel-->
+	<action name="THassendLogAction" url="/send_log/list_excel.xinyu">
+		c.x.all.admin.complex.bs.excel_sqlserver_kaida.admin.T.hassend_Log.action.THassendLogAction_list_excel
+		<result name="index" type="forward">
+			/pages/c/x/business/admin/complex/excel_sqlserver_kaida/send_log/list_excel.jsp
+		</result>
+		<result name="list" type="forward">
+			/pages/c/x/business/admin/complex/excel_sqlserver_kaida/send_log/list.jsp
+		</result>
+	</action>
+	
+	<!--列表list-->
+	<action name="THassendLogAction" url="/send_log/list.xinyu">
+		c.x.all.admin.complex.bs.excel_sqlserver_kaida.admin.T.hassend_Log.action.THassendLogListAction
+		<result name="index" type="forward">
+			/pages/c/x/business/admin/complex/excel_sqlserver_kaida/send_log/list.jsp
+		</result>
+	</action>
+	
+	<!--列表index-->
+	<action name="THassendLogAction" url="/send_log/index.xinyu">
+		c.x.all.admin.complex.bs.excel_sqlserver_kaida.admin.T.hassend_Log.action.THassendLogActionIndex
+		<result name="index" type="forward">
+			/pages/c/x/business/admin/complex/excel_sqlserver_kaida/send_log/index.jsp
+		</result>
+	</action>
+	
+	
+	<!--表单form-->
+	<action name="THassendLogAction" url="/send_log/form.xinyu">
+		c.x.all.admin.complex.bs.excel_sqlserver_kaida.admin.T.hassend_Log.action.THassendLogActionForm
+		<result name="index" type="forward">
+			/pages/c/x/business/admin/complex/excel_sqlserver_kaida/send_log/form.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	<action name="THassendLogAction" url="/send_log/save.xinyu">
+		c.x.all.admin.complex.bs.excel_sqlserver_kaida.admin.T.hassend_Log.action.THassendLogSaveAction
+		<result name="index" type="forward">
+			/send_log/list.xinyu
+		</result>
+	</action>
+	<!--删除del-->
+	<action name="THassendLogAction" url="/send_log/del.xinyu">
+		c.x.all.admin.complex.bs.excel_sqlserver_kaida.admin.T.hassend_Log.action.THassendLogDelAction
+		<result name="index" type="forward">
+			/send_log/list.xinyu
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="THassendLogAction" url="/send_log/del_all.xinyu">
+		c.x.all.admin.complex.bs.excel_sqlserver_kaida.admin.T.hassend_Log.action.THassendLogDelAllAction
+		<result name="index" type="forward">
+			/send_log/list.xinyu
+		</result>
+	</action>
+	<!--请求选择上一级parent-->
+	<action name="THassendLogAction" url="/send_log/parent.xinyu">
+		c.x.all.admin.complex.bs.excel_sqlserver_kaida.admin.T.hassend_Log.action.THassendLogParentAction
+		<result name="index" type="forward">
+			/pages/c/x/business/admin/complex/excel_sqlserver_kaida/send_log/parent.jsp
+		</result>
+	</action>
+	<!--选择上一级select-->
+	<action name="THassendLogAction" url="/send_log/select.xinyu">
+		c.x.all.admin.complex.bs.excel_sqlserver_kaida.admin.T.hassend_Log.action.THassendLogSelectAction
+		<result name="index" type="forward">
+			/pages/c/x/business/admin/complex/excel_sqlserver_kaida/send_log/select.jsp
+		</result>
+	</action>
+</root>

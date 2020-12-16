@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!-- 报表设计 -->
+	<action name="CntReportAction" url="/cnt/cnt_approve/t/report.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportAction
+	</action>
+	<!-- 模板Index -->
+	<action name="CntReportAction" url="/cnt/cnt_report/template/index.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportTemplateIndexAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_report/CntReportTemplateIndex.jsp
+		</result>
+	</action>
+	<!-- 模板分类 -->
+	<action name="CntReportAction" url="/cnt/cnt_report/template/type.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportTemplateTypeAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_report/CntReportTemplateType.jsp
+		</result>
+	</action>
+	<!-- 模板列表 -->
+	<action name="CntReportAction" url="/cnt/cnt_report/template/list.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportTemplateListAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_report/CntReportTemplateList.jsp
+		</result>
+	</action>
+	<!-- 跳转新增模板 -->
+	<action name="CntReportAction" url="/cnt/cnt_report/template/addModel.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportTemplateAddModelAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_report/CntReportTemplateAdd.jsp
+		</result>
+	</action>
+	<!-- 新增模板 -->
+	<action name="CntReportAction" url="/cnt/cnt_report/template/add.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportTemplateAddAction
+	</action>
+	<!-- 模板名称唯一性校验 -->
+	<action name="CntReportAction" url="/cnt/cnt_report/template/checkName.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportTemplateCheckName
+	</action>
+	<!--绑定元指标 -->
+	<action name="CntReportAction" url="/cnt/cnt_report/template/metaquota/binding.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportMetaQuotaAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_report/CntReportMetaQuota.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_report/CntReportMetaQuota.jsp
+		</result>
+	</action>
+	<!--选择元指标 -->
+	<action name="CntReportAction" url="/cnt/cnt_report/template/metaquota/select.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportMetaQuotaSelectAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_report/CntReportMetaQuotaSelect.jsp
+		</result>
+	</action>
+	<!--元指标列表listJson -->
+	<action name="CntTreeMetaQuotaMqAction" url="/cnt/cnt_report/template/metaquota/listJson.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportMetaQuotaListJsonAction
+	</action>
+	<!--绑定维度 -->
+	<action name="CntReportAction" url="/cnt/cnt_report/template/dimension/binding.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportDimensionAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_report/CntReportDimension.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_report/CntReportDimension.jsp
+		</result>
+	</action>
+	<!--选择维度 -->
+	<action name="CntReportAction" url="/cnt/cnt_report/template/dimension/select.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportDimensionSelectAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_report/CntReportDimensionSelect.jsp
+		</result>
+	</action>
+	<!-- 模板列表json -->
+	<action name="CntQuotaTAction" url="/cnt/cnt_report/template/listJson.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportTemplateListJsonAction
+	</action>
+	<!--删除模板 -->
+	<action name="CntQuotaTAction" url="/cnt/cnt_report/template/del.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportTemplateDelAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_report/CntReportTemplateList.jsp
+		</result>
+	</action>
+	<!-- 模板分类 start -->
+	<!--列表Json -->
+	<action name="CntReportTemplateTypeListJsonAction" url="/cnt/cnt_report/template/type/listJson.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportTemplateTypeListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="CntReportTemplateTypeListAction" url="/cnt/cnt_report/template/type/list.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportTemplateTypeListAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_report/CntReportTemplateType.jsp
+
+		</result>
+	</action>
+	<!--模板分类表单页面 -->
+	<action name="CntReportTemplateTypeFormAction" url="/cnt/cnt_report/template/type/form.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportTemplateTypeFormAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_report/CntReportTemplateTypeFormBootstrap.jsp
+		</result>
+	</action>
+	<!-- 模板分类添加 -->
+	<action name="CntReportTemplateTypeSaveAction" url="/cnt/cnt_report/template/type/save.do">
+		net.gzcnt.cds.cnt.cnt_report.action.CntReportTemplateTypeSaveAction
+		<result name="Default" type="forward">
+			/cnt/cnt_report/template/type/list.do
+		</result>
+	</action>
+	<!-- 模板分类 end -->
+</root>

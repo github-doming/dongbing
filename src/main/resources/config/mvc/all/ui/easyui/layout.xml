@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<action name="IndexAction" url="/easyui/layout/menu/list.do">
+		all.ui.easyui.layout.menu.EasyuiMenuListJsonAction
+	</action>
+	<action name="IndexAction" url="/easyui/layout/sys_menu/comm/list.do">
+		all.ui.easyui.layout.menu.EasyuiSysMenuCommListJsonAction
+	</action>
+	<action name="IndexAction" url="/easyui/layout/app_menu/comm/list.do">
+		all.ui.easyui.layout.menu.EasyuiAppMenuCommListJsonAction
+	</action>
+</root>

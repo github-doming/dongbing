@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--json -->
+	<action name="SysEthnicTAction"
+		url="/cnt/sys_ethnic/t/listJson.do">
+		net.gzcnt.cds.cnt.sys_ethnic.t.action.SysEthnicTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="SysEthnicTAction"
+		url="/cnt/sys_ethnic/t/list.do">
+		net.gzcnt.cds.cnt.sys_ethnic.t.action.SysEthnicTListAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_ethnic/t/SysEthnicTListBootstrap.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_ethnic/t/SysEthnicTListMiniui.jsp
+		</result>
+
+		<result name="DefaultObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_ethnic/t/SysEthnicTListObject.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_ethnic/t/SysEthnicTListBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_ethnic/t/SysEthnicTListBootstrapObject.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_ethnic/t/SysEthnicTListKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_ethnic/t/SysEthnicTListKaidaObject.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysEthnicTAction"
+		url="/cnt/sys_ethnic/t/form.do">
+		net.gzcnt.cds.cnt.sys_ethnic.t.action.SysEthnicTFormAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_ethnic/t/SysEthnicTFormBootstrap.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_ethnic/t/SysEthnicTFormMiniui.jsp
+		</result>
+		
+		<result name="DefaultObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_ethnic/t/SysEthnicTForm.jsp
+		</result>
+		
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_ethnic/t/SysEthnicTFormBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_ethnic/t/SysEthnicTFormBootstrap.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_ethnic/t/SysEthnicTFormKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/sys_ethnic/t/SysEthnicTFormKaida.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysEthnicTAction"
+		url="/cnt/sys_ethnic/t/save.do">
+		net.gzcnt.cds.cnt.sys_ethnic.t.action.SysEthnicTSaveAction
+		<result name="Default" type="forward">
+			/cnt/sys_ethnic/t/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="SysEthnicTAction"
+		url="/cnt/sys_ethnic/t/del.do">
+		net.gzcnt.cds.cnt.sys_ethnic.t.action.SysEthnicTDelAction
+		<result name="Default" type="forward">
+			/cnt/sys_ethnic/t/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="SysEthnicTAction"
+		url="/cnt/sys_ethnic/t/del_all.do">
+		net.gzcnt.cds.cnt.sys_ethnic.t.action.SysEthnicTDelAllAction
+		<result name="Default" type="forward">
+			/cnt/sys_ethnic/t/list.do
+		</result>
+	</action>
+</root>

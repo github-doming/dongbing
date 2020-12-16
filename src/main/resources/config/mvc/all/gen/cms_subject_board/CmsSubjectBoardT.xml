@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="CmsSubjectBoardTAction"
+		url="/all/gen/cms_subject_board/t/listJson.do">
+		all.gen.cms_subject_board.t.action.CmsSubjectBoardTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="CmsSubjectBoardTAction"
+		url="/all/gen/cms_subject_board/t/list/easyui.do">
+		all.gen.cms_subject_board.t.action.CmsSubjectBoardTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/cms_subject_board/t/CmsSubjectBoardTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="CmsSubjectBoardTAction"
+		url="/all/gen/cms_subject_board/t/list/bootstrap.do">
+		all.gen.cms_subject_board.t.action.CmsSubjectBoardTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/cms_subject_board/t/CmsSubjectBoardTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="CmsSubjectBoardTAction"
+		url="/all/gen/cms_subject_board/t/form/bootstrap.do">
+		all.gen.cms_subject_board.t.action.CmsSubjectBoardTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/cms_subject_board/t/CmsSubjectBoardTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="CmsSubjectBoardTAction"
+		url="/all/gen/cms_subject_board/t/save/bootstrap.do">
+		all.gen.cms_subject_board.t.action.CmsSubjectBoardTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/cms_subject_board/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsSubjectBoardTAction"
+		url="/all/gen/cms_subject_board/t/saveJson.do">
+		all.gen.cms_subject_board.t.action.CmsSubjectBoardTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="CmsSubjectBoardTAction"
+		url="/all/gen/cms_subject_board/t/del/bootstrap.do">
+		all.gen.cms_subject_board.t.action.CmsSubjectBoardTDelAction
+		<result name="Default" type="forward">
+			/all/gen/cms_subject_board/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsSubjectBoardTAction"
+		url="/all/gen/cms_subject_board/t/delJson.do">
+		all.gen.cms_subject_board.t.action.CmsSubjectBoardTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="CmsSubjectBoardTAction"
+		url="/all/gen/cms_subject_board/t/del_all/bootstrap.do">
+		all.gen.cms_subject_board.t.action.CmsSubjectBoardTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/cms_subject_board/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsSubjectBoardTAction"
+		url="/all/gen/cms_subject_board/t/delAllJson.do">
+		all.gen.cms_subject_board.t.action.CmsSubjectBoardTDelAllJsonAction
+		
+	</action>
+</root>

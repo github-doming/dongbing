@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!-- 后台查看游戏 -->
+	<action name="IbmGameAction" url="/ibm/admin/ibm_game/list.do">
+		com.ibm.old.v1.admin.ibm_game.action.IbmGameListAction
+		<result name="Default" type="forward">
+			/pages/com/ibm/admin/ibm_game/IbmGameList.jsp
+		</result>
+	</action>
+	<!-- 跳转新增/编辑 -->
+	<action name="IbmGameAction" url="/ibm/admin/ibm_game/form.do">
+		com.ibm.old.v1.admin.ibm_game.action.IbmGameFormAction
+		<result name="Default" type="forward">
+			/pages/com/ibm/admin/ibm_game/IbmGameForm.jsp
+		</result>
+	</action>
+	<!-- 删除游戏 -->
+	<action name="IbmGameAction" url="/ibm/admin/ibm_game/del.do">
+		com.ibm.old.v1.admin.ibm_game.action.IbmGameDelAction
+		<result name="Default" type="forward">
+			/ibm/admin/ibm_game/list.do
+		</result>
+	</action>
+
+	<!-- 删除选中游戏 -->
+	<action name="IbmGameAction" url="/ibm/admin/ibm_game/delAll.do">
+		com.ibm.old.v1.admin.ibm_game.action.IbmGameDelAllAction
+		<result name="Default" type="forward">
+			/ibm/admin/ibm_game/list.do
+		</result>
+	</action>
+	<!-- 保存盘口 -->
+	<action name="IbmGameAction" url="/ibm/admin/ibm_game/save.do">
+		com.ibm.old.v1.admin.ibm_game.action.IbmGameSaveAction
+		<result name="Default" type="forward">
+			/ibm/admin/ibm_game/list.do
+		</result>
+	</action>
+
+	<!-- 查看所有游戏 -->
+	<action name="IbmGameListJsonAction" url="/ibm/admin/ibm_game/w/listJson.do">
+		com.ibm.old.v1.admin.ibm_game.w.action.IbmGameListJsonAction
+	</action>
+</root>

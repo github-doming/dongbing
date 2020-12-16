@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+<!--保存save -->
+	<action name="SysFileTAction"
+		url="/all/upload/sys_file/t/saveJson/comm.do">
+		all.upload.sys_file.t.action.SysFileTSaveJsonCommAction
+	</action>
+	<!--列表json -->
+	<action name="SysFileTAction"
+		url="/all/upload/sys_file/t/listJson.do">
+		all.upload.sys_file.t.action.SysFileTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="SysFileTAction"
+		url="/all/upload/sys_file/t/list/easyui.do">
+		all.upload.sys_file.t.action.SysFileTListAction
+		<result name="Default" type="forward">
+			/pages/all/upload/sys_file/t/SysFileTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="SysFileTAction"
+		url="/all/upload/sys_file/t/list/bootstrap.do">
+		all.upload.sys_file.t.action.SysFileTListAction
+		<result name="Default" type="forward">
+			/pages/all/upload/sys_file/t/SysFileTListBootstrap.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysFileTAction"
+		url="/all/upload/sys_file/t/form/bootstrap.do">
+		all.upload.sys_file.t.action.SysFileTFormAction
+		<result name="Default" type="forward">
+			/pages/all/upload/sys_file/t/SysFileTFormBootstrap.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysFileTAction"
+		url="/all/upload/sys_file/t/save/bootstrap.do">
+		all.upload.sys_file.t.action.SysFileTSaveAction
+		<result name="Default" type="forward">
+			/all/upload/sys_file/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysFileTAction"
+		url="/all/upload/sys_file/t/saveJson.do">
+		all.upload.sys_file.t.action.SysFileTSaveJsonAction
+	</action>
+	<!--删除del -->
+	<action name="SysFileTAction"
+		url="/all/upload/sys_file/t/del/bootstrap.do">
+		all.upload.sys_file.t.action.SysFileTDelAction
+		<result name="Default" type="forward">
+			/all/upload/sys_file/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysFileTAction"
+		url="/all/upload/sys_file/t/delJson.do">
+		all.upload.sys_file.t.action.SysFileTDelJsonAction
+	</action>
+	<!--删除所有del all -->
+	<action name="SysFileTAction"
+		url="/all/upload/sys_file/t/del_all/bootstrap.do">
+		all.upload.sys_file.t.action.SysFileTDelAllAction
+		<result name="Default" type="forward">
+			/all/upload/sys_file/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysFileTAction"
+		url="/all/upload/sys_file/t/delAllJson.do">
+		all.upload.sys_file.t.action.SysFileTDelAllJsonAction
+	</action>
+</root>

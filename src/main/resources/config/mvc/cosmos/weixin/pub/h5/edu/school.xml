@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!---->
+	<action name="IndexAction" url="/cosmos/weixin/pub/h5/edu/school/search.do">
+		cosmos.weixin.pub.h5.edu.school.action.SearchAction_php
+		<result name="index" type="forward">
+			/pages/cosmos/weixin/pub/h5/edu/school/search/index.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/cosmos/weixin/pub/h5/edu/school/search.do">
+		cosmos.weixin.pub.h5.edu.school.action.SearchAction_xinyu
+		<result name="index" type="forward">
+			/pages/cosmos/weixin/pub/h5/edu/school/search/index.jsp
+		</result>
+	</action>
+	<action name="IndexAction"
+		url="/cosmos/weixin/pub/h5/edu/school/search_home.do">
+		cosmos.weixin.pub.h5.edu.school.action.SearchHomeAction_xinyu
+		<result name="index" type="forward">
+			/pages/cosmos/weixin/pub/h5/edu/school/search/home.jsp
+		</result>
+	</action>
+	<action name="IndexAction"
+		url="/cosmos/weixin/pub/h5/edu/school/search_company.do">
+		cosmos.weixin.pub.h5.edu.school.action.SearchCompanyAction_xinyu
+		<result name="index" type="forward">
+			/pages/cosmos/weixin/pub/h5/edu/school/search/company.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/cosmos/weixin/pub/h5/edu/school/list.do">
+		cosmos.weixin.pub.h5.edu.school.action.ListAction
+		<result name="index" type="forward">
+			/pages/cosmos/weixin/pub/h5/edu/school/list/index.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/cosmos/weixin/pub/h5/edu/school/search_my.do">
+		cosmos.weixin.pub.h5.edu.school.action.SearchMyAction_xinyu
+		<result name="index" type="forward">
+			/pages/cosmos/weixin/pub/h5/edu/school/search/index.jsp
+		</result>
+	</action>
+</root>

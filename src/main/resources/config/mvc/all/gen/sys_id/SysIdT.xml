@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="SysIdTAction"
+		url="/all/gen/sys_id/t/listJson.do">
+		all.gen.sys_id.t.action.SysIdTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="SysIdTAction"
+		url="/all/gen/sys_id/t/list/easyui.do">
+		all.gen.sys_id.t.action.SysIdTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/sys_id/t/SysIdTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="SysIdTAction"
+		url="/all/gen/sys_id/t/list/bootstrap.do">
+		all.gen.sys_id.t.action.SysIdTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/sys_id/t/SysIdTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="SysIdTAction"
+		url="/all/gen/sys_id/t/form/bootstrap.do">
+		all.gen.sys_id.t.action.SysIdTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/sys_id/t/SysIdTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="SysIdTAction"
+		url="/all/gen/sys_id/t/save/bootstrap.do">
+		all.gen.sys_id.t.action.SysIdTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/sys_id/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysIdTAction"
+		url="/all/gen/sys_id/t/saveJson.do">
+		all.gen.sys_id.t.action.SysIdTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="SysIdTAction"
+		url="/all/gen/sys_id/t/del/bootstrap.do">
+		all.gen.sys_id.t.action.SysIdTDelAction
+		<result name="Default" type="forward">
+			/all/gen/sys_id/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysIdTAction"
+		url="/all/gen/sys_id/t/delJson.do">
+		all.gen.sys_id.t.action.SysIdTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="SysIdTAction"
+		url="/all/gen/sys_id/t/del_all/bootstrap.do">
+		all.gen.sys_id.t.action.SysIdTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/sys_id/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="SysIdTAction"
+		url="/all/gen/sys_id/t/delAllJson.do">
+		all.gen.sys_id.t.action.SysIdTDelAllJsonAction
+		
+	</action>
+</root>

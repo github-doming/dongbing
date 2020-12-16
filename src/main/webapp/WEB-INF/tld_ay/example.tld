@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	version="2.0" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+	<description><![CDATA[""]]></description>
+	<display-name>"自定义 Tags"</display-name>
+	<tlib-version>2.2.3</tlib-version>
+	<short-name>short_name_example</short-name>
+	<uri>/ay_example</uri>
+	<tag>
+		<description><![CDATA[""]]></description>
+		<name>example</name>
+		<tag-class>c.x.platform.root.tag.example.TagExample</tag-class>
+		<!-- 
+			自己处理;标签体内容直接被写入BodyContent;
+			<body-content>tagdependent</body-content>
+			接管所有JSP语法;JSP指令和动作;
+			<body-content>JSP</body-content>
+		标签之间没有内容;
+				<body-content>empty</body-content>
+			接管文本、EL和JSP动作;
+			<body-content>scriptless</body-content>
+			 -->
+		<body-content>scriptless</body-content>
+		<attribute>
+			<description><![CDATA[]]></description>
+			<name>name</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<description><![CDATA[]]></description>
+			<name>code</name>
+			<required>false</required>
+		</attribute>
+	</tag>
+</taglib>

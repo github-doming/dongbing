@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <!-- 盘口游戏设置 -->
+    <action name="IbmHandicapGameSetAction" url="/ibm/pc/ibm_hm_game_set/handicapGameSet.do">
+        com.ibm.old.v1.pc.ibm_hm_game_set.t.action.IbmHandicapGameSetAction
+    </action>
+
+    <!-- 投注状态设置 -->
+    <action name="IbmHandicapBetStateAction" url="/ibm/pc/ibm_hm_game_set/betStateSet.do">
+        com.ibm.old.v1.pc.ibm_hm_game_set.t.action.IbmHandicapBetStateAction
+    </action>
+
+    <!-- 自动开始投注设置 -->
+    <action name="IbmHandicapAutoStartAction" url="/ibm/pc/ibm_hm_game_set/autoStartSet.do">
+        com.ibm.old.v1.pc.ibm_hm_game_set.t.action.IbmHandicapAutoStartAction
+    </action>
+
+    <!-- 自动停止投注设置 -->
+    <action name="IbmHandicapAutoStopAction" url="/ibm/pc/ibm_hm_game_set/autoStopSet.do">
+        com.ibm.old.v1.pc.ibm_hm_game_set.t.action.IbmHandicapAutoStopAction
+    </action>
+    
+
+</root>
+

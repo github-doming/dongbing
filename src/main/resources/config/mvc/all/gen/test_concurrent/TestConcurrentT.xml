@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="TestConcurrentTAction"
+		url="/all/gen/test_concurrent/t/listJson.do">
+		all.gen.test_concurrent.t.action.TestConcurrentTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="TestConcurrentTAction"
+		url="/all/gen/test_concurrent/t/list/easyui.do">
+		all.gen.test_concurrent.t.action.TestConcurrentTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/test_concurrent/t/TestConcurrentTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="TestConcurrentTAction"
+		url="/all/gen/test_concurrent/t/list/bootstrap.do">
+		all.gen.test_concurrent.t.action.TestConcurrentTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/test_concurrent/t/TestConcurrentTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="TestConcurrentTAction"
+		url="/all/gen/test_concurrent/t/form/bootstrap.do">
+		all.gen.test_concurrent.t.action.TestConcurrentTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/test_concurrent/t/TestConcurrentTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="TestConcurrentTAction"
+		url="/all/gen/test_concurrent/t/save/bootstrap.do">
+		all.gen.test_concurrent.t.action.TestConcurrentTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/test_concurrent/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="TestConcurrentTAction"
+		url="/all/gen/test_concurrent/t/saveJson.do">
+		all.gen.test_concurrent.t.action.TestConcurrentTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="TestConcurrentTAction"
+		url="/all/gen/test_concurrent/t/del/bootstrap.do">
+		all.gen.test_concurrent.t.action.TestConcurrentTDelAction
+		<result name="Default" type="forward">
+			/all/gen/test_concurrent/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="TestConcurrentTAction"
+		url="/all/gen/test_concurrent/t/delJson.do">
+		all.gen.test_concurrent.t.action.TestConcurrentTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="TestConcurrentTAction"
+		url="/all/gen/test_concurrent/t/del_all/bootstrap.do">
+		all.gen.test_concurrent.t.action.TestConcurrentTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/test_concurrent/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="TestConcurrentTAction"
+		url="/all/gen/test_concurrent/t/delAllJson.do">
+		all.gen.test_concurrent.t.action.TestConcurrentTDelAllJsonAction
+		
+	</action>
+</root>

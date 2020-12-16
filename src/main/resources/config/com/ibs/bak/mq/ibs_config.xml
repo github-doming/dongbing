@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <config>
+        <virtualHost>ibm_zjj</virtualHost>
+        <ip>mq.tzxyz.xyz</ip>
+        <port>5672</port>
+        <userName>ibm_zjj</userName>
+        <password>ibm_zjj</password>
+        <exchangeFormat>ibs_exchange_%s</exchangeFormat>
+    </config>
+
+    <!-- mq模块-->
+    <!-- 请求-->
+    <exchange id="mq_request" type="TOPIC">
+        <client class="com.ibs.plan.module.mq.listener.RequestAcceptListener">
+            <routing key="accept.request"/>
+        </client>
+        <client class="com.ibs.plan.module.mq.listener.RequestHandleListener">
+            <routing key="handle.request"/>
+        </client>
+    </exchange>
+
+    <!-- 投注-->
+    <exchange id="mq_bet" type="TOPIC">
+        <client class="com.ibs.plan.module.mq.listener.BetItemListener">
+            <routing key="item.bet"/>
+        </client>
+        <client class="com.ibs.plan.module.mq.listener.BetResultListener">
+            <routing key="result.bet"/>
+        </client>
+    </exchange>
+    <!-- 信息 -->
+    <exchange id="mq_info" type="TOPIC">
+        <client class="com.ibs.plan.module.mq.listener.InfoMemberListener">
+            <routing key="member.info"/>
+        </client>
+        <client class="com.ibs.plan.module.mq.listener.InfoClientListener">
+            <routing key="client.info"/>
+        </client>
+    </exchange>
+    <!-- mq模块-->
+
+
+    <!-- 客户端模块 -->
+    <!-- 会员 -->
+    <exchange id="client_member" type="TOPIC">
+        <client class="com.ibs.plan.module.client.core.mq.MemberManageListener">
+            <routing desc="manage.member.%s"/>
+        </client>
+        <client class="com.ibs.plan.module.client.core.mq.MemberSetListener">
+            <routing desc="set.member.%s"/>
+        </client>
+        <client class="com.ibs.plan.module.client.core.mq.MemberInfoListener">
+            <routing desc="info.member.%s"/>
+        </client>
+    </exchange>
+    <!-- 基础信息 -->
+    <exchange id="client_base" type="TOPIC">
+        <client class="com.ibs.plan.module.client.core.mq.ClientInfoListener">
+            <routing desc="client.info.%s"/>
+        </client>
+    </exchange>
+    <!-- 客户端模块 -->
+
+
+</root>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="ActwfFormDefTAction"
+		url="/all/workflow/actwf/actwf_form_def/t/listJson.do">
+		all.workflow.actwf.actwf_form_def.t.action.ActwfFormDefTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="ActwfFormDefTAction"
+		url="/all/workflow/actwf/actwf_form_def/t/list/easyui.do">
+		all.workflow.actwf.actwf_form_def.t.action.ActwfFormDefTListAction
+		<result name="Default" type="forward">
+			/pages/all/workflow/actwf/actwf_form_def/t/ActwfFormDefTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="ActwfFormDefTAction"
+		url="/all/workflow/actwf/actwf_form_def/t/list/bootstrap.do">
+		all.workflow.actwf.actwf_form_def.t.action.ActwfFormDefTListAction
+		<result name="Default" type="forward">
+			/pages/all/workflow/actwf/actwf_form_def/t/ActwfFormDefTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单design -->
+	<action name="ActwfFormDefTAction"
+		url="/all/workflow/actwf/actwf_form_def/t/design.do">
+		all.workflow.actwf.actwf_form_def.t.action.ActwfFormDefTdesignAction
+		<result name="Default" type="forward">
+			/pages/all/workflow/actwf/actwf_form_def/t/ActwfFormDefTdesign.jsp
+		</result>
+		
+	</action>
+	
+	
+	<!--表单form -->
+	<action name="ActwfFormDefTAction"
+		url="/all/workflow/actwf/actwf_form_def/t/form/bootstrap.do">
+		all.workflow.actwf.actwf_form_def.t.action.ActwfFormDefTFormAction
+		<result name="Default" type="forward">
+			/pages/all/workflow/actwf/actwf_form_def/t/ActwfFormDefTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="ActwfFormDefTAction"
+		url="/all/workflow/actwf/actwf_form_def/t/save/bootstrap.do">
+		all.workflow.actwf.actwf_form_def.t.action.ActwfFormDefTSaveAction
+		<result name="Default" type="forward">
+			/all/workflow/actwf/actwf_form_def/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="ActwfFormDefTAction"
+		url="/all/workflow/actwf/actwf_form_def/t/saveJson.do">
+		all.workflow.actwf.actwf_form_def.t.action.ActwfFormDefTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="ActwfFormDefTAction"
+		url="/all/workflow/actwf/actwf_form_def/t/del/bootstrap.do">
+		all.workflow.actwf.actwf_form_def.t.action.ActwfFormDefTDelAction
+		<result name="Default" type="forward">
+			/all/workflow/actwf/actwf_form_def/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="ActwfFormDefTAction"
+		url="/all/workflow/actwf/actwf_form_def/t/delJson.do">
+		all.workflow.actwf.actwf_form_def.t.action.ActwfFormDefTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="ActwfFormDefTAction"
+		url="/all/workflow/actwf/actwf_form_def/t/del_all/bootstrap.do">
+		all.workflow.actwf.actwf_form_def.t.action.ActwfFormDefTDelAllAction
+		<result name="Default" type="forward">
+			/all/workflow/actwf/actwf_form_def/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="ActwfFormDefTAction"
+		url="/all/workflow/actwf/actwf_form_def/t/delAllJson.do">
+		all.workflow.actwf.actwf_form_def.t.action.ActwfFormDefTDelAllJsonAction
+		
+	</action>
+</root>

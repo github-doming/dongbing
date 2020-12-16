@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+    <!-- 刷新盈亏信息 -->
+    <action name="IbmRefreshProfit" url="/ibm/pc/ibm_hm_profit/refreshProfit.do">
+        com.ibm.old.v1.pc.ibm_profit.t.action.IbmRefreshProfitAction
+    </action>
+
+</root>

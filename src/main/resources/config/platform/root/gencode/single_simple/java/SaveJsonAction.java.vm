@@ -1,0 +1,24 @@
+package ${ay_package_name}.action;
+
+import c.a.util.core.request.RequestThreadLocal;
+import c.a.util.core.string.StringUtil;
+import ${ay_package_name}.entity.${ay_table_class};
+import ${ay_package_name}.service.${ay_table_class}Service;
+import ${ay_package_name}.vo.${ay_table_class}Vo;
+import c.x.platform.root.common.action.BaseAction;
+public class ${ay_table_class}SaveJsonAction extends BaseAction {
+	@Override
+	public String execute() throws Exception {
+		${ay_table_class}Service service = new ${ay_table_class}Service();
+		${ay_table_class} entity = null;
+		String id = request.getParameter("id");
+		entity = (${ay_table_class}) RequestThreadLocal.doRequest2EntityByJson(${ay_table_class}Vo.class, ${ay_table_class}.class, request);
+		if (StringUtil.isBlank(id)) {
+				service.save(entity);
+		} else {
+				service.update(entity);
+		}
+		return this.returnJson(true, "保存成功");
+		
+	}
+}

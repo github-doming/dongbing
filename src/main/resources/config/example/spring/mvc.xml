@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+	<bean
+		class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
+	<!--缺省映射处理器，不需要明确声明，但声明后就非常清楚使用的是哪个映射处理器  -->   
+	<bean id="beanNameUrlMapping"
+		class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+	</bean>
+	<!--配置一个视图解析器将控制器与JSP结合起来-->
+	<!--
+		InternalResourceViewResolver在ModelAndView返回的视图名前
+		加上prefix属性配置的前缀,再在最后加上suffix属性配置的后缀。
+		由于HelloController返回的ModelAndView中视图名为welcome,
+		所以InternalResourceViewResolver将在/WEB-INF/jsp/welcome.jsp处查找视图。
+		-->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	<!--对multipart解析器的配置:-->
+	<!-- upload file --> 
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="104857600"/>
+		<property name="maxInMemorySize" value="4096"/>
+		<property name="defaultEncoding"> 
+			<value>UTF-8</value> 
+		</property> 
+	</bean>
+	<!--
+		<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"> 
+			<property name="maxUploadSize"> 
+				<value>2048000</value> 
+			</property> 
+			<property name="maxInMemorySize"> 
+				<value>2048</value> 
+			</property> 
+			<property name="defaultEncoding"> 
+				<value>UTF-8</value> 
+			</property> 
+		</bean>
+-->
+	<!--切换数据源-->
+	<!-- 这里的name属性有两个职责，既定义Bean的名字，也定义需要这个控制器处理的URL样式 -->
+	<!--测试oracle,xfire,spring mvc,spring multipart上传-->
+	<bean name="/example/all/business/admin/complex/spring/fun/sys_user_t/list.spring"
+		class="example.all.business.admin.complex.spring.fun.sys_user.action.SysUserTListSpringAction">
+	</bean>
+	<bean name="/example/all/business/admin/complex/spring/fun/sys_user_t/form.spring"
+		class="example.all.business.admin.complex.spring.fun.sys_user.action.SysUserTFormSpringAction">
+	</bean>
+	
+	<bean name="/example/all/business/admin/complex/spring/gen/fun_type_str_t/list.spring"
+		class="example.all.business.admin.complex.spring.gen.fun_type_str.action.FunTypeStrTListSpringAction">
+	</bean>
+	<bean name="/example/all/business/admin/complex/spring/gen/fun_type_str_t/form.spring"
+		class="example.all.business.admin.complex.spring.gen.fun_type_str.action.FunTypeStrTFormSpringAction">
+	</bean>
+	
+</beans>

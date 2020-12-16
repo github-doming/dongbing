@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	
+	<!-- 接收消息 -->
+	<action name="IbmHmLoginReceiptAction" url="/ibm/pc/cloud/ibm_cloud_receipt/t/hmLoginReceipt.do">
+		com.ibm.old.v1.pc.ibm_cloud_receipt.t.action.IbmHmLoginReceiptAction
+	</action>
+	
+</root>

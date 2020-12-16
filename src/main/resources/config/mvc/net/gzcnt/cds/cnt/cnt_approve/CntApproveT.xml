@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="CntApproveTAction"
+		url="/cnt/cnt_approve/t/listJson.do">
+		net.gzcnt.cds.cnt.cnt_approve.t.action.CntApproveTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="CntApproveTAction"
+		url="/cnt/cnt_approve/t/list/easyui.do">
+		net.gzcnt.cds.cnt.cnt_approve.t.action.CntApproveTListAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_approve/t/CntApproveTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="CntApproveTAction"
+		url="/cnt/cnt_approve/t/list.do">
+		net.gzcnt.cds.cnt.cnt_approve.t.action.CntApproveTListAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_approve/t/CntApproveTListBootstrap.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_approve/t/CntApproveTListMiniui.jsp
+		</result>
+
+		<result name="DefaultObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_approve/t/CntApproveTListObject.jsp
+		</result>
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_approve/t/CntApproveTListBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_approve/t/CntApproveTListBootstrapObject.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_approve/t/CntApproveTListKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_approve/t/CntApproveTListKaidaObject.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="CntApproveTAction"
+		url="/cnt/cnt_approve/t/form.do">
+		net.gzcnt.cds.cnt.cnt_approve.t.action.CntApproveTFormAction
+		<result name="Default" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_approve/t/CntApproveTFormBootstrap.jsp
+		</result>
+		<result name="Miniui" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_approve/t/CntApproveTFormMiniui.jsp
+		</result>
+
+		<result name="DefaultObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_approve/t/CntApproveTForm.jsp
+		</result>
+
+		<result name="Bootstrap" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_approve/t/CntApproveTFormBootstrap.jsp
+		</result>
+		<result name="BootstrapObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_approve/t/CntApproveTFormBootstrap.jsp
+		</result>
+		<result name="Kaida" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_approve/t/CntApproveTFormKaida.jsp
+		</result>
+		<result name="KaidaObject" type="forward">
+			/pages/net/gzcnt/cds/cnt/cnt_approve/t/CntApproveTFormKaida.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="CntApproveTAction"
+		url="/cnt/cnt_approve/t/save.do">
+		net.gzcnt.cds.cnt.cnt_approve.t.action.CntApproveTSaveAction
+		<result name="Default" type="forward">
+			/cnt/cnt_approve/t/list.do
+		</result>
+	</action>
+	<action name="CntApproveTAction"
+		url="/cnt/cnt_approve/t/saveJson.do">
+		net.gzcnt.cds.cnt.cnt_approve.t.action.CntApproveTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="CntApproveTAction"
+		url="/cnt/cnt_approve/t/del.do">
+		net.gzcnt.cds.cnt.cnt_approve.t.action.CntApproveTDelAction
+		<result name="Default" type="forward">
+			/cnt/cnt_approve/t/list.do
+		</result>
+	</action>
+	<action name="CntApproveTAction"
+		url="/cnt/cnt_approve/t/delJson.do">
+		net.gzcnt.cds.cnt.cnt_approve.t.action.CntApproveTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="CntApproveTAction"
+		url="/cnt/cnt_approve/t/del_all.do">
+		net.gzcnt.cds.cnt.cnt_approve.t.action.CntApproveTDelAllAction
+		<result name="Default" type="forward">
+			/cnt/cnt_approve/t/list.do
+		</result>
+	</action>
+	<action name="CntApproveTAction"
+		url="/cnt/cnt_approve/t/delAllJson.do">
+		net.gzcnt.cds.cnt.cnt_approve.t.action.CntApproveTDelAllJsonAction
+		<result name="Default" type="forward">
+			/cnt/cnt_approve/t/list.do
+		</result>
+	</action>
+</root>

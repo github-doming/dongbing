@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<action name="TestAction" url="/example/c/x/all/third/ztree/e1/area.do">
+		example.cosmos.all.third.ztree.e1.SysAreaInfoJsonAction
+	</action>
+	<action name="TestAction" url="/example/c/x/all/third/ztree/e2/org.do">
+		example.cosmos.all.third.ztree.e2.SysOrgInfoJsonAction
+	</action>
+	<action name="TestAction" url="/example/c/x/all/third/ztree/e2/user.do">
+		example.cosmos.all.third.ztree.e2.SysUserInfoListAction
+		<result name="index" type="forward">
+			/pages/example/c/x/all/third/ztree/css/e2/list_bootstrap.jsp
+		</result>
+	</action>
+
+	<action name="TestAction" url="/example/c/x/all/third/ztree/e3/index.do">
+		example.cosmos.all.third.ztree.e3.ZtreeNodeAction_e3
+		<result name="index" type="forward">
+			/pages/example/c/x/all/third/ztree/css/e3/e3.jsp
+		</result>
+	</action>
+<action name="TestAction" url="/example/c/x/all/third/ztree/e5/index.do">
+		example.cosmos.all.third.ztree.e3.ZtreeNodeAction_e5
+		
+	</action>
+
+</root>

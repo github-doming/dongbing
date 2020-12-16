@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!-- form -->
+		<action name="FunProductTAction" url="/net/example/fun/fun_product/t/form.do">
+		net.example.fun.fun_product.t.action.FunProductTFormAction
+		<result name="Default" type="forward">
+			/pages/net/example/fun/fun_product/t/FunProductTForm.jsp
+		</result>
+	</action>
+	<action name="FunProductTAction" url="/net/example/fun/fun_product/t/form/Miniui.do">
+		net.example.fun.fun_product.t.action.FunProductTFormMiniuiAction
+		<result name="Default" type="forward">
+			/pages/net/example/fun/fun_product/t/FunProductTFormMiniui.jsp
+		</result>
+	</action>
+	<action name="FunProductTAction" url="/net/example/fun/fun_product/t/form/Kaida.do">
+		net.example.fun.fun_product.t.action.FunProductTFormAction
+		<result name="Default" type="forward">
+			/pages/net/example/fun/fun_product/t/FunProductTFormKaida.jsp
+		</result>
+	</action>
+	<!-- list -->
+	<action name="FunProductTAction" url="/net/example/fun/fun_product/t/list.do">
+		net.example.fun.fun_product.t.action.FunProductTListAction
+		<result name="Default" type="forward">
+			/pages/net/example/fun/fun_product/t/FunProductTList.jsp
+		</result>
+	</action>
+	<action name="FunProductTAction" url="/net/example/fun/fun_product/t/list_object.do">
+		net.example.fun.fun_product.t.action.FunProductTListObjectAction
+		<result name="Default" type="forward">
+			/pages/net/example/fun/fun_product/t/FunProductTListObject.jsp
+		</result>
+	</action>
+	<action name="FunProductTAction"
+		url="/net/example/fun/fun_product/t/list_object/bootstrap.do">
+		net.example.fun.fun_product.t.action.FunProductTListObjectAction
+		<result name="Default" type="forward">
+			/pages/net/example/fun/fun_product/t/FunProductTListBootstrapObject.jsp
+		</result>
+	</action>
+	<action name="FunProductTAction" url="/net/example/fun/fun_product/t/list/Miniui.do">
+		net.example.fun.fun_product.t.action.FunProductTListAction
+		<result name="Default" type="forward">
+			/pages/net/example/fun/fun_product/t/FunProductTListMiniui.jsp
+		</result>
+	</action>
+		<action name="FunProductTAction" url="/net/example/fun/fun_product/t/list/Kaida.do">
+		net.example.fun.fun_product.t.action.FunProductTListAction
+		<result name="Default" type="forward">
+			/pages/net/example/fun/fun_product/t/FunProductTListKaida.jsp
+		</result>
+	</action>
+		<action name="FunProductTAction" url="/net/example/fun/fun_product/t/list_object/kaida.do">
+		net.example.fun.fun_product.t.action.FunProductTListObjectAction
+		<result name="Default" type="forward">
+			/pages/net/example/fun/fun_product/t/FunProductTListKaidaObject.jsp
+		</result>
+	</action>
+	
+</root>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!-- 查询所有core线程数据 -->
+	<action name="WebServletContentListAction"
+		url="/com/ibm/admin/webservletcontent/list.do">
+		com.ibm.old.v1.admin.webservletcontent.w.action.WebServletContentListAction
+		<result name="Default" type="forward">
+			/pages/com/ibm/admin/webservletcontent/WebServletContentList.jsp
+		</result>
+	</action>
+
+	<!-- 查询所有core线程数据 -->
+	<action name="WebServletContentEditAction"
+			url="/com/ibm/admin/webservletcontent/edit.do">
+		com.ibm.old.v1.admin.webservletcontent.w.action.WebServletContentEditAction
+		<result name="Default" type="forward">
+			/com/ibm/admin/webservletcontent/list.do
+		</result>
+	</action>
+
+</root>

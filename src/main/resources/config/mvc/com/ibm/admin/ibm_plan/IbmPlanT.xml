@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+
+	<!-- 查询所有方案 -->
+	<action name="IbmPlanWListJsonAction" url="/ibm/admin/ibm_plan/w/listJson.do">
+		com.ibm.old.v1.admin.ibm_plan.w.action.IbmPlanListJsonAction
+	</action>
+	
+	<!-- 后台方案列表 -->
+	<action name="IbmPlanWListAction" url="/ibm/admin/ibm_plan/w/list.do">
+		com.ibm.old.v1.admin.ibm_plan.w.action.IbmPlanListAction
+		<result name="Default" type="forward">
+			/pages/com/ibm/admin/ibm_plan/IbmPlanWList.jsp
+		</result>
+	</action>
+	
+	<!-- 跳转新增/修改界面 -->
+	<action name="IbmPlanWFormAction" url="/ibm/admin/ibm_plan/w/form.do">
+		com.ibm.old.v1.admin.ibm_plan.w.action.IbmPlanFormAction
+		<result name="Default" type="forward">
+			/pages/com/ibm/admin/ibm_plan/IbmPlanWForm.jsp
+		</result>
+	</action>
+	
+	<!-- 删除方案 -->
+	<action name="IbmPlanWDelAction" url="/ibm/admin/ibm_plan/w/del.do">
+		com.ibm.old.v1.admin.ibm_plan.w.action.IbmPlanDelAction
+		<result name="Default" type="forward">
+			/ibm/admin/ibm_plan/w/list.do
+		</result>
+	</action>
+	
+	<!-- 删除选中方案 -->
+	<action name="IbmPlanWDelAllAction" url="/ibm/admin/ibm_plan/w/del_all.do">
+		com.ibm.old.v1.admin.ibm_plan.w.action.IbmPlanDelAllAction
+		<result name="Default" type="forward">
+			/ibm/admin/ibm_plan/w/list.do
+		</result>
+	</action>
+	
+	<!-- 保存方案 -->
+	<action name="IbmPlanWSaveAction" url="/ibm/admin/ibm_plan/w/save.do">
+		com.ibm.old.v1.admin.ibm_plan.w.action.IbmPlanSaveAction
+		<result name="Default" type="forward">
+			/ibm/admin/ibm_plan/w/list.do
+		</result>
+	</action>
+
+</root>

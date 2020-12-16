@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	<action name="WfInsFieldTCxAction" url="/c/x/platform/admin/feng/wf/wf_ins_field_t/cx/list.do">
+		c.x.platform.admin.feng.wf.wf_ins_field_t.cx.action.WfInsFieldTCxListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_ins_field_t/cx/WfInsFieldTCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object-->
+	<action name="WfInsFieldTCxAction" url="/c/x/platform/admin/feng/wf/wf_ins_field_t/cx/list_object.do">
+		c.x.platform.admin.feng.wf.wf_ins_field_t.cx.action.WfInsFieldTCxListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_ins_field_t/cx/WfInsFieldTCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form-->
+	<action name="WfInsFieldTCxAction" url="/c/x/platform/admin/feng/wf/wf_ins_field_t/cx/form.do">
+		c.x.platform.admin.feng.wf.wf_ins_field_t.cx.action.WfInsFieldTCxFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/feng/wf/wf_ins_field_t/cx/WfInsFieldTCxForm.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	<action name="WfInsFieldTCxAction" url="/c/x/platform/admin/feng/wf/wf_ins_field_t/cx/save.do">
+		c.x.platform.admin.feng.wf.wf_ins_field_t.cx.action.WfInsFieldTCxSaveAction
+		<result name="index" type="forward">
+	/c/x/platform/admin/feng/wf/wf_ins_field_t/cx/list.do
+		</result>
+	</action>
+	<!--删除del-->
+	<action name="WfInsFieldTCxAction" url="/c/x/platform/admin/feng/wf/wf_ins_field_t/cx/del.do">
+		c.x.platform.admin.feng.wf.wf_ins_field_t.cx.action.WfInsFieldTCxDelAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/wf/wf_ins_field_t/cx/list.do
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="WfInsFieldTCxAction" url="/c/x/platform/admin/feng/wf/wf_ins_field_t/cx/del_all.do">
+		c.x.platform.admin.feng.wf.wf_ins_field_t.cx.action.WfInsFieldTCxDelAllAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/feng/wf/wf_ins_field_t/cx/list.do
+		</result>
+	</action>
+</root>

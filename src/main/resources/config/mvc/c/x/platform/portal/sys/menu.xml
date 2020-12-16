@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!---->
+	<action name="IndexAction" url="/menu/list.do">
+		c.x.platform.portal.sys.menu.action.SysMenuInfoListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/portal/sys/menu/list.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/menu/form.do">
+		c.x.platform.portal.sys.menu.action.SysMenuInfoFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/portal/sys/menu/form.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/menu/save.do">
+		c.x.platform.portal.sys.menu.action.SysMenuInfoSaveAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/portal/sys/menu/updated.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/menu/del.do">
+		c.x.platform.portal.sys.menu.action.SysMenuInfoDelAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/portal/sys/menu/del.jsp
+		</result>
+	</action>
+	<action name="IndexAction" url="/menu/del_all.do">
+		c.x.platform.portal.sys.menu.action.SysMenuInfoDelAllAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/portal/sys/menu/del.jsp
+		</result>
+	</action>
+</root>

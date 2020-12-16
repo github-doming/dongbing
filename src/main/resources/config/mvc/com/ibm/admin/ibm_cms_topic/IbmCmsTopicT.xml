@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!-- 发送消息 -->
+	<action name="CmsTopicTAction" url="/ibm/admin/cms_topic/w/save.do">
+		com.ibm.old.v1.admin.cms_topic.w.action.IbmCmsTopicWSaveAction
+		<result name="Default" type="forward">
+			/ibm/admin/cms_topic/w/list.do
+		</result>
+	</action>
+	
+
+
+	<!-- 删除消息-->
+	<action name="CmsTopicTAction" url="/ibm/admin/cms_topic/w/del.do">
+		com.ibm.old.v1.admin.cms_topic.w.action.IbmCmsTopicWDelAction
+		<result name="Default" type="forward">
+			/ibm/admin/cms_topic/w/list.do
+		</result>
+	</action>
+	
+	<!-- 删除消息-->
+	<action name="CmsTopicTAction" url="/ibm/admin/cms_topic/w/del_all.do">
+		com.ibm.old.v1.admin.cms_topic.w.action.IbmCmsTopicWDelAllAction
+		<result name="Default" type="forward">
+			/ibm/admin/cms_topic/w/list.do
+		</result>
+	</action>
+	
+	<!-- 后台查看消息-->
+	<action name="CmsTopicTAction" url="/ibm/admin/cms_topic/w/list.do">
+		com.ibm.old.v1.admin.cms_topic.w.action.IbmCmsTopicWListAction
+		<result name="Default" type="forward">
+			/pages/com/ibm/admin/ibm_cms_topic/IbmCmsTopicWList.jsp
+		</result>
+	</action>
+	
+	<!-- 跳转新增/编辑界面 -->
+	<action name="CmsTopicTAction" url="/ibm/admin/cms_topic/w/form.do">
+		com.ibm.old.v1.admin.cms_topic.w.action.IbmCmsTopicWFormAction
+		<result name="Default" type="forward">
+			/pages/com/ibm/admin/ibm_cms_topic/IbmCmsTopicWForm.jsp
+		</result>
+	</action>
+	
+</root>

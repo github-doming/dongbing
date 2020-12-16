@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<action name="IndexAction"
+		url="/example/c/x/all/feng/compo/cyui/sys_menu/list.do">
+		example.c.x.all.feng.compo.cyui.SysMenuListAction
+	</action>
+</root>

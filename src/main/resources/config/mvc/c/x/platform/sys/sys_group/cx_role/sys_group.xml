@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--模块,角色 -->
+	<!--模块,角色,授权authorize -->
+	<!--授权保存 -->
+	<action name="SysGroupInfoAction"
+		url="/c/x/platform/sys/sys_group/cx_role/authorize_save.do">
+		c.x.platform.sys.sys_group.cx_role.action.menu.SysGroupMenuCxRoleSaveAction
+		<result name="index" type="send">
+			/c/x/platform/sys/sys_group/cx_role/list.do
+		</result>
+	</action>
+	<!--授权请求 -->
+	<action name="SysGroupInfoAction" url="/c/x/platform/sys/sys_group/cx_role/authorize.do">
+		c.x.platform.sys.sys_group.cx_role.action.menu.SysGroupMenuCxRoleListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group/cx_role/menu/SysGroupMenuCxRoleList.jsp
+		</result>
+	</action>
+
+	<!--模块,角色,授权authorize -->
+
+	<!--列表list -->
+	<action name="SysGroupCxRoleAction" url="/c/x/platform/sys/sys_group/cx_role/list.do">
+		c.x.platform.sys.sys_group.cx_role.action.SysGroupCxRoleListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group/cx_role/SysGroupCxRoleList.jsp
+		</result>
+	</action>
+	<!--列表list_object -->
+	<action name="SysGroupCxRoleAction" url="/c/x/platform/sys/sys_group/cx_role/list_object.do">
+		c.x.platform.sys.sys_group.cx_role.action.SysGroupCxRoleListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group/cx_role/SysGroupCxRoleListObject.jsp
+		</result>
+	</action>
+	<!--表单form -->
+	<action name="SysGroupCxRoleAction" url="/c/x/platform/sys/sys_group/cx_role/form.do">
+		c.x.platform.sys.sys_group.cx_role.action.SysGroupCxRoleFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/sys/sys_group/cx_role/SysGroupCxRoleForm.jsp
+		</result>
+	</action>
+	<!--保存save -->
+	<action name="SysGroupCxRoleAction" url="/c/x/platform/sys/sys_group/cx_role/save.do">
+		c.x.platform.sys.sys_group.cx_role.action.SysGroupCxRoleSaveAction
+		<result name="index" type="send">
+		/c/x/platform/sys/sys_group/cx_role/list.do
+		</result>
+	</action>
+	<!--删除del -->
+	<action name="SysGroupCxRoleAction" url="/c/x/platform/sys/sys_group/cx_role/del.do">
+		c.x.platform.sys.sys_group.cx_role.action.SysGroupCxRoleDelAction
+		<result name="index" type="send">
+			/c/x/platform/sys/sys_group/cx_role/list.do
+		</result>
+	</action>
+	<!--删除所有del all -->
+	<action name="SysGroupCxRoleAction" url="/c/x/platform/sys/sys_group/cx_role/del_all.do">
+		c.x.platform.sys.sys_group.cx_role.action.SysGroupCxRoleDelAllAction
+		<result name="index" type="send">
+			/c/x/platform/sys/sys_group/cx_role/list.do
+		</result>
+	</action>
+	<!--模块,角色 -->
+</root>

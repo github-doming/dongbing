@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<root>
+	<!--列表list-->
+	<action name="WxQyThirdConfigTCxAction" url="/c/x/platform/admin/all/third/weixin/ent_third/wx_qy_third_config_t/cx/list.do">
+		all.business.pc.third.weixin.ent_third.wx_qy_third_config_t.cx.action.WxQyThirdConfigTCxListAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/all/third/weixin/ent_third/wx_qy_third_config_t/cx/WxQyThirdConfigTCxList.jsp
+		</result>
+	</action>
+	<!--列表list_object-->
+	<action name="WxQyThirdConfigTCxAction" url="/c/x/platform/admin/all/third/weixin/ent_third/wx_qy_third_config_t/cx/list_object.do">
+		all.business.pc.third.weixin.ent_third.wx_qy_third_config_t.cx.action.WxQyThirdConfigTCxListObjectAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/all/third/weixin/ent_third/wx_qy_third_config_t/cx/WxQyThirdConfigTCxListObject.jsp
+		</result>
+	</action>
+	<!--表单form-->
+	<action name="WxQyThirdConfigTCxAction" url="/c/x/platform/admin/all/third/weixin/ent_third/wx_qy_third_config_t/cx/form.do">
+		all.business.pc.third.weixin.ent_third.wx_qy_third_config_t.cx.action.WxQyThirdConfigTCxFormAction
+		<result name="index" type="forward">
+			/pages/c/x/platform/admin/all/third/weixin/ent_third/wx_qy_third_config_t/cx/WxQyThirdConfigTCxForm.jsp
+		</result>
+	</action>
+	<!--保存save-->
+	<action name="WxQyThirdConfigTCxAction" url="/c/x/platform/admin/all/third/weixin/ent_third/wx_qy_third_config_t/cx/save.do">
+		all.business.pc.third.weixin.ent_third.wx_qy_third_config_t.cx.action.WxQyThirdConfigTCxSaveAction
+		<result name="index" type="forward">
+	/c/x/platform/admin/all/third/weixin/ent_third/wx_qy_third_config_t/cx/list.do
+		</result>
+	</action>
+	<!--删除del-->
+	<action name="WxQyThirdConfigTCxAction" url="/c/x/platform/admin/all/third/weixin/ent_third/wx_qy_third_config_t/cx/del.do">
+		all.business.pc.third.weixin.ent_third.wx_qy_third_config_t.cx.action.WxQyThirdConfigTCxDelAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/all/third/weixin/ent_third/wx_qy_third_config_t/cx/list.do
+		</result>
+	</action>
+	<!--删除所有del all-->
+	<action name="WxQyThirdConfigTCxAction" url="/c/x/platform/admin/all/third/weixin/ent_third/wx_qy_third_config_t/cx/del_all.do">
+		all.business.pc.third.weixin.ent_third.wx_qy_third_config_t.cx.action.WxQyThirdConfigTCxDelAllAction
+		<result name="index" type="forward">
+		/c/x/platform/admin/all/third/weixin/ent_third/wx_qy_third_config_t/cx/list.do
+		</result>
+	</action>
+</root>

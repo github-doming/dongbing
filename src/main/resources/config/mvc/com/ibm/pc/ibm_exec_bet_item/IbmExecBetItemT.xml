@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+
+	<!-- 获取开奖信息 -->
+	<!--<action name="IbmHmPlanGroupRepDrawItemTAction" url="/ibm/pc/ibm_exec_bet_item/getRepDrawResult.do">-->
+		<!--com.ibm.old.v1.pc.ibm_exec_bet_item.t.action.IbmRepDrawResultAction-->
+	<!--</action>-->
+	<!-- 手动投注 -->
+	<action name="IbmHmPlanGroupRepDrawItemTAction" url="/ibm/pc/ibm_exec_bet_item/handleBet.do">
+		com.ibm.old.v1.pc.ibm_exec_bet_item.t.action.IbmExecManualBetAction
+	</action>
+</root>

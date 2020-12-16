@@ -1,0 +1,259 @@
+*{
+   margin: 0;
+   padding: 0;
+   font-family: "Microsoft Yahei";
+}
+input:focus, button:focus, textarea:focus{
+   outline: none;
+}
+ul,li{
+   list-style: none;
+}
+a, a:hover, a:link, a:visited, a:active{
+  text-decoration: none;
+}
+body{
+   /*background-color: #fff;*/
+}
+/*头部样式*/
+.header{
+   width: 100%;
+   height: 51px;
+   background-color: #fff;
+   border-bottom: 1px solid #eee;
+}
+/*头部左侧logo部分*/
+.productName{
+   width: auto;
+   height: 100%;
+   float: left;
+}
+.logoImg{
+   float: left;
+   width: 74px;
+   height: 50px;
+   padding: 3px 10px 3px 20px; 
+}
+.logoImg img{
+   width: auto;
+   height: 100%;
+}
+.productNameText{
+   float: left;
+   color: #333;
+   padding-top: 2px;
+}
+.productNameText p{
+   margin-bottom: 0;
+}
+.ChineseName{
+   font-size: 24px;
+}
+.EnglishName{
+   font-size: 11px;
+   margin-top: -5px;
+}
+/*头部右侧部分样式*/
+.headerRight{
+   float: right;
+   width: auto;
+   height: 100%;
+}
+.searchBox{
+   border-left: 1px solid #eee;
+   width: auto;
+   height: 100%;
+   float: left;
+}
+.userInfo{
+   height: 100%;
+   float: left;
+}
+.headermenu .dropdown-menu{
+	margin-right:0;
+}
+/*上导航/一级导航*/
+.topNav{
+   width: 100%;
+   height: 41px;
+   background-color: #f7f7f7;
+   border-bottom: 1px solid #d3d7db;
+}
+.navBtn{
+   float: left;
+   width: 51px;
+   height: 40px;
+}
+.menutoggle{
+   padding-top: 5px;
+   height: 40px;
+   border-right: none;
+   width: 51px;
+}
+.menutoggle:hover {
+    background-color: #ccc;
+}
+.navBtn .fa{
+   font-size: 22px;
+}
+.topNavUl{
+   height: 40px;
+   float: left;
+   margin-bottom: 0;
+}
+.topNavUl li{
+   float: left;
+   padding: 5px 0;
+   margin-right:3px;
+}
+.topNavUl li a{
+   width: auto;
+   height: 30px;
+   display: inline-block;
+   padding: 0 20px;
+   color: #333;
+}
+.topNavUl li a:hover{
+   background-color: #1caf9a;
+   color: #fff;
+   border-radius: 4px;
+}
+.icons{
+   width: 25px;
+   height: 25px;
+   display: block;
+   overflow: hidden;
+   margin-top: 3px;
+   float: left;
+}
+.topNavUl li a span{
+   height: 30px;
+   line-height: 30px;
+   display: block;
+   float: left;
+   padding-left: 5px;
+}
+.iconsBg1{
+   background: url(../images/shuzongimg/icons01.png) no-repeat left top;
+}
+.iconsBg2{
+   background: url(../images/shuzongimg/icons02.png) no-repeat left top;
+}
+.iconsBg3{
+   background: url(../images/shuzongimg/icons03.png) no-repeat left top;
+}
+.iconsBg4{
+   background: url(../images/shuzongimg/icons04.png) no-repeat left top;
+}
+.iconsBg5{
+   background: url(../images/shuzongimg/icons05.png) no-repeat left top;
+}
+.iconsBg6{
+   background: url(../images/shuzongimg/icons06.png) no-repeat left top;
+}
+.iconsBg7{
+   background: url(../images/shuzongimg/icons07.png) no-repeat left top;
+}
+.iconsBg8{
+   background: url(../images/shuzongimg/icons08.png) no-repeat left top;
+}
+.iconsBg9{
+   background: url(../images/shuzongimg/icons09.png) no-repeat left top;
+}
+.topNavUl li a:hover .icons{
+   background-position: left bottom;
+}
+.topNavUl .active01 a{
+   background-color: #1caf9a;
+   color: #fff;
+   border-radius: 4px;
+}
+.topNavUl .active01 a .icons{
+   background-position: left bottom;
+}
+/*下面内容部分样式*/
+.bottonContent{
+   width: 100%;
+   position: relative;
+   background-color: #1d2939;
+   overflow:hidden;
+}
+/*左侧导航栏*/
+.leftpanel{
+	width:200px;
+}
+.leftpanel-collapsed .leftpanel {
+   width: 51px;
+   top: 0; 
+}
+.leftpanel-collapsed .nav-bracket li.nav-hover ul {
+   top: 40px; 
+}
+.leftpanelinner ul{
+   display: none;
+}
+.leftpanelinner .active02{
+   display: block;
+}
+.nav-bracket .children > li.active > a {
+   color: #fff;
+}
+.nav-bracket .children > li > a:hover {
+   color: #fff;
+}
+/*右侧内嵌页面部分*/
+.mainpanel{
+   overflow:auto;
+   min-height: 1px;
+   font-size: 0;
+   height:100%;
+   margin-left:200px;
+}
+.mainpanel .iframes_one{
+    width: 100%;
+    height:100%;
+}
+/* tanchuang */
+.lock , .lock2{
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(80,81,82,.9);
+	z-index:1000;
+}
+.iframe2 ,.iframe3{
+	width:100%; 
+	margin:0; 
+	padding:0; 
+	background:#fff; 
+	height:100%;  
+	border-radius: 4px;
+}
+.password_div{
+	width:640px;
+	height:332px;
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-top:-166px;
+	margin-left:-320px;
+	z-index:2000;
+	font-size:0;
+}
+.ziliao_div{
+	width:640px;
+	height:512px;
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-top:-256px;
+	margin-left:-320px;
+	z-index:2000;
+	font-size:0;
+}
+.yincang{
+	display:none;
+}

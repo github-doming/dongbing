@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<config>
+		<virtualHost>MqVirtualHost</virtualHost>
+		<ip>134.175.152.61</ip>
+		<port>5672</port>
+		<userName>admin</userName>
+		<password>admin#</password>
+		<clientIdFormat>MqClientId[%s]</clientIdFormat>
+		<exchangeFormat>MqExchange[%s]</exchangeFormat>
+		<topicFormat>MqTopic[%s]</topicFormat>
+		<queueFormat>MqQueue[%s]</queueFormat>
+	</config>
+	<queue name="queue.sql">
+		<client class="all.app.common.mq.SecuritySqlTaskMessageListener"></client>
+	</queue>
+	<!-- 发送的
+	
+	RabbitMqUtil mqUtil = RabbitMqUtil.findInstance();
+				MqSendBean bean = new MqSendBean();
+				bean.setText(sql);
+				mqUtil.sendQueueSimple("queue.game.bet", bean);
+	
+	 -->
+	<queue name="queue.game.bet">
+		<!-- 队列接收 -->
+			<client class="com.game2.bet.xxxxxxxxxxxxxxxxx"></client>
+	</queue>
+	
+</root>

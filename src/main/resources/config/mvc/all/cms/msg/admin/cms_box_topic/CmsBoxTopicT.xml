@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="CmsBoxTopicTAction"
+		url="/all/cms/msg/admin/cms_box_topic/t/listJson.do">
+		all.cms.msg.admin.cms_box_topic.t.action.CmsBoxTopicTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="CmsBoxTopicTAction"
+		url="/all/cms/msg/admin/cms_box_topic/t/list/easyui.do">
+		all.cms.msg.admin.cms_box_topic.t.action.CmsBoxTopicTListAction
+		<result name="Default" type="forward">
+			/pages/all/cms/msg/admin/cms_box_topic/t/CmsBoxTopicTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="CmsBoxTopicTAction"
+		url="/all/cms/msg/admin/cms_box_topic/t/list/bootstrap.do">
+		all.cms.msg.admin.cms_box_topic.t.action.CmsBoxTopicTListAction
+		<result name="Default" type="forward">
+			/pages/all/cms/msg/admin/cms_box_topic/t/CmsBoxTopicTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="CmsBoxTopicTAction"
+		url="/all/cms/msg/admin/cms_box_topic/t/form/bootstrap.do">
+		all.cms.msg.admin.cms_box_topic.t.action.CmsBoxTopicTFormAction
+		<result name="Default" type="forward">
+			/pages/all/cms/msg/admin/cms_box_topic/t/CmsBoxTopicTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="CmsBoxTopicTAction"
+		url="/all/cms/msg/admin/cms_box_topic/t/save/bootstrap.do">
+		all.cms.msg.admin.cms_box_topic.t.action.CmsBoxTopicTSaveAction
+		<result name="Default" type="send">
+			/all/cms/admin/cms_box_topic/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsBoxTopicTAction"
+		url="/all/cms/msg/admin/cms_box_topic/t/saveJson.do">
+		all.cms.msg.admin.cms_box_topic.t.action.CmsBoxTopicTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="CmsBoxTopicTAction"
+		url="/all/cms/msg/admin/cms_box_topic/t/del/bootstrap.do">
+		all.cms.msg.admin.cms_box_topic.t.action.CmsBoxTopicTDelAction
+		<result name="Default" type="send">
+			/all/cms/admin/cms_box_topic/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsBoxTopicTAction"
+		url="/all/cms/msg/admin/cms_box_topic/t/delJson.do">
+		all.cms.msg.admin.cms_box_topic.t.action.CmsBoxTopicTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="CmsBoxTopicTAction"
+		url="/all/cms/msg/admin/cms_box_topic/t/del_all/bootstrap.do">
+		all.cms.msg.admin.cms_box_topic.t.action.CmsBoxTopicTDelAllAction
+		<result name="Default" type="send">
+			/all/cms/admin/cms_box_topic/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="CmsBoxTopicTAction"
+		url="/all/cms/msg/admin/cms_box_topic/t/delAllJson.do">
+		all.cms.msg.admin.cms_box_topic.t.action.CmsBoxTopicTDelAllJsonAction
+		
+	</action>
+</root>

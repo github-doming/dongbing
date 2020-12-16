@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--用户反馈信息 -->
+	<action name="IbmSysSuggestSaveAction"
+			url="/ibm/pc/ibm_sys_suggest/save.do">
+		com.ibm.old.v1.pc.ibm_sys_suggest.t.action.IbmSysSuggestSaveAction
+	</action>
+</root>

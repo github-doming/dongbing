@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<action name="IndexAction"
+		url="/example/c/x/all/complex/table/jq_grid/sys_user/list/jsonp.do">
+		example.c.x.all.complex.table.jq_grid.sys_user.action.SysUserListJsonpAction
+	</action>
+	<action name="IndexAction"
+		url="/example/c/x/all/complex/table/jq_grid/sys_user/list/json.do">
+		example.c.x.all.complex.table.jq_grid.sys_user.action.SysUserListJsonAction
+	</action>
+</root>

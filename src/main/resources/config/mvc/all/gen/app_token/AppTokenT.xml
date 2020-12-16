@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="AppTokenTAction"
+		url="/all/gen/app_token/t/listJson.do">
+		all.gen.app_token.t.action.AppTokenTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="AppTokenTAction"
+		url="/all/gen/app_token/t/list/easyui.do">
+		all.gen.app_token.t.action.AppTokenTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_token/t/AppTokenTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="AppTokenTAction"
+		url="/all/gen/app_token/t/list/bootstrap.do">
+		all.gen.app_token.t.action.AppTokenTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_token/t/AppTokenTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="AppTokenTAction"
+		url="/all/gen/app_token/t/form/bootstrap.do">
+		all.gen.app_token.t.action.AppTokenTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/app_token/t/AppTokenTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="AppTokenTAction"
+		url="/all/gen/app_token/t/save/bootstrap.do">
+		all.gen.app_token.t.action.AppTokenTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/app_token/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppTokenTAction"
+		url="/all/gen/app_token/t/saveJson.do">
+		all.gen.app_token.t.action.AppTokenTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="AppTokenTAction"
+		url="/all/gen/app_token/t/del/bootstrap.do">
+		all.gen.app_token.t.action.AppTokenTDelAction
+		<result name="Default" type="forward">
+			/all/gen/app_token/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppTokenTAction"
+		url="/all/gen/app_token/t/delJson.do">
+		all.gen.app_token.t.action.AppTokenTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="AppTokenTAction"
+		url="/all/gen/app_token/t/del_all/bootstrap.do">
+		all.gen.app_token.t.action.AppTokenTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/app_token/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="AppTokenTAction"
+		url="/all/gen/app_token/t/delAllJson.do">
+		all.gen.app_token.t.action.AppTokenTDelAllJsonAction
+		
+	</action>
+</root>

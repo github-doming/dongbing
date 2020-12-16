@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -->
+<root>
+	<!--列表json -->
+	<action name="WxPMoTextTAction"
+		url="/all/gen/wx_p_mo_text/t/listJson.do">
+		all.gen.wx_p_mo_text.t.action.WxPMoTextTListJsonAction
+	</action>
+	<!--列表list -->
+	<action name="WxPMoTextTAction"
+		url="/all/gen/wx_p_mo_text/t/list/easyui.do">
+		all.gen.wx_p_mo_text.t.action.WxPMoTextTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_mo_text/t/WxPMoTextTListEasyui.jsp
+		</result>
+	</action>
+	<!--列表list -->
+	<action name="WxPMoTextTAction"
+		url="/all/gen/wx_p_mo_text/t/list/bootstrap.do">
+		all.gen.wx_p_mo_text.t.action.WxPMoTextTListAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_mo_text/t/WxPMoTextTListBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--表单form -->
+	<action name="WxPMoTextTAction"
+		url="/all/gen/wx_p_mo_text/t/form/bootstrap.do">
+		all.gen.wx_p_mo_text.t.action.WxPMoTextTFormAction
+		<result name="Default" type="forward">
+			/pages/all/gen/wx_p_mo_text/t/WxPMoTextTFormBootstrap.jsp
+		</result>
+		
+	</action>
+	<!--保存save -->
+	<action name="WxPMoTextTAction"
+		url="/all/gen/wx_p_mo_text/t/save/bootstrap.do">
+		all.gen.wx_p_mo_text.t.action.WxPMoTextTSaveAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_mo_text/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPMoTextTAction"
+		url="/all/gen/wx_p_mo_text/t/saveJson.do">
+		all.gen.wx_p_mo_text.t.action.WxPMoTextTSaveJsonAction
+
+	</action>
+	<!--删除del -->
+	<action name="WxPMoTextTAction"
+		url="/all/gen/wx_p_mo_text/t/del/bootstrap.do">
+		all.gen.wx_p_mo_text.t.action.WxPMoTextTDelAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_mo_text/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPMoTextTAction"
+		url="/all/gen/wx_p_mo_text/t/delJson.do">
+		all.gen.wx_p_mo_text.t.action.WxPMoTextTDelJsonAction
+
+	</action>
+	<!--删除所有del all -->
+	<action name="WxPMoTextTAction"
+		url="/all/gen/wx_p_mo_text/t/del_all/bootstrap.do">
+		all.gen.wx_p_mo_text.t.action.WxPMoTextTDelAllAction
+		<result name="Default" type="forward">
+			/all/gen/wx_p_mo_text/t/list/bootstrap.do
+		</result>
+	</action>
+	<action name="WxPMoTextTAction"
+		url="/all/gen/wx_p_mo_text/t/delAllJson.do">
+		all.gen.wx_p_mo_text.t.action.WxPMoTextTDelAllJsonAction
+		
+	</action>
+</root>
